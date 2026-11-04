@@ -1,0 +1,1159 @@
+# MASTER PROMPT – PHASE 4
+# GOVAI NEXUS – AI, ML, GENAI & INTELLIGENT AUTOMATION
+
+## 1. YOUR ROLE
+
+Act as a Principal AI Architect, Senior Python AI Engineer, Machine Learning Engineer, Generative AI Engineer, RAG Specialist, NLP Engineer, Computer Vision Engineer and Multi-Agent Systems Architect.
+
+Your responsibility is to implement the complete AI intelligence layer for GovAI Nexus.
+
+Use the existing Phase 3 application, FastAPI backend, PostgreSQL database, frontend and authentication system.
+
+Build real, modular, testable AI capabilities using Python.
+
+Do not create disconnected AI demonstrations. Every AI feature must integrate with the existing GovAI Nexus platform, database, APIs and user portals.
+
+## 2. PRIMARY TECHNOLOGY STACK
+
+**Python is the primary programming language for all AI and ML development.**
+
+### AI and GenAI
+- Python 3.12+
+- Google Gemini API
+- OpenAI API (optional provider)
+- Hugging Face Transformers
+- LangChain or LlamaIndex
+- Sentence Transformers
+- Pydantic AI or an appropriate agent orchestration framework
+
+### RAG and Vector Search
+- PostgreSQL
+- pgvector
+- Sentence Transformers
+- Hybrid Search
+- Reranking models
+
+### Machine Learning
+- Scikit-learn
+- XGBoost
+- PyTorch
+- Pandas
+- NumPy
+- MLflow or an equivalent model registry
+
+### NLP
+- Hugging Face
+- Indic NLP resources
+- Sentence Transformers
+- Language detection
+- Text classification
+
+### OCR and Document Intelligence
+- PaddleOCR
+- Tesseract OCR
+- PyMuPDF
+- OpenCV
+- Python document processing libraries
+
+### Voice and Speech
+- Whisper-compatible speech recognition
+- Indic speech processing
+- Text-to-speech providers
+- Tamil language support
+
+### Backend Integration
+- FastAPI
+- SQLAlchemy
+- PostgreSQL
+- Redis
+- Celery or an equivalent background task system
+
+Do not use Node.js for AI or ML processing.
+
+## 3. AI ARCHITECTURE
+
+Create a centralized Python AI engine with independently maintainable modules.
+
+Organize the architecture into:
+
+1. LLM Provider Management.
+2. RAG Knowledge Engine.
+3. AI Citizen Assistant.
+4. NLP Processing Engine.
+5. Tamil Language Processing.
+6. Speech and Voice Engine.
+7. OCR and Document Intelligence.
+8. Machine Learning Engine.
+9. Predictive Analytics.
+10. Fraud and Anomaly Detection.
+11. Recommendation Engine.
+12. Multi-Agent Orchestration.
+13. Workflow Automation.
+14. AI Evaluation and Monitoring.
+
+All modules must communicate with the existing FastAPI backend through clearly defined service interfaces.
+
+Use background workers for time-consuming tasks.
+
+## 4. LLM INTEGRATION
+
+Implement a provider-independent LLM integration layer.
+
+Support:
+
+- Google Gemini.
+- OpenAI.
+- Approved open-source LLMs where infrastructure permits.
+
+Features:
+
+- Provider configuration.
+- Model selection.
+- Prompt templates.
+- System instructions.
+- Conversation context.
+- Token usage tracking.
+- Error handling.
+- Retry mechanisms.
+- Timeout handling.
+- Model fallback where configured.
+- Response validation.
+- Model version tracking.
+
+Never hardcode API keys.
+
+Store credentials securely using environment variables or an approved secret manager.
+
+Create a centralized LLM service so individual application modules do not directly depend on a specific model provider.
+
+## 5. RETRIEVAL-AUGMENTED GENERATION (RAG)
+
+Implement a complete RAG system using Python and PostgreSQL with pgvector.
+
+### A. Knowledge Document Ingestion
+
+Build the following pipeline:
+
+1. Upload government documents.
+2. Validate file type and size.
+3. Perform security checks.
+4. Extract document text.
+5. Clean extracted content.
+6. Detect language.
+7. Extract metadata.
+8. Split documents into semantic chunks.
+9. Generate embeddings.
+10. Store embeddings in pgvector.
+11. Store document metadata.
+12. Maintain document versions.
+13. Record indexing status.
+14. Verify successful ingestion.
+
+Support:
+
+- PDF.
+- DOCX.
+- TXT.
+- Approved image formats.
+
+### B. Document Metadata
+
+Maintain:
+
+- Document ID.
+- Title.
+- Department.
+- Category.
+- Source.
+- Publication date.
+- Effective date.
+- Version.
+- Language.
+- Verification status.
+- Uploaded by.
+- Last updated.
+- Processing status.
+
+### C. Embedding Architecture
+
+Create an embedding provider abstraction.
+
+Support suitable multilingual embedding models.
+
+Evaluate embedding models for:
+
+- English retrieval.
+- Tamil retrieval.
+- Semantic similarity.
+- Retrieval relevance.
+- Latency.
+- Storage requirements.
+
+Do not assume one embedding model is best without evaluation.
+
+### D. Retrieval Pipeline
+
+Implement:
+
+1. User query.
+2. Language detection.
+3. Query normalization.
+4. Intent identification.
+5. Embedding generation.
+6. Vector similarity search.
+7. Keyword search.
+8. Metadata filtering.
+9. Hybrid retrieval.
+10. Reranking.
+11. Top-K context selection.
+12. Prompt construction.
+13. LLM generation.
+14. Citation validation.
+15. Final response.
+
+### E. RAG Response Requirements
+
+Every relevant response should include:
+
+- Answer.
+- Supporting source documents.
+- Document title.
+- Department.
+- Relevant reference information.
+- Source links where available.
+
+The system must:
+
+- Prefer verified information.
+- Respect document versions.
+- Respect effective dates.
+- Avoid unsupported answers.
+- Abstain when evidence is insufficient.
+- Prevent prompt injection from retrieved documents.
+- Never fabricate government policy or scheme information.
+
+### F. RAG Evaluation
+
+Evaluate:
+
+- Retrieval precision.
+- Retrieval recall.
+- Context relevance.
+- Answer relevance.
+- Faithfulness.
+- Citation correctness.
+- Hallucination rate.
+
+Use RAGAS or suitable custom evaluation metrics.
+
+Create a knowledge retrieval testing interface in the AI Knowledge Centre.
+
+## 6. AI-POWERED CITIZEN ASSISTANT
+
+Implement a real AI assistant integrated with the Citizen Portal.
+
+### Features
+
+- Government service guidance.
+- Government scheme information.
+- Eligibility guidance.
+- Required document information.
+- Application instructions.
+- Application status assistance.
+- Complaint guidance.
+- Department information.
+- Tamil and English conversation.
+- Context-aware conversations.
+- Conversation history.
+- Follow-up questions.
+- Source citations.
+- Feedback collection.
+
+### Chatbot interface
+
+Connect the existing Phase 3 AI Assistant UI to the Python AI engine.
+
+Implement:
+
+- New conversation.
+- Message submission.
+- Streaming responses where supported.
+- Conversation storage.
+- Conversation retrieval.
+- Language selection.
+- Source references.
+- Feedback.
+- Error and retry states.
+
+The assistant must not claim to approve applications or make official government decisions.
+
+## 7. TAMIL AND ENGLISH MULTILINGUAL AI
+
+Implement bilingual AI processing.
+
+### Tamil capabilities
+
+- Tamil query understanding.
+- Tamil text normalization.
+- Tamil language detection.
+- Tamil government terminology handling.
+- Tamil question answering.
+- Tamil document retrieval.
+- Tamil response generation.
+- English-to-Tamil translation.
+- Tamil-to-English translation.
+
+### English capabilities
+
+- English query understanding.
+- English document retrieval.
+- English response generation.
+- English summaries.
+
+Ensure that Tamil and English queries can retrieve relevant information from supported document collections.
+
+Evaluate language quality rather than assuming translation is correct.
+
+Prepare architecture for future Hindi and other Indian languages.
+
+## 8. VOICE ASSISTANT
+
+Implement voice-based citizen assistance.
+
+### Voice workflow
+
+1. User selects voice input.
+2. Audio is captured.
+3. Speech-to-text processes the audio.
+4. Language is detected.
+5. Tamil or English query is generated.
+6. Query is passed to the RAG assistant.
+7. Answer is generated.
+8. Text-to-speech produces audio.
+9. User receives spoken response.
+
+### Features
+
+- Tamil voice input.
+- English voice input.
+- Speech recognition.
+- Text-to-speech.
+- Voice playback.
+- Audio recording controls.
+- Error handling.
+- Permission handling.
+- Transcribed text preview.
+
+Do not automatically record users without appropriate consent.
+
+Integrate the voice experience into the Citizen Portal and mobile application.
+
+## 9. INTELLIGENT DOCUMENT PROCESSING (OCR)
+
+Implement a complete Python-based document intelligence pipeline.
+
+### Processing workflow
+
+1. Document upload.
+2. File validation.
+3. PDF/image preprocessing.
+4. OCR extraction.
+5. Layout detection.
+6. Text extraction.
+7. Table extraction where supported.
+8. Document classification.
+9. Field extraction.
+10. Data validation.
+11. Confidence scoring.
+12. Verification queue.
+13. Employee review.
+14. Verification result storage.
+
+### Document categories
+
+Prepare classification support for:
+
+- Identity documents.
+- Address proof.
+- Income certificates.
+- Community certificates.
+- Educational certificates.
+- Land records.
+- Supporting documents.
+- Other authorized government application documents.
+
+### Extracted fields
+
+Where appropriate, extract:
+
+- Applicant name.
+- Document number.
+- Date.
+- Address.
+- Issuing authority.
+- Document category.
+- Relevant form fields.
+
+Do not assume all document formats have identical layouts.
+
+### Verification
+
+Implement:
+
+- Missing field detection.
+- Low-confidence detection.
+- Duplicate file detection.
+- Format validation.
+- Human review.
+- Verification history.
+
+OCR extraction must not automatically establish that a document is genuine.
+
+Connect OCR outputs to the existing Employee Document Verification interface.
+
+## 10. NLP ENGINE
+
+Create a centralized NLP processing module.
+
+Implement:
+
+- Language detection.
+- Text normalization.
+- Tokenization.
+- Named entity recognition.
+- Keyword extraction.
+- Text classification.
+- Intent classification.
+- Semantic similarity.
+- Text summarization.
+- Sentiment analysis.
+
+### Government use cases
+
+- Understand citizen questions.
+- Classify complaint descriptions.
+- Identify department-related keywords.
+- Extract relevant entities.
+- Categorize government documents.
+- Summarize lengthy documents.
+- Analyze citizen feedback.
+
+Create reusable NLP services.
+
+## 11. COMPLAINT CLASSIFICATION AND ROUTING
+
+Implement intelligent complaint processing.
+
+### Workflow
+
+1. Citizen submits complaint.
+2. Text is normalized.
+3. Language is detected.
+4. Complaint category is predicted.
+5. Relevant department is suggested.
+6. Priority is estimated.
+7. Confidence score is generated.
+8. Employee or officer reviews the suggestion.
+9. Complaint is assigned according to authorized workflow.
+
+Possible categories:
+
+- Public Infrastructure.
+- Water Supply.
+- Electricity.
+- Sanitation.
+- Transportation.
+- Public Welfare.
+- Education.
+- Healthcare.
+- Other Government Services.
+
+Provide explanations for classifications.
+
+Do not automatically escalate sensitive cases solely on an unverified model prediction.
+
+## 12. MACHINE LEARNING ENGINE
+
+Build a centralized Python ML engine.
+
+Use appropriate supervised and unsupervised learning algorithms.
+
+Prepare reusable pipelines for:
+
+- Data ingestion.
+- Data validation.
+- Preprocessing.
+- Feature engineering.
+- Model training.
+- Model evaluation.
+- Model versioning.
+- Inference.
+- Monitoring.
+
+### A. Complaint Classification
+
+Objective:
+
+Predict complaint categories and recommend relevant departments.
+
+Candidate algorithms:
+
+- Logistic Regression.
+- Random Forest.
+- XGBoost.
+- Suitable transformer-based classifiers.
+
+Evaluation:
+
+- Accuracy.
+- Precision.
+- Recall.
+- F1-score.
+- Confusion matrix.
+
+### B. Application Delay Prediction
+
+Objective:
+
+Estimate potential processing delays.
+
+Possible inputs:
+
+- Application category.
+- Department.
+- Historical processing time.
+- Workload.
+- Application status.
+- Missing information indicators.
+
+Candidate algorithms:
+
+- Random Forest.
+- XGBoost.
+- Regression models.
+
+Evaluation:
+
+- MAE.
+- RMSE.
+- Prediction error analysis.
+
+### C. Service Demand Forecasting
+
+Objective:
+
+Predict future government service demand.
+
+Possible inputs:
+
+- Historical application counts.
+- Service categories.
+- Time-based patterns.
+- District.
+- Department.
+
+Candidate algorithms:
+
+- Time-series forecasting.
+- Prophet where appropriate.
+- XGBoost.
+- Suitable statistical models.
+
+Evaluation:
+
+- MAE.
+- RMSE.
+- MAPE where meaningful.
+
+### D. Complaint Volume Forecasting
+
+Predict future complaint volumes by:
+
+- Department.
+- District.
+- Category.
+- Time period.
+
+### E. Employee Workload Prediction
+
+Estimate workload trends using historical operational records.
+
+Do not use predictions as automatic employee performance judgments.
+
+### F. Scheme Recommendation
+
+Develop a recommendation engine that identifies potentially relevant government schemes based on authorized citizen-provided information and published eligibility criteria.
+
+Use:
+
+- Rule-based eligibility filtering.
+- Content-based recommendation.
+- Ranking.
+- Explanation generation.
+
+Always show eligibility criteria and explain that recommendations do not guarantee approval.
+
+## 13. FRAUD DETECTION AND ANOMALY INTELLIGENCE
+
+Build a fraud-risk indicator system.
+
+### Detection methods
+
+- Duplicate record detection.
+- Unusual application patterns.
+- Repeated submission patterns.
+- Suspicious transaction patterns, where authorized data exists.
+- Unusual document metadata.
+- Anomaly detection.
+- Rule-based validation.
+
+### Candidate algorithms
+
+- Isolation Forest.
+- Local Outlier Factor.
+- One-Class SVM where suitable.
+- Statistical anomaly detection.
+- Rule-based checks.
+
+### Workflow
+
+1. Data ingestion.
+2. Validation.
+3. Feature engineering.
+4. Rule evaluation.
+5. Anomaly detection.
+6. Risk scoring.
+7. Alert generation.
+8. Evidence summary.
+9. Human investigation.
+10. Investigation outcome.
+
+Integrate with the Officer Portal and Fraud Intelligence Centre.
+
+Important:
+
+- An anomaly is not proof of fraud.
+- Do not automatically accuse citizens.
+- Do not automatically reject applications.
+- Preserve evidence and model explanations.
+- Require authorized human review.
+
+## 14. CITIZEN SENTIMENT ANALYSIS
+
+Implement sentiment analysis for citizen feedback.
+
+Features:
+
+- Positive sentiment.
+- Neutral sentiment.
+- Negative sentiment.
+- Feedback classification.
+- Topic identification.
+- Department-level analysis.
+- Service-level analysis.
+- Tamil feedback processing.
+- English feedback processing.
+- Trend analysis.
+
+Connect results to the Citizen Sentiment Centre.
+
+Include language and model-quality limitations.
+
+## 15. MULTI-AGENT AI ARCHITECTURE
+
+Implement a modular multi-agent architecture.
+
+Create the following agents.
+
+### 1. Orchestrator Agent
+
+Responsibilities:
+
+- Understand the user's request.
+- Select appropriate agents.
+- Manage workflow execution.
+- Coordinate tool calls.
+- Handle failures.
+- Return structured results.
+
+### 2. Citizen Service Agent
+
+Responsibilities:
+
+- Government service guidance.
+- Scheme information.
+- Application guidance.
+- Citizen queries.
+
+### 3. Knowledge Retrieval Agent
+
+Responsibilities:
+
+- Search verified government documents.
+- Retrieve relevant information.
+- Provide source references.
+- Support RAG.
+
+### 4. Document Intelligence Agent
+
+Responsibilities:
+
+- Document processing.
+- OCR.
+- Classification.
+- Field extraction.
+- Validation assistance.
+
+### 5. Complaint Management Agent
+
+Responsibilities:
+
+- Complaint classification.
+- Category suggestion.
+- Department recommendation.
+- Priority estimation.
+
+### 6. Analytics Agent
+
+Responsibilities:
+
+- Query authorized analytics.
+- Summarize trends.
+- Explain metrics.
+- Generate analytical insights.
+
+### 7. Fraud Intelligence Agent
+
+Responsibilities:
+
+- Analyze anomaly alerts.
+- Summarize evidence.
+- Provide risk explanations.
+- Support investigation.
+
+### 8. Language & Translation Agent
+
+Responsibilities:
+
+- Language detection.
+- Translation.
+- Tamil and English support.
+- Multilingual communication.
+
+### 9. Governance Monitoring Agent
+
+Responsibilities:
+
+- Monitor authorized governance indicators.
+- Summarize compliance information.
+- Identify pending reviews.
+- Generate monitoring reports.
+
+### Agent architecture requirements
+
+Define for every agent:
+
+- Role.
+- System instructions.
+- Input schema.
+- Output schema.
+- Available tools.
+- Permissions.
+- Execution conditions.
+- Failure handling.
+- Logging.
+- Human approval requirements.
+
+Use structured communication between agents.
+
+The orchestrator must enforce permissions.
+
+Agents must never directly access unrestricted databases or bypass the FastAPI authorization layer.
+
+Use deterministic tool-based workflows for sensitive operations.
+
+Require human approval for legally significant government decisions.
+
+## 16. INTELLIGENT WORKFLOW AUTOMATION
+
+Implement controlled automation for:
+
+- Application notification generation.
+- Document processing task creation.
+- Complaint classification.
+- Department routing suggestions.
+- Employee task recommendations.
+- Application status notifications.
+- Pending task reminders.
+- Report summarization.
+- AI-assisted knowledge retrieval.
+
+Use Python background workers.
+
+Implement:
+
+- Job queues.
+- Retry handling.
+- Failure tracking.
+- Idempotency where applicable.
+- Execution logs.
+- Job status monitoring.
+
+Do not allow an AI agent to execute unauthorized administrative operations.
+
+## 17. FASTAPI AI INTEGRATION
+
+Expose AI capabilities through the existing FastAPI application.
+
+Use the following API structure.
+
+### AI Chat
+
+- POST /api/v1/ai/chat
+- POST /api/v1/ai/chat/stream
+- GET /api/v1/ai/conversations
+- GET /api/v1/ai/conversations/{id}
+- POST /api/v1/ai/feedback
+
+### Knowledge Management
+
+- POST /api/v1/knowledge/documents
+- GET /api/v1/knowledge/documents
+- POST /api/v1/knowledge/documents/{id}/ingest
+- GET /api/v1/knowledge/documents/{id}/status
+- POST /api/v1/knowledge/search
+
+### OCR
+
+- POST /api/v1/ai/documents/process
+- GET /api/v1/ai/documents/{id}/status
+- GET /api/v1/ai/documents/{id}/extraction
+
+### NLP
+
+- POST /api/v1/ai/nlp/classify
+- POST /api/v1/ai/nlp/sentiment
+- POST /api/v1/ai/nlp/entities
+- POST /api/v1/ai/nlp/summarize
+
+### Voice
+
+- POST /api/v1/ai/voice/transcribe
+- POST /api/v1/ai/voice/synthesize
+
+### ML
+
+- POST /api/v1/ml/predict/complaints
+- POST /api/v1/ml/predict/demand
+- POST /api/v1/ml/predict/delay
+- POST /api/v1/ml/predict/workload
+- POST /api/v1/ml/predict/anomaly
+- GET /api/v1/ml/models
+- GET /api/v1/ml/predictions
+
+### Fraud
+
+- GET /api/v1/fraud/alerts
+- GET /api/v1/fraud/alerts/{id}
+- POST /api/v1/fraud/alerts/{id}/investigate
+
+### Agents
+
+- POST /api/v1/agents/execute
+- GET /api/v1/agents
+- GET /api/v1/agents/executions
+
+Every API must have authentication, authorization, validation, error handling and audit logging where appropriate.
+
+## 18. DATABASE INTEGRATION
+
+Integrate AI modules with the existing PostgreSQL database.
+
+Use existing entities wherever possible.
+
+Implement additional tables only when required:
+
+- ai_provider_configs
+- prompt_templates
+- embedding_models
+- ai_evaluation_runs
+- model_training_runs
+- model_versions
+- prediction_results
+- agent_registry
+- agent_executions
+- workflow_executions
+- document_processing_jobs
+
+Use pgvector for embeddings.
+
+Store:
+
+- Document references.
+- Embeddings.
+- AI conversations.
+- AI messages.
+- Prediction results.
+- Model metadata.
+- Agent execution records.
+- AI evaluation information.
+
+Maintain relationships and migrations.
+
+Do not duplicate existing tables or create a separate disconnected AI database.
+
+## 19. AI KNOWLEDGE CENTRE FRONTEND
+
+Connect the AI Knowledge Centre to real backend APIs.
+
+Include:
+
+- Knowledge document library.
+- Document upload.
+- Document search.
+- Department filtering.
+- Processing status.
+- OCR status.
+- Chunking status.
+- Embedding status.
+- Verification status.
+- Version history.
+- Document preview.
+- Retrieval testing.
+- Source details.
+
+## 20. PREDICTIVE INTELLIGENCE CENTRE FRONTEND
+
+Connect real ML prediction APIs.
+
+Include:
+
+- Prediction overview.
+- Application demand.
+- Complaint forecasting.
+- Delay prediction.
+- Workload forecasting.
+- District analysis.
+- Department analysis.
+- Historical vs predicted charts.
+- Model confidence.
+- Model information.
+- Evaluation metrics.
+
+Clearly distinguish real predictions from sample demonstration data.
+
+## 21. FRAUD INTELLIGENCE CENTRE FRONTEND
+
+Include:
+
+- Alert overview.
+- Risk categories.
+- Risk distribution.
+- Alert details.
+- Evidence summary.
+- Anomaly explanation.
+- Investigation status.
+- Investigation history.
+- Human review controls.
+
+## 22. CITIZEN AI ASSISTANT FRONTEND
+
+Connect the existing chatbot to the actual Python AI service.
+
+Implement:
+
+- Conversation creation.
+- Message submission.
+- Streaming response.
+- Conversation history.
+- Tamil and English selection.
+- Source citations.
+- Suggested questions.
+- Voice interaction.
+- Feedback.
+
+## 23. TESTING AND AI EVALUATION
+
+Create comprehensive testing.
+
+### RAG testing
+
+- Retrieval quality.
+- Source accuracy.
+- Faithfulness.
+- Hallucination checks.
+- Tamil retrieval.
+- English retrieval.
+
+### ML testing
+
+- Train/test separation.
+- Precision.
+- Recall.
+- F1-score.
+- MAE.
+- RMSE.
+- Model comparison.
+- Bias checks.
+
+### OCR testing
+
+- Extraction quality.
+- Field accuracy.
+- Document classification accuracy.
+- Low-confidence handling.
+
+### Agent testing
+
+- Correct agent selection.
+- Tool permission enforcement.
+- Failure handling.
+- Unauthorized operation prevention.
+- Structured output validation.
+
+### Security testing
+
+- Prompt injection.
+- Data leakage.
+- Unauthorized retrieval.
+- Sensitive data exposure.
+- Model provider error handling.
+
+Never claim a model is accurate without actual evaluation results.
+
+## 24. PROJECT STRUCTURE
+
+Maintain the existing monorepo.
+
+Expand the Python backend as follows:
+
+backend/
+
+- app/
+- ai_engine/
+  - llm/
+  - rag/
+  - chatbot/
+  - embeddings/
+  - retrieval/
+  - reranking/
+  - nlp/
+  - translation/
+  - speech/
+  - ocr/
+  - agents/
+  - orchestration/
+  - automation/
+  - evaluation/
+- ml_engine/
+  - preprocessing/
+  - feature_engineering/
+  - classification/
+  - forecasting/
+  - anomaly_detection/
+  - recommendation/
+  - training/
+  - inference/
+  - evaluation/
+  - registry/
+- workers/
+- migrations/
+- tests/
+
+Keep business logic separate from AI infrastructure.
+
+## 25. EXECUTION RULES
+
+1. Inspect the existing Phase 3 project before modifications.
+2. Reuse the existing FastAPI backend.
+3. Reuse the existing PostgreSQL database.
+4. Preserve existing frontend designs.
+5. Use Python for all AI and ML processing.
+6. Do not replace working Phase 3 features.
+7. Do not hardcode API keys.
+8. Do not fabricate training datasets.
+9. Do not invent model accuracy.
+10. Do not return unsupported AI answers.
+11. Do not allow agents to bypass authorization.
+12. Do not make automatic legally significant decisions.
+13. Use verified government knowledge sources.
+14. Label sample data clearly.
+15. Create proper database migrations.
+16. Implement automated tests.
+17. Maintain structured logging.
+18. Keep model providers interchangeable.
+19. Validate Tamil and English separately.
+20. Document incomplete functionality honestly.
+
+If model training is blocked by unavailable datasets, hardware or dependencies, implement the training pipeline and report the limitation. Do not substitute fabricated metrics.
+
+If the environment cannot run a particular model, implement a clean provider interface and document how it will be deployed in the appropriate runtime.
+
+## 26. PHASE 4 ACCEPTANCE CRITERIA
+
+Phase 4 is complete when:
+
+- [ ] LLM provider integration works.
+- [ ] RAG ingestion pipeline works.
+- [ ] Embedding generation works.
+- [ ] pgvector retrieval works.
+- [ ] Hybrid search and reranking are implemented and evaluated.
+- [ ] Source-grounded AI responses work.
+- [ ] Citizen AI assistant is connected.
+- [ ] Tamil and English AI support works.
+- [ ] Voice assistant pipeline is implemented.
+- [ ] OCR document processing works.
+- [ ] NLP engine is integrated.
+- [ ] Complaint classification works.
+- [ ] Application delay prediction pipeline works.
+- [ ] Demand forecasting pipeline works.
+- [ ] Anomaly detection pipeline works.
+- [ ] Scheme recommendation engine works.
+- [ ] Sentiment analysis is integrated.
+- [ ] Multi-agent architecture works.
+- [ ] Workflow automation works.
+- [ ] AI APIs are connected to FastAPI.
+- [ ] AI data is stored correctly.
+- [ ] Model evaluation is documented.
+- [ ] Security and permission controls are verified.
+- [ ] Existing Phase 3 functionality remains operational.
+
+## 27. FINAL EXECUTION REPORT
+
+After implementation, provide:
+
+1. AI architecture summary.
+2. LLM providers integrated.
+3. RAG implementation status.
+4. Embedding and vector search details.
+5. Citizen chatbot status.
+6. Tamil and English support status.
+7. Voice assistant status.
+8. OCR implementation status.
+9. NLP implementation status.
+10. ML models implemented.
+11. Actual model evaluation results.
+12. Fraud detection status.
+13. Recommendation engine status.
+14. Multi-agent implementation status.
+15. Automation workflows implemented.
+16. APIs created.
+17. Database changes.
+18. Frontend integrations.
+19. Testing results.
+20. Pending issues and technical limitations.
+21. Phase 5 readiness assessment.
+
+Clearly mark every feature as Completed, Partially Completed, Pending or Blocked.
+
+# FINAL INSTRUCTION
+
+Start by inspecting the existing GovAI Nexus Phase 3 project.
+
+Implement the complete AI intelligence layer using Python.
+
+Integrate RAG, LLM, ML, NLP, OCR, Tamil voice assistant, predictive analytics, fraud detection, recommendation systems, multi-agent orchestration and intelligent automation.
+
+Connect every capability to the existing FastAPI backend, PostgreSQL database and approved frontend designs.
+
+**Transform GovAI Nexus into a secure, explainable, multilingual and intelligent digital governance platform.**

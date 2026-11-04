@@ -1,0 +1,2788 @@
+# GOVAI NEXUS – SUPER ADMIN PORTAL
+# COMPLETE MASTER PROMPT FOR UI/UX DESIGN, FRONTEND, BACKEND, DATABASE, SECURITY & SYSTEM MANAGEMENT
+
+## 1. PROJECT OVERVIEW
+
+Project Name: GovAI Nexus  
+Tagline: Smarter Government. Faster Services. Transparent Governance.  
+Organization: Government of Tamil Nadu  
+Portal: Super Admin Portal  
+Languages: English + Tamil  
+Platforms: Web Application + Responsive Mobile
+
+You are working on an existing enterprise-level GovTech platform called GovAI Nexus.
+
+Your task is to design, develop and integrate the complete Super Admin Portal into the existing GovAI Nexus ecosystem.
+
+The Super Admin Portal is the central administrative control centre responsible for managing the entire platform.
+
+It must provide centralized management of:
+
+1. Users and accounts.
+2. Citizens, employees and officers.
+3. Departments and organizational structures.
+4. Roles and permissions.
+5. Government services.
+6. Government schemes.
+7. AI and ML models.
+8. System configurations.
+9. Security and audit logs.
+10. External integrations.
+11. Notifications and announcements.
+12. Platform monitoring and maintenance.
+
+### Main objectives
+
+- Centralized platform administration.
+- Secure user and account management.
+- Department and portal management.
+- Role-based access control.
+- Government service configuration.
+- Scheme and document master management.
+- AI model and knowledge-base management.
+- System health monitoring.
+- Security and compliance monitoring.
+- Platform-wide audit management.
+- Integration management.
+- Administrative analytics.
+
+### Mandatory technology stack
+
+Make Python the primary programming language.
+
+Frontend:
+- React 19.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide React.
+- TanStack Query.
+- Zustand.
+- Recharts.
+
+Backend:
+- Python 3.12+.
+- FastAPI.
+- Pydantic.
+- SQLAlchemy 2.
+- Alembic.
+
+Database:
+- PostgreSQL.
+- pgvector.
+- Redis.
+
+AI/ML:
+- Python.
+- Gemini or configured LLM providers.
+- OpenAI or authorized alternative providers.
+- Hugging Face.
+- Sentence Transformers.
+- Scikit-learn.
+- XGBoost.
+- PyTorch.
+- Pandas.
+- NumPy.
+
+DevOps:
+- Docker.
+- GitHub Actions.
+- OpenTelemetry.
+- Prometheus.
+- Grafana.
+- Sentry.
+
+### Important implementation rules
+
+1. Inspect the existing GovAI Nexus repository before development.
+2. Reuse existing authentication and database infrastructure.
+3. Do not create a separate disconnected admin application.
+4. Do not duplicate existing master tables.
+5. Implement real database-backed functionality.
+6. Connect all administrative actions to actual backend APIs.
+7. Implement backend authorization for every administrative action.
+8. Do not use hardcoded production statistics.
+9. Do not create fake government users or departments.
+10. Maintain consistency across all six GovAI Nexus portals.
+11. Keep sensitive system operations restricted to authorized Super Admin roles.
+12. Use confirmation and audit logging for critical administrative actions.
+
+---
+
+# 2. SUPER ADMIN PORTAL – DESIGN SYSTEM
+
+Follow the existing GovAI Nexus design system used in the Citizen, Employee and Officer Portals.
+
+### Brand colour palette
+
+- Primary Navy: #102A43
+- Dark Navy: #071B3B
+- Primary Blue: #2563EB
+- Primary Purple: #6D28D9
+- Secondary Purple: #7C3AED
+- Teal: #0F766E
+- Background: #F8FAFC
+- Card Background: #FFFFFF
+- Primary Text: #0F172A
+- Secondary Text: #64748B
+- Border: #E2E8F0
+
+### Design style
+
+- Premium government enterprise administration interface.
+- Navy-blue government header.
+- Dark navy left sidebar.
+- Purple gradient active navigation.
+- White rounded dashboard cards.
+- Soft shadows and subtle borders.
+- Modern outline icons.
+- Clean charts and tables.
+- Professional typography.
+- Clear status indicators.
+- Consistent spacing.
+- Responsive desktop, tablet and mobile design.
+
+### Typography
+
+- English: Inter or Poppins.
+- Tamil: Noto Sans Tamil.
+
+### Common header
+
+Every Super Admin page must contain:
+
+- Government of Tamil Nadu emblem.
+- GovAI Nexus logo.
+- Super Admin Portal badge.
+- Global search.
+- English / Tamil language selector.
+- Font size controls.
+- Notification icon with unread count.
+- System status indicator.
+- Admin profile photograph/avatar.
+- Admin name and role.
+- Profile dropdown.
+- Logout.
+
+### Global search
+
+Allow Super Admins to search authorized records across:
+
+- Users.
+- Employees.
+- Officers.
+- Departments.
+- Offices.
+- Services.
+- Schemes.
+- Roles.
+- Permissions.
+- AI models.
+- Integrations.
+- Audit events.
+
+Search results must respect administrative permissions and must not expose secrets or sensitive personal data.
+
+---
+
+# 3. LEFT SIDEBAR – COMPLETE NAVIGATION STRUCTURE
+
+Create a fixed, collapsible, dark navy sidebar.
+
+Use purple gradient highlighting for the active navigation item.
+
+## Main navigation
+
+1. Dashboard
+
+2. User Management
+   - All Users
+   - Citizen Accounts
+   - Employee Accounts
+   - Officer Accounts
+   - Super Admin Accounts
+   - Pending Accounts
+   - Suspended Accounts
+   - User Activity
+
+3. Department Management
+   - All Departments
+   - Department Details
+   - Department Offices
+   - District Management
+   - Taluk Management
+   - Organizational Structure
+
+4. Roles & Permissions
+   - Role Management
+   - Permission Management
+   - Role Assignment
+   - Access Control Matrix
+   - Access Review
+
+5. Service Management
+   - Government Services
+   - Government Schemes
+   - Certificates
+   - Documents Directory
+   - Licences & Permits
+   - Application Forms
+   - Eligibility Rules
+   - Official Application Links
+
+6. AI Model Management
+   - AI Dashboard
+   - LLM Provider Management
+   - Model Registry
+   - ML Model Management
+   - RAG Knowledge Base
+   - Embedding Management
+   - AI Agent Management
+   - Model Evaluation
+   - AI Usage Monitoring
+
+7. System Configuration
+   - General Settings
+   - Portal Configuration
+   - Language Settings
+   - Notification Settings
+   - Email / SMS Settings
+   - API Configuration
+   - Integration Management
+   - Storage Management
+   - Backup & Recovery
+   - Feature Flags
+
+8. Security & Audit Logs
+   - Security Dashboard
+   - Audit Logs
+   - Login History
+   - Failed Login Attempts
+   - Active Sessions
+   - Access History
+   - Security Alerts
+   - Data Access Logs
+
+9. Notifications & Announcements
+   - Notifications
+   - Broadcast Messages
+   - Announcements
+   - Templates
+   - Notification History
+
+10. Reports & Analytics
+    - Platform Analytics
+    - User Analytics
+    - Department Analytics
+    - Service Analytics
+    - AI Analytics
+    - Security Reports
+    - System Reports
+
+11. Help & Support
+
+12. Admin Profile & Settings
+
+Make navigation groups expandable and collapsible.
+
+Display notification counts beside relevant sections.
+
+Implement sidebar permissions so administrators only see sections they are authorized to access.
+
+---
+
+# 4. PAGE 1 – SUPER ADMIN LOGIN
+
+Route: /admin/login
+
+Create a professional, secure administration login page.
+
+### Left panel
+
+Display:
+
+- GovAI Nexus logo.
+- Government of Tamil Nadu branding.
+- Super Admin Portal title.
+- Government Secretariat illustration.
+- Platform administration introduction.
+- Security message.
+
+### Right panel – Login card
+
+Fields:
+
+- Admin ID.
+- Official email / username.
+- Password.
+- Show / Hide Password.
+- Remember Device, where permitted.
+- Forgot Password.
+- Login button.
+
+### Security features
+
+- Strong password policy.
+- Secure password hashing.
+- Rate limiting.
+- Account lockout.
+- Optional MFA.
+- Secure session management.
+- Session expiration.
+- Login history.
+- Device/session management.
+- Password reset workflow.
+- Unauthorized access protection.
+
+Require MFA for privileged administration according to the configured security policy.
+
+After successful authentication, redirect to:
+
+/admin/dashboard
+
+Never expose default administrator credentials or hardcoded passwords.
+
+---
+
+# 5. PAGE 2 – SUPER ADMIN DASHBOARD
+
+Route: /admin/dashboard
+
+Create the central administrative dashboard.
+
+This is the first page displayed after a successful Super Admin login.
+
+The dashboard must provide an overview of the entire GovAI Nexus platform.
+
+## A. Welcome Banner
+
+Display:
+
+- Welcome message.
+- Admin name.
+- Admin profile image.
+- Administrator designation.
+- System role.
+- Current date and time.
+- Last login information.
+
+Banner title:
+
+"Welcome, [Admin Name]"
+
+Subtitle:
+
+"Manage, monitor and secure the entire GovAI Nexus digital governance ecosystem."
+
+Include a professional government-themed illustration.
+
+## B. Platform Overview KPI Cards
+
+Create the following metric cards using actual database records.
+
+1. Total Registered Users.
+2. Active Users.
+3. Total Departments.
+4. Total Government Services.
+5. Total Government Schemes.
+6. Total Applications.
+7. Active AI Models.
+8. System Health.
+
+Each card must display:
+
+- Title.
+- Actual metric.
+- Relevant icon.
+- Percentage change where calculable.
+- Previous reporting period comparison.
+- Clickable action.
+
+Clicking a card must open the relevant detailed management page.
+
+## C. User Distribution Overview
+
+Create a donut chart displaying:
+
+- Citizens.
+- Employees.
+- Department Officers.
+- HODs.
+- Super Admins.
+
+Display actual user counts and percentage distribution.
+
+## D. Portal Usage Analytics
+
+Create a chart comparing platform activity across:
+
+- Public Government Website.
+- Citizen Portal.
+- Employee Portal.
+- Officer Portal.
+- Super Admin Portal.
+- AI & Analytics Centre.
+
+Metrics:
+
+- Active Users.
+- Login Count.
+- Page Visits.
+- API Requests, where available.
+
+Provide date filters:
+
+- Today.
+- Last 7 Days.
+- Last 30 Days.
+- Last 3 Months.
+- Custom Date Range.
+
+## E. Department Overview
+
+Create a department summary table.
+
+Columns:
+
+- Department Name.
+- Department Code.
+- Total Employees.
+- Active Services.
+- Applications.
+- Department Status.
+- Actions.
+
+Actions:
+
+- View.
+- Manage.
+- View Analytics.
+
+## F. Application Platform Overview
+
+Display:
+
+- Applications Received.
+- Applications Processed.
+- Pending Applications.
+- Approved Applications.
+- Rejected Applications.
+- Delayed Applications.
+
+Create a status distribution chart.
+
+These figures must be aggregated from the central application database, not entered manually.
+
+## G. System Health Overview
+
+Display:
+
+- Backend API Status.
+- Database Status.
+- Redis Status.
+- AI Service Status.
+- Storage Status.
+- Background Worker Status.
+- External Integration Status.
+
+Show:
+
+- Healthy.
+- Degraded.
+- Down.
+- Unknown.
+
+Display last health-check time.
+
+Only show a healthy status when a successful health check supports it.
+
+## H. AI Platform Overview
+
+Display:
+
+- Active LLM Providers.
+- Active AI Models.
+- RAG Knowledge Documents.
+- Indexed Knowledge Chunks.
+- AI Requests Today.
+- AI Error Rate.
+- Average Response Time.
+- Model Health.
+
+Do not invent model performance metrics.
+
+## I. Security Overview
+
+Display:
+
+- Active Admin Sessions.
+- Failed Login Attempts.
+- Security Alerts.
+- Suspicious Login Events.
+- Privileged Account Changes.
+- Recent Critical Audit Events.
+
+## J. Recent System Activities
+
+Create a timeline:
+
+- User Created.
+- Employee Activated.
+- Department Updated.
+- Role Permission Changed.
+- Service Published.
+- AI Model Updated.
+- System Configuration Changed.
+- Security Alert Triggered.
+
+Display:
+
+- Time.
+- Action.
+- Actor.
+- Affected Resource.
+- Event Status.
+
+## K. Critical Alerts Panel
+
+Display:
+
+- Database connectivity issues.
+- Backend API failures.
+- High API error rate.
+- AI model failures.
+- Expired integration credentials.
+- Failed scheduled jobs.
+- Unusual privileged account activity.
+- Backup failures.
+- Storage capacity warnings.
+
+## L. Quick Actions
+
+Create quick-action cards:
+
+1. Add User.
+2. Add Department.
+3. Manage Roles.
+4. Add Government Service.
+5. Add Government Scheme.
+6. Manage AI Models.
+7. View Audit Logs.
+8. System Configuration.
+9. Manage Integrations.
+10. Generate Platform Report.
+
+## M. Admin AI Assistant
+
+Add an Ask GovAI Admin Assistant.
+
+Example queries:
+
+- How many active users are registered?
+- Which departments have the highest application volume?
+- Are all platform services operational?
+- Which AI models are currently active?
+- Show recent security alerts.
+- Which government service links need verification?
+- Summarize the system activity for this week.
+
+The assistant must only access authorized administrative data and provide source-backed responses.
+
+---
+
+# 6. PAGE 3 – USER MANAGEMENT
+
+Route: /admin/users
+
+Create a complete centralized user administration system.
+
+## A. User Management Overview Cards
+
+Display:
+
+1. Total Users.
+2. Active Users.
+3. Pending Accounts.
+4. Suspended Accounts.
+5. Inactive Accounts.
+6. New Registrations.
+7. Locked Accounts.
+
+## B. User Type Tabs
+
+Create:
+
+- All Users.
+- Citizens.
+- Employees.
+- Department Officers.
+- HODs.
+- Super Admins.
+
+## C. User Search & Filters
+
+Support:
+
+- User ID.
+- Name.
+- Email.
+- Mobile Number.
+- Department.
+- District.
+- Role.
+- Account Status.
+- Registration Date.
+- Last Login.
+
+Use masked identifiers where appropriate.
+
+## D. User Directory Table
+
+Columns:
+
+- User ID.
+- Name.
+- User Type.
+- Email.
+- Department.
+- Assigned Role.
+- Account Status.
+- Registration Date.
+- Last Login.
+- Actions.
+
+Actions:
+
+- View Profile.
+- Edit Permitted Details.
+- Activate.
+- Deactivate.
+- Suspend.
+- Unlock Account.
+- Reset Authentication, through secure workflows.
+- Assign Role.
+- View Activity History.
+
+## E. Add User
+
+Create a dynamic Add User form.
+
+Fields:
+
+- Full Name.
+- Email.
+- Mobile Number.
+- User Type.
+- Department.
+- Office.
+- District.
+- Designation.
+- Role.
+- Account Status.
+
+Apply conditional fields based on user type.
+
+## F. User Details Page
+
+Route: /admin/users/:userId
+
+Sections:
+
+1. Basic Information.
+2. Account Information.
+3. Assigned Roles.
+4. Department / Office Mapping.
+5. Account Status.
+6. Login History.
+7. Recent Activities.
+8. Permission Summary.
+9. Security Events.
+
+## G. Account Management Actions
+
+- Create Account.
+- Edit Account.
+- Activate.
+- Deactivate.
+- Suspend.
+- Reactivate.
+- Reset Password through secure process.
+- Revoke Sessions.
+- Assign / Remove Roles.
+- View Audit History.
+
+Require confirmation for suspension, deactivation, role changes and other critical actions.
+
+Never allow an administrator to retrieve a user's existing password.
+
+## H. User Import & Export
+
+Support controlled bulk onboarding through validated CSV / Excel imports.
+
+Features:
+
+- Upload.
+- Column Mapping.
+- Validation.
+- Duplicate Detection.
+- Preview.
+- Import Summary.
+- Error Report.
+
+Require appropriate permissions and audit all bulk operations.
+
+---
+
+# 7. PAGE 4 – DEPARTMENT MANAGEMENT
+
+Route: /admin/departments
+
+Create a centralized organizational management workspace.
+
+## A. Department Summary Cards
+
+Display:
+
+- Total Departments.
+- Active Departments.
+- Inactive Departments.
+- Total Offices.
+- Total District Mappings.
+- Total Department Employees.
+
+## B. Department Directory
+
+Columns:
+
+- Department ID.
+- Department Name.
+- Tamil Name.
+- Department Code.
+- Department Head.
+- Total Employees.
+- Total Services.
+- Department Status.
+- Actions.
+
+## C. Add Department
+
+Create a complete form:
+
+- Department Name.
+- Tamil Name.
+- Department Code.
+- Description.
+- Department Logo.
+- Official Website.
+- Email.
+- Contact Number.
+- Headquarters Address.
+- Responsible Officer.
+- Department Status.
+
+Validate unique department codes.
+
+## D. Department Details
+
+Route: /admin/departments/:departmentId
+
+Tabs:
+
+1. Overview.
+2. Profile.
+3. Offices.
+4. Districts.
+5. Taluks.
+6. Employees.
+7. Officers.
+8. Services.
+9. Schemes.
+10. Applications.
+11. Analytics.
+12. Activity History.
+
+## E. Office Management
+
+Create an office directory:
+
+- Office ID.
+- Office Name.
+- Office Type.
+- Department.
+- District.
+- Taluk.
+- Address.
+- Contact.
+- Office Head.
+- Employee Count.
+- Status.
+
+Actions:
+
+- Add Office.
+- Edit.
+- View.
+- Assign Department.
+- Map District.
+- Deactivate, if authorized.
+
+## F. District & Taluk Mapping
+
+Display the administrative hierarchy.
+
+Support:
+
+- Department-to-district mapping.
+- District-to-taluk mapping.
+- Taluk-to-office mapping.
+- Employee-to-office mapping.
+- Officer jurisdiction mapping.
+
+Do not create or modify official geographic boundaries without authorized source records and approval.
+
+## G. Department Analytics
+
+Display:
+
+- Department User Count.
+- Employee Count.
+- Service Count.
+- Application Volume.
+- Pending Applications.
+- Processing Trends.
+- Department Activity.
+
+---
+
+# 8. PAGE 5 – ROLES & PERMISSIONS
+
+Route: /admin/roles-permissions
+
+Create a centralized Role-Based Access Control management system.
+
+## A. Permission Overview Cards
+
+Display:
+
+- Total Roles.
+- Active Roles.
+- Total Permissions.
+- Users with Privileged Access.
+- Pending Access Reviews.
+- Recent Permission Changes.
+
+## B. Default Role Categories
+
+Create configurable role categories:
+
+### Citizen Roles
+
+- Citizen.
+- Verified Citizen, where applicable.
+
+### Employee Roles
+
+- Employee.
+- Junior Assistant.
+- Clerk.
+- e-Sevai Operator.
+- Document Verification Officer.
+- Application Processing Officer.
+
+### Officer Roles
+
+- Taluk Officer.
+- District Officer.
+- Regional Officer.
+- Department Officer.
+- HOD.
+
+### Administrative Roles
+
+- Super Admin.
+- System Administrator.
+- Security Administrator.
+- AI Administrator.
+- Service Administrator.
+- Read-Only Auditor.
+
+These are configurable application roles, not automatic declarations of official government rank or legal authority.
+
+## C. Role Directory
+
+Columns:
+
+- Role ID.
+- Role Name.
+- Role Category.
+- Description.
+- Assigned Users.
+- Permission Count.
+- Status.
+- Actions.
+
+Actions:
+
+- View.
+- Edit.
+- Duplicate.
+- Assign.
+- Deactivate.
+
+## D. Add / Edit Role
+
+Fields:
+
+- Role Name.
+- Role Code.
+- Description.
+- Role Category.
+- Permission Set.
+- Status.
+
+## E. Permission Management
+
+Create granular permission categories.
+
+### User Permissions
+
+- View Users.
+- Create Users.
+- Edit Users.
+- Suspend Users.
+- Activate Users.
+- Delete or De-identify, where legally permitted.
+
+### Department Permissions
+
+- View Departments.
+- Create Departments.
+- Edit Departments.
+- Manage Offices.
+- Manage Jurisdictions.
+
+### Application Permissions
+
+- View Applications.
+- Assign Applications.
+- Process Applications.
+- Verify Documents.
+- Recommend Approval.
+- Approve, only where formally delegated.
+- Reject, only where formally delegated.
+
+### Service Permissions
+
+- View Services.
+- Create Services.
+- Edit Services.
+- Publish Services.
+- Manage Application Forms.
+
+### AI Permissions
+
+- View AI Models.
+- Configure AI Providers.
+- Activate / Deactivate Models.
+- Manage Knowledge Base.
+- Evaluate Models.
+
+### System Permissions
+
+- View System Configuration.
+- Update System Configuration.
+- Manage Integrations.
+- View Audit Logs.
+- Manage Security Policies.
+- Manage Backups.
+
+### Reporting Permissions
+
+- View Reports.
+- Generate Reports.
+- Export Reports.
+- View Sensitive Analytics, where authorized.
+
+## F. Access Control Matrix
+
+Create a visual permission matrix.
+
+Rows: Permissions.
+
+Columns: Roles.
+
+Controls:
+
+- View.
+- Create.
+- Edit.
+- Delete.
+- Approve.
+- Export.
+- Manage.
+
+Use checkboxes or controlled toggles.
+
+Save changes through backend APIs.
+
+## G. User Role Assignment
+
+Allow administrators with sufficient privileges to:
+
+- Assign Roles.
+- Remove Roles.
+- Assign Department.
+- Assign Office.
+- Set Jurisdiction.
+- Set Access Expiry.
+- Review Effective Permissions.
+
+## H. Access Review
+
+Create periodic access review features.
+
+Display:
+
+- Privileged Accounts.
+- Inactive Accounts with Access.
+- Unused Permissions.
+- Expiring Role Assignments.
+- Recently Elevated Accounts.
+
+Support review decisions and audit trails.
+
+## I. Security Safeguards
+
+- Enforce least privilege.
+- Prevent unauthorized privilege escalation.
+- Restrict self-elevation.
+- Protect critical roles.
+- Require additional confirmation for privileged changes.
+- Log all permission changes.
+- Prevent accidental removal of the last authorized platform administrator.
+
+---
+
+# 9. PAGE 6 – SERVICE MANAGEMENT
+
+Route: /admin/services
+
+Create a centralized government service administration system.
+
+This module must integrate with the Citizen Portal's Government Services, Certificates, Documents Directory, Licences & Permits and Apply Here pages.
+
+## A. Service Summary Cards
+
+Display:
+
+- Total Services.
+- Active Services.
+- Draft Services.
+- Inactive Services.
+- Services Pending Verification.
+- Services with Broken Links.
+- Services Requiring Review.
+
+## B. Service Categories
+
+Create:
+
+1. Revenue Services.
+2. Identity Services.
+3. Certificate Services.
+4. Education Services.
+5. Healthcare Services.
+6. Agriculture Services.
+7. Land & Property Services.
+8. Transport Services.
+9. Business Services.
+10. Social Welfare Services.
+11. Utility Services.
+12. Local Body Services.
+13. Licences & Permits.
+14. Other Government Services.
+
+## C. Service Directory
+
+Columns:
+
+- Service ID.
+- Service Name.
+- Category.
+- Department.
+- Application Mode.
+- Fee.
+- Processing Timeline.
+- Status.
+- Last Verified.
+- Actions.
+
+## D. Add Government Service
+
+Fields:
+
+- Service Name.
+- Tamil Name.
+- Service Code.
+- Description.
+- Tamil Description.
+- Category.
+- Department.
+- Issuing Authority.
+- Eligibility.
+- Required Documents.
+- Application Fee.
+- Processing Timeline.
+- Service Type.
+- Application Mode.
+- Official Information URL.
+- Official Application URL.
+- Service Status.
+
+Support configurable dynamic application forms.
+
+## E. Service Details Page
+
+Route: /admin/services/:serviceId
+
+Tabs:
+
+1. Overview.
+2. Description.
+3. Eligibility Rules.
+4. Document Requirements.
+5. Application Form.
+6. Fees.
+7. Processing Rules.
+8. Official Links.
+9. Application Analytics.
+10. Version History.
+
+## F. Certificate Management
+
+Create a certificate master catalogue.
+
+Examples:
+
+- Income Certificate.
+- Community Certificate.
+- Nativity Certificate.
+- Residence Certificate.
+- First Graduate Certificate.
+- Legal Heir Certificate.
+- Birth Certificate.
+- Death Certificate.
+- Other officially available certificates.
+
+Each certificate must have:
+
+- Description.
+- Issuing Department.
+- Eligibility.
+- Required Documents.
+- Application Process.
+- Official Portal.
+- Application Mode.
+- Last Verified Date.
+
+## G. Document Directory Management
+
+Manage:
+
+- Identity Documents.
+- Address Proofs.
+- Educational Records.
+- Financial Records.
+- Revenue Certificates.
+- Property Documents.
+- Healthcare Documents.
+- Employment Documents.
+- Transport Documents.
+
+Support:
+
+- Add Document.
+- Edit Description.
+- Update Category.
+- Update Accepted File Types.
+- Configure File Size.
+- Manage Verification Requirements.
+- Link Documents to Services.
+
+## H. Licence & Permit Management
+
+Manage:
+
+- Business Licences.
+- Professional Licences.
+- Trade Licences.
+- FSSAI.
+- GST Registration.
+- Udyam Registration.
+- Building Permissions.
+- Transport Permits.
+- Pollution Consents.
+- Other applicable licences.
+
+For every licence, maintain:
+
+- Issuing Authority.
+- Purpose.
+- Eligibility.
+- Required Documents.
+- Application URL.
+- Fee, if verified.
+- Validity.
+- Renewal Rules.
+- Official Sources.
+
+## I. Government Scheme Management
+
+Manage Tamil Nadu and Central Government schemes.
+
+For each scheme:
+
+- Scheme Name.
+- Tamil Name.
+- Scheme Category.
+- State / Central / Joint Classification.
+- Department.
+- Description.
+- Benefits.
+- Eligibility.
+- Required Documents.
+- Application Procedure.
+- Official Apply URL.
+- Information URL.
+- Government Order / Notification.
+- Scheme Status.
+- Last Verified Date.
+
+Do not publish unverified scheme details as active official information.
+
+## J. Eligibility Rule Management
+
+Create configurable eligibility rules.
+
+Support:
+
+- Age.
+- Income.
+- District.
+- Occupation.
+- Education.
+- Gender, when relevant.
+- Marital Status, when relevant.
+- Disability status, when relevant.
+- Other officially prescribed conditions.
+
+Use structured rule definitions and backend validation.
+
+AI may explain rules but must not invent or independently modify official eligibility criteria.
+
+## K. Application Form Builder
+
+Create a dynamic form builder.
+
+Field types:
+
+- Text.
+- Number.
+- Email.
+- Mobile.
+- Date.
+- Dropdown.
+- Radio.
+- Checkbox.
+- Address.
+- File Upload.
+- Conditional Section.
+- Declaration.
+- Consent.
+
+Features:
+
+- Add Fields.
+- Edit Fields.
+- Reorder Fields.
+- Configure Validation.
+- Set Required / Optional.
+- Configure Conditional Logic.
+- Preview Form.
+- Save Draft.
+- Publish Version.
+- Roll Back Version.
+
+## L. Official Link Management
+
+Manage:
+
+- Information URLs.
+- Application URLs.
+- Download URLs.
+- Government Order URLs.
+- Guideline URLs.
+
+Track:
+
+- Link Status.
+- Last Verified Date.
+- Verification Method.
+- HTTP Result, where available.
+- Last Verification Error.
+- Next Review Date.
+
+Never fabricate official application links.
+
+---
+
+# 10. PAGE 7 – AI MODEL MANAGEMENT
+
+Route: /admin/ai-models
+
+Create a comprehensive AI and ML administration centre.
+
+This module controls the AI infrastructure powering GovAI Nexus.
+
+## A. AI Overview Cards
+
+Display:
+
+- Active LLM Providers.
+- Registered AI Models.
+- Active ML Models.
+- Total AI Requests.
+- AI Requests Today.
+- Average Response Time.
+- AI Error Rate.
+- RAG Knowledge Documents.
+
+## B. AI Provider Management
+
+Manage configured AI providers.
+
+Examples:
+
+- Google Gemini.
+- OpenAI.
+- Hugging Face-hosted models.
+- Authorized self-hosted LLMs.
+- Other approved providers.
+
+Display:
+
+- Provider Name.
+- Provider Type.
+- Connection Status.
+- Available Models.
+- Usage.
+- Configuration Status.
+
+Actions:
+
+- Add Provider.
+- Configure Provider.
+- Test Connection.
+- Enable.
+- Disable.
+- View Usage.
+
+Never expose API keys in frontend responses, logs or database plaintext.
+
+Use encrypted secret management.
+
+## C. LLM Model Registry
+
+Columns:
+
+- Model ID.
+- Model Name.
+- Provider.
+- Model Type.
+- Version.
+- Context Capacity, if documented.
+- Status.
+- Last Tested.
+- Actions.
+
+Features:
+
+- Register Model.
+- Configure Model.
+- Test Inference.
+- Set Active Model.
+- Configure Fallback.
+- Deactivate Model.
+
+## D. Machine Learning Model Management
+
+Manage models for:
+
+- Application Delay Prediction.
+- Academic / Citizen Service Demand Forecasting, where relevant.
+- Workload Forecasting.
+- Complaint Classification.
+- Sentiment Analysis.
+- Anomaly Detection.
+- Scheme Recommendation.
+
+Display:
+
+- Model Name.
+- Model Type.
+- Version.
+- Training Dataset.
+- Training Date.
+- Evaluation Metrics.
+- Model Status.
+- Last Prediction.
+
+Support:
+
+- Model Registration.
+- Model Versioning.
+- Evaluation.
+- Deployment.
+- Rollback.
+- Deactivation.
+
+Do not invent accuracy, F1-score or other model metrics.
+
+## E. RAG Knowledge Base Management
+
+Route: /admin/ai-models/knowledge-base
+
+Manage official government knowledge sources.
+
+Content types:
+
+- Government Orders.
+- Scheme Guidelines.
+- Government Service Documents.
+- Eligibility Rules.
+- Application Guidelines.
+- Official FAQs.
+- Department Circulars.
+- Licence Rules.
+- Document Requirements.
+
+Features:
+
+- Upload PDF.
+- Upload DOCX.
+- Upload TXT.
+- Add Official URL.
+- Extract Text.
+- Clean Text.
+- Chunk Documents.
+- Generate Embeddings.
+- Store in pgvector.
+- View Indexed Documents.
+- Re-index.
+- Deactivate.
+- Delete, subject to retention policy.
+
+Display:
+
+- Document Name.
+- Department.
+- Source URL.
+- Version.
+- Chunk Count.
+- Embedding Status.
+- Last Indexed Date.
+- Verification Status.
+
+## F. Embedding Management
+
+Display:
+
+- Embedding Model.
+- Model Version.
+- Vector Dimensions.
+- Indexed Records.
+- Processing Status.
+- Last Update.
+
+Support:
+
+- Embedding Configuration.
+- Re-embedding Jobs.
+- Failed Job Review.
+- Index Health.
+
+## G. AI Agent Management
+
+Manage the configured AI agents:
+
+1. Citizen Assistant Agent.
+2. Scheme Finder Agent.
+3. Eligibility Agent.
+4. Document Assistant Agent.
+5. Application Guidance Agent.
+6. Employee Assistant Agent.
+7. Department Intelligence Agent.
+8. Predictive Analytics Agent.
+9. Fraud / Anomaly Detection Agent.
+10. Report Generation Agent.
+11. Workflow Assistant Agent.
+
+Display:
+
+- Agent Name.
+- Purpose.
+- Connected Model.
+- Tools / Permissions.
+- Status.
+- Last Execution.
+- Error Count.
+
+Actions:
+
+- View Agent.
+- Configure.
+- Activate.
+- Deactivate.
+- Test.
+- View Logs.
+
+Agents must never receive permissions beyond their authorized scope.
+
+## H. AI Evaluation & Monitoring
+
+Display:
+
+- Response Latency.
+- Request Volume.
+- Error Rate.
+- RAG Retrieval Performance.
+- Groundedness Evaluation.
+- Citation Coverage.
+- Model Usage.
+- Token Consumption, where available.
+- Provider Availability.
+
+Support:
+
+- Test Prompts.
+- Evaluation Datasets.
+- Evaluation Runs.
+- Model Comparisons.
+- Regression Testing.
+- Version History.
+
+Do not present evaluation metrics unless calculated from actual evaluation results.
+
+---
+
+# 11. PAGE 8 – SYSTEM CONFIGURATION
+
+Route: /admin/system-configuration
+
+Create a centralized system configuration workspace.
+
+## A. System Overview Cards
+
+Display:
+
+- Application Version.
+- Backend Status.
+- Database Status.
+- Cache Status.
+- Storage Status.
+- Active Integrations.
+- Scheduled Jobs.
+- Last Backup.
+
+## B. General Settings
+
+Manage:
+
+- Platform Name.
+- Platform Tagline.
+- Government Identity.
+- Logo.
+- Default Language.
+- Supported Languages.
+- Default Time Zone.
+- Date Format.
+- Currency.
+- Contact Details.
+- Support Information.
+
+## C. Portal Configuration
+
+Manage configurations for:
+
+1. Public Website.
+2. Citizen Portal.
+3. Employee Portal.
+4. Officer Portal.
+5. Super Admin Portal.
+6. AI & Analytics Centre.
+
+Settings:
+
+- Portal Name.
+- Portal Logo.
+- Portal Status.
+- Navigation Configuration.
+- Feature Availability.
+- Maintenance Mode.
+- Accessibility Settings.
+
+Do not allow accidental disabling of the last functioning administrative access route.
+
+## D. Language Configuration
+
+Manage:
+
+- English.
+- Tamil.
+- Future supported languages.
+
+Features:
+
+- Translation Keys.
+- Language Labels.
+- Default Language.
+- Language Availability.
+- Translation Completeness.
+
+## E. Notification Configuration
+
+Manage:
+
+- In-App Notifications.
+- Email Notifications.
+- SMS Notifications.
+- Push Notifications.
+- Notification Templates.
+- Event Triggers.
+- Retry Policies.
+
+External notification providers must be explicitly configured and authorized.
+
+## F. Email / SMS Configuration
+
+Manage:
+
+- Email Provider.
+- SMTP Configuration.
+- SMS Provider.
+- Sender ID.
+- API Connection.
+- Delivery Status.
+- Retry Policy.
+
+Never expose credentials in UI or logs.
+
+## G. API Configuration
+
+Manage:
+
+- API Base URL.
+- API Version.
+- Rate Limits.
+- Timeout Settings.
+- CORS Policy.
+- Authentication Settings.
+- API Documentation Access.
+
+Do not allow unsafe runtime changes without validation and approval.
+
+## H. Integration Management
+
+Manage authorized integrations:
+
+- Government Service Gateways.
+- e-Sevai Integrations.
+- DigiLocker, where authorized.
+- UMANG, where authorized.
+- Payment Gateways.
+- SMS Providers.
+- Email Providers.
+- Maps.
+- Storage Providers.
+- Analytics Services.
+
+Display:
+
+- Integration Name.
+- Provider.
+- Connection Status.
+- Last Successful Sync.
+- Last Error.
+- Credential Expiry, where available.
+- Actions.
+
+Actions:
+
+- Configure.
+- Test Connection.
+- Enable.
+- Disable.
+- View Logs.
+
+Never assume an external government API is available simply because a portal exists.
+
+## I. Storage Management
+
+Display:
+
+- Total Storage.
+- Used Storage.
+- Available Storage.
+- Document Count.
+- File Count.
+- Storage Health.
+
+Manage:
+
+- Document Storage.
+- AI Knowledge Storage.
+- Backup Storage.
+- Retention Configuration.
+
+## J. Backup & Recovery
+
+Features:
+
+- Backup Configuration.
+- Scheduled Backups.
+- Backup History.
+- Backup Status.
+- Backup Verification.
+- Restore Workflow.
+- Recovery Point Information.
+
+Require privileged authorization and confirmation for restoration operations.
+
+Never claim a backup succeeded without an actual successful backup record.
+
+## K. Feature Flags
+
+Manage controlled feature availability:
+
+- AI Assistant.
+- Scheme Finder.
+- Eligibility Checker.
+- Document OCR.
+- Predictive Analytics.
+- Anomaly Detection.
+- Voice Assistant.
+- Mobile Notifications.
+- New Service Modules.
+
+Support:
+
+- Enable.
+- Disable.
+- Environment Scope.
+- Rollout Percentage, where appropriate.
+- Change History.
+
+Critical changes must be audited and reversible.
+
+---
+
+# 12. PAGE 9 – SECURITY & AUDIT LOGS
+
+Route: /admin/security-audit
+
+Create a centralized security and compliance monitoring centre.
+
+## A. Security Summary Cards
+
+Display:
+
+- Total Security Events.
+- Failed Login Attempts.
+- Active Sessions.
+- Suspicious Login Events.
+- Privileged Access Changes.
+- Critical Alerts.
+- Unusual Data Access Events.
+
+## B. Security Dashboard
+
+Display:
+
+- Login Activity Trend.
+- Failed Login Trend.
+- User Access Distribution.
+- Privileged Activity.
+- Security Alert Distribution.
+
+## C. Audit Logs
+
+Route: /admin/security-audit/logs
+
+Record:
+
+- User Login.
+- User Logout.
+- User Creation.
+- User Modification.
+- Role Assignment.
+- Permission Modification.
+- Department Updates.
+- Service Changes.
+- Scheme Updates.
+- AI Model Changes.
+- System Configuration Changes.
+- Integration Changes.
+- Data Exports.
+- Critical Administrative Actions.
+
+Table columns:
+
+- Event ID.
+- Timestamp.
+- Actor.
+- Role.
+- Action.
+- Resource Type.
+- Resource ID.
+- Result.
+- IP / Session Metadata, where permitted.
+- Details.
+
+Features:
+
+- Search.
+- Filters.
+- Date Range.
+- Event Category.
+- User.
+- Resource.
+- Export, if authorized.
+
+Audit records must be tamper-resistant and access-controlled.
+
+## D. Login History
+
+Display:
+
+- User.
+- Role.
+- Login Time.
+- Session Status.
+- Device / Browser Information, where collected.
+- Login Result.
+- Location Estimate, only if lawfully collected and justified.
+
+## E. Failed Login Attempts
+
+Display:
+
+- Account.
+- Attempt Time.
+- Failure Reason Category.
+- Source Metadata.
+- Lockout Status.
+
+Do not expose passwords or authentication secrets.
+
+## F. Active Sessions
+
+Display:
+
+- User.
+- Role.
+- Session Created.
+- Last Activity.
+- Device.
+- Session Status.
+
+Actions:
+
+- View.
+- Revoke Session, if authorized.
+
+## G. Access History
+
+Track authorized access to:
+
+- Citizen Records.
+- Uploaded Documents.
+- Employee Records.
+- Department Data.
+- Reports.
+- Administrative Settings.
+
+Store necessary audit information without unnecessarily copying sensitive document contents into logs.
+
+## H. Security Alerts
+
+Categories:
+
+- Multiple Failed Login Attempts.
+- Unusual Login Pattern.
+- Privileged Role Changes.
+- Unexpected Session Activity.
+- Excessive API Requests.
+- Unauthorized Access Attempts.
+- Unusual Data Exports.
+- Integration Security Failures.
+
+## I. Security Incident Workflow
+
+Alert Generated
+→ Security Review
+→ Investigation
+→ Containment
+→ Resolution
+→ Closure.
+
+Actions:
+
+- Review.
+- Assign Investigator.
+- Add Notes.
+- Escalate.
+- Resolve.
+- Close.
+
+Record all actions.
+
+---
+
+# 13. ADDITIONAL ADMINISTRATIVE MODULES
+
+## A. NOTIFICATIONS & ANNOUNCEMENTS
+
+Routes:
+
+- /admin/notifications
+- /admin/announcements
+
+Features:
+
+- Send Platform Announcement.
+- Send Department Announcement.
+- Send Employee Notification.
+- Send Citizen Notification, where authorized.
+- Schedule Announcement.
+- Manage Notification Templates.
+- View Delivery Status.
+- View Notification History.
+
+Recipient targeting must respect consent, purpose and access controls.
+
+## B. REPORTS & ANALYTICS
+
+Route: /admin/reports
+
+Create a centralized platform reporting centre.
+
+Report categories:
+
+1. Platform Usage Report.
+2. User Registration Report.
+3. User Activity Report.
+4. Department Overview Report.
+5. Application Analytics Report.
+6. Government Service Report.
+7. Scheme Utilization Report.
+8. Employee Analytics Report.
+9. Officer Activity Report.
+10. AI Usage Report.
+11. Model Performance Report.
+12. Security Report.
+13. Integration Health Report.
+14. System Performance Report.
+15. Audit Report.
+
+Features:
+
+- Date Filters.
+- Department Filters.
+- Portal Filters.
+- User Type Filters.
+- Report Preview.
+- Generate Report.
+- Export PDF.
+- Export Excel.
+- Export CSV.
+- Report History.
+
+Protect citizen and employee information in exports.
+
+## C. HELP & SUPPORT
+
+Route: /admin/help
+
+Provide:
+
+- Super Admin Manual.
+- User Management Guide.
+- RBAC Documentation.
+- Department Configuration Guide.
+- AI Model Management Guide.
+- System Configuration Guide.
+- Integration Guide.
+- Security Manual.
+- Backup and Recovery Manual.
+- API Documentation.
+- Technical Support.
+
+## D. ADMIN PROFILE & SETTINGS
+
+Route: /admin/profile
+
+Display:
+
+- Admin Name.
+- Admin ID.
+- Official Email.
+- Role.
+- Account Status.
+- Last Login.
+- MFA Status.
+
+Settings:
+
+- Change Password.
+- MFA Settings.
+- Language Preference.
+- Notification Preferences.
+- Active Sessions.
+- Login History.
+- Security Settings.
+
+---
+
+# 14. DATABASE ARCHITECTURE
+
+Extend the existing PostgreSQL database.
+
+Reuse existing user, department, employee, officer, service, scheme, application, document, notification and audit entities wherever available.
+
+Do not create duplicate master tables.
+
+Create or extend the following entities.
+
+### User administration
+
+1. admin_user_profiles
+2. user_account_status_history
+3. user_activation_history
+4. user_suspension_history
+5. user_import_jobs
+6. user_import_errors
+
+### Organizational management
+
+7. department_configuration
+8. department_office_mapping
+9. department_jurisdiction_mapping
+10. department_administration_history
+
+### RBAC
+
+11. role_master
+12. permission_master
+13. role_permissions
+14. user_role_assignments
+15. role_assignment_history
+16. access_review_records
+
+### Service administration
+
+17. service_master
+18. service_categories
+19. service_form_definitions
+20. service_form_fields
+21. service_eligibility_rules
+22. service_document_requirements
+23. service_official_links
+24. service_version_history
+
+### AI management
+
+25. ai_provider_registry
+26. ai_model_registry
+27. ai_model_versions
+28. ai_model_evaluations
+29. ai_model_deployment_history
+30. ai_agent_registry
+31. ai_agent_permissions
+32. ai_usage_metrics
+33. rag_knowledge_documents
+34. rag_knowledge_chunks
+35. embedding_registry
+36. ai_evaluation_runs
+
+### System configuration
+
+37. system_configuration
+38. portal_configuration
+39. notification_configuration
+40. integration_registry
+41. integration_health_logs
+42. feature_flags
+43. backup_history
+44. storage_metrics
+45. scheduled_job_history
+
+### Security
+
+46. security_events
+47. login_history
+48. failed_login_attempts
+49. active_sessions
+50. privileged_action_history
+51. data_access_logs
+52. security_incidents
+
+### Reporting and announcements
+
+53. platform_report_history
+54. report_export_history
+55. announcement_master
+56. announcement_delivery_history
+57. admin_activity_history
+
+Use:
+
+- SQLAlchemy 2.
+- Alembic migrations.
+- Proper primary keys.
+- Foreign keys.
+- Unique constraints.
+- Indexes.
+- Validation constraints.
+- Transactions.
+- Timestamps.
+- Audit history.
+
+Secrets must be stored using an appropriate encrypted secret-management mechanism, not as plaintext database values.
+
+---
+
+# 15. BACKEND API DEVELOPMENT
+
+Use Python 3.12+ and FastAPI.
+
+Implement REST APIs under /api/v1/admin/.
+
+### Dashboard APIs
+
+- GET /api/v1/admin/dashboard/summary
+- GET /api/v1/admin/dashboard/user-distribution
+- GET /api/v1/admin/dashboard/portal-usage
+- GET /api/v1/admin/dashboard/department-overview
+- GET /api/v1/admin/dashboard/application-overview
+- GET /api/v1/admin/dashboard/system-health
+- GET /api/v1/admin/dashboard/ai-overview
+- GET /api/v1/admin/dashboard/security-overview
+- GET /api/v1/admin/dashboard/recent-activities
+
+### User Management
+
+- GET /api/v1/admin/users
+- POST /api/v1/admin/users
+- GET /api/v1/admin/users/{user_id}
+- PUT /api/v1/admin/users/{user_id}
+- POST /api/v1/admin/users/{user_id}/activate
+- POST /api/v1/admin/users/{user_id}/suspend
+- POST /api/v1/admin/users/{user_id}/deactivate
+- POST /api/v1/admin/users/{user_id}/unlock
+- POST /api/v1/admin/users/{user_id}/revoke-sessions
+- GET /api/v1/admin/users/{user_id}/activity
+
+### Department Management
+
+- GET /api/v1/admin/departments
+- POST /api/v1/admin/departments
+- GET /api/v1/admin/departments/{department_id}
+- PUT /api/v1/admin/departments/{department_id}
+- GET /api/v1/admin/departments/{department_id}/offices
+- GET /api/v1/admin/departments/{department_id}/employees
+- GET /api/v1/admin/departments/{department_id}/analytics
+
+### Roles & Permissions
+
+- GET /api/v1/admin/roles
+- POST /api/v1/admin/roles
+- PUT /api/v1/admin/roles/{role_id}
+- GET /api/v1/admin/permissions
+- POST /api/v1/admin/roles/{role_id}/permissions
+- POST /api/v1/admin/users/{user_id}/roles
+- DELETE /api/v1/admin/users/{user_id}/roles/{role_id}
+- GET /api/v1/admin/access-reviews
+
+### Service Management
+
+- GET /api/v1/admin/services
+- POST /api/v1/admin/services
+- PUT /api/v1/admin/services/{service_id}
+- GET /api/v1/admin/schemes
+- POST /api/v1/admin/schemes
+- PUT /api/v1/admin/schemes/{scheme_id}
+- GET /api/v1/admin/certificates
+- GET /api/v1/admin/documents
+- GET /api/v1/admin/licences
+- POST /api/v1/admin/service-forms
+- PUT /api/v1/admin/service-forms/{form_id}
+- POST /api/v1/admin/services/{service_id}/publish
+
+### AI Model Management
+
+- GET /api/v1/admin/ai/providers
+- POST /api/v1/admin/ai/providers
+- POST /api/v1/admin/ai/providers/{provider_id}/test
+- GET /api/v1/admin/ai/models
+- POST /api/v1/admin/ai/models
+- PUT /api/v1/admin/ai/models/{model_id}
+- POST /api/v1/admin/ai/models/{model_id}/activate
+- POST /api/v1/admin/ai/models/{model_id}/deactivate
+- GET /api/v1/admin/ai/usage
+- GET /api/v1/admin/ai/evaluations
+- GET /api/v1/admin/ai/agents
+
+### RAG Knowledge Base
+
+- GET /api/v1/admin/knowledge/documents
+- POST /api/v1/admin/knowledge/documents
+- POST /api/v1/admin/knowledge/documents/{document_id}/index
+- POST /api/v1/admin/knowledge/documents/{document_id}/reindex
+- GET /api/v1/admin/knowledge/documents/{document_id}
+- GET /api/v1/admin/knowledge/index-health
+
+### System Configuration
+
+- GET /api/v1/admin/config
+- PUT /api/v1/admin/config
+- GET /api/v1/admin/portal-config
+- PUT /api/v1/admin/portal-config
+- GET /api/v1/admin/integrations
+- POST /api/v1/admin/integrations
+- POST /api/v1/admin/integrations/{integration_id}/test
+- GET /api/v1/admin/backups
+- POST /api/v1/admin/backups
+- GET /api/v1/admin/feature-flags
+- PUT /api/v1/admin/feature-flags/{flag_id}
+
+### Security & Audit
+
+- GET /api/v1/admin/security/events
+- GET /api/v1/admin/security/alerts
+- GET /api/v1/admin/security/sessions
+- POST /api/v1/admin/security/sessions/{session_id}/revoke
+- GET /api/v1/admin/audit-logs
+- GET /api/v1/admin/audit-logs/{event_id}
+- GET /api/v1/admin/access-history
+
+### Notifications & Reports
+
+- GET /api/v1/admin/notifications
+- POST /api/v1/admin/notifications
+- POST /api/v1/admin/announcements
+- GET /api/v1/admin/reports
+- POST /api/v1/admin/reports/generate
+- GET /api/v1/admin/reports/{report_id}
+
+All APIs must implement:
+
+- Authentication.
+- RBAC.
+- Pydantic validation.
+- Pagination.
+- Filtering.
+- Sorting.
+- Rate limiting.
+- Audit logging.
+- Standardized error responses.
+- Secure serialization.
+- Transaction management.
+
+Do not expose internal secrets or raw credential values through API responses.
+
+---
+
+# 16. SECURITY & ADMINISTRATIVE GOVERNANCE
+
+The Super Admin Portal has privileged access and must have stronger protection than other portals.
+
+Implement:
+
+1. Multi-factor authentication.
+2. Strong password policy.
+3. Secure session management.
+4. Least-privilege access.
+5. Privileged role protection.
+6. Backend permission validation.
+7. Secure secret storage.
+8. Encrypted data transmission.
+9. Database access controls.
+10. Audit logging.
+11. Session revocation.
+12. Rate limiting.
+13. CSRF protection where applicable.
+14. XSS protection.
+15. SQL injection prevention.
+16. Secure file uploads.
+17. Backup and disaster recovery.
+18. Security incident management.
+
+### Critical action confirmation
+
+Require appropriate confirmation for:
+
+- Suspending administrators.
+- Modifying privileged permissions.
+- Disabling AI providers.
+- Changing system-wide settings.
+- Changing integration credentials.
+- Disabling portal modules.
+- Restoring backups.
+- Revoking privileged sessions.
+- Publishing major service configuration changes.
+
+For especially sensitive actions, support additional authentication or multi-person approval according to organizational policy.
+
+### Break-glass administration
+
+Provide a documented emergency access recovery procedure.
+
+Do not implement an unlogged hidden backdoor or shared master password.
+
+### Audit policy
+
+Every privileged operation must record:
+
+- Actor.
+- Role.
+- Action.
+- Resource.
+- Timestamp.
+- Outcome.
+- Change summary.
+- Relevant request/session metadata.
+
+Audit records must be protected against unauthorized modification or deletion.
+
+---
+
+# 17. TAMIL & ENGLISH LOCALIZATION
+
+Implement complete bilingual support.
+
+Languages:
+
+- English.
+- Tamil.
+
+Translate:
+
+- Navigation.
+- Dashboard.
+- Cards.
+- Tables.
+- Forms.
+- Validation messages.
+- Notifications.
+- Reports.
+- Service descriptions.
+- Scheme descriptions.
+- Settings.
+
+Use:
+
+- Inter.
+- Noto Sans Tamil.
+- A proper localization framework.
+
+Allow language switching without losing unsaved work.
+
+Do not automatically translate legal or policy-critical government content without clearly identifying machine-translated content.
+
+---
+
+# 18. FRONTEND COMPONENT ARCHITECTURE
+
+Build reusable components:
+
+- AdminHeader.
+- AdminSidebar.
+- AdminProfileMenu.
+- AdminDashboardBanner.
+- AdminStatCard.
+- UserManagementTable.
+- DepartmentTable.
+- RolePermissionMatrix.
+- ServiceManagementTable.
+- SchemeManagementTable.
+- AIModelCard.
+- AIProviderCard.
+- KnowledgeBaseTable.
+- SystemHealthCard.
+- IntegrationStatusCard.
+- SecurityAlertCard.
+- AuditLogTable.
+- NotificationPanel.
+- ReportBuilder.
+- DynamicFormBuilder.
+- ConfirmationDialog.
+- FileUploadComponent.
+- LoadingSkeleton.
+- EmptyState.
+- ErrorState.
+
+Use shared design tokens.
+
+Do not build every page independently with inconsistent styling.
+
+### Responsive layout
+
+Desktop:
+
+- Full left sidebar.
+- Header.
+- Multi-column dashboard.
+- Advanced tables.
+- Administrative panels.
+
+Tablet:
+
+- Collapsible sidebar.
+- Responsive cards.
+- Scrollable tables.
+
+Mobile:
+
+- Drawer navigation.
+- Stacked cards.
+- Responsive forms.
+- Touch-friendly controls.
+
+Target WCAG 2.2 AA accessibility.
+
+---
+
+# 19. TESTING & VALIDATION
+
+Use:
+
+Backend:
+- Pytest.
+- FastAPI TestClient.
+
+Frontend:
+- Vitest.
+- React Testing Library.
+
+End-to-end:
+- Playwright.
+
+Test every major administrative workflow.
+
+### User Management
+
+- Create User.
+- Update User.
+- Activate User.
+- Suspend User.
+- Revoke Sessions.
+- Assign Role.
+- Permission Validation.
+
+### Department Management
+
+- Create Department.
+- Edit Department.
+- Map Offices.
+- View Department Details.
+- View Department Analytics.
+
+### Roles & Permissions
+
+- Create Role.
+- Update Permissions.
+- Assign Role.
+- Remove Role.
+- Test Unauthorized Access.
+- Test Privilege Escalation Protection.
+
+### Service Management
+
+- Create Service.
+- Update Service.
+- Configure Documents.
+- Configure Eligibility.
+- Publish Service.
+- Verify Citizen Portal Integration.
+
+### AI Management
+
+- Configure Provider.
+- Test Connection.
+- Register Model.
+- Activate Model.
+- Evaluate Model.
+- Upload Knowledge Document.
+- Index Knowledge Document.
+- Verify RAG Retrieval.
+
+### System Configuration
+
+- Update Settings.
+- Test Integration.
+- Configure Notifications.
+- Test Backup Workflow.
+- Test Feature Flags.
+
+### Security & Audit
+
+- Login History.
+- Failed Login Tracking.
+- Active Sessions.
+- Session Revocation.
+- Audit Event Recording.
+- Sensitive Data Protection.
+
+Do not claim that a test has passed unless it has actually been executed.
+
+---
+
+# 20. IMPLEMENTATION ROADMAP
+
+Before implementation:
+
+1. Inspect the entire existing GovAI Nexus repository.
+2. Inspect existing portal routes.
+3. Inspect authentication and RBAC.
+4. Inspect PostgreSQL schema.
+5. Inspect user, department and employee master data.
+6. Inspect existing services and schemes.
+7. Inspect AI and RAG infrastructure.
+8. Inspect API architecture.
+9. Identify reusable components.
+10. Prepare a detailed implementation plan.
+
+Implement in this order:
+
+### Phase A – Admin Authentication & Security
+
+- Secure login.
+- MFA.
+- Session management.
+- Admin profile.
+- Privileged access control.
+
+### Phase B – Super Admin Dashboard
+
+- Platform KPI cards.
+- User analytics.
+- Department overview.
+- System health.
+- AI overview.
+- Security alerts.
+
+### Phase C – User Management
+
+- User directory.
+- Add User.
+- User details.
+- Account actions.
+- Role assignment.
+
+### Phase D – Department Management
+
+- Department directory.
+- Department profile.
+- Office management.
+- Geographic hierarchy.
+- Department analytics.
+
+### Phase E – Roles & Permissions
+
+- Role master.
+- Permission master.
+- Access matrix.
+- User-role assignment.
+- Access reviews.
+
+### Phase F – Service Management
+
+- Service master.
+- Scheme master.
+- Certificate master.
+- Document master.
+- Licence master.
+- Eligibility rules.
+- Dynamic application form builder.
+- Official link management.
+
+### Phase G – AI Model Management
+
+- Provider registry.
+- LLM models.
+- ML models.
+- RAG knowledge base.
+- Embeddings.
+- AI agents.
+- Evaluation.
+
+### Phase H – System Configuration
+
+- General settings.
+- Portal settings.
+- Integrations.
+- Notifications.
+- Storage.
+- Backup.
+- Feature flags.
+
+### Phase I – Security & Audit
+
+- Security dashboard.
+- Audit logs.
+- Login history.
+- Active sessions.
+- Access history.
+- Security incidents.
+
+### Phase J – Reports & Testing
+
+- Platform reports.
+- Analytics.
+- Export.
+- End-to-end integration.
+- Security validation.
+- Performance testing.
+
+---
+
+# 21. CROSS-PORTAL INTEGRATION
+
+The Super Admin Portal must be connected to all existing GovAI Nexus portals.
+
+## Public Government Website
+
+Super Admin manages:
+
+- Public portal configuration.
+- Published government information.
+- Public scheme directory.
+- Public service directory.
+- Public notices.
+
+## Citizen Portal
+
+Super Admin manages:
+
+- Citizen account configuration.
+- Government schemes.
+- Government services.
+- Certificates.
+- Documents.
+- Licences and permits.
+- Application form configuration.
+- Eligibility rules.
+- Official application links.
+
+## Employee Portal
+
+Super Admin manages:
+
+- Employee accounts.
+- Employee roles.
+- Employee permissions.
+- Employee account status.
+- Authorized access.
+- Employee portal configuration.
+
+## Officer / HOD Portal
+
+Super Admin manages:
+
+- Officer accounts.
+- Officer roles.
+- Department mappings.
+- Jurisdiction mappings.
+- Officer permissions.
+- Officer portal configuration.
+
+## AI & Analytics Centre
+
+Super Admin manages:
+
+- AI provider configuration.
+- LLM models.
+- ML models.
+- RAG knowledge.
+- Embedding models.
+- Agent permissions.
+- Evaluation datasets.
+- AI usage and health.
+
+### Cross-portal consistency
+
+Any authorized change to a shared master record must be reflected in the relevant portals through the central backend.
+
+Examples:
+
+- Publishing a service updates the Citizen Portal service directory.
+- Updating a scheme's verified description updates the Citizen Portal scheme details and AI knowledge repository.
+- Updating an employee's role changes the Employee Portal permissions.
+- Updating an officer's jurisdiction changes the records visible in the Officer Portal.
+- Deactivating an account blocks new sessions and revokes active sessions according to security policy.
+
+All critical changes must have audit history and appropriate rollback mechanisms.
+
+---
+
+# 22. FINAL EXPECTED RESULT
+
+Build a complete Super Admin Portal that acts as the central control centre of GovAI Nexus.
+
+The Super Admin must be able to:
+
+1. Log in securely.
+2. View platform-wide dashboard analytics.
+3. Manage citizen accounts.
+4. Manage employee accounts.
+5. Manage officer accounts.
+6. Manage departments.
+7. Manage offices and organizational mappings.
+8. Manage roles and permissions.
+9. Configure government services.
+10. Manage government schemes.
+11. Manage certificates and documents.
+12. Manage licences and permits.
+13. Configure dynamic application forms.
+14. Manage official application links.
+15. Manage AI providers.
+16. Manage LLM and ML models.
+17. Manage RAG knowledge sources.
+18. Manage AI agents.
+19. Monitor AI usage and evaluation.
+20. Configure all portal settings.
+21. Manage authorized external integrations.
+22. Monitor system health.
+23. Configure backups and recovery.
+24. Manage feature flags.
+25. Monitor security events.
+26. Review audit logs.
+27. Manage notifications and announcements.
+28. Generate platform-wide reports.
+29. Monitor the entire GovAI Nexus ecosystem.
+
+The final system must be:
+
+- Fully integrated.
+- Python-first.
+- Secure.
+- Scalable.
+- Bilingual.
+- Database-driven.
+- Permission-aware.
+- Auditable.
+- Responsive.
+- Production-oriented.
+
+**FINAL INSTRUCTION: Build the complete Super Admin Portal inside the existing GovAI Nexus project. Every page, card, table, button, form, filter, chart, workflow and administrative action must be connected to real backend APIs and PostgreSQL data. Maintain the same visual design as the existing GovAI Nexus Citizen, Employee and Officer Portals. Do not deliver static mockups, disconnected modules or fake administrative data.**

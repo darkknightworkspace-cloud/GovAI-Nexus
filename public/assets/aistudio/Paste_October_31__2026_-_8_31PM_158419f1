@@ -1,0 +1,1692 @@
+# MASTER PROMPT – PHASE 1
+# GOVAI NEXUS: PROJECT FOUNDATION & SYSTEM ARCHITECTURE
+
+## 1. YOUR ROLE
+
+Act as a Principal Software Architect, Senior Full-Stack Engineer, AI/ML Architect, Database Architect, Cloud Architect, Cybersecurity Engineer and Technical Project Manager.
+
+You are responsible for establishing the complete enterprise-level technical foundation of a project named:
+
+**GovAI Nexus – AI-Powered GovTech & Digital Governance Platform**
+
+Your responsibility in this phase is to analyze the entire project, define its architecture, finalize the technology stack, design the database, establish API specifications, organize the codebase and prepare all technical documentation required for subsequent development.
+
+Think like an engineering team building a real-world government technology platform, not a simple college mini-project.
+
+All architectural decisions must prioritize:
+
+- Scalability
+- Security
+- Reliability
+- Maintainability
+- Modularity
+- Performance
+- Accessibility
+- Data privacy
+- AI transparency
+- Real-world usability
+- Future extensibility
+
+Do not unnecessarily simplify the project.
+
+---
+
+## 2. PROJECT OVERVIEW
+
+### Project Name
+GovAI Nexus
+
+### Project Title
+AI-Powered GovTech and Digital Governance Platform
+
+### Tagline
+Smarter Government. Faster Services. Transparent Governance.
+
+### Project Vision
+
+Develop a unified, intelligent, multilingual digital governance ecosystem that connects citizens, government employees, departments, administrators and public services through modern web and mobile applications.
+
+The platform should use Artificial Intelligence, Machine Learning, Generative AI, Retrieval-Augmented Generation, Natural Language Processing, Intelligent Document Processing, Predictive Analytics and Workflow Automation to improve government service delivery.
+
+The platform will initially focus on Tamil Nadu, India, with an architecture that can later support other Indian states and government organizations.
+
+### Primary Objectives
+
+1. Improve government service accessibility.
+2. Reduce manual administrative work.
+3. Simplify citizen-government interactions.
+4. Provide intelligent government service discovery.
+5. Improve application processing and tracking.
+6. Automate document processing and verification assistance.
+7. Enable predictive analytics for government departments.
+8. Detect unusual patterns and potential fraud indicators.
+9. Improve public transparency and accountability.
+10. Support Tamil and English communication.
+11. Provide data-driven decision support.
+12. Build an extensible digital governance ecosystem.
+
+---
+
+## 3. PROJECT DEVELOPMENT STRATEGY
+
+The complete project will be developed in six major phases.
+
+### Phase 1 – Project Foundation & Architecture
+Current phase. Establish architecture, requirements, technical decisions, database design, API contracts, codebase organization and documentation.
+
+### Phase 2 – Complete UI/UX Design
+Design the complete public website, portals, dashboards, mobile interfaces, components, design system and interactive prototypes. No backend implementation in this phase.
+
+### Phase 3 – Full-Stack Core Platform Development
+Develop frontend, backend, database, authentication, portals, government services, schemes, applications, document workflows and complaint management.
+
+### Phase 4 – AI, ML, GenAI & Intelligent Automation
+Develop RAG, LLM integrations, multilingual assistant, OCR, NLP, machine learning, prediction, fraud intelligence and multi-agent automation.
+
+### Phase 5 – Advanced Governance, Analytics & Mobile Ecosystem
+Develop advanced analytics, transparency, open data, infrastructure monitoring, mobile applications, external integrations and enterprise features.
+
+### Phase 6 – Enterprise Testing, Security & Deployment
+Perform complete testing, security assessment, performance optimization, deployment, monitoring and production readiness.
+
+**Critical instruction:** Work exclusively on Phase 1 now. Prepare the foundation for all six phases, but do not implement the later phases.
+
+---
+
+# 4. PROJECT SCOPE AND USER ECOSYSTEM
+
+Design the architecture to support the following user categories.
+
+### A. Citizen
+
+Citizens should eventually be able to:
+
+- Register and securely log in.
+- Manage their profiles.
+- Discover government services.
+- Search government schemes.
+- Check scheme eligibility.
+- Receive personalized scheme recommendations.
+- Apply for government services.
+- Upload supporting documents.
+- Track application progress.
+- Raise complaints and grievances.
+- Communicate with the AI assistant.
+- Receive notifications.
+- Submit feedback.
+- Access Tamil and English interfaces.
+
+### B. Government Employee
+
+Government employees should eventually be able to:
+
+- Access assigned departmental dashboards.
+- View assigned applications.
+- Review submitted documents.
+- Assist with document verification.
+- Update application status.
+- Manage complaints.
+- Assign and update tasks according to permissions.
+- View workload information.
+- Generate operational reports.
+- Receive notifications.
+
+### C. Department Officer / HOD
+
+Department officers should eventually be able to:
+
+- Monitor departmental operations.
+- Manage departmental employees.
+- Assign and supervise work.
+- Monitor applications and complaints.
+- Review service performance.
+- Monitor workload and processing delays.
+- View predictive analytics.
+- Review AI-generated risk alerts.
+- Generate department reports.
+- Monitor departmental KPIs.
+
+### D. Super Administrator
+
+Super administrators should eventually be able to:
+
+- Manage platform users.
+- Manage departments.
+- Configure roles and permissions.
+- Manage government services and schemes.
+- Configure system settings.
+- Monitor system health.
+- Manage AI model configurations.
+- Review audit logs.
+- Monitor integrations.
+- Manage notifications.
+- Control platform-level access.
+
+### E. AI & Analytics Centre
+
+Authorized users should eventually access:
+
+- AI Knowledge Centre.
+- Predictive Intelligence Centre.
+- Fraud Intelligence Centre.
+- Public Transparency Centre.
+- Citizen Sentiment Centre.
+- Infrastructure Monitoring Centre.
+- Compliance and Governance Centre.
+
+Access must be controlled by role-based permissions.
+
+---
+
+# 5. COMPLETE FUNCTIONAL MODULE ARCHITECTURE
+
+Define the architecture around these major modules.
+
+### Module 1 – User Management & Digital Identity
+
+- Citizen registration and authentication.
+- Employee authentication.
+- Officer and administrator accounts.
+- Role-based access control.
+- Permission management.
+- Profile management.
+- OTP and multi-factor authentication support.
+- Session management.
+- Account status and security controls.
+- Authorized identity-provider integration points.
+
+Do not directly store biometric data or claim Aadhaar integration without formal authorization.
+
+### Module 2 – AI Citizen Assistant & Government Service Portal
+
+- AI-powered citizen assistance.
+- Government service discovery.
+- Government scheme information.
+- Application guidance.
+- Application status assistance.
+- Tamil and English language support.
+- Context-aware question answering.
+- RAG-based information retrieval.
+- Voice assistant integration points.
+
+### Module 3 – Intelligent Document Processing
+
+- PDF and image upload support.
+- OCR integration.
+- Document classification.
+- Information extraction.
+- Field validation.
+- Missing information detection.
+- Duplicate document detection.
+- Confidence scoring.
+- Employee verification workflow.
+- Document version management.
+
+### Module 4 – Predictive Analytics & Forecasting
+
+- Government service demand prediction.
+- Complaint volume forecasting.
+- Application delay prediction.
+- Department workload forecasting.
+- Resource demand forecasting.
+- District-level analytics.
+- Performance trend analysis.
+
+### Module 5 – Fraud Detection & Anomaly Intelligence
+
+- Duplicate record detection.
+- Unusual transaction pattern identification.
+- Suspicious application pattern detection.
+- Rule-based alerts.
+- ML-based anomaly detection.
+- Risk scoring.
+- Investigation workflows.
+- Explainability and evidence tracking.
+
+An anomaly or risk score must never automatically be treated as proof of fraud.
+
+### Module 6 – Transparency & Public Governance
+
+- Public project progress.
+- Approved public budget information.
+- Government service statistics.
+- Open datasets.
+- Public reports.
+- Auditability.
+- Transparency dashboards.
+- Citizen reporting mechanisms.
+
+Only publish information approved for public disclosure.
+
+### Module 7 – Multilingual & Accessibility
+
+- Tamil and English.
+- Future language expansion.
+- Speech-to-text.
+- Text-to-speech.
+- Screen-reader compatibility.
+- Keyboard navigation.
+- Accessible forms.
+- Responsive interfaces.
+- WCAG accessibility target.
+
+### Module 8 – Citizen Feedback & Sentiment Intelligence
+
+- Citizen feedback collection.
+- Feedback categorization.
+- Sentiment classification.
+- Department-level feedback trends.
+- Service quality analysis.
+- Complaint feedback.
+- Citizen satisfaction reporting.
+
+---
+
+# 6. TECHNOLOGY STACK – FINAL ARCHITECTURAL BASELINE
+
+Use the following preferred technologies unless a strong technical reason requires a documented alternative.
+
+## Frontend – Web
+
+- React 19
+- Vite
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- TanStack Query
+- Zustand
+- React Hook Form
+- Zod
+- Recharts
+- Chart.js
+- Axios or a centralized typed API client
+
+Architecture requirements:
+
+- Feature-based folder structure.
+- Reusable components.
+- Centralized API communication.
+- Protected routes.
+- Role-based navigation.
+- Form validation.
+- Error boundaries.
+- Loading and error states.
+- Responsive design support.
+- Internationalization readiness.
+
+## Mobile Application
+
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- TanStack Query
+- Secure local storage.
+- Push notification support.
+
+Target platforms:
+
+- Android
+- iOS
+
+The mobile application should reuse shared types, validation rules and API contracts wherever practical.
+
+## Backend
+
+- Python 3.12+
+- FastAPI
+- Pydantic
+- SQLAlchemy 2
+- Alembic
+- PostgreSQL driver
+- REST API architecture
+- OpenAPI documentation
+
+Backend architecture must use modular boundaries and separation of concerns.
+
+## Database
+
+Primary database:
+
+- PostgreSQL
+
+Vector search:
+
+- pgvector
+
+Cache:
+
+- Redis
+
+Background processing:
+
+- Celery or an appropriately selected task queue.
+
+Object storage:
+
+- S3-compatible storage or an equivalent managed object-storage service.
+
+Database requirements:
+
+- Primary keys.
+- Foreign keys.
+- Unique constraints.
+- Indexes.
+- Check constraints.
+- Timestamps.
+- Soft deletion where appropriate.
+- Referential integrity.
+- Migration support.
+- Auditability.
+- Transaction management.
+
+Do not create duplicate or disconnected databases for the same business entities.
+
+## AI & Generative AI
+
+Prepare integration architecture for:
+
+- Large Language Models.
+- Retrieval-Augmented Generation.
+- Embedding models.
+- Vector retrieval.
+- Hybrid search.
+- Reranking.
+- Natural Language Processing.
+- Tamil language processing.
+- AI agents.
+- Tool calling.
+- Prompt management.
+- AI evaluation.
+- Response validation.
+
+Potential providers and frameworks:
+
+- Google Gemini.
+- OpenAI.
+- Approved open-source LLMs.
+- Hugging Face.
+- Sentence Transformers.
+- LangChain or LlamaIndex.
+
+Do not hardcode provider-specific logic into business modules. Create provider abstraction layers.
+
+## Machine Learning
+
+Prepare modular support for:
+
+- Scikit-learn.
+- XGBoost.
+- PyTorch.
+- Forecasting models.
+- Classification models.
+- Anomaly detection.
+- Recommendation systems.
+- Model evaluation.
+- Model version management.
+
+## Intelligent Document Processing
+
+Prepare integration points for:
+
+- PaddleOCR.
+- Tesseract OCR.
+- PDF extraction libraries.
+- Image preprocessing.
+- Layout and table extraction.
+- Document classification.
+- Entity extraction.
+
+## Voice & Language
+
+Prepare integration points for:
+
+- Speech recognition.
+- Indic language speech processing.
+- Whisper-compatible ASR.
+- Text-to-speech.
+- Tamil voice interaction.
+- Language detection.
+- Translation.
+
+## DevOps & Infrastructure
+
+- Git and GitHub.
+- Docker.
+- Docker Compose.
+- GitHub Actions.
+- Environment-based configuration.
+- OpenTelemetry.
+- Grafana.
+- Sentry.
+- Cloud deployment.
+- Centralized logging.
+
+---
+
+# 7. SYSTEM ARCHITECTURE DESIGN
+
+Design a modular, API-first architecture.
+
+Prefer a **Modular Monolith with separately deployable AI and background workers** as the initial architecture.
+
+Do not introduce microservices unnecessarily. The architecture should permit future extraction of individual modules when scalability and operational requirements justify it.
+
+### Architecture layers
+
+1. Presentation Layer
+   - Public website.
+   - Citizen web portal.
+   - Employee portal.
+   - Officer portal.
+   - Admin portal.
+   - Analytics portal.
+   - Mobile applications.
+
+2. API Gateway / API Layer
+   - API versioning.
+   - Authentication.
+   - Authorization.
+   - Request validation.
+   - Rate limiting.
+   - Error handling.
+   - API documentation.
+
+3. Application Layer
+   - User management.
+   - Department management.
+   - Service management.
+   - Scheme management.
+   - Application processing.
+   - Complaint management.
+   - Document workflows.
+   - Notification workflows.
+
+4. AI Intelligence Layer
+   - RAG engine.
+   - LLM service.
+   - NLP engine.
+   - OCR service.
+   - Speech service.
+   - ML inference.
+   - Agent orchestration.
+   - AI evaluation.
+
+5. Data Layer
+   - PostgreSQL.
+   - pgvector.
+   - Redis.
+   - Object storage.
+   - Audit storage.
+
+6. Infrastructure Layer
+   - Docker.
+   - Cloud services.
+   - CI/CD.
+   - Monitoring.
+   - Logging.
+   - Backups.
+   - Security infrastructure.
+
+### Architecture requirements
+
+- Clearly define module responsibilities.
+- Define module-to-module communication.
+- Define synchronous and asynchronous workflows.
+- Define transaction boundaries.
+- Define error propagation.
+- Define authentication and authorization boundaries.
+- Define AI provider integration boundaries.
+- Define external integration boundaries.
+- Define data ownership.
+- Define deployment boundaries.
+
+Create architecture diagrams using Mermaid.
+
+Required diagrams:
+
+1. High-level system architecture.
+2. Component architecture.
+3. Backend module architecture.
+4. AI architecture.
+5. Database architecture.
+6. Deployment architecture.
+7. Authentication and authorization flow.
+8. Citizen application processing flow.
+9. Document processing flow.
+10. RAG question-answering flow.
+11. AI agent orchestration flow.
+
+---
+
+# 8. DATABASE ARCHITECTURE AND COMPLETE DATA MODEL
+
+Design a normalized relational database for the entire project.
+
+Use PostgreSQL as the system of record.
+
+Organize tables into the following logical groups.
+
+## A. Identity & Access Management
+
+1. users
+2. citizen_profiles
+3. employee_profiles
+4. roles
+5. permissions
+6. user_roles
+7. role_permissions
+8. user_sessions
+9. consent_records
+
+## B. Government Organization & Geography
+
+10. states
+11. districts
+12. local_bodies
+13. departments
+14. department_employees
+
+Support the hierarchy:
+
+State → District → Local Body → Department / Office.
+
+Use versioned and maintainable geography records rather than hardcoding a fixed list of districts or local bodies.
+
+## C. Government Services & Schemes
+
+15. government_services
+16. government_schemes
+17. scheme_eligibility
+18. service_requirements
+
+## D. Application Management
+
+19. service_applications
+20. application_documents
+21. document_extraction
+22. document_verification
+23. application_status_history
+
+## E. Complaint Management
+
+24. complaints
+25. complaint_assignments
+26. complaint_updates
+27. complaint_categories
+
+## F. AI & Knowledge Management
+
+28. knowledge_documents
+29. document_chunks
+30. ai_conversations
+31. ai_messages
+32. ai_predictions
+33. model_registry
+
+Prepare pgvector-compatible embedding storage and metadata design.
+
+## G. Analytics & Fraud Intelligence
+
+34. fraud_alerts
+35. government_projects
+36. project_progress
+37. public_datasets
+38. citizen_feedback
+39. sentiment_results
+
+## H. System & Operations
+
+40. notifications
+41. audit_logs
+42. system_configuration
+43. background_jobs
+
+Additional tables may be proposed when technically necessary. Explain why each additional table is needed.
+
+### Database design deliverables
+
+For every table, specify:
+
+- Table name.
+- Business purpose.
+- Column name.
+- Data type.
+- Primary key.
+- Foreign key.
+- Unique constraints.
+- Required and nullable fields.
+- Default values.
+- Indexing strategy.
+- Relationships.
+- Validation rules.
+- Sensitive data classification.
+- Retention requirements where applicable.
+
+Also prepare:
+
+- Complete ER diagram.
+- Table relationship documentation.
+- Database normalization strategy.
+- Migration strategy.
+- Indexing strategy.
+- Transaction strategy.
+- Seed-data strategy.
+- Data integrity rules.
+
+Do not create arbitrary mock government records or fabricated real-world datasets.
+
+Use clearly identified synthetic data only for development and testing.
+
+---
+
+# 9. API ARCHITECTURE AND ENDPOINT SPECIFICATION
+
+Use REST APIs with the base path:
+
+`/api/v1/`
+
+Prepare endpoint specifications for all major modules.
+
+## Authentication
+
+- POST /auth/register
+- POST /auth/login
+- POST /auth/refresh
+- POST /auth/logout
+- POST /auth/verify-otp
+- POST /auth/forgot-password
+- POST /auth/reset-password
+- GET /auth/me
+
+## Users & Roles
+
+- GET /users
+- POST /users
+- GET /users/{id}
+- PATCH /users/{id}
+- GET /roles
+- POST /roles
+- GET /permissions
+- POST /roles/assign
+
+## Departments & Geography
+
+- GET /departments
+- POST /departments
+- GET /districts
+- GET /local-bodies
+- GET /department-employees
+
+## Services & Schemes
+
+- GET /services
+- POST /services
+- GET /services/{id}
+- GET /schemes
+- POST /schemes
+- GET /schemes/{id}
+- POST /schemes/check-eligibility
+- GET /schemes/recommendations
+
+## Applications
+
+- GET /applications
+- POST /applications
+- GET /applications/{id}
+- PATCH /applications/{id}
+- GET /applications/{id}/history
+- POST /applications/{id}/documents
+- POST /applications/{id}/submit
+- POST /applications/{id}/withdraw
+
+## Employee Workflows
+
+- GET /employee/tasks
+- GET /employee/applications
+- POST /applications/{id}/assign
+- POST /applications/{id}/request-information
+- POST /applications/{id}/review
+- POST /applications/{id}/decision
+- GET /employee/workload
+
+## Document Processing
+
+- POST /documents/upload
+- POST /documents/{id}/process
+- GET /documents/{id}/status
+- GET /documents/{id}/extraction
+- POST /documents/{id}/verify
+- GET /documents/{id}/history
+
+## Complaints
+
+- GET /complaints
+- POST /complaints
+- GET /complaints/{id}
+- POST /complaints/{id}/assign
+- POST /complaints/{id}/update
+- POST /complaints/{id}/escalate
+- GET /complaints/{id}/timeline
+- POST /complaints/{id}/feedback
+
+## AI & Knowledge
+
+- POST /ai/chat
+- POST /ai/chat/stream
+- GET /ai/conversations
+- GET /ai/conversations/{id}
+- POST /ai/feedback
+- GET /knowledge/documents
+- POST /knowledge/documents
+- POST /knowledge/documents/{id}/ingest
+- POST /knowledge/search
+
+## Machine Learning & Fraud
+
+- POST /ml/predict/complaints
+- POST /ml/predict/demand
+- POST /ml/predict/delay
+- POST /ml/predict/anomaly
+- GET /ml/predictions
+- GET /ml/models
+- GET /fraud/alerts
+- GET /fraud/alerts/{id}
+- POST /fraud/alerts/{id}/investigate
+
+## Analytics & Transparency
+
+- GET /analytics/overview
+- GET /analytics/departments
+- GET /analytics/complaints
+- GET /analytics/districts
+- GET /analytics/sentiment
+- GET /analytics/infrastructure
+- GET /public/projects
+- GET /public/projects/{id}
+- GET /public/datasets
+- GET /public/reports
+
+## Administration
+
+- GET /admin/dashboard
+- GET /admin/audit-logs
+- GET /admin/system-health
+- GET /admin/model-registry
+- GET /admin/configuration
+- GET /notifications
+- POST /notifications/{id}/read
+
+### API specification requirements
+
+For every endpoint define:
+
+- HTTP method.
+- URL.
+- Purpose.
+- Authentication requirement.
+- Required role or permission.
+- Request parameters.
+- Request body schema.
+- Response schema.
+- Validation rules.
+- Expected status codes.
+- Error response format.
+- Pagination and filtering rules.
+- Rate-limiting requirements where applicable.
+
+Do not implement all endpoints in Phase 1. Produce the complete API contract and module organization.
+
+---
+
+# 10. AI, RAG AND MULTI-AGENT ARCHITECTURE PLANNING
+
+Prepare the complete AI architecture for future implementation.
+
+## RAG architecture
+
+Design the following workflow:
+
+1. Government document ingestion.
+2. File validation.
+3. Text extraction.
+4. Text cleaning.
+5. Language detection.
+6. Semantic chunking.
+7. Metadata extraction.
+8. Embedding generation.
+9. Vector storage using pgvector.
+10. Hybrid retrieval.
+11. Metadata filtering.
+12. Reranking.
+13. Prompt construction.
+14. LLM response generation.
+15. Evidence and citation verification.
+16. Response delivery.
+17. Feedback collection.
+18. Evaluation and monitoring.
+
+Every knowledge document should support metadata such as:
+
+- Document title.
+- Department.
+- Document category.
+- Source.
+- Publication date.
+- Effective date.
+- Version.
+- Language.
+- Verification status.
+- Last updated timestamp.
+
+The assistant must prefer verified, authoritative government information.
+
+If reliable information is unavailable, it must communicate the limitation instead of inventing an answer.
+
+## Multi-agent architecture
+
+Prepare an extensible agent architecture with the following agents:
+
+1. Orchestrator Agent.
+2. Citizen Service Agent.
+3. Knowledge Retrieval Agent.
+4. Document Intelligence Agent.
+5. Complaint Management Agent.
+6. Analytics Agent.
+7. Fraud Intelligence Agent.
+8. Language & Translation Agent.
+9. Governance Monitoring Agent.
+
+Define:
+
+- Agent responsibility.
+- Input and output.
+- Available tools.
+- Permission boundaries.
+- Communication contracts.
+- Failure handling.
+- Logging.
+- Human approval requirements.
+
+AI agents must never bypass authentication, authorization or departmental permissions.
+
+Agents may assist with application processing, but must not independently make legally significant government decisions.
+
+## ML architecture
+
+Prepare model design specifications for:
+
+- Complaint classification.
+- Application delay prediction.
+- Government service demand forecasting.
+- Complaint volume forecasting.
+- Anomaly detection.
+- Scheme recommendation.
+- Citizen feedback sentiment analysis.
+
+For each model define:
+
+- Business objective.
+- Input data.
+- Expected output.
+- Candidate algorithms.
+- Training requirements.
+- Evaluation metrics.
+- Model versioning.
+- Monitoring.
+- Human review requirements.
+
+Do not claim model accuracy or performance before actual training and evaluation.
+
+---
+
+# 11. SECURITY, PRIVACY AND GOVERNANCE ARCHITECTURE
+
+This is a government-oriented platform. Security must be considered from the beginning.
+
+Define a comprehensive security architecture covering:
+
+### Authentication
+
+- Secure password hashing.
+- OTP verification.
+- Multi-factor authentication support.
+- Session expiry.
+- Refresh token rotation.
+- Account lockout and recovery.
+- Secure logout.
+
+### Authorization
+
+- Role-based access control.
+- Permission-based authorization.
+- Department-level data isolation.
+- Resource-level authorization.
+- Administrative access controls.
+- API-level permission enforcement.
+
+### Application Security
+
+- Input validation.
+- SQL injection prevention.
+- XSS protection.
+- CSRF protection where applicable.
+- CORS configuration.
+- Rate limiting.
+- Secure file upload.
+- Malware scanning integration.
+- Secret management.
+- Secure headers.
+- Dependency vulnerability scanning.
+
+### Data Security
+
+- Encryption in transit.
+- Encryption at rest.
+- Sensitive data classification.
+- Data minimization.
+- Access logging.
+- Retention and deletion policies.
+- Backup and recovery.
+- Database access restrictions.
+
+### AI Governance
+
+- AI output validation.
+- Hallucination mitigation.
+- Source citation.
+- Human-in-the-loop decisions.
+- Model version tracking.
+- Bias and fairness evaluation.
+- Explainability.
+- Prompt injection protection.
+- Sensitive data protection.
+- AI usage audit logs.
+
+### Regulatory considerations
+
+Design with the applicable Indian data protection framework, including the Digital Personal Data Protection Act, 2023 and relevant rules and obligations, in mind. Flag all legal and regulatory requirements for formal review.
+
+Do not claim legal compliance merely because controls have been designed.
+
+Do not assume access to Aadhaar, government identity systems, e-Sevai, departmental databases or other protected services.
+
+External integrations must be implemented only through officially documented and authorized APIs.
+
+---
+
+# 12. TAMIL NADU GOVERNMENT DATA AND INTEGRATION STRATEGY
+
+The initial geographical scope is Tamil Nadu.
+
+Prepare the platform to support:
+
+- State-level administration.
+- District-level administration.
+- Municipal corporations.
+- Municipalities.
+- Town panchayats.
+- Village panchayats.
+- Government departments.
+- Department offices.
+- Government services.
+- Public projects.
+
+Potential official information discovery sources:
+
+1. https://www.tn.gov.in/
+2. https://www.tnesevai.tn.gov.in/
+3. https://www.data.gov.in/
+4. https://www.mygov.in/
+
+These are reference sources for research and future integration planning, not confirmation that public APIs are available.
+
+For each proposed integration, document:
+
+- Integration purpose.
+- Owning organization.
+- Required authorization.
+- Official API availability status.
+- Authentication method.
+- Data exchanged.
+- Failure handling.
+- Rate limits, if documented.
+- Security requirements.
+
+Never fabricate API endpoints, access credentials, official government partnerships or integration permissions.
+
+---
+
+# 13. PROJECT REPOSITORY AND FOLDER STRUCTURE
+
+Establish a clean monorepo architecture.
+
+Use the following structure as the baseline:
+
+govai-nexus/
+
+- apps/
+  - web/
+  - mobile/
+  - admin-web/
+
+- backend/
+  - app/
+  - ai_engine/
+  - ml_engine/
+  - workers/
+  - migrations/
+  - tests/
+
+- packages/
+  - shared-types/
+  - api-client/
+  - validation/
+  - design-tokens/
+
+- infrastructure/
+  - docker/
+  - nginx/
+  - monitoring/
+  - deployment/
+
+- datasets/
+  - government/
+  - complaints/
+  - documents/
+  - ml/
+
+- research/
+  - papers/
+  - experiments/
+  - model-evaluation/
+
+- docs/
+  - architecture/
+  - api/
+  - database/
+  - diagrams/
+  - security/
+  - testing/
+  - deployment/
+  - user-manual/
+
+- scripts/
+- tests/
+- .github/
+- docker-compose.yml
+- .env.example
+- README.md
+
+### Backend module organization
+
+Prepare a module-based backend structure:
+
+backend/app/
+
+- core/
+- api/
+- modules/
+  - auth/
+  - users/
+  - roles/
+  - departments/
+  - geography/
+  - services/
+  - schemes/
+  - applications/
+  - documents/
+  - complaints/
+  - notifications/
+  - analytics/
+  - fraud/
+  - transparency/
+  - feedback/
+  - audit/
+- integrations/
+- database/
+- schemas/
+- middleware/
+- common/
+
+backend/ai_engine/
+
+- rag/
+- chatbot/
+- agents/
+- nlp/
+- translation/
+- speech/
+- ocr/
+- evaluation/
+
+backend/ml_engine/
+
+- preprocessing/
+- classification/
+- forecasting/
+- anomaly_detection/
+- recommendation/
+- training/
+- inference/
+- evaluation/
+
+Provide a README explaining the purpose of every major directory.
+
+Do not create unnecessary empty files simply to make the structure look complete.
+
+---
+
+# 14. DEVELOPMENT ENVIRONMENT AND ENGINEERING STANDARDS
+
+Define the development standards for the entire team.
+
+### Coding standards
+
+- TypeScript strict mode.
+- Python type hints.
+- PEP 8.
+- ESLint.
+- Prettier.
+- Ruff.
+- Clear naming conventions.
+- Reusable functions.
+- Separation of concerns.
+- Centralized configuration.
+- Structured logging.
+- Consistent error handling.
+- Secure coding practices.
+
+### API standards
+
+- Versioned REST APIs.
+- Consistent response format.
+- Standard error format.
+- Pagination.
+- Filtering.
+- Sorting.
+- Request validation.
+- OpenAPI documentation.
+
+### Database standards
+
+- SQLAlchemy models.
+- Alembic migrations.
+- Referential integrity.
+- Proper indexes.
+- Transaction handling.
+- No uncontrolled schema changes.
+
+### Git standards
+
+Define:
+
+- Main branch.
+- Development branch.
+- Feature branches.
+- Bug-fix branches.
+- Pull request rules.
+- Commit naming conventions.
+- Code review checklist.
+
+### Environment management
+
+Prepare:
+
+- Development environment.
+- Staging environment.
+- Production environment.
+
+Use environment variables for credentials and configuration.
+
+Create `.env.example` with placeholder values only. Never include real API keys, passwords, tokens or secrets.
+
+---
+
+# 15. NON-FUNCTIONAL REQUIREMENTS
+
+Define measurable targets and validation methods for:
+
+### Performance
+
+- Efficient API responses.
+- Database query optimization.
+- Caching.
+- Asynchronous processing.
+- Pagination.
+- Efficient frontend rendering.
+
+### Scalability
+
+- Modular architecture.
+- Stateless API services where practical.
+- Independent background workers.
+- Database indexing.
+- Horizontal scaling readiness.
+
+### Availability
+
+- Health checks.
+- Graceful error handling.
+- Monitoring.
+- Backup and recovery.
+- Service failure handling.
+
+### Accessibility
+
+- WCAG 2.2 AA target.
+- Keyboard navigation.
+- Screen-reader support.
+- Sufficient color contrast.
+- Tamil font and glyph validation.
+
+### Reliability
+
+- Input validation.
+- Database consistency.
+- Retry policies.
+- Idempotency for suitable operations.
+- Structured logging.
+- Failure recovery.
+
+Do not claim that these targets have been achieved until tested.
+
+---
+
+# 16. DATA FLOW AND BUSINESS WORKFLOW PLANNING
+
+Prepare detailed workflow specifications for the following future processes.
+
+### Workflow A – Citizen Registration
+
+Citizen → Registration → Verification → Profile Creation → Role Assignment → Citizen Dashboard.
+
+### Workflow B – Government Service Application
+
+Citizen → Service Discovery → Application Form → Document Upload → Validation → Submission → Employee Assignment → Review → Decision → Notification → Application History.
+
+### Workflow C – Complaint Management
+
+Citizen → Complaint Submission → Classification → Department Assignment → Officer Review → Resolution Workflow → Citizen Notification → Feedback.
+
+### Workflow D – Intelligent Document Processing
+
+Document Upload → File Validation → OCR → Classification → Extraction → Confidence Scoring → Employee Verification → Document Status Update.
+
+### Workflow E – AI Citizen Assistance
+
+Citizen Query → Language Detection → Intent Detection → Knowledge Retrieval → Evidence Validation → LLM Response → Source References → Feedback.
+
+### Workflow F – Predictive Analytics
+
+Historical Data → Data Validation → Preprocessing → Feature Engineering → Model Inference → Prediction → Dashboard → Human Review.
+
+### Workflow G – Fraud Intelligence
+
+Event/Data Input → Rule Checks → Anomaly Detection → Risk Score → Alert Creation → Investigator Review → Investigation Outcome.
+
+### Workflow H – Government Transparency
+
+Approved Government Data → Validation → Public Data Preparation → Publication Approval → Public Dashboard → Citizen Access.
+
+For each workflow define:
+
+- Actors.
+- Preconditions.
+- Main flow.
+- Alternative flow.
+- Failure cases.
+- Permissions.
+- Data changes.
+- Notifications.
+- Audit events.
+
+---
+
+# 17. REQUIRED PHASE 1 DELIVERABLES
+
+Complete the following deliverables before declaring Phase 1 finished.
+
+## Deliverable 1 – Project Requirements Document
+
+Create:
+
+`docs/PROJECT_REQUIREMENTS.md`
+
+Include:
+
+- Project overview.
+- Vision.
+- Objectives.
+- Scope.
+- Stakeholders.
+- User roles.
+- Functional requirements.
+- Non-functional requirements.
+- Assumptions.
+- Constraints.
+- Out-of-scope items.
+- Success criteria.
+
+## Deliverable 2 – Software Architecture Document
+
+Create:
+
+`docs/architecture/SYSTEM_ARCHITECTURE.md`
+
+Include:
+
+- Architecture overview.
+- Technology decisions.
+- Architecture layers.
+- Module boundaries.
+- Communication patterns.
+- Deployment approach.
+- Scalability strategy.
+- Security architecture.
+- Architecture trade-offs.
+
+## Deliverable 3 – Database Design
+
+Create:
+
+`docs/database/DATABASE_DESIGN.md`
+
+Include:
+
+- Database strategy.
+- All proposed tables.
+- Column specifications.
+- Primary keys.
+- Foreign keys.
+- Relationships.
+- Constraints.
+- Indexes.
+- Normalization.
+- Migration strategy.
+
+## Deliverable 4 – API Specification
+
+Create:
+
+`docs/api/API_SPECIFICATION.md`
+
+Include all proposed API groups and endpoint specifications.
+
+## Deliverable 5 – AI Architecture
+
+Create:
+
+`docs/architecture/AI_ARCHITECTURE.md`
+
+Include:
+
+- RAG architecture.
+- LLM integration.
+- Agent architecture.
+- NLP.
+- OCR.
+- Speech processing.
+- ML architecture.
+- Model governance.
+- AI safety.
+
+## Deliverable 6 – Security Architecture
+
+Create:
+
+`docs/security/SECURITY_AND_PRIVACY.md`
+
+Include:
+
+- Authentication.
+- Authorization.
+- RBAC.
+- Data protection.
+- API security.
+- File security.
+- AI security.
+- Audit logging.
+- Privacy and compliance considerations.
+
+## Deliverable 7 – System Diagrams
+
+Create:
+
+`docs/diagrams/`
+
+Include the required Mermaid architecture and workflow diagrams.
+
+## Deliverable 8 – Repository Structure
+
+Create:
+
+`docs/architecture/PROJECT_STRUCTURE.md`
+
+Include the proposed monorepo structure and explain each major directory.
+
+## Deliverable 9 – Technology Decision Record
+
+Create:
+
+`docs/architecture/TECH_STACK_AND_DECISIONS.md`
+
+Include:
+
+- Selected technologies.
+- Their responsibilities.
+- Why they were selected.
+- Alternatives considered.
+- Trade-offs.
+- Version compatibility considerations.
+
+## Deliverable 10 – Development Roadmap
+
+Create:
+
+`docs/DEVELOPMENT_ROADMAP.md`
+
+Include all six phases, their objectives, deliverables, dependencies and completion criteria.
+
+## Deliverable 11 – Integration Strategy
+
+Create:
+
+`docs/architecture/INTEGRATION_STRATEGY.md`
+
+Include external government integrations, AI providers, storage, notification services and future integration requirements.
+
+## Deliverable 12 – Master README
+
+Create or update:
+
+`README.md`
+
+Include:
+
+- Project name.
+- Tagline.
+- Project overview.
+- Core features.
+- Architecture overview.
+- Technology stack.
+- Repository structure.
+- Setup prerequisites.
+- Environment configuration.
+- Development instructions.
+- Documentation links.
+- Phase roadmap.
+- Security notice.
+
+---
+
+# 18. GOOGLE AI STUDIO EXECUTION INSTRUCTIONS
+
+Follow this sequence carefully.
+
+### Step 1 – Inspect the Current Project
+
+Before modifying anything:
+
+- Inspect the current project and available files.
+- Identify the existing framework and configuration.
+- Identify existing source code.
+- Check for existing documentation.
+- Check existing dependencies.
+- Identify any existing database or API configuration.
+- Identify incomplete or conflicting architecture decisions.
+
+Do not delete or overwrite useful existing files.
+
+### Step 2 – Architecture Analysis
+
+Analyze the complete project requirements.
+
+Identify:
+
+- Missing requirements.
+- Technical dependencies.
+- Architecture risks.
+- Database dependencies.
+- Integration constraints.
+- Security risks.
+- AI implementation risks.
+
+Document assumptions instead of inventing missing facts.
+
+### Step 3 – Finalize the Foundation
+
+Produce the complete architecture, data model, API contracts, security strategy, integration strategy and repository structure.
+
+Ensure all modules are connected logically.
+
+### Step 4 – Create Documentation
+
+Create all 12 deliverables described above in the appropriate project documentation directories.
+
+Keep documents consistent with one another.
+
+### Step 5 – Validate the Foundation
+
+Check:
+
+- Every major feature maps to a module.
+- Every module has clear responsibilities.
+- Every important entity has a database design.
+- API contracts align with the database.
+- User roles align with permissions.
+- AI workflows align with the AI architecture.
+- Security controls apply to all relevant modules.
+- The repository structure supports all six phases.
+- No critical requirement has been silently omitted.
+
+### Step 6 – Prepare for Phase 2
+
+After completing Phase 1, provide the complete design handoff for Phase 2.
+
+Include:
+
+- User roles and user journeys.
+- Portal list.
+- Page-level feature requirements.
+- Navigation hierarchy.
+- Component inventory.
+- Design system requirements.
+- Responsive design requirements.
+- Accessibility requirements.
+- Tamil and English interface requirements.
+- Mobile application screen inventory.
+
+Do not create the actual UI designs yet.
+
+---
+
+# 19. STRICT RULES – MUST FOLLOW
+
+1. Do not start Phase 2, 3, 4, 5 or 6 implementation.
+2. Do not create actual frontend pages or dashboards in this phase.
+3. Do not build placeholder UI and call it a completed foundation.
+4. Do not fabricate government datasets.
+5. Do not fabricate official API integrations.
+6. Do not hardcode real credentials.
+7. Do not use mock data as a substitute for a real database architecture.
+8. Do not create duplicate database entities.
+9. Do not introduce microservices without justification.
+10. Do not hardcode AI provider-specific business logic.
+11. Do not allow AI agents to bypass authorization.
+12. Do not allow AI predictions to automatically make legally significant decisions.
+13. Do not assume external government integration permissions.
+14. Do not claim model accuracy without evaluation.
+15. Do not claim production readiness before testing.
+16. Maintain consistency across every architecture document.
+17. Prefer maintainable, scalable and industry-standard solutions.
+18. Reuse existing valid project work instead of unnecessarily rebuilding it.
+19. Clearly separate confirmed facts, assumptions and proposed future integrations.
+20. Never silently skip a deliverable because of response-length limitations.
+
+If the environment cannot create or edit a particular documentation file, provide its complete contents and identify where it belongs.
+
+---
+
+# 20. PHASE 1 ACCEPTANCE CRITERIA
+
+Phase 1 can be declared complete only when the following conditions are satisfied.
+
+- [ ] Project scope and requirements documented.
+- [ ] All user roles and permissions defined.
+- [ ] All eight core functional modules architecturally defined.
+- [ ] Six-phase development roadmap documented.
+- [ ] Technology stack finalized.
+- [ ] System architecture documented.
+- [ ] Backend architecture documented.
+- [ ] Frontend and mobile architecture documented.
+- [ ] Database tables and relationships specified.
+- [ ] ER diagram prepared.
+- [ ] API endpoint specifications prepared.
+- [ ] RAG architecture documented.
+- [ ] Multi-agent architecture documented.
+- [ ] ML architecture documented.
+- [ ] OCR and voice architecture documented.
+- [ ] Security and privacy architecture documented.
+- [ ] Tamil Nadu integration strategy documented.
+- [ ] Repository structure documented.
+- [ ] Development standards documented.
+- [ ] Workflow diagrams prepared.
+- [ ] All 12 documentation deliverables created or supplied.
+- [ ] Documentation consistency verified.
+- [ ] Phase 2 design handoff prepared.
+
+---
+
+# 21. FINAL RESPONSE REQUIRED AFTER EXECUTION
+
+When Phase 1 work is complete, provide a structured completion report containing:
+
+1. Project foundation summary.
+2. Final architecture overview.
+3. Technology stack.
+4. Modules covered.
+5. Database architecture summary.
+6. API architecture summary.
+7. AI architecture summary.
+8. Security architecture summary.
+9. Documentation files created.
+10. Existing files modified, if any.
+11. Architectural assumptions and unresolved decisions.
+12. Known risks and technical limitations.
+13. Phase 1 acceptance checklist with actual completion status.
+14. Phase 2 readiness assessment.
+
+Clearly distinguish completed deliverables from proposed designs and unimplemented future features.
+
+Do not declare Phase 1 complete if important deliverables are missing.
+
+## FINAL INSTRUCTION
+
+Begin with inspecting the existing project.
+
+Then execute Phase 1 in the exact order described above.
+
+Establish a professional, scalable and secure enterprise-level architectural foundation for GovAI Nexus.
+
+**Remember: Phase 1 is the foundation of the entire six-phase project. Every decision made here must support the complete GovAI Nexus vision, including all future full-stack, AI, ML, RAG, NLP, OCR, automation, multi-agent, analytics, transparency and mobile capabilities.**

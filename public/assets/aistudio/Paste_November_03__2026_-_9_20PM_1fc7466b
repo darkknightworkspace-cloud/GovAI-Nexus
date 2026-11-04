@@ -1,0 +1,2106 @@
+# GOVAI NEXUS – DEPARTMENT OFFICER / HOD PORTAL
+# COMPLETE UI/UX + FULL-STACK DEVELOPMENT MASTER PROMPT
+
+## 1. PROJECT OVERVIEW
+
+Project Name: GovAI Nexus  
+Tagline: Smarter Government. Faster Services. Transparent Governance.  
+Target: Government of Tamil Nadu, India  
+Portal: Department Officer / Head of Department (HOD) Portal  
+Languages: English + Tamil  
+Platforms: Web + Responsive Mobile
+
+You are working on an existing enterprise-level GovTech platform called GovAI Nexus.
+
+Your task is to build the complete Department Officer / HOD Portal as an integrated part of the existing GovAI Nexus platform.
+
+This portal is designed for:
+
+- Department Officers.
+- Heads of Departments (HODs).
+- District-Level Officers.
+- Taluk-Level Officers.
+- Regional Officers.
+- Authorized Supervisory Officers.
+- Department Administrators.
+- Senior Government Officials.
+
+The portal must provide a centralized workspace for monitoring department operations, managing employees, supervising government applications, monitoring service delivery, identifying bottlenecks, analyzing department performance and supporting administrative decisions.
+
+### Core objectives
+
+1. Monitor overall department performance.
+2. Manage department information and services.
+3. Monitor government application processing.
+4. Supervise employee activities and workloads.
+5. Monitor pending and delayed applications.
+6. Analyze district-wise and service-wise performance.
+7. Predict application delays and service demand.
+8. Detect unusual patterns and potential irregularities.
+9. Monitor complaints and citizen satisfaction.
+10. Generate departmental reports.
+11. Support evidence-based administrative decisions.
+12. Improve transparency and service delivery.
+
+### Mandatory technical requirements
+
+- Primary programming language: Python.
+- Backend: Python 3.12+ with FastAPI.
+- Frontend: React 19 + Vite + TypeScript.
+- Styling: Tailwind CSS + shadcn/ui.
+- Database: PostgreSQL.
+- ORM: SQLAlchemy 2.
+- Migrations: Alembic.
+- Cache: Redis.
+- Analytics: Pandas, NumPy, Scikit-learn, XGBoost.
+- Deep Learning: PyTorch where appropriate.
+- Charts: Recharts.
+- AI/GenAI: Gemini or configured LLM provider.
+- RAG: PostgreSQL + pgvector.
+- Authentication: Existing GovAI Nexus authentication system.
+- Deployment: Docker + CI/CD.
+
+IMPORTANT:
+
+1. Inspect the existing project before making changes.
+2. Reuse existing Citizen and Employee Portal infrastructure.
+3. Do not create a disconnected application.
+4. Do not duplicate existing database entities.
+5. All dashboards must use actual database-backed information.
+6. Every button, table action, filter and form must work.
+7. Enforce authorization on the backend, not only the frontend.
+8. Do not use hardcoded mock data in production functionality.
+9. Do not invent official government statistics or department records.
+10. Maintain the existing GovAI Nexus branding.
+
+---
+
+# 2. OFFICER PORTAL DESIGN SYSTEM
+
+Follow the same visual identity used in the previous GovAI Nexus Citizen and Employee Portal designs.
+
+### Brand colours
+
+- Primary Navy: #102A43
+- Dark Navy: #071B3B
+- Primary Blue: #2563EB
+- Primary Purple: #6D28D9
+- Secondary Purple: #7C3AED
+- Teal: #0F766E
+- Background: #F8FAFC
+- Card Background: #FFFFFF
+- Primary Text: #0F172A
+- Secondary Text: #64748B
+- Border: #E2E8F0
+
+### Visual style
+
+- Government enterprise dashboard.
+- Professional administrative interface.
+- Navy-blue top header.
+- Dark navy collapsible sidebar.
+- Purple active navigation.
+- White content cards.
+- Blue and purple gradient banners.
+- Clean tables and charts.
+- Soft shadows.
+- Consistent spacing.
+- Modern outline icons.
+- Clear status indicators.
+- Responsive layouts.
+- Accessible typography.
+
+### Typography
+
+- English: Inter or Poppins.
+- Tamil: Noto Sans Tamil.
+
+### Header
+
+Create a shared header containing:
+
+- Government of Tamil Nadu emblem and identity.
+- GovAI Nexus logo.
+- Officer Portal badge.
+- Global search.
+- English / Tamil language switcher.
+- Font size controls.
+- Notification icon with unread count.
+- Officer profile photograph or avatar.
+- Officer name.
+- Designation.
+- Profile dropdown.
+- Logout.
+
+### Left Sidebar – Main Navigation
+
+Create a fixed, collapsible sidebar with the following sections:
+
+1. Dashboard
+2. Department Management
+   - Department Overview
+   - Department Profile
+   - Government Services
+   - Government Schemes
+   - Department Offices
+   - District / Taluk Management
+3. Application Monitoring
+   - All Applications
+   - Pending Applications
+   - Under Review
+   - Delayed Applications
+   - Approval Monitoring
+   - Rejected Applications
+4. Employee Management
+   - Employee Directory
+   - Employee Performance
+   - Employee Assignments
+   - Employee Workload
+   - Attendance / Availability, if authorized
+5. Workload Monitoring
+   - Overall Workload
+   - District-wise Workload
+   - Office-wise Workload
+   - Employee-wise Workload
+   - Task Distribution
+6. Predictive Analytics
+   - Application Delay Prediction
+   - Service Demand Forecasting
+   - Workload Forecasting
+   - Department Performance Forecasting
+7. Fraud & Anomaly Alerts
+   - Anomaly Dashboard
+   - Unusual Application Patterns
+   - Duplicate Application Alerts
+   - Unusual Processing Patterns
+   - Investigation Queue
+8. Citizen Grievances
+   - Grievance Overview
+   - Pending Grievances
+   - Escalated Grievances
+   - Resolution Monitoring
+   - Citizen Feedback
+9. Department Reports
+   - Performance Reports
+   - Application Reports
+   - Employee Reports
+   - Service Reports
+   - District Reports
+   - SLA Reports
+10. Notifications & Announcements
+11. Help & Resources
+12. Officer Profile & Settings
+
+Use expandable navigation groups.
+
+The sidebar must support desktop, tablet and mobile layouts.
+
+---
+
+# 3. COMPLETE OFFICER PORTAL – SIX CORE PAGES
+
+# PAGE 1 – OFFICER DASHBOARD
+
+Route: /officer/dashboard
+
+Create a comprehensive administrative dashboard.
+
+This is the first page displayed after an authorized officer logs in.
+
+## A. Welcome Banner
+
+Display:
+
+- Welcome message.
+- Officer name.
+- Profile photograph.
+- Designation.
+- Department.
+- Assigned district or administrative jurisdiction.
+- Office name.
+- Current date.
+- Reporting period.
+
+Banner text:
+
+"Welcome, [Officer Name]"
+
+"Monitor department operations, supervise service delivery and make informed administrative decisions."
+
+Include a professional Tamil Nadu government visual in the banner.
+
+Add a compact Ask GovAI Officer Assistant panel.
+
+## B. Department Information Strip
+
+Display:
+
+- Department Name.
+- Department Code.
+- Assigned District / Region.
+- Number of Offices.
+- Number of Active Employees.
+- Total Services.
+- Reporting Period.
+
+All information must come from the authorized officer profile and department records.
+
+## C. Department KPI Cards
+
+Create the following database-driven metric cards:
+
+1. Total Applications Received.
+2. Pending Applications.
+3. Applications Under Processing.
+4. Approved Applications.
+5. Rejected Applications.
+6. Delayed Applications.
+7. Active Employees.
+8. SLA Compliance Percentage.
+
+Each card should show:
+
+- Metric title.
+- Actual count or percentage.
+- Relevant icon.
+- Trend compared with the previous reporting period, where calculable.
+- Clickable navigation to the filtered details page.
+
+Do not display fabricated values.
+
+## D. Application Processing Overview
+
+Create an interactive chart displaying:
+
+- Applications Received.
+- Applications Processed.
+- Applications Approved.
+- Applications Rejected.
+
+Filters:
+
+- Today.
+- Last 7 Days.
+- Last 30 Days.
+- Last 3 Months.
+- Last 6 Months.
+- Custom Date Range.
+
+## E. Application Status Distribution
+
+Create a donut chart showing:
+
+- Pending.
+- Assigned.
+- Under Review.
+- Document Verification.
+- Additional Documents Required.
+- Ready for Approval.
+- Approved.
+- Rejected.
+
+Display actual record counts and percentages.
+
+## F. District-wise Performance
+
+Display an interactive district-level overview for the districts under the officer's jurisdiction.
+
+Include:
+
+- Applications Received.
+- Applications Processed.
+- Pending Applications.
+- Delayed Applications.
+- Average Processing Time.
+- SLA Compliance.
+
+Allow drill-down into:
+
+District → Taluk → Office → Service.
+
+Never expose information outside the officer's authorized jurisdiction.
+
+## G. Service-wise Performance
+
+Create a chart showing the department's major government services.
+
+Examples:
+
+- Income Certificate.
+- Community Certificate.
+- Nativity Certificate.
+- Patta Services.
+- Land Records.
+- Smart Family Card Services.
+- Other department-specific services.
+
+Show:
+
+- Applications Received.
+- Applications Processed.
+- Pending.
+- Average Processing Time.
+- SLA Compliance.
+
+The displayed services must be loaded dynamically from the department service master.
+
+## H. Workload Summary
+
+Display:
+
+- Total Assigned Applications.
+- Employee Workload.
+- Unassigned Applications.
+- Overdue Tasks.
+- High-Priority Applications.
+- Employees Requiring Workload Rebalancing.
+
+Provide a View Workload action.
+
+## I. Recent Department Activities
+
+Display a timeline of:
+
+- New applications received.
+- Applications processed.
+- Document verification completed.
+- Applications forwarded for approval.
+- Grievances escalated.
+- Employee task assignments.
+- Department announcements.
+
+Every event must be based on actual records and accessible according to permissions.
+
+## J. Critical Alerts
+
+Create an alert panel containing:
+
+- Applications exceeding configured SLA.
+- High pending application volume.
+- Employee workload imbalance.
+- Unresolved citizen grievances.
+- Unusual application patterns.
+- System integration failures.
+- Important department notifications.
+
+Use priority levels:
+
+- Critical.
+- High.
+- Medium.
+- Low.
+
+## K. Quick Actions
+
+Provide:
+
+1. View Applications.
+2. Manage Department.
+3. Monitor Workload.
+4. View Predictive Analytics.
+5. Review Anomaly Alerts.
+6. Generate Department Report.
+7. View Grievances.
+8. Publish Department Announcement, if authorized.
+
+## L. Officer AI Assistant
+
+Provide an Ask GovAI Officer Assistant card.
+
+Example queries:
+
+- What is the current application backlog?
+- Which district has the highest pending workload?
+- Which services have the longest processing times?
+- Which applications are approaching their SLA deadlines?
+- What are the main causes of application delays?
+- Which employees have excessive assigned workloads?
+- Summarize department performance for this month.
+
+The AI must use authorized database queries and verified government sources.
+
+---
+
+# PAGE 2 – DEPARTMENT MANAGEMENT
+
+Route: /officer/department-management
+
+Create a comprehensive department administration workspace.
+
+## A. Department Overview
+
+Display:
+
+- Department Name.
+- Department Code.
+- Department Description.
+- Responsible HOD.
+- Department Headquarters.
+- Contact Details.
+- Administrative Jurisdiction.
+- Number of District Offices.
+- Number of Taluk Offices.
+- Active Employees.
+- Department Services.
+- Department Schemes.
+
+## B. Department Profile
+
+Display and manage authorized fields:
+
+- Department Name.
+- Department Tamil Name.
+- Department Logo.
+- Department Description.
+- Official Contact Details.
+- Headquarters Address.
+- Department Website.
+- Department Email.
+- Department Helpline.
+- Office Working Hours.
+
+Allow editing only when the officer has the required permission.
+
+Policy-critical information must follow the department's approval process.
+
+## C. Department Offices
+
+Create an office directory.
+
+Office types:
+
+- Headquarters.
+- Regional Office.
+- District Office.
+- Taluk Office.
+- Block Office.
+- Local Office.
+- Service Centre.
+
+Display:
+
+- Office ID.
+- Office Name.
+- Office Type.
+- District.
+- Taluk.
+- Address.
+- Contact.
+- Assigned Officer.
+- Active Employee Count.
+- Office Status.
+
+Features:
+
+- Search.
+- Filters.
+- Sorting.
+- Office details.
+- Office-wise performance.
+- Authorized office assignment.
+
+## D. District & Taluk Management
+
+Display the administrative units under the officer's jurisdiction.
+
+Features:
+
+- District directory.
+- Taluk directory.
+- Office mapping.
+- Geographic hierarchy.
+- Employee allocation.
+- Service coverage.
+- District performance drill-down.
+
+Do not allow officers to modify official administrative boundaries or create unauthorized jurisdiction changes.
+
+## E. Department Service Management
+
+Create a service directory.
+
+Display:
+
+- Service ID.
+- Service Name.
+- Tamil Name.
+- Service Category.
+- Description.
+- Eligibility.
+- Required Documents.
+- Application Fee, if verified.
+- Official Processing Timeline.
+- SLA Configuration.
+- Application Mode.
+- Service Status.
+
+Actions:
+
+- View Details.
+- View Application Guidelines.
+- View Required Documents.
+- Monitor Applications.
+- View Service Analytics.
+
+Only authorized roles may modify service configuration.
+
+## F. Department Scheme Management
+
+Display all schemes assigned to the department.
+
+Show:
+
+- Scheme Name.
+- Scheme Category.
+- State / Central / Joint Classification.
+- Description.
+- Eligibility Criteria.
+- Benefits.
+- Required Documents.
+- Application Link.
+- Current Status.
+- Last Verification Date.
+
+Actions:
+
+- View Scheme.
+- Monitor Applications.
+- View Benefit Distribution.
+- View Eligibility Information.
+- Access Official Guidelines.
+
+Do not allow an officer to change legal eligibility, benefits or policy details without an approved process and authoritative source.
+
+## G. Department Resource Monitoring
+
+Where authorized, show:
+
+- Service availability.
+- Office capacity.
+- Employee availability.
+- Document processing capacity.
+- Service demand.
+- Resource utilization.
+
+Do not present unconnected or unavailable data as live monitoring.
+
+---
+
+# PAGE 3 – APPLICATION MONITORING
+
+Route: /officer/applications
+
+Create a department-wide application monitoring and supervisory workspace.
+
+This page must connect directly to the Citizen and Employee Portals.
+
+## A. Application Monitoring Summary
+
+Display:
+
+- Total Applications.
+- Newly Received.
+- Pending.
+- Under Review.
+- Document Verification.
+- Additional Documents Required.
+- Ready for Approval.
+- Approved.
+- Rejected.
+- Delayed / SLA Breached.
+
+## B. Application Status Tabs
+
+Create:
+
+1. All Applications.
+2. Newly Received.
+3. Pending.
+4. Under Review.
+5. Document Verification.
+6. Additional Documents Required.
+7. Ready for Approval.
+8. Approved.
+9. Rejected.
+10. Delayed Applications.
+
+## C. Application Search & Filters
+
+Support:
+
+- Application ID.
+- Citizen Name.
+- Service Name.
+- Scheme Name.
+- District.
+- Taluk.
+- Office.
+- Assigned Employee.
+- Submission Date.
+- Current Status.
+- Priority.
+- SLA Status.
+
+## D. Department Application Table
+
+Columns:
+
+- Application ID.
+- Citizen Name.
+- Service / Scheme.
+- District.
+- Office.
+- Assigned Employee.
+- Submission Date.
+- Last Updated.
+- Current Status.
+- SLA Deadline.
+- Delay Duration.
+- Action.
+
+Provide:
+
+- Pagination.
+- Sorting.
+- Advanced filtering.
+- Column visibility.
+- Export, where authorized.
+- Saved filters.
+- Bulk review actions, where permitted.
+
+## E. Application Details & Supervisory Review
+
+Route: /officer/applications/:applicationId
+
+Display:
+
+### Application Overview
+
+- Application ID.
+- Service / Scheme.
+- Citizen Information.
+- Submission Channel.
+- Submission Date.
+- Current Status.
+- Assigned Office.
+- Assigned Employee.
+- SLA Deadline.
+
+### Application Information
+
+- Citizen-submitted details.
+- Eligibility information.
+- Uploaded documents.
+- Verification history.
+- Employee review notes.
+- Previous actions.
+- Application timeline.
+
+### Supervisory Actions
+
+- View Processing History.
+- Request Employee Clarification.
+- Reassign Application, if authorized.
+- Forward to Authorized Reviewing Officer.
+- Escalate Delayed Application.
+- Return for Additional Processing.
+- Add Supervisory Note.
+- View Audit History.
+
+Final approval and rejection must be controlled by the official authority matrix.
+
+Do not give every HOD or officer unlimited approval permissions automatically.
+
+## F. Application Delay Monitoring
+
+Identify:
+
+- Applications nearing SLA deadlines.
+- Applications exceeding SLA.
+- Applications waiting for document verification.
+- Applications awaiting citizen response.
+- Applications pending employee action.
+- Applications awaiting authorized approval.
+
+Display delay reason when available.
+
+Possible delay categories:
+
+- Missing Documents.
+- Citizen Response Pending.
+- Employee Workload.
+- Verification Pending.
+- External Department Dependency.
+- Technical Issue.
+- Other Recorded Reason.
+
+## G. Approval Monitoring
+
+Show:
+
+- Applications recommended for approval.
+- Applications awaiting authorized approval.
+- Applications approved.
+- Applications rejected.
+- Applications returned for correction.
+
+Display approving authority and decision history.
+
+## H. Application Workflow Monitoring
+
+Show the configured workflow:
+
+Citizen Submission
+→ Employee Assignment
+→ Document Verification
+→ Application Review
+→ Officer Review
+→ Authorized Decision
+→ Citizen Notification
+→ Closure.
+
+Provide a visual workflow timeline for each application.
+
+---
+
+# PAGE 4 – EMPLOYEE MANAGEMENT & WORKLOAD MONITORING
+
+Routes:
+
+- /officer/employees
+- /officer/workload
+
+Create an employee supervision and workload management workspace.
+
+## A. Employee Overview
+
+Display:
+
+- Total Employees.
+- Active Employees.
+- Assigned Employees.
+- Employees with Pending Work.
+- Employees with Overdue Tasks.
+- Workload Distribution.
+
+## B. Employee Directory
+
+Columns:
+
+- Employee ID.
+- Employee Name.
+- Designation.
+- Department.
+- Office.
+- District.
+- Assigned Applications.
+- Completed Applications.
+- Pending Applications.
+- Current Workload.
+- Account Status.
+- Action.
+
+Filters:
+
+- District.
+- Taluk.
+- Office.
+- Designation.
+- Role.
+- Workload.
+- Account Status.
+
+## C. Employee Profile Details
+
+Route: /officer/employees/:employeeId
+
+Display authorized information:
+
+- Employee Name.
+- Employee ID.
+- Designation.
+- Department.
+- Assigned Office.
+- District.
+- Assigned Services.
+- Application Processing Summary.
+- Task History.
+- Workload Summary.
+- SLA Metrics.
+- Recent Activities.
+
+Do not expose sensitive employee personal data unnecessarily.
+
+## D. Workload Monitoring Dashboard
+
+Display:
+
+- Total Department Workload.
+- Unassigned Applications.
+- Employee-wise Assigned Applications.
+- Completed Work.
+- Pending Work.
+- Overdue Work.
+- High-Priority Work.
+
+## E. Employee Workload Comparison
+
+Create an interactive bar chart.
+
+Compare:
+
+- Applications Assigned.
+- Applications Completed.
+- Pending Applications.
+- Overdue Applications.
+
+Allow filters by:
+
+- District.
+- Office.
+- Service.
+- Reporting Period.
+
+Use actual data and clearly explain the metrics.
+
+## F. Workload Distribution Matrix
+
+Create a table:
+
+Employee | Office | Assigned | Completed | Pending | Overdue | Workload Status
+
+Workload indicators:
+
+- Low.
+- Balanced.
+- High.
+- Critical.
+
+Define workload thresholds using configurable rules, not arbitrary hardcoded values.
+
+## G. Workload Allocation
+
+Where authorized, allow the officer to:
+
+- Assign Unallocated Applications.
+- Reassign Applications.
+- Redistribute Tasks.
+- Set Processing Priority.
+- Monitor Assignment History.
+- View Employee Availability.
+
+Before reassigning an application, check role permissions and maintain a complete audit history.
+
+## H. Team Performance
+
+Display:
+
+- Processing Volume.
+- Average Processing Time.
+- Application Completion.
+- Document Verification.
+- SLA Compliance.
+- Task Completion.
+
+Avoid unfair employee ranking based solely on raw application counts.
+
+Consider application complexity, assignment volume, workload and reporting period.
+
+## I. Attendance / Availability
+
+Only when authorized and connected to an approved attendance system, display:
+
+- Employee Availability.
+- Office Attendance Status.
+- Approved Leave.
+- Assigned Shift.
+
+Do not fabricate attendance data or introduce employee surveillance without authorization.
+
+---
+
+# PAGE 5 – PREDICTIVE ANALYTICS CENTRE
+
+Route: /officer/predictive-analytics
+
+Create an AI-powered departmental intelligence dashboard.
+
+This module must use Python-based ML models and actual historical data.
+
+## A. Predictive Intelligence Overview
+
+Display:
+
+- Application Demand Forecast.
+- Processing Delay Prediction.
+- Pending Workload Forecast.
+- Service Demand Forecast.
+- Department Capacity Indicators.
+- Model Health and Data Freshness.
+
+## B. Application Delay Prediction
+
+Predict the likelihood that an application may exceed its configured SLA.
+
+Potential input features:
+
+- Service Type.
+- Application Complexity.
+- Submission Date.
+- Current Application Stage.
+- Number of Pending Documents.
+- Previous Processing Durations.
+- Assigned Office Workload.
+- Employee Workload.
+- Historical Service Delays.
+- Available processing capacity.
+
+Output:
+
+- Predicted Delay Risk.
+- Expected Processing Duration, if model validation supports it.
+- Major contributing factors.
+- Recommended administrative action.
+
+Display risk categories:
+
+- Low.
+- Medium.
+- High.
+
+Never present predictions as guaranteed outcomes.
+
+## C. Service Demand Forecasting
+
+Forecast future demand for government services.
+
+Examples:
+
+- Income Certificates.
+- Community Certificates.
+- Nativity Certificates.
+- Land Services.
+- Welfare Schemes.
+- Other department services.
+
+Show:
+
+- Historical Application Volume.
+- Predicted Demand.
+- Forecast Period.
+- Confidence Interval.
+- Trend.
+- Model Evaluation Metrics.
+
+Forecast horizons:
+
+- Next 7 Days.
+- Next 30 Days.
+- Next 3 Months.
+- Next 6 Months.
+
+## D. Workload Forecasting
+
+Predict future workload for:
+
+- Department.
+- District.
+- Taluk.
+- Office.
+- Service Category.
+
+Display:
+
+- Expected Application Volume.
+- Available Processing Capacity.
+- Projected Backlog.
+- Potential Bottlenecks.
+- Suggested Resource Allocation.
+
+## E. Department Performance Forecasting
+
+Analyze expected:
+
+- Application Completion.
+- SLA Compliance.
+- Processing Time.
+- Service Demand.
+- Pending Backlog.
+
+## F. Predictive Insight Cards
+
+Provide actionable explanations:
+
+Example:
+
+"Community Certificate applications show an increasing pending workload in the selected reporting period."
+
+"Document verification is a major contributor to the current processing delay."
+
+Only show insights when supported by actual data.
+
+## G. Recommended Actions
+
+Provide administrative suggestions such as:
+
+- Redistribute workload.
+- Prioritize SLA-sensitive applications.
+- Allocate additional verification capacity.
+- Review services with high pending volume.
+- Investigate recurring document rejection reasons.
+
+These are recommendations for officer review, not automatic administrative decisions.
+
+## H. Model Monitoring
+
+Display:
+
+- Model Name.
+- Model Version.
+- Training Date.
+- Data Period.
+- Evaluation Metrics.
+- Last Prediction Date.
+- Data Freshness.
+- Model Status.
+- Known Limitations.
+
+Do not invent model accuracy or performance scores.
+
+If insufficient historical data exists, show "Insufficient Data for Reliable Prediction."
+
+---
+
+# PAGE 6 – FRAUD & ANOMALY INTELLIGENCE CENTRE
+
+Route: /officer/fraud-alerts
+
+Create a secure AI-powered anomaly monitoring and investigation workspace.
+
+The objective is to identify unusual patterns for authorized human investigation.
+
+IMPORTANT:
+
+An anomaly is not proof of fraud, corruption or misconduct.
+
+Never automatically accuse citizens or employees.
+
+## A. Fraud & Anomaly Overview
+
+Display:
+
+- Total Anomaly Alerts.
+- New Alerts.
+- Under Investigation.
+- Resolved Alerts.
+- High-Priority Alerts.
+- Alerts Awaiting Review.
+
+## B. Alert Categories
+
+1. Duplicate Application Patterns.
+2. Unusual Application Submission Patterns.
+3. Unusual Processing Time.
+4. Repeated Document Rejection Patterns.
+5. Unusual Status Changes.
+6. Unusual Bulk Processing.
+7. Suspicious Application Clusters.
+8. Unusual Service Utilization.
+9. Potential Document Inconsistencies.
+10. Unusual Financial or Benefit Distribution Patterns, only where authorized and supported by reliable records.
+
+## C. Anomaly Detection Methods
+
+Use Python ML techniques where appropriate:
+
+- Isolation Forest.
+- Local Outlier Factor.
+- Statistical Outlier Detection.
+- Clustering.
+- Rule-Based Detection.
+- Time-Series Anomaly Detection.
+
+Choose techniques based on the actual data quality and business problem.
+
+## D. Alert Details
+
+Route: /officer/fraud-alerts/:alertId
+
+Display:
+
+- Alert ID.
+- Alert Category.
+- Detection Date.
+- Related Application.
+- Department.
+- Office.
+- Anomaly Description.
+- Detection Method.
+- Risk Indicator.
+- Evidence Summary.
+- Related Records.
+- Source Data.
+- Model Version.
+- Investigation Status.
+
+Avoid exposing unnecessary personal information.
+
+## E. Alert Prioritization
+
+Classify alerts as:
+
+- Critical.
+- High.
+- Medium.
+- Low.
+
+Use configurable thresholds.
+
+Clearly distinguish:
+
+- Rule-based alert.
+- Statistical anomaly.
+- ML-generated anomaly.
+- Manually reported concern.
+
+## F. Investigation Workflow
+
+Create the following workflow:
+
+Alert Generated
+→ Officer Review
+→ Evidence Examination
+→ Investigation Assignment
+→ Additional Information
+→ Findings Recorded
+→ Authorized Resolution
+→ Closure.
+
+Actions:
+
+- View Evidence.
+- Mark as Under Review.
+- Assign Investigator, if authorized.
+- Request Additional Information.
+- Add Investigation Notes.
+- Escalate.
+- Mark as False Positive.
+- Resolve Alert.
+- Close Investigation.
+
+Require reasons for important status changes.
+
+Maintain a complete immutable audit history.
+
+## G. Anomaly Analytics
+
+Display:
+
+- Alerts by Category.
+- Alerts by District.
+- Alerts by Office.
+- Alert Trends.
+- False Positive Trends.
+- Investigation Resolution Time.
+
+All analysis must be based on actual alert records.
+
+## H. Responsible AI Safeguards
+
+- No automatic guilt determination.
+- No automatic rejection of citizen applications.
+- No automatic employee disciplinary action.
+- Human investigation required.
+- Explain the reason for each alert.
+- Record model versions and evidence.
+- Provide a correction and appeal process where applicable.
+- Restrict sensitive investigations to authorized roles.
+
+---
+
+# 4. ADDITIONAL OFFICER PORTAL MODULES
+
+Integrate these supporting modules into the six core pages.
+
+## A. CITIZEN GRIEVANCE MONITORING
+
+Route: /officer/grievances
+
+Features:
+
+- Total Grievances.
+- New Grievances.
+- In Progress.
+- Escalated.
+- Resolved.
+- Overdue.
+- Department-wise Grievances.
+- District-wise Grievances.
+- Category-wise Grievances.
+- Average Resolution Time.
+
+Grievance table:
+
+- Grievance ID.
+- Citizen.
+- Subject.
+- Category.
+- Department.
+- Office.
+- Submitted Date.
+- Priority.
+- Status.
+- Assigned Employee.
+- SLA Deadline.
+
+Actions:
+
+- View.
+- Assign.
+- Forward.
+- Escalate.
+- Request Information.
+- Monitor Resolution.
+
+Do not reveal private complaint information to unauthorized employees.
+
+## B. CITIZEN FEEDBACK & SENTIMENT
+
+Route: /officer/citizen-feedback
+
+Features:
+
+- Total Feedback.
+- Average Rating.
+- Positive Feedback.
+- Negative Feedback.
+- Service-wise Ratings.
+- District-wise Satisfaction.
+- Common Complaint Topics.
+- Feedback Trends.
+
+Use NLP for:
+
+- Tamil text analysis.
+- English text analysis.
+- Topic classification.
+- Sentiment classification.
+- Feedback summarization.
+
+Sentiment scores are indicators, not definitive judgments about a citizen or department.
+
+## C. DEPARTMENT ANNOUNCEMENTS
+
+Route: /officer/announcements
+
+Features:
+
+- Create Announcement, if authorized.
+- Department Notices.
+- Employee Notifications.
+- Important Circulars.
+- Announcement Scheduling.
+- Publish / Unpublish.
+- Announcement History.
+
+Require approval for official notices where policy demands it.
+
+## D. OFFICER NOTIFICATIONS
+
+Route: /officer/notifications
+
+Notification categories:
+
+- SLA Breach.
+- Pending Application Alert.
+- Employee Workload Alert.
+- High-Priority Grievance.
+- Anomaly Alert.
+- Department Announcement.
+- Predictive Risk Alert.
+- System Integration Failure.
+
+Features:
+
+- Unread Count.
+- Mark as Read.
+- Mark All as Read.
+- Filter.
+- Notification History.
+- Click-through navigation.
+
+## E. DEPARTMENT REPORTS & ANALYTICS
+
+Route: /officer/reports
+
+Create a comprehensive reporting centre.
+
+Report categories:
+
+1. Department Performance Report.
+2. Application Processing Report.
+3. Pending Application Report.
+4. Delayed Application Report.
+5. Employee Performance Report.
+6. Workload Distribution Report.
+7. District Performance Report.
+8. Office Performance Report.
+9. Service-wise Report.
+10. Scheme Utilization Report.
+11. Citizen Grievance Report.
+12. Citizen Feedback Report.
+13. SLA Compliance Report.
+14. Anomaly Alert Report.
+15. Predictive Analytics Report.
+
+Features:
+
+- Reporting period.
+- District filter.
+- Office filter.
+- Service filter.
+- Employee filter, where authorized.
+- Generate Report.
+- Preview.
+- Export PDF.
+- Export Excel.
+- Export CSV.
+- Report History.
+
+Apply privacy protection to all exported citizen and employee information.
+
+## F. OFFICER HELP & RESOURCES
+
+Route: /officer/help
+
+Provide:
+
+- Officer User Manual.
+- Department Management Guidelines.
+- Application Supervision Manual.
+- Employee Management Guidelines.
+- Government Service Guidelines.
+- Government Orders.
+- Department Circulars.
+- AI Analytics Documentation.
+- Anomaly Investigation Guidelines.
+- Technical Support.
+- Contact Administrator.
+
+---
+
+# 5. OFFICER PROFILE & SETTINGS
+
+Route: /officer/profile
+
+Display:
+
+- Officer Name.
+- Officer ID.
+- Designation.
+- Department.
+- Assigned District.
+- Assigned Region.
+- Office.
+- Official Email.
+- Official Contact.
+- Account Status.
+- Authorized Roles.
+
+Settings:
+
+- Change Password.
+- Language.
+- Notification Preferences.
+- Accessibility.
+- Active Sessions.
+- Login History.
+- Security Settings.
+
+Only authorized profile information may be edited.
+
+---
+
+# 6. ROLE-BASED ACCESS CONTROL
+
+Implement hierarchical role-based and jurisdiction-based authorization.
+
+Possible roles:
+
+- Department HOD.
+- Senior Department Officer.
+- District Officer.
+- Regional Officer.
+- Taluk Officer.
+- Supervisory Officer.
+- Authorized Reviewing Officer.
+
+The actual permission matrix must be configurable by the Super Admin.
+
+Example permissions:
+
+| Feature | District Officer | HOD |
+|---|---|---|
+| View Assigned Jurisdiction | Yes | Yes |
+| View Department Summary | Restricted | Yes |
+| View District Analytics | Yes | Yes |
+| View All Department Records | No, unless authorized | Based on scope |
+| Manage Employee Assignments | If authorized | If authorized |
+| Monitor Applications | Yes | Yes |
+| Final Application Approval | Based on delegation | Based on delegation |
+| View Predictive Analytics | Yes | Yes |
+| Review Anomaly Alerts | If authorized | If authorized |
+| Close Investigations | Based on authority | Based on authority |
+| Export Reports | Restricted | Based on permission |
+| Modify Official Policies | No | Only through approved process |
+
+Enforce permissions at the backend API, database query and UI levels.
+
+Do not assume every officer has access to every district or department.
+
+---
+
+# 7. AI & MULTI-AGENT INTEGRATION
+
+Extend the existing GovAI Nexus AI architecture.
+
+Use Python as the primary AI orchestration language.
+
+Create or integrate these specialized agents:
+
+1. Department Intelligence Agent.
+2. Application Monitoring Agent.
+3. Workload Analysis Agent.
+4. Predictive Analytics Agent.
+5. Anomaly Detection Agent.
+6. Grievance Intelligence Agent.
+7. Citizen Sentiment Agent.
+8. Report Generation Agent.
+9. Officer Guidance Agent.
+
+### Department Intelligence Agent
+
+Answers authorized department-level operational questions.
+
+### Application Monitoring Agent
+
+Analyzes application volume, status, delays and bottlenecks.
+
+### Workload Analysis Agent
+
+Analyzes workload distribution and resource capacity.
+
+### Predictive Analytics Agent
+
+Runs configured ML prediction models.
+
+### Anomaly Detection Agent
+
+Identifies unusual patterns for human review.
+
+### Grievance Intelligence Agent
+
+Analyzes complaint categories and resolution performance.
+
+### Citizen Sentiment Agent
+
+Analyzes feedback trends in Tamil and English.
+
+### Report Generation Agent
+
+Creates source-backed departmental summaries and reports.
+
+### Officer Guidance Agent
+
+Retrieves official rules, procedures and guidelines using RAG.
+
+All agents must:
+
+- Respect officer permissions.
+- Access only authorized data.
+- Log important actions.
+- Use verified knowledge sources.
+- Provide explanations.
+- Avoid fabricated results.
+- Never bypass approval workflows.
+- Never make unauthorized government decisions.
+
+---
+
+# 8. DATABASE ARCHITECTURE
+
+Extend the existing PostgreSQL database.
+
+Reuse existing tables for:
+
+- Users.
+- Employees.
+- Departments.
+- Offices.
+- Districts.
+- Taluks.
+- Services.
+- Schemes.
+- Applications.
+- Documents.
+- Grievances.
+- Tasks.
+- Notifications.
+- Audit Logs.
+
+Do not duplicate master data.
+
+Create or extend the following officer-related entities where they do not already exist:
+
+### Officer and organizational management
+
+1. officer_master
+2. officer_department_mapping
+3. officer_jurisdiction_mapping
+4. officer_role_mapping
+5. department_profile
+6. department_office_mapping
+7. department_service_mapping
+8. department_scheme_mapping
+
+### Application supervision
+
+9. application_supervisory_review
+10. application_escalation
+11. application_sla_tracking
+12. application_supervisory_notes
+13. application_decision_history
+
+### Employee and workload
+
+14. employee_workload_snapshots
+15. employee_assignment_history
+16. workload_distribution
+17. employee_performance_metrics
+
+### Predictive analytics
+
+18. predictive_model_registry
+19. model_training_history
+20. model_evaluation_metrics
+21. prediction_results
+22. forecast_results
+23. prediction_explanations
+24. analytics_data_quality_logs
+
+### Anomaly detection
+
+25. anomaly_alerts
+26. anomaly_evidence
+27. anomaly_investigations
+28. anomaly_investigation_history
+29. anomaly_model_registry
+30. anomaly_false_positive_records
+
+### Grievances and feedback
+
+31. grievance_supervisory_records
+32. grievance_escalations
+33. citizen_feedback_analysis
+34. sentiment_analysis_results
+
+### Reports and announcements
+
+35. department_report_history
+36. report_export_logs
+37. department_announcements
+38. department_announcement_history
+
+### Governance and auditing
+
+39. officer_action_audit_logs
+40. officer_notification_preferences
+
+Use:
+
+- SQLAlchemy 2.
+- Alembic migrations.
+- Foreign key constraints.
+- Proper indexes.
+- Transaction management.
+- Audit history.
+- Data retention rules.
+- Row-level access restrictions where appropriate.
+
+Never store sensitive data unnecessarily.
+
+---
+
+# 9. BACKEND API DEVELOPMENT
+
+Implement Python FastAPI REST APIs.
+
+Use the existing project API structure and naming conventions.
+
+### Officer authentication and profile
+
+- GET /api/v1/officer/profile
+- PUT /api/v1/officer/profile
+- GET /api/v1/officer/permissions
+- GET /api/v1/officer/jurisdiction
+
+### Officer dashboard
+
+- GET /api/v1/officer/dashboard/summary
+- GET /api/v1/officer/dashboard/application-trends
+- GET /api/v1/officer/dashboard/status-distribution
+- GET /api/v1/officer/dashboard/district-performance
+- GET /api/v1/officer/dashboard/service-performance
+- GET /api/v1/officer/dashboard/workload
+- GET /api/v1/officer/dashboard/alerts
+
+### Department management
+
+- GET /api/v1/officer/department
+- GET /api/v1/officer/department/offices
+- GET /api/v1/officer/department/districts
+- GET /api/v1/officer/department/taluks
+- GET /api/v1/officer/department/services
+- GET /api/v1/officer/department/schemes
+- GET /api/v1/officer/department/performance
+
+### Application monitoring
+
+- GET /api/v1/officer/applications
+- GET /api/v1/officer/applications/{application_id}
+- GET /api/v1/officer/applications/{application_id}/timeline
+- POST /api/v1/officer/applications/{application_id}/review
+- POST /api/v1/officer/applications/{application_id}/escalate
+- POST /api/v1/officer/applications/{application_id}/reassign
+- POST /api/v1/officer/applications/{application_id}/forward
+- GET /api/v1/officer/applications/delayed
+- GET /api/v1/officer/applications/approval-monitoring
+
+### Employee management
+
+- GET /api/v1/officer/employees
+- GET /api/v1/officer/employees/{employee_id}
+- GET /api/v1/officer/employees/{employee_id}/performance
+- GET /api/v1/officer/employees/{employee_id}/workload
+- GET /api/v1/officer/workload/summary
+- GET /api/v1/officer/workload/distribution
+- POST /api/v1/officer/workload/assign
+- POST /api/v1/officer/workload/reassign
+
+### Predictive analytics
+
+- GET /api/v1/officer/analytics/summary
+- GET /api/v1/officer/analytics/delay-prediction
+- GET /api/v1/officer/analytics/service-demand
+- GET /api/v1/officer/analytics/workload-forecast
+- GET /api/v1/officer/analytics/performance-forecast
+- GET /api/v1/officer/analytics/model-health
+
+### Anomaly intelligence
+
+- GET /api/v1/officer/anomalies
+- GET /api/v1/officer/anomalies/{alert_id}
+- POST /api/v1/officer/anomalies/{alert_id}/review
+- POST /api/v1/officer/anomalies/{alert_id}/assign
+- POST /api/v1/officer/anomalies/{alert_id}/escalate
+- POST /api/v1/officer/anomalies/{alert_id}/resolve
+- POST /api/v1/officer/anomalies/{alert_id}/false-positive
+
+### Grievances
+
+- GET /api/v1/officer/grievances
+- GET /api/v1/officer/grievances/{grievance_id}
+- POST /api/v1/officer/grievances/{grievance_id}/assign
+- POST /api/v1/officer/grievances/{grievance_id}/escalate
+- POST /api/v1/officer/grievances/{grievance_id}/review
+
+### Reports
+
+- GET /api/v1/officer/reports
+- POST /api/v1/officer/reports/generate
+- GET /api/v1/officer/reports/{report_id}
+- GET /api/v1/officer/reports/{report_id}/download
+
+### Notifications and announcements
+
+- GET /api/v1/officer/notifications
+- POST /api/v1/officer/notifications/{notification_id}/read
+- POST /api/v1/officer/notifications/read-all
+- GET /api/v1/officer/announcements
+- POST /api/v1/officer/announcements
+- PUT /api/v1/officer/announcements/{announcement_id}
+
+Every endpoint must implement:
+
+- Authentication.
+- RBAC.
+- Jurisdiction restrictions.
+- Pydantic validation.
+- Pagination.
+- Filtering.
+- Sorting.
+- Error handling.
+- Audit logging.
+- Rate limiting.
+- Secure response serialization.
+
+---
+
+# 10. FRONTEND DEVELOPMENT
+
+Use:
+
+- React 19.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide React.
+- TanStack Query.
+- Zustand.
+- React Hook Form.
+- Zod.
+- Recharts.
+
+Create reusable components:
+
+- OfficerHeader.
+- OfficerSidebar.
+- OfficerProfileMenu.
+- OfficerWelcomeBanner.
+- DepartmentInfoStrip.
+- OfficerStatCard.
+- DepartmentPerformanceChart.
+- ApplicationStatusChart.
+- DistrictPerformanceTable.
+- ServicePerformanceTable.
+- ApplicationMonitoringTable.
+- EmployeeDirectoryTable.
+- WorkloadDistributionChart.
+- PredictionCard.
+- AnomalyAlertCard.
+- InvestigationTimeline.
+- GrievanceMonitoringTable.
+- DepartmentReportBuilder.
+- NotificationPanel.
+- SearchFilterBar.
+- Pagination.
+- ConfirmationDialog.
+- LoadingSkeleton.
+- EmptyState.
+- ErrorState.
+
+All pages must share consistent design tokens and navigation.
+
+### Responsive design
+
+Desktop:
+
+- Fixed left sidebar.
+- Multi-column dashboard.
+- Advanced tables.
+- Interactive charts.
+- Detailed monitoring workspaces.
+
+Tablet:
+
+- Collapsible sidebar.
+- Responsive grids.
+- Scrollable tables.
+
+Mobile:
+
+- Drawer navigation.
+- Stacked KPI cards.
+- Compact charts.
+- Mobile-friendly tables.
+- Responsive forms.
+- Touch-friendly controls.
+
+Target WCAG 2.2 AA accessibility.
+
+---
+
+# 11. TAMIL & ENGLISH LOCALIZATION
+
+Support bilingual functionality across the entire Officer Portal.
+
+Translate:
+
+- Sidebar.
+- Dashboard.
+- Metrics.
+- Application statuses.
+- Tables.
+- Filters.
+- Forms.
+- Notifications.
+- Reports.
+- AI Assistant.
+- Error messages.
+- Help resources.
+
+Use Noto Sans Tamil and Inter.
+
+Allow the officer to change language without losing the current workflow state.
+
+Legal and policy-critical text must use verified official translations wherever available.
+
+---
+
+# 12. SECURITY, PRIVACY & GOVERNANCE
+
+Implement security using applicable Indian data protection requirements, including the Digital Personal Data Protection Act and applicable rules.
+
+Requirements:
+
+1. Role-based access control.
+2. Department-level authorization.
+3. District and office-level jurisdiction restrictions.
+4. Secure authentication.
+5. Encryption in transit and at rest.
+6. Sensitive-data masking.
+7. Audit logs.
+8. Secure report exports.
+9. Application data access controls.
+10. Secure document preview.
+11. Session management.
+12. Rate limiting.
+13. Input validation.
+14. API authorization.
+15. Backup and recovery.
+
+### AI governance
+
+- AI must not approve or reject applications independently.
+- AI must not make legal or disciplinary decisions.
+- Anomaly detection must not be treated as proof of wrongdoing.
+- Predictions must display uncertainty and limitations.
+- All significant administrative actions must be performed by authorized officials.
+- Record model versions, data freshness and evidence sources.
+- Allow authorized human review and correction.
+
+### Data governance
+
+- Use only authorized department data.
+- Keep public and confidential data separate.
+- Do not expose citizen personal information in public dashboards.
+- Maintain appropriate data retention and deletion rules.
+- Never use synthetic development data as real government statistics.
+
+---
+
+# 13. TESTING & VALIDATION
+
+Use:
+
+Backend:
+- Pytest.
+- FastAPI TestClient.
+
+Frontend:
+- Vitest.
+- React Testing Library.
+
+End-to-end:
+- Playwright.
+
+Test all six core pages and their workflows.
+
+### Functional tests
+
+1. Officer authentication.
+2. Officer dashboard.
+3. Department information.
+4. Office and district filtering.
+5. Application monitoring.
+6. Application supervisory review.
+7. Employee directory.
+8. Workload monitoring.
+9. Authorized workload reassignment.
+10. Predictive analytics.
+11. Model health.
+12. Anomaly alerts.
+13. Investigation workflow.
+14. Grievance monitoring.
+15. Citizen feedback analytics.
+16. Department reports.
+17. Report export.
+18. Notifications.
+19. Tamil localization.
+20. Role-based access.
+
+### Integration tests
+
+Verify:
+
+Citizen Portal Application Submission
+→ Employee Portal Application Queue
+→ Employee Document Verification
+→ Officer Portal Monitoring
+→ Authorized Decision
+→ Citizen Portal Status Update.
+
+Verify that every status change is recorded in the central application history.
+
+Verify that the Employee Portal and Officer Portal show consistent records.
+
+### Security tests
+
+- Unauthorized department access.
+- Unauthorized district access.
+- Unauthorized employee access.
+- Unauthorized approval.
+- Unauthorized report exports.
+- Sensitive-data exposure.
+- Insecure document access.
+- API authorization failures.
+
+Do not report a test as passed unless it was actually executed.
+
+---
+
+# 14. IMPLEMENTATION PLAN
+
+Before development:
+
+1. Inspect the entire existing repository.
+2. Identify existing portal structures.
+3. Inspect existing authentication and RBAC.
+4. Inspect employee, department and office master data.
+5. Inspect application and document workflows.
+6. Inspect existing analytics and ML infrastructure.
+7. Inspect existing database relationships.
+8. Identify reusable components.
+9. Prepare an implementation plan.
+10. Avoid duplicate tables and duplicate APIs.
+
+Then implement in the following order:
+
+### Phase A – Officer Authentication & Profile
+
+- Officer login.
+- Role and jurisdiction permissions.
+- Profile.
+- Session management.
+
+### Phase B – Officer Dashboard
+
+- KPI cards.
+- Application analytics.
+- District performance.
+- Service performance.
+- Workload.
+- Alerts.
+
+### Phase C – Department Management
+
+- Department profile.
+- Office directory.
+- District / Taluk management views.
+- Service directory.
+- Scheme information.
+
+### Phase D – Application Monitoring
+
+- Application search.
+- Application status monitoring.
+- Application details.
+- Supervisory workflow.
+- Delay monitoring.
+- Approval monitoring.
+
+### Phase E – Employee & Workload Management
+
+- Employee directory.
+- Employee profiles.
+- Workload analytics.
+- Assignment and reassignment.
+- Performance monitoring.
+
+### Phase F – Predictive Analytics
+
+- Data preparation.
+- Model training and evaluation.
+- Delay prediction.
+- Demand forecasting.
+- Workload forecasting.
+- Model monitoring.
+
+### Phase G – Fraud & Anomaly Intelligence
+
+- Anomaly detection.
+- Alert generation.
+- Evidence display.
+- Investigation workflow.
+- Audit history.
+
+### Phase H – Grievance & Reporting
+
+- Grievance monitoring.
+- Citizen feedback.
+- Department reports.
+- Export.
+
+### Phase I – AI Integration
+
+- Officer AI Assistant.
+- RAG.
+- Multi-agent orchestration.
+- Source citations.
+- Permission-aware data access.
+
+### Phase J – Testing & Deployment
+
+- Functional testing.
+- Integration testing.
+- Security testing.
+- Performance testing.
+- Accessibility testing.
+- Production readiness.
+
+---
+
+# 15. FINAL EXPECTED RESULT
+
+Build a complete, production-oriented Department Officer / HOD Portal.
+
+The officer must be able to:
+
+1. Log in securely.
+2. View a department-level dashboard.
+3. Monitor applications across authorized jurisdictions.
+4. Manage department information.
+5. View government services and schemes.
+6. Monitor employee performance.
+7. Analyze employee workloads.
+8. Assign or reassign work where authorized.
+9. Monitor delayed applications.
+10. Supervise application processing.
+11. Monitor approval workflows.
+12. Analyze department performance.
+13. Predict application delays.
+14. Forecast service demand.
+15. Forecast workload.
+16. Review anomaly alerts.
+17. Manage authorized investigations.
+18. Monitor citizen grievances.
+19. Analyze citizen feedback.
+20. Generate department reports.
+21. Receive administrative notifications.
+22. Use the AI Officer Assistant.
+23. Work in Tamil and English.
+
+The final architecture must connect all three operational portals:
+
+**Citizen Portal → Employee Portal → Department Officer / HOD Portal**
+
+Citizen submits an application.
+
+Employee processes the application and verifies documents.
+
+Officer supervises department operations, monitors progress, reviews escalations and exercises only the authority delegated to their role.
+
+The final application status must synchronize across all relevant portals.
+
+**FINAL INSTRUCTION: Build a complete, secure, scalable, bilingual and Python-first government administrative intelligence platform. Every page must be functional, database-connected, permission-aware and integrated with the existing GovAI Nexus ecosystem. Do not deliver static dashboard mockups or disconnected modules.**

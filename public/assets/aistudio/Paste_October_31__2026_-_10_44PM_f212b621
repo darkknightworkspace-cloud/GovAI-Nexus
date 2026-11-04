@@ -1,0 +1,1277 @@
+# MASTER PROMPT – PHASE 5
+# GOVAI NEXUS – ADVANCED GOVERNANCE, ANALYTICS & MOBILE ECOSYSTEM
+
+## 1. YOUR ROLE
+
+Act as a Principal Software Architect, Senior Python Engineer, AI Solutions Architect, Data Engineer, Business Intelligence Engineer, Mobile Application Architect, Cloud Integration Engineer and Enterprise Full-Stack Developer.
+
+Your responsibility is to expand the existing GovAI Nexus platform into a complete, integrated and intelligent digital governance ecosystem.
+
+Continue from the completed Phase 1, Phase 2, Phase 3 and Phase 4 implementations.
+
+Reuse all existing functionality, databases, APIs, AI models, RAG pipelines, ML services, authentication and UI/UX designs.
+
+Do not rebuild existing modules unnecessarily.
+
+## 2. PRIMARY TECHNOLOGY STACK
+
+Python must remain the primary programming language.
+
+### Backend
+- Python 3.12+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- PostgreSQL
+- Redis
+- Celery
+
+### AI & Analytics
+- Gemini / configured LLM providers
+- RAG
+- pgvector
+- Scikit-learn
+- XGBoost
+- PyTorch
+- Pandas
+- NumPy
+- NLP
+- ML forecasting
+- Multi-Agent AI
+
+### Web Frontend
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- TanStack Query
+- Recharts
+- Zustand
+
+### Mobile
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Expo Notifications
+- Expo Location
+
+### Integrations
+- Government APIs, where formally authorized.
+- Maps and geolocation providers.
+- SMS and email providers.
+- Payment gateways, where required and approved.
+- Cloud object storage.
+- Push notification services.
+
+## 3. ADVANCED GOVERNANCE ANALYTICS
+
+Develop a centralized governance analytics platform.
+
+The system must analyze authorized government operational data across departments, districts, services and time periods.
+
+Implement:
+
+- Department-wise analytics.
+- District-wise analytics.
+- Service delivery analytics.
+- Application processing analytics.
+- Complaint analytics.
+- Employee workload analytics.
+- Scheme utilization analytics.
+- Public project analytics.
+- Resource utilization analytics.
+- Historical trend analysis.
+- Predictive analytics.
+- Performance comparison.
+
+Create reusable analytics services in Python.
+
+Use optimized PostgreSQL queries and aggregation.
+
+Use background processing for computationally intensive reports.
+
+All analytics must be based on actual authorized records.
+
+Clearly label demonstration data.
+
+## 4. DEPARTMENT-WISE INTELLIGENCE
+
+Develop a centralized Department Intelligence Dashboard.
+
+For every department, provide:
+
+- Department overview.
+- Total applications.
+- Pending applications.
+- Approved applications.
+- Rejected applications.
+- Average processing time.
+- Complaint volume.
+- Complaint resolution rate.
+- Employee workload.
+- Service utilization.
+- Historical trends.
+- AI-generated analytical summaries.
+- Predictive insights.
+
+### Advanced features
+
+- Compare departments.
+- Identify service bottlenecks.
+- Detect unusual workload increases.
+- Identify processing delays.
+- Analyze department performance trends.
+- Recommend operational improvements.
+
+Display recommendations with supporting metrics and explanations.
+
+Do not automatically rank or penalize employees based solely on AI predictions.
+
+## 5. DISTRICT-WISE GOVERNANCE ANALYTICS
+
+Implement district-level intelligence for Tamil Nadu.
+
+Use a configurable geographical hierarchy:
+
+Tamil Nadu → District → Local Body → Department / Office.
+
+Include:
+
+- District overview.
+- Application distribution.
+- Complaint distribution.
+- Service utilization.
+- Scheme participation.
+- Processing performance.
+- District-level demand forecasting.
+- Regional comparisons.
+- Geographic visualizations.
+
+### Map-based analytics
+
+Integrate an approved mapping provider.
+
+Display:
+
+- District boundaries, where licensed data is available.
+- Geographic service distribution.
+- Complaint density.
+- Government project locations.
+- Infrastructure monitoring locations.
+- Service availability.
+
+Support interactive district selection and filtering.
+
+Use verified geographical data instead of manually inventing boundaries.
+
+## 6. ADVANCED PREDICTIVE INTELLIGENCE
+
+Extend the Phase 4 ML engine.
+
+Implement the following predictive capabilities.
+
+### A. Government Service Demand Prediction
+
+Predict future demand based on:
+
+- Historical application counts.
+- Service category.
+- Department.
+- District.
+- Time-based patterns.
+- Seasonal patterns, where supported by data.
+
+### B. Complaint Volume Prediction
+
+Predict complaint volume based on:
+
+- Historical complaints.
+- Department.
+- Category.
+- District.
+- Time period.
+
+### C. Application Delay Forecasting
+
+Estimate potential delays based on:
+
+- Application type.
+- Department.
+- Current workload.
+- Historical processing times.
+- Missing information.
+- Processing stage.
+
+### D. Department Workload Forecasting
+
+Estimate future workload and staffing pressure.
+
+### E. Scheme Utilization Analytics
+
+Analyze:
+
+- Scheme applications.
+- Approved applications.
+- Rejected applications.
+- Participation trends.
+- District-level distribution.
+
+### F. Infrastructure Maintenance Forecasting
+
+Where sufficient authorized historical data exists, estimate maintenance demand and potential infrastructure issues.
+
+For every prediction, display:
+
+- Predicted value.
+- Historical comparison.
+- Prediction period.
+- Model version.
+- Confidence information, where calibrated.
+- Important influencing factors.
+- Data limitations.
+
+Never present predictions as guaranteed outcomes.
+
+## 7. ADVANCED TRANSPARENCY & OPEN GOVERNMENT DATA
+
+Build a complete public transparency ecosystem.
+
+### Public Transparency Portal
+
+Include:
+
+- Government project directory.
+- Project progress.
+- Approved budget information.
+- Approved expenditure information.
+- Department-wise reporting.
+- District-wise reporting.
+- Government service statistics.
+- Public datasets.
+- Published reports.
+- Data download options.
+
+### Government Project Monitoring
+
+Implement:
+
+- Project creation and management.
+- Project department.
+- Project location.
+- Project description.
+- Approved budget.
+- Project milestones.
+- Project progress.
+- Completion status.
+- Public update history.
+- Supporting documents.
+
+### Budget Monitoring
+
+Display authorized financial information:
+
+- Approved budget.
+- Allocated amount.
+- Recorded expenditure.
+- Remaining allocation.
+- Project-wise summaries.
+- Department-wise summaries.
+
+Do not calculate or publish financial figures from incomplete or unauthorized records.
+
+### Open Data Management
+
+Implement:
+
+- Dataset registration.
+- Dataset metadata.
+- Dataset categories.
+- Publication status.
+- Data versioning.
+- Downloadable files.
+- API availability information.
+- Update history.
+
+Only publish data approved for public disclosure.
+
+### Public and Internal Data Separation
+
+Create separate access policies for:
+
+1. Publicly accessible data.
+2. Authenticated citizen information.
+3. Department-restricted information.
+4. Confidential administrative information.
+
+Never expose private citizen records through public transparency dashboards.
+
+## 8. INFRASTRUCTURE & RESOURCE MONITORING
+
+Develop the Infrastructure Monitoring Centre.
+
+Monitor authorized infrastructure records and connected data sources.
+
+### Categories
+
+- Roads.
+- Water supply.
+- Electricity.
+- Public buildings.
+- Sanitation.
+- Public transportation.
+- Government facilities.
+- Other approved infrastructure.
+
+### Features
+
+- Infrastructure inventory.
+- Geographic locations.
+- Asset information.
+- Maintenance history.
+- Maintenance schedules.
+- Operational status.
+- Reported issues.
+- Maintenance alerts.
+- Resource utilization.
+- Historical monitoring.
+
+### Advanced capabilities
+
+- Infrastructure issue classification.
+- Maintenance priority suggestions.
+- Geographic issue visualization.
+- Maintenance demand forecasting.
+- Resource allocation recommendations.
+
+### Integration
+
+Prepare connectors for:
+
+- Authorized IoT sensors.
+- Approved monitoring APIs.
+- Government infrastructure datasets.
+- Department-provided records.
+
+Do not fabricate live sensor readings.
+
+If no sensor or external data source is connected, display clearly labelled sample or manually entered information.
+
+## 9. ADVANCED FRAUD INTELLIGENCE
+
+Extend the Phase 4 anomaly detection system.
+
+Implement a centralized fraud intelligence workflow.
+
+### Capabilities
+
+- Duplicate application patterns.
+- Suspicious submission patterns.
+- Unusual record relationships.
+- Anomalous transaction patterns, where authorized.
+- Document inconsistency indicators.
+- Repeated unusual activity.
+- Risk trend monitoring.
+- Cross-department anomaly correlation.
+
+### Investigation workflow
+
+1. Detect anomaly.
+2. Generate alert.
+3. Store supporting evidence.
+4. Assign authorized investigator.
+5. Review evidence.
+6. Record investigation.
+7. Add findings.
+8. Record outcome.
+9. Maintain audit history.
+
+### Fraud Intelligence Dashboard
+
+Include:
+
+- Total alerts.
+- Open investigations.
+- High-risk indicators.
+- Alert distribution.
+- Department comparisons.
+- District comparisons.
+- Investigation timelines.
+- Model performance.
+- False-positive analysis.
+
+An anomaly must never be treated as proof of fraud.
+
+Do not automatically reject applications, penalize citizens or accuse individuals based on model predictions.
+
+Require authorized human review.
+
+## 10. COMPLIANCE & GOVERNANCE MONITORING
+
+Build the Compliance & Governance Centre.
+
+Implement:
+
+- Compliance indicator management.
+- Policy tracking.
+- Governance monitoring.
+- Access monitoring.
+- Audit summaries.
+- Data governance indicators.
+- Pending review tracking.
+- Compliance history.
+- Review assignments.
+- Risk reporting.
+
+### Features
+
+- Compliance dashboard.
+- Policy register.
+- Review schedules.
+- Compliance status.
+- Evidence references.
+- Responsible department.
+- Review history.
+- Audit trail.
+
+Support configurable compliance requirements.
+
+Do not automatically claim legal compliance without an authorized assessment.
+
+## 11. CITIZEN FEEDBACK & SENTIMENT INTELLIGENCE
+
+Extend the Phase 4 NLP and sentiment analysis system.
+
+Implement:
+
+- Feedback collection.
+- Sentiment analysis.
+- Topic classification.
+- Complaint category trends.
+- Service satisfaction.
+- Department feedback.
+- District feedback.
+- Tamil feedback processing.
+- English feedback processing.
+- Historical comparisons.
+
+### Dashboard
+
+Display:
+
+- Total feedback.
+- Positive sentiment.
+- Neutral sentiment.
+- Negative sentiment.
+- Feedback by department.
+- Feedback by service.
+- Common topics.
+- Complaint trends.
+- Satisfaction trends.
+
+### AI-generated insights
+
+Generate concise analytical summaries using actual aggregated data.
+
+Provide supporting metrics and source references.
+
+Clearly identify sentiment as automated analysis and account for language and classification limitations.
+
+## 12. ADVANCED REPORTING & BUSINESS INTELLIGENCE
+
+Build a centralized reporting engine.
+
+### Report categories
+
+- Department Reports.
+- District Reports.
+- Service Reports.
+- Application Reports.
+- Complaint Reports.
+- Employee Workload Reports.
+- Scheme Reports.
+- Project Reports.
+- Transparency Reports.
+- Fraud Intelligence Reports.
+- Infrastructure Reports.
+- Citizen Feedback Reports.
+
+### Features
+
+- Custom date ranges.
+- Department filters.
+- District filters.
+- Service filters.
+- Category filters.
+- Historical comparison.
+- Interactive charts.
+- Data tables.
+- Report summaries.
+- Export to CSV.
+- Export to Excel.
+- PDF reports.
+
+### Report generation
+
+Implement report generation through Python background workers.
+
+Support:
+
+- Scheduled reports.
+- On-demand reports.
+- Report history.
+- Report status.
+- Download authorization.
+- Report metadata.
+
+Ensure reports respect user permissions and data access policies.
+
+## 13. ADVANCED AI ANALYTICAL INSIGHTS
+
+Extend the existing multi-agent architecture.
+
+Reuse the Phase 4 Orchestrator Agent, Analytics Agent, Knowledge Retrieval Agent and Fraud Intelligence Agent.
+
+Add specialized capabilities:
+
+### A. Governance Insights Agent
+
+- Analyze governance metrics.
+- Identify unusual trends.
+- Summarize department performance.
+- Highlight service delivery bottlenecks.
+
+### B. Department Intelligence Agent
+
+- Compare departmental performance.
+- Summarize workload.
+- Identify operational trends.
+
+### C. District Intelligence Agent
+
+- Analyze district-level data.
+- Compare regional patterns.
+- Summarize service demand.
+
+### D. Transparency Agent
+
+- Summarize approved public project information.
+- Explain published datasets.
+- Generate public-facing reports.
+
+### E. Infrastructure Intelligence Agent
+
+- Analyze infrastructure monitoring data.
+- Summarize maintenance patterns.
+- Suggest review priorities.
+
+### F. Reporting Agent
+
+- Generate structured analytical summaries.
+- Explain charts.
+- Create reports from authorized metrics.
+
+### Agent requirements
+
+- Use structured tool calls.
+- Respect user permissions.
+- Retrieve only authorized data.
+- Validate output against actual data.
+- Provide source references.
+- Log execution.
+- Require human review for sensitive conclusions.
+
+AI agents must not independently publish official reports or alter government records without authorization.
+
+## 14. MOBILE APPLICATION – ANDROID & IOS
+
+Develop the full GovAI Nexus citizen mobile application using React Native and Expo.
+
+Connect it to the existing Python FastAPI backend.
+
+Do not create a separate database or backend.
+
+### Mobile navigation
+
+Use five primary destinations:
+
+1. Home.
+2. Services.
+3. AI Assistant.
+4. My Requests.
+5. Profile.
+
+### A. Home
+
+Include:
+
+- Personalized greeting.
+- Quick government services.
+- Recommended schemes.
+- Recent applications.
+- Notifications.
+- AI assistant.
+- Important announcements.
+
+### B. Services
+
+Include:
+
+- Service search.
+- Categories.
+- Service details.
+- Required documents.
+- Eligibility.
+- Application guidance.
+
+### C. AI Assistant
+
+Include:
+
+- Tamil and English chat.
+- Voice input.
+- Voice responses.
+- Conversation history.
+- RAG source references.
+- Suggested questions.
+
+### D. My Requests
+
+Include:
+
+- My applications.
+- Application status.
+- Application timeline.
+- Complaint tracking.
+- Document requests.
+- Notifications.
+
+### E. Profile
+
+Include:
+
+- Profile details.
+- Language settings.
+- Security settings.
+- Consent settings.
+- Notification preferences.
+- Help centre.
+
+## 15. MOBILE APPLICATION ADVANCED FEATURES
+
+Implement:
+
+### A. Push Notifications
+
+Use Expo Notifications or an appropriate push notification service.
+
+Support:
+
+- Application updates.
+- Complaint updates.
+- Document requests.
+- Important announcements.
+- Service notifications.
+
+Respect user notification preferences.
+
+### B. Location Services
+
+Use Expo Location with appropriate user permission.
+
+Features:
+
+- Optional location selection.
+- Nearby service centre discovery.
+- Nearby government office discovery.
+- Location-based service discovery.
+- Map visualization.
+
+Do not track citizens continuously without explicit consent.
+
+### C. Camera & Document Upload
+
+Support:
+
+- Camera capture.
+- Image selection.
+- PDF upload.
+- Document preview.
+- Upload progress.
+- Upload retry.
+
+Integrate with the existing secure document API.
+
+### D. Offline-Friendly Experience
+
+Implement appropriate offline support:
+
+- Cached public service information.
+- Cached previously viewed scheme information.
+- Draft application storage.
+- Offline status indicator.
+- Network reconnection.
+- Upload retry queue.
+
+Clearly indicate that application submissions and other server-side actions require connectivity unless a specifically designed secure workflow supports otherwise.
+
+### E. Accessibility
+
+Support:
+
+- Tamil and English.
+- Screen readers.
+- Larger text.
+- Accessible navigation.
+- High contrast.
+- Touch-friendly controls.
+
+## 16. EXTERNAL SERVICE INTEGRATIONS
+
+Create a centralized Python integration layer.
+
+All external services must be configurable.
+
+### A. Government Integrations
+
+Prepare interfaces for:
+
+- Official government service APIs.
+- Approved department systems.
+- Government datasets.
+- Approved digital identity integrations.
+- Official notification systems.
+
+Only integrate when formal authorization and documented API access are available.
+
+Do not scrape or automate restricted government portals without authorization.
+
+Do not assume a public government website provides an API.
+
+### B. SMS Integration
+
+Support an approved SMS provider.
+
+Use cases:
+
+- OTP.
+- Application updates.
+- Complaint updates.
+- Important notifications.
+
+### C. Email Integration
+
+Support:
+
+- Account notifications.
+- Application acknowledgements.
+- Status updates.
+- Reports.
+- Administrative alerts.
+
+### D. Payment Integration
+
+Where applicable and formally approved, prepare a payment gateway abstraction.
+
+Support:
+
+- Payment initiation.
+- Payment status.
+- Transaction references.
+- Payment confirmation.
+- Failure handling.
+- Reconciliation.
+
+Do not store card information directly.
+
+Do not assume every government service requires payment.
+
+### E. Maps Integration
+
+Support an approved maps provider for:
+
+- District maps.
+- Office locations.
+- Service centre discovery.
+- Project locations.
+- Infrastructure visualization.
+
+### F. Cloud Storage
+
+Integrate approved object storage for:
+
+- Documents.
+- Reports.
+- Public datasets.
+- Generated files.
+- Supporting evidence.
+
+Use secure, time-limited access links where appropriate.
+
+## 17. CENTRALIZED NOTIFICATION AND EVENT SYSTEM
+
+Extend the existing notification module.
+
+Create a centralized event-driven notification architecture.
+
+### Event examples
+
+- Application submitted.
+- Application status updated.
+- Additional information requested.
+- Complaint assigned.
+- Complaint resolved.
+- Document processed.
+- Report generated.
+- Important government announcement published.
+
+### Delivery channels
+
+- In-app.
+- Email.
+- SMS.
+- Push notifications.
+
+### Technical requirements
+
+- Event creation.
+- Event processing.
+- Notification preferences.
+- Delivery status.
+- Retry mechanisms.
+- Failure tracking.
+- Notification history.
+- Idempotency.
+
+Do not send duplicate notifications for the same event.
+
+## 18. ADVANCED ROLE-BASED DASHBOARDS
+
+Upgrade all existing portals.
+
+### Citizen Dashboard
+
+- Personalized service discovery.
+- Scheme recommendations.
+- Application tracking.
+- Complaint tracking.
+- AI assistant.
+- Notifications.
+
+### Employee Dashboard
+
+- Workload.
+- Assigned tasks.
+- Application processing.
+- Document verification.
+- Complaint management.
+
+### Officer / HOD Dashboard
+
+- Department performance.
+- Workload.
+- Predictive analytics.
+- Complaint trends.
+- Fraud alerts.
+- Reports.
+
+### Super Admin Dashboard
+
+- Platform activity.
+- User management.
+- Department management.
+- System configuration.
+- Model registry.
+- Security and audit.
+
+### AI & Analytics Centre
+
+- Predictive intelligence.
+- Department analytics.
+- District analytics.
+- Fraud intelligence.
+- Infrastructure monitoring.
+- Sentiment intelligence.
+- Compliance monitoring.
+- Transparency analytics.
+
+All dashboard data must respect role-based and department-level permissions.
+
+## 19. PERFORMANCE AND BACKGROUND PROCESSING
+
+Improve platform scalability.
+
+Implement:
+
+- Redis caching.
+- Background report generation.
+- Asynchronous AI jobs.
+- Document processing queues.
+- Notification workers.
+- Prediction jobs.
+- Scheduled analytics.
+- Database query optimization.
+- API pagination.
+- Efficient data aggregation.
+
+Use Python background workers.
+
+Track job execution status.
+
+Implement retries and failure handling.
+
+Do not use caching to bypass authorization or expose stale confidential information.
+
+## 20. API IMPLEMENTATION
+
+Extend the existing FastAPI API structure.
+
+### Governance analytics
+
+- GET /api/v1/analytics/governance
+- GET /api/v1/analytics/departments
+- GET /api/v1/analytics/districts
+- GET /api/v1/analytics/services
+- GET /api/v1/analytics/applications
+- GET /api/v1/analytics/complaints
+- GET /api/v1/analytics/workload
+
+### Transparency
+
+- GET /api/v1/public/projects
+- GET /api/v1/public/projects/{id}
+- GET /api/v1/public/datasets
+- GET /api/v1/public/reports
+- GET /api/v1/transparency/departments
+- GET /api/v1/transparency/districts
+
+### Infrastructure
+
+- GET /api/v1/infrastructure/assets
+- GET /api/v1/infrastructure/locations
+- GET /api/v1/infrastructure/alerts
+- GET /api/v1/infrastructure/maintenance
+
+### Compliance
+
+- GET /api/v1/compliance/overview
+- GET /api/v1/compliance/policies
+- GET /api/v1/compliance/reviews
+
+### Reporting
+
+- POST /api/v1/reports/generate
+- GET /api/v1/reports
+- GET /api/v1/reports/{id}
+- GET /api/v1/reports/{id}/download
+
+### Mobile
+
+- GET /api/v1/mobile/home
+- GET /api/v1/mobile/services
+- GET /api/v1/mobile/notifications
+- POST /api/v1/mobile/device/register
+- POST /api/v1/mobile/device/unregister
+
+### Integrations
+
+- GET /api/v1/integrations
+- GET /api/v1/integrations/{id}/status
+- POST /api/v1/integrations/{id}/test
+
+Use appropriate authentication, authorization, validation, pagination and audit logging.
+
+These are proposed endpoint contracts; implement request and response schemas based on the existing database and service architecture.
+
+## 21. DATABASE EXTENSIONS
+
+Reuse the existing PostgreSQL database.
+
+Create additional tables only when required.
+
+Potential additions:
+
+### Governance Analytics
+
+- analytics_snapshots
+- department_metrics
+- district_metrics
+- service_metrics
+- forecast_results
+
+### Transparency
+
+- government_projects
+- project_milestones
+- project_budget_records
+- public_dataset_metadata
+- public_report_metadata
+
+### Infrastructure
+
+- infrastructure_assets
+- infrastructure_locations
+- maintenance_records
+- infrastructure_alerts
+- sensor_readings
+
+### Compliance
+
+- compliance_policies
+- compliance_reviews
+- compliance_evidence
+
+### Notifications and integrations
+
+- notification_delivery_logs
+- notification_preferences
+- registered_mobile_devices
+- integration_registry
+- integration_logs
+- payment_transactions, only if payment integration is implemented
+
+### Reporting
+
+- report_jobs
+- generated_reports
+- report_schedules
+
+Requirements:
+
+- Correct primary and foreign keys.
+- Proper indexes.
+- Data validation.
+- Timestamps.
+- Database migrations.
+- Audit history.
+- Permission-aware access.
+- Appropriate retention policies.
+
+Avoid duplicate tables already implemented in earlier phases.
+
+## 22. SECURITY, PRIVACY AND GOVERNANCE
+
+Implement:
+
+- RBAC.
+- Department-level data restrictions.
+- Secure API access.
+- Encryption in transit.
+- Secure storage.
+- Audit logging.
+- Consent management.
+- Data minimization.
+- Retention policies.
+- Secure document access.
+- Location permission handling.
+- External integration authentication.
+- API rate limiting.
+
+Follow applicable Indian data protection requirements, including the Digital Personal Data Protection framework, with appropriate legal and security review.
+
+Never expose private citizen information in public dashboards or open datasets.
+
+## 23. TESTING AND VALIDATION
+
+Test all advanced features.
+
+### Analytics testing
+
+- Correct aggregations.
+- Date filtering.
+- Department filtering.
+- District filtering.
+- Historical comparisons.
+- Data consistency.
+
+### Transparency testing
+
+- Public/private data separation.
+- Dataset access.
+- Report access.
+- Project information.
+- Download permissions.
+
+### Mobile testing
+
+- Login.
+- Navigation.
+- API integration.
+- Document upload.
+- Notifications.
+- Location permissions.
+- Offline states.
+- Network failure recovery.
+
+### Integration testing
+
+- SMS.
+- Email.
+- Push notifications.
+- Maps.
+- Cloud storage.
+- Government API connectors.
+- Payment integration, if enabled.
+
+### Performance testing
+
+- Dashboard response time.
+- Database query performance.
+- Background job throughput.
+- Concurrent API requests.
+- Report generation.
+
+Use Pytest, Playwright, mobile testing tools and Locust or k6 where appropriate.
+
+## 24. PROJECT STRUCTURE
+
+Preserve the existing monorepo and extend it.
+
+govai-nexus/
+
+- apps/
+  - web/
+  - mobile/
+  - admin-web/
+
+- backend/
+  - app/
+  - ai_engine/
+  - ml_engine/
+  - analytics_engine/
+  - reporting_engine/
+  - integrations/
+    - government/
+    - sms/
+    - email/
+    - maps/
+    - payments/
+    - storage/
+  - workers/
+  - migrations/
+  - tests/
+
+- packages/
+  - shared-types/
+  - api-client/
+  - validation/
+  - design-tokens/
+
+- infrastructure/
+  - docker/
+  - monitoring/
+  - deployment/
+
+- docs/
+  - architecture/
+  - database/
+  - api/
+  - uiux/
+  - analytics/
+  - mobile/
+  - integrations/
+  - security/
+  - testing/
+
+## 25. EXECUTION RULES
+
+1. Inspect the existing Phase 3 and Phase 4 implementations.
+2. Reuse the existing Python FastAPI backend.
+3. Reuse PostgreSQL and existing database models.
+4. Reuse existing RAG and ML pipelines.
+5. Reuse existing multi-agent architecture.
+6. Preserve the Phase 2 design system.
+7. Use Python for backend and analytical processing.
+8. Use React Native and Expo for mobile.
+9. Do not create a separate mobile backend.
+10. Do not fabricate government statistics.
+11. Do not expose restricted data.
+12. Do not invent external API availability.
+13. Integrate only authorized external services.
+14. Do not assume live sensor data exists.
+15. Do not allow AI to make unauthorized official decisions.
+16. Implement database migrations.
+17. Implement automated tests.
+18. Preserve working Phase 3 and Phase 4 features.
+19. Maintain documentation.
+20. Clearly report incomplete integrations.
+
+If external credentials or APIs are unavailable, implement the connector interface, configuration, mock-free failure states and integration documentation. Do not claim the external integration is live.
+
+If the environment cannot build or install a native mobile application, implement the Expo project and document the required build and testing steps.
+
+## 26. PHASE 5 ACCEPTANCE CRITERIA
+
+Phase 5 is complete when:
+
+- [ ] Department-wise analytics works.
+- [ ] District-wise analytics works.
+- [ ] Governance analytics is integrated.
+- [ ] Predictive intelligence is integrated.
+- [ ] Transparency Portal is connected to approved data.
+- [ ] Government project monitoring works.
+- [ ] Budget monitoring works with authorized records.
+- [ ] Open Data management works.
+- [ ] Infrastructure Monitoring Centre works with available data.
+- [ ] Fraud Intelligence is extended.
+- [ ] Compliance & Governance Centre works.
+- [ ] Citizen Sentiment Centre is integrated.
+- [ ] Advanced reporting works.
+- [ ] AI analytical insights work with evidence.
+- [ ] Android application is implemented.
+- [ ] iOS application is implemented.
+- [ ] Mobile authentication works.
+- [ ] Mobile API integration works.
+- [ ] Push notification integration is configured.
+- [ ] Location features respect permissions.
+- [ ] Document upload works on mobile.
+- [ ] Offline-friendly states are implemented.
+- [ ] External integration framework works.
+- [ ] Role-based dashboards are upgraded.
+- [ ] Redis and background processing are configured.
+- [ ] Security and privacy controls are validated.
+- [ ] Existing platform functionality remains operational.
+
+## 27. FINAL EXECUTION REPORT
+
+After implementation, provide:
+
+1. Advanced governance architecture.
+2. Department analytics implementation.
+3. District analytics implementation.
+4. Predictive intelligence status.
+5. Transparency Portal status.
+6. Government project monitoring status.
+7. Budget and open data status.
+8. Infrastructure monitoring status.
+9. Fraud intelligence status.
+10. Compliance monitoring status.
+11. Citizen sentiment analytics status.
+12. Reporting engine status.
+13. AI agent enhancements.
+14. Android application status.
+15. iOS application status.
+16. Push notification status.
+17. Maps and location integration status.
+18. External integrations status.
+19. Database changes.
+20. New APIs.
+21. Security and testing results.
+22. Performance results.
+23. Pending tasks.
+24. Phase 6 readiness assessment.
+
+Clearly identify completed, partially completed, pending and blocked components.
+
+# FINAL INSTRUCTION
+
+Inspect the existing GovAI Nexus project and continue from Phase 4.
+
+Build advanced governance analytics, department and district intelligence, transparency and open data, government project monitoring, budget monitoring, infrastructure intelligence, compliance monitoring, fraud intelligence, reporting and the complete Android/iOS mobile ecosystem.
+
+Integrate all modules with the existing Python FastAPI backend, PostgreSQL database, AI engine, ML engine and multi-agent architecture.
+
+Maintain the existing GovAI Nexus branding and all six portal experiences.
+
+**The final outcome must be a connected, intelligent, multilingual and mobile-enabled digital governance ecosystem for Tamil Nadu.**

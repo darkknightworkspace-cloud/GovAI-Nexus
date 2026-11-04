@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "GovAI Nexus Tamil Nadu",
+    "slug": "govai-nexus-tn",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "govainexus",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#071B3B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "gov.tn.nexus.citizen",
+      "infoPlist": {
+        "NSCameraUsageDescription": "GovAI Nexus requires camera access to scan physical certificates and verify biometric identity documents.",
+        "NSLocationWhenInUseUsageDescription": "GovAI Nexus uses your location to discover nearby e-Sevai centres and local government offices."
+      }
+    },
+    "android": {
+      "package": "gov.tn.nexus.citizen",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#071B3B"
+      },
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#6D28D9"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow GovAI Nexus to locate closest e-Sevai kiosks and taluk revenue offices."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "govai-nexus-tn-prod"
+      },
+      "apiBaseUrl": "http://10.0.2.2:8000/api/v1"
+    }
+  }
+}

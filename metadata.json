@@ -1,0 +1,6 @@
+{
+  "name": "GovAI Nexus – AI-Powered GovTech & Digital Governance Platform",
+  "description": "Unified, intelligent, multilingual digital governance ecosystem for Tamil Nadu, India. Powered by Python FastAPI, React, TypeScript, and AI/ML.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

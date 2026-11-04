@@ -1,0 +1,1954 @@
+# MASTER PROMPT – PHASE 2
+# GOVAI NEXUS – COMPLETE UI/UX DESIGN & PROTOTYPING
+
+## 1. YOUR ROLE
+
+Act as a Principal Product Designer, Senior UI/UX Designer, Enterprise Design System Architect, UX Researcher, Interaction Designer and Senior Frontend Design Engineer.
+
+Your task is to design the complete UI/UX experience of GovAI Nexus, an AI-powered digital governance platform for Tamil Nadu, India.
+
+You must create a complete, professional, premium, responsive and implementation-ready user experience covering all six portals and all 45 core web pages, together with the mobile application.
+
+The uploaded homepage screenshot is the official visual reference for the design direction.
+
+**IMPORTANT: The homepage is the visual reference, not a universal page template.**
+
+Every remaining page must have its own professionally designed layout based on its functionality.
+
+Maintain consistent branding, but create different page structures for different use cases.
+
+Do not simply duplicate the homepage and change its headings.
+
+---
+
+# 2. PROJECT IDENTITY
+
+Project Name: GovAI Nexus
+
+Project Title: AI-Powered GovTech & Digital Governance Platform
+
+Tagline: Smarter Government. Faster Services. Transparent Governance.
+
+Target: Tamil Nadu, India.
+
+Languages:
+- Tamil
+- English
+
+Platforms:
+- Public Website
+- Citizen Web Portal
+- Employee Portal
+- Department Officer / HOD Portal
+- Super Admin Portal
+- AI & Analytics Centre
+- Android Application
+- iOS Application
+
+Primary design objective:
+
+Build a unified digital governance ecosystem that makes government services accessible, improves administrative efficiency, supports intelligent decision-making and increases transparency.
+
+---
+
+# 3. REFERENCE IMAGE – OFFICIAL DESIGN DIRECTION
+
+Use the uploaded GovAI Nexus homepage screenshot as the main visual reference.
+
+Study its:
+
+- Header design.
+- Government identity.
+- Logo placement.
+- Navigation.
+- Typography.
+- Navy and purple color combination.
+- Hero composition.
+- Tamil Nadu-inspired imagery.
+- Service category cards.
+- AI assistant presentation.
+- Government scheme cards.
+- Transparency section.
+- Latest updates.
+- Mobile app promotion.
+- Footer design.
+- Spacing.
+- Borders.
+- Rounded corners.
+- Shadows.
+- Iconography.
+- Overall visual hierarchy.
+
+### Maintain these brand characteristics
+
+- Premium government enterprise design.
+- White and navy primary surfaces.
+- Purple and blue accent colors.
+- Professional typography.
+- Subtle gradients.
+- Rounded cards.
+- Clean layouts.
+- Clear navigation.
+- Consistent spacing.
+- Accessible contrast.
+- Professional icons.
+- High-quality imagery.
+
+### Reference color palette
+
+Primary Navy: #102A43
+
+Dark Navy: #071B3B
+
+Primary Blue: #2563EB
+
+Purple: #6D28D9
+
+Secondary Purple: #7C3AED
+
+Teal: #0F766E
+
+Background: #F8FAFC
+
+White: #FFFFFF
+
+Text: #0F172A
+
+Secondary Text: #64748B
+
+Border: #E2E8F0
+
+Success: #15803D
+
+Warning: #D97706
+
+Error: #DC2626
+
+Use these colors as shared design tokens.
+
+You may introduce carefully selected supporting colors for charts, alerts and status indicators.
+
+Do not randomly change the branding across portals.
+
+---
+
+# 4. MOST IMPORTANT DESIGN RULE
+
+Create 45 distinct page-level designs.
+
+Each page must have:
+
+1. Unique page purpose.
+2. Appropriate page layout.
+3. Correct navigation.
+4. Relevant information hierarchy.
+5. Suitable components.
+6. Relevant visualizations.
+7. Functional interactions.
+8. Responsive behavior.
+9. Loading state.
+10. Empty state.
+11. Error state.
+12. Success state.
+13. Tamil and English support.
+14. Accessible controls.
+
+All pages must share the same global design system.
+
+However, do not force every page into the same layout.
+
+Examples:
+
+- Homepage: Hero + search + service discovery + public information.
+- About: Editorial storytelling layout.
+- Government Services: Search and category discovery.
+- Schemes: Scheme listing and eligibility discovery.
+- Citizen Dashboard: Personalized dashboard.
+- AI Assistant: Conversational workspace.
+- Applications: Data table and application tracking.
+- Document Verification: Split-screen review workspace.
+- Employee Dashboard: Operational task dashboard.
+- Officer Dashboard: Department analytics.
+- Admin Dashboard: Platform management.
+- Role Management: Permission matrix.
+- AI Knowledge Centre: Document repository.
+- Predictive Intelligence: Analytical dashboard.
+- Fraud Intelligence: Alert investigation workspace.
+- Transparency Centre: Public data visualization.
+
+The result must look like one unified product with different purpose-built experiences.
+
+---
+
+# 5. GLOBAL DESIGN SYSTEM
+
+Create a reusable global design system before designing individual pages.
+
+## 5.1 Typography
+
+English:
+- Inter.
+
+Tamil:
+- Noto Sans Tamil.
+
+Optional branding typography:
+- Poppins.
+
+Define:
+- Display headings.
+- Page headings.
+- Section headings.
+- Card headings.
+- Body text.
+- Captions.
+- Labels.
+- Helper text.
+- Table typography.
+
+Maintain consistent font weights and line heights.
+
+## 5.2 Spacing system
+
+Use a consistent spacing scale based on 4px increments.
+
+Define:
+- Page padding.
+- Section spacing.
+- Card padding.
+- Form spacing.
+- Grid gaps.
+- Navigation spacing.
+- Mobile spacing.
+
+## 5.3 Border radius
+
+Define reusable values for:
+
+- Small controls.
+- Input fields.
+- Buttons.
+- Cards.
+- Modals.
+- Large panels.
+
+Use a consistent visual language.
+
+## 5.4 Shadows and elevation
+
+Create restrained elevation levels.
+
+- Flat surfaces.
+- Subtle cards.
+- Floating dropdowns.
+- Modals.
+- Overlays.
+
+Avoid excessive shadows.
+
+## 5.5 Iconography
+
+Use a consistent Lucide-style outline icon family.
+
+Do not mix unrelated icon styles.
+
+## 5.6 Buttons
+
+Create:
+
+- Primary.
+- Secondary.
+- Outline.
+- Ghost.
+- Destructive.
+- Icon-only.
+- Loading.
+- Disabled.
+
+## 5.7 Status indicators
+
+Create reusable status badges for:
+
+- Pending.
+- Submitted.
+- Under Review.
+- Approved.
+- Rejected.
+- Processing.
+- Completed.
+- Failed.
+- Active.
+- Inactive.
+- High Priority.
+- Medium Priority.
+- Low Priority.
+
+Never rely on color alone; include readable labels.
+
+---
+
+# 6. GLOBAL APPLICATION LAYOUTS
+
+Create reusable layout systems for different user experiences.
+
+### A. Public Website Layout
+
+- Government identity bar.
+- Main header.
+- Public navigation.
+- Language switcher.
+- Accessibility controls.
+- Login and registration.
+- Main content.
+- Public information footer.
+
+### B. Citizen Portal Layout
+
+- Citizen header.
+- Sidebar or responsive navigation.
+- Profile menu.
+- Notifications.
+- Language selector.
+- Main content area.
+- Citizen help and support.
+
+### C. Employee Portal Layout
+
+- Employee sidebar.
+- Operational top navigation.
+- Task notifications.
+- User profile.
+- Breadcrumbs.
+- Main workspace.
+
+### D. Officer Portal Layout
+
+- Department navigation.
+- Department selector where applicable.
+- Analytics controls.
+- Notifications.
+- Dashboard workspace.
+
+### E. Super Admin Layout
+
+- Enterprise admin sidebar.
+- System navigation.
+- Global search.
+- Notifications.
+- Profile and account controls.
+- Administrative workspace.
+
+### F. AI & Analytics Layout
+
+- Intelligence navigation.
+- Analytical workspace.
+- Filter controls.
+- Date selection.
+- Data visualizations.
+- AI activity and model information.
+
+Do not use one identical sidebar for every role.
+
+---
+
+# 7. PORTAL 1 – PUBLIC GOVERNMENT WEBSITE
+
+Create seven distinct public-facing pages.
+
+## PAGE 1 – HOME
+
+**Purpose:** Main landing page and platform overview.
+
+Use the uploaded homepage image as the primary design reference.
+
+Maintain its overall visual direction.
+
+### Required sections
+
+1. Government identity top bar.
+2. Logo and main navigation.
+3. Login / Sign In.
+4. Hero section.
+5. Government service search.
+6. Popular service shortcuts.
+7. Government statistics.
+8. Explore Government Services.
+9. Government service categories.
+10. Government leadership / public message area.
+11. AI-powered citizen assistant.
+12. Schemes & Benefits.
+13. Transparency & Open Data.
+14. Latest Updates.
+15. Mobile application promotion.
+16. Comprehensive footer.
+
+### Important instructions
+
+- Preserve the visual quality and general composition of the reference.
+- Do not treat demonstration statistics as real government data.
+- Use approved or clearly labelled sample content.
+- Make search and navigation visually prominent.
+- Ensure the page is fully responsive.
+
+This is the official design reference for the rest of the platform.
+
+## PAGE 2 – ABOUT
+
+**Purpose:** Explain the platform's vision, mission and governance objectives.
+
+### Layout
+
+1. Standard public website header.
+2. Page hero with government/digital governance imagery.
+3. Breadcrumb navigation.
+4. About GovAI Nexus introduction.
+5. Vision and mission cards.
+6. Core objectives.
+7. Citizen-first governance principles.
+8. Digital transformation overview.
+9. AI and technology capabilities.
+10. Accessibility and inclusion commitment.
+11. Transparency and accountability.
+12. Call-to-action.
+13. Public website footer.
+
+Use an editorial storytelling layout rather than the homepage hero structure.
+
+## PAGE 3 – GOVERNMENT SERVICES
+
+**Purpose:** Enable citizens to discover and explore services.
+
+### Layout
+
+1. Public header.
+2. Page title and introduction.
+3. Large service search.
+4. Search suggestions.
+5. Service category sidebar.
+6. Filter controls.
+7. Popular services.
+8. Service results grid/list.
+9. Department filter.
+10. Service detail preview.
+11. Pagination.
+12. Help and AI assistant entry.
+13. Footer.
+
+### Categories
+
+- Certificates & Records.
+- Citizen Welfare.
+- Land & Property.
+- Licenses & Permits.
+- Business & Industry.
+- Agriculture & Rural Development.
+- Education.
+- Health.
+- Social Welfare.
+- Other Government Services.
+
+### Service cards
+
+Include:
+
+- Icon.
+- Service name.
+- Description.
+- Department.
+- Required document indicator.
+- Eligibility information.
+- View Details action.
+
+Design an appropriate service detail view or route.
+
+## PAGE 4 – SCHEMES & BENEFITS
+
+**Purpose:** Help citizens discover welfare schemes.
+
+### Layout
+
+1. Public header.
+2. Scheme discovery hero.
+3. Search schemes.
+4. Category navigation.
+5. Department filters.
+6. Eligibility filters.
+7. Featured schemes.
+8. Scheme results grid.
+9. Scheme detail preview.
+10. Required documents.
+11. Benefits summary.
+12. Application instructions.
+13. AI-assisted scheme discovery.
+14. Footer.
+
+Scheme categories:
+
+- Women Welfare.
+- Student Welfare.
+- Agriculture.
+- Healthcare.
+- Education.
+- Employment.
+- Senior Citizens.
+- Disability Support.
+- Rural Development.
+- Entrepreneurship.
+
+Clearly distinguish illustrative scheme examples from verified official schemes.
+
+## PAGE 5 – PUBLIC INFORMATION
+
+**Purpose:** Provide government information and public resources.
+
+### Layout
+
+1. Public header.
+2. Public information hero.
+3. Search information.
+4. Information category cards.
+5. Government announcements.
+6. Public notices.
+7. Department directory.
+8. Public document repository.
+9. Government publications.
+10. Official information links.
+11. Frequently accessed information.
+12. Footer.
+
+Use a searchable information portal layout.
+
+## PAGE 6 – TRANSPARENCY PORTAL
+
+**Purpose:** Improve public access to approved governance information.
+
+### Layout
+
+1. Public header.
+2. Transparency hero.
+3. Public data overview.
+4. Government project monitoring.
+5. Approved budget information.
+6. Project progress cards.
+7. Department performance.
+8. District-wise information.
+9. Open government datasets.
+10. Data visualization.
+11. Reports and downloads.
+12. Data publication information.
+13. Footer.
+
+Use charts, data cards and tables.
+
+Clearly distinguish approved public data from internal administrative data.
+
+## PAGE 7 – CONTACT & HELP
+
+**Purpose:** Help citizens contact and understand the platform.
+
+### Layout
+
+1. Public header.
+2. Contact page heading.
+3. Help search.
+4. Frequently asked questions.
+5. Contact information cards.
+6. Support request form.
+7. Complaint guidance.
+8. AI help assistant.
+9. Accessibility support information.
+10. Footer.
+
+---
+
+# 8. PORTAL 2 – CITIZEN PORTAL
+
+Create ten distinct page-level destinations.
+
+Citizen-facing pages must be friendly, simple and easy to navigate.
+
+## PAGE 8 – CITIZEN REGISTRATION
+
+Design a clean multi-step registration interface.
+
+### Layout
+
+- Brand header.
+- Registration progress indicator.
+- Account information.
+- Personal information.
+- Mobile/email verification.
+- Password setup.
+- Preferred language.
+- Privacy and consent acknowledgement.
+- Submit button.
+- Existing account login link.
+
+Fields:
+
+- Full name.
+- Email.
+- Mobile number.
+- Password.
+- Confirm password.
+- Preferred language.
+
+Use field-level validation and accessible error messages.
+
+Do not request unnecessary sensitive information.
+
+## PAGE 9 – CITIZEN LOGIN
+
+Design a secure login page.
+
+Include:
+
+- GovAI Nexus branding.
+- Login heading.
+- Email/mobile field.
+- Password field.
+- Password visibility.
+- Forgot password.
+- Remember me, where appropriate.
+- Login button.
+- OTP login option.
+- MFA support.
+- Registration link.
+- Security guidance.
+
+Use a clean split-screen design with subtle government-themed imagery.
+
+## PAGE 10 – CITIZEN DASHBOARD
+
+Design a personalized dashboard.
+
+### Sections
+
+- Welcome message.
+- Citizen profile summary.
+- Quick action cards.
+- Application statistics.
+- Recent applications.
+- Complaint overview.
+- Recommended schemes.
+- Recent notifications.
+- AI assistant panel.
+- Important announcements.
+
+### KPI cards
+
+- Total Applications.
+- Under Review.
+- Approved.
+- Pending Information.
+- Active Complaints.
+
+Use clear charts and application status indicators.
+
+## PAGE 11 – CITIZEN PROFILE
+
+Design a structured account management interface.
+
+### Navigation tabs
+
+- Personal Information.
+- Contact Details.
+- Address.
+- Preferred Language.
+- Security.
+- Consent Preferences.
+- Notification Preferences.
+
+Include:
+
+- Profile information card.
+- Edit profile.
+- Save changes.
+- Cancel.
+- Validation.
+- Account security controls.
+
+Sensitive details should be masked appropriately.
+
+## PAGE 12 – AI CITIZEN ASSISTANT
+
+Design a premium AI conversational workspace.
+
+### Layout
+
+Left sidebar:
+
+- New Conversation.
+- Recent Conversations.
+- Saved Conversations.
+- Conversation search.
+
+Main workspace:
+
+- Assistant introduction.
+- Suggested questions.
+- Chat history.
+- User message bubbles.
+- AI response cards.
+- Source references.
+- Follow-up suggestions.
+- Response feedback.
+
+Input area:
+
+- Text input.
+- Send button.
+- Voice input.
+- Attachment support where appropriate.
+- Language selector.
+
+Design Tamil and English interaction states.
+
+Use a distinct visual identity for AI responses without making the interface look like a generic ChatGPT clone.
+
+## PAGE 13 – SERVICE EXPLORER
+
+Design an advanced citizen service discovery interface.
+
+### Sections
+
+- Service search.
+- Category navigation.
+- Popular services.
+- Recommended services.
+- Department filters.
+- Eligibility filters.
+- Service result cards.
+- Service details.
+- Required documents.
+- Application guidance.
+- Apply Now.
+
+Use a structured discovery layout.
+
+## PAGE 14 – SCHEME RECOMMENDATIONS
+
+Design a personalized scheme discovery dashboard.
+
+### Sections
+
+- Welcome and scheme discovery.
+- Eligibility questionnaire entry.
+- Scheme categories.
+- Recommended schemes.
+- Benefits overview.
+- Eligibility explanation.
+- Required documents.
+- Department information.
+- Application instructions.
+- View Scheme Details.
+
+Include a clear explanation that recommendations are preliminary and do not guarantee eligibility or approval.
+
+## PAGE 15 – APPLY FOR SERVICES
+
+Design a professional multi-step application workflow.
+
+### Steps
+
+1. Select service.
+2. Review requirements.
+3. Enter application details.
+4. Upload documents.
+5. Review application.
+6. Submit.
+
+### UI elements
+
+- Progress stepper.
+- Application information.
+- Dynamic form fields.
+- Document uploader.
+- File preview.
+- Validation.
+- Save Draft.
+- Previous.
+- Continue.
+- Submit.
+
+Include success, error and upload progress states.
+
+## PAGE 16 – MY APPLICATIONS
+
+Design an application tracking workspace.
+
+### Layout
+
+- Page header.
+- Application overview.
+- Search.
+- Status filters.
+- Department filters.
+- Date filters.
+- Application table.
+- Pagination.
+
+### Table columns
+
+- Application ID.
+- Service Name.
+- Department.
+- Submitted Date.
+- Current Status.
+- Last Updated.
+- Action.
+
+### Application details
+
+Include:
+
+- Application summary.
+- Application timeline.
+- Submitted documents.
+- Review history.
+- Additional information requests.
+- Notifications.
+- Downloadable acknowledgement, when applicable.
+
+## PAGE 17 – COMPLAINTS & FEEDBACK
+
+Design a citizen grievance management interface.
+
+### Sections
+
+- Submit Complaint.
+- Complaint Category.
+- Complaint Description.
+- Related Department.
+- Supporting Documents.
+- Submit.
+- My Complaints.
+- Complaint Tracking.
+- Complaint Timeline.
+- Resolution Information.
+- Citizen Feedback.
+
+Use a simple form and a clear tracking interface.
+
+---
+
+# 9. PORTAL 3 – GOVERNMENT EMPLOYEE PORTAL
+
+Create seven distinct employee pages.
+
+Use a professional enterprise operations theme.
+
+## PAGE 18 – EMPLOYEE LOGIN
+
+Include:
+
+- Employee authentication.
+- Employee ID/email.
+- Password.
+- MFA option.
+- Forgot password.
+- Secure login messaging.
+
+Use an institutional visual design.
+
+## PAGE 19 – EMPLOYEE DASHBOARD
+
+Create an operational dashboard.
+
+### KPI cards
+
+- Assigned Applications.
+- Pending Reviews.
+- Documents Awaiting Verification.
+- Assigned Complaints.
+- Overdue Tasks.
+
+### Additional sections
+
+- Today's tasks.
+- Upcoming deadlines.
+- Recent activity.
+- Application status distribution.
+- Complaint overview.
+- Priority alerts.
+- Quick actions.
+
+Use a sidebar-based employee workspace.
+
+## PAGE 20 – APPLICATION MANAGEMENT
+
+Design a full application processing workspace.
+
+### Sections
+
+- Application statistics.
+- Application search.
+- Filters.
+- Assigned applications table.
+- Application details panel.
+- Applicant information.
+- Submitted documents.
+- Application history.
+- Internal notes.
+- Review controls.
+
+### Actions
+
+- Open.
+- Assign, if authorized.
+- Request Additional Information.
+- Approve, if authorized.
+- Reject, if authorized.
+- Update Status.
+
+Use confirmation dialogs for consequential actions.
+
+## PAGE 21 – DOCUMENT VERIFICATION
+
+This page must have a distinct professional split-screen layout.
+
+### Left panel
+
+- PDF/image document viewer.
+- Document thumbnails.
+- Zoom controls.
+- Page navigation.
+- Document download, if authorized.
+
+### Right panel
+
+- Extracted information.
+- OCR confidence.
+- Field validation.
+- Missing information.
+- Document classification.
+- Verification status.
+
+### Actions
+
+- Verify.
+- Request Correction.
+- Mark Unclear.
+- Reject with Reason, if authorized.
+
+Clearly distinguish extracted AI information from human-verified information.
+
+## PAGE 22 – COMPLAINT MANAGEMENT
+
+Include:
+
+- Complaint statistics.
+- Complaint table.
+- Priority filters.
+- Category filters.
+- Assigned complaints.
+- Complaint details.
+- Citizen-submitted information.
+- Complaint timeline.
+- Internal notes.
+- Resolution workflow.
+- Escalation actions.
+
+## PAGE 23 – TASK & WORKFLOW MANAGEMENT
+
+Create a task management interface.
+
+Include:
+
+- Task overview.
+- Kanban board.
+- List view.
+- Calendar view.
+- Assigned tasks.
+- Priority.
+- Due date.
+- Status.
+- Task details.
+- Comments.
+- Activity history.
+
+## PAGE 24 – REPORTS & PERFORMANCE
+
+Include:
+
+- Employee performance overview.
+- Application processing statistics.
+- Complaint resolution statistics.
+- Workload trends.
+- Completed work.
+- Pending tasks.
+- Time-based filters.
+- Report export.
+
+Use clear and readable visualizations.
+
+---
+
+# 10. PORTAL 4 – DEPARTMENT OFFICER / HOD PORTAL
+
+Create six distinct management and analytical pages.
+
+## PAGE 25 – OFFICER DASHBOARD
+
+Include:
+
+- Department overview.
+- Total Applications.
+- Pending Applications.
+- Average Processing Time.
+- Open Complaints.
+- Employee Workload.
+- Service Performance.
+- Department activity.
+- Application trends.
+- Complaint trends.
+- Priority alerts.
+
+Create a premium decision-support dashboard.
+
+## PAGE 26 – DEPARTMENT MANAGEMENT
+
+Include:
+
+- Department overview.
+- Department details.
+- Employee directory.
+- Employee roles.
+- Service assignments.
+- Department configuration.
+- Department performance.
+- Employee details.
+- Work allocation.
+
+## PAGE 27 – WORKLOAD MONITORING
+
+Include:
+
+- Employee workload distribution.
+- Pending tasks.
+- Overdue work.
+- Application allocation.
+- Department workload.
+- Employee capacity.
+- Workload charts.
+- Task reassignment, subject to permissions.
+
+Use a visual operational monitoring layout.
+
+## PAGE 28 – PREDICTIVE ANALYTICS
+
+Include:
+
+- Application demand forecasting.
+- Complaint volume forecasting.
+- Processing delay prediction.
+- Workload forecasting.
+- District comparisons.
+- Department comparisons.
+- Historical versus predicted trends.
+- Date filters.
+- Model information.
+- Confidence indicators.
+
+Never present sample predictions as actual results.
+
+## PAGE 29 – FRAUD & ANOMALY ALERTS
+
+Include:
+
+- Alert overview.
+- Risk distribution.
+- Alert category.
+- Risk score.
+- Related records.
+- Detection date.
+- Evidence summary.
+- Investigation status.
+- Investigation history.
+- Review actions.
+
+An alert is an indicator for human investigation, not proof of wrongdoing.
+
+## PAGE 30 – DEPARTMENT REPORTS
+
+Include:
+
+- Department performance.
+- Service delivery.
+- Application statistics.
+- Complaint resolution.
+- Employee workload.
+- Historical trends.
+- District comparison.
+- Date filters.
+- Report export.
+
+---
+
+# 11. PORTAL 5 – SUPER ADMIN PORTAL
+
+Create eight distinct administration pages.
+
+Use an enterprise-grade admin theme consistent with the main branding.
+
+## PAGE 31 – ADMIN DASHBOARD
+
+KPI cards:
+
+- Total Users.
+- Citizens.
+- Employees.
+- Departments.
+- Total Applications.
+- Active Services.
+- Pending Complaints.
+- System Health.
+
+Additional sections:
+
+- User growth.
+- Application activity.
+- Department performance.
+- System status.
+- Recent activity.
+- Audit events.
+- Integration status.
+
+## PAGE 32 – USER MANAGEMENT
+
+Include:
+
+- User statistics.
+- Search.
+- Role filters.
+- Department filters.
+- User table.
+- User details.
+- Create user.
+- Edit user.
+- Activate/deactivate.
+- Assign roles.
+- Account status.
+
+Use a detailed data table with pagination.
+
+## PAGE 33 – DEPARTMENT MANAGEMENT
+
+Include:
+
+- Department list.
+- Department search.
+- Department profile.
+- Department information.
+- Officer assignments.
+- Employee mapping.
+- Department status.
+- Edit department.
+- Create department.
+
+## PAGE 34 – ROLES & PERMISSIONS
+
+Create an advanced role and permission management interface.
+
+Include:
+
+- Role list.
+- Permission groups.
+- Permission matrix.
+- User-role assignment.
+- Department restrictions.
+- Role creation.
+- Role editing.
+- Access preview.
+- Confirmation dialogs.
+
+Clearly distinguish view, create, update, delete, approve and administrative permissions.
+
+## PAGE 35 – SERVICE MANAGEMENT
+
+Include:
+
+- Service overview.
+- Service categories.
+- Service list.
+- Create service.
+- Edit service.
+- Required document configuration.
+- Eligibility rules.
+- Department assignment.
+- Service status.
+- Service preview.
+
+## PAGE 36 – AI MODEL MANAGEMENT
+
+Include:
+
+- Registered models.
+- Model type.
+- Provider.
+- Model version.
+- Deployment status.
+- Model evaluation metrics.
+- Configuration.
+- Model history.
+- Enable/disable controls, where authorized.
+
+Never expose API keys or secrets.
+
+## PAGE 37 – SYSTEM CONFIGURATION
+
+Include:
+
+- General settings.
+- Language settings.
+- Notification settings.
+- Security settings.
+- Integration configuration.
+- Feature flags.
+- Storage configuration.
+- Environment information.
+- System preferences.
+
+## PAGE 38 – SECURITY & AUDIT LOGS
+
+Include:
+
+- Login activity.
+- User actions.
+- Permission changes.
+- Administrative operations.
+- Data access events.
+- AI operation logs.
+- Date filters.
+- Actor filters.
+- Event severity.
+- Audit event details.
+
+---
+
+# 12. PORTAL 6 – AI & ANALYTICS CENTRE
+
+Create seven specialized intelligence workspaces.
+
+These pages should use sophisticated but readable enterprise analytics design.
+
+## PAGE 39 – AI KNOWLEDGE CENTRE
+
+Include:
+
+- Knowledge repository.
+- Document library.
+- Upload document.
+- Search.
+- Department filters.
+- Document categories.
+- Processing status.
+- OCR status.
+- Chunking status.
+- Embedding/indexing status.
+- Verification status.
+- Version history.
+- Document preview.
+- Retrieval testing.
+
+## PAGE 40 – PREDICTIVE INTELLIGENCE CENTRE
+
+Include:
+
+- Prediction overview.
+- Application demand.
+- Complaint forecasting.
+- Delay prediction.
+- Workload forecasting.
+- District-level analytics.
+- Department-level analytics.
+- Historical versus predicted chart.
+- Model confidence.
+- Model version.
+- Evaluation information.
+
+## PAGE 41 – FRAUD INTELLIGENCE CENTRE
+
+Include:
+
+- Fraud alert overview.
+- Anomaly distribution.
+- Risk categories.
+- Alert table.
+- Related records.
+- Risk score.
+- Evidence summary.
+- Investigation workflow.
+- Investigation outcome.
+- Audit history.
+
+Use a professional investigation workspace rather than a generic chart dashboard.
+
+## PAGE 42 – PUBLIC TRANSPARENCY CENTRE
+
+Include:
+
+- Government project overview.
+- Project progress.
+- Approved budget information.
+- Public expenditure information.
+- Department performance.
+- District reporting.
+- Open datasets.
+- Public reports.
+- Data publication status.
+- Download options.
+
+Do not expose restricted administrative information.
+
+## PAGE 43 – CITIZEN SENTIMENT CENTRE
+
+Include:
+
+- Feedback volume.
+- Sentiment distribution.
+- Positive feedback.
+- Neutral feedback.
+- Negative feedback.
+- Department comparisons.
+- Service satisfaction.
+- Complaint trends.
+- Language analysis.
+- Feedback category analysis.
+- Time filters.
+
+Clearly label sentiment as automated analysis, not objective fact.
+
+## PAGE 44 – INFRASTRUCTURE MONITORING
+
+Include:
+
+- Infrastructure overview.
+- Geographic monitoring.
+- Infrastructure categories.
+- Resource utilization.
+- Maintenance alerts.
+- Historical trends.
+- District filters.
+- Monitoring indicators.
+- Map visualization.
+- Alert details.
+
+Use realistic placeholders only until valid monitoring data is connected.
+
+## PAGE 45 – COMPLIANCE & GOVERNANCE CENTRE
+
+Include:
+
+- Compliance overview.
+- Governance indicators.
+- Policy tracking.
+- Audit summaries.
+- Access monitoring.
+- Data governance.
+- Pending reviews.
+- Risk indicators.
+- Compliance history.
+- Review status.
+
+---
+
+# 13. SHARED UTILITY SCREENS
+
+In addition to the 45 core destinations, design shared utility screens and reusable states.
+
+### Authentication utilities
+
+- Forgot Password.
+- Reset Password.
+- OTP Verification.
+- MFA Verification.
+- Account Recovery.
+
+### General utilities
+
+- Notifications.
+- Settings.
+- Language Selection.
+- Help Centre.
+- Search.
+- Profile Menu.
+- Access Denied.
+- Page Not Found.
+- Server Error.
+- Maintenance Mode.
+
+### Application utilities
+
+- Application Details.
+- Application Timeline.
+- Document Upload.
+- Submission Confirmation.
+- Additional Information Request.
+- Application History.
+
+### Complaint utilities
+
+- Complaint Details.
+- Complaint Timeline.
+- Resolution Details.
+- Feedback Submission.
+
+### AI utilities
+
+- Conversation History.
+- Voice Input.
+- Source Reference Details.
+- AI Feedback.
+- Knowledge Document Preview.
+
+### Administrative utilities
+
+- User Details.
+- Department Details.
+- Role Editor.
+- Permission Details.
+- Audit Event Details.
+- Model Details.
+
+Implement these as separate routes or reusable dialogs/drawers where appropriate.
+
+Do not unnecessarily increase the number of top-level navigation destinations.
+
+---
+
+# 14. ANDROID & IOS MOBILE APPLICATION
+
+Design a dedicated citizen mobile application using React Native and Expo-compatible patterns.
+
+The mobile experience must follow the same GovAI Nexus branding but use native-feeling navigation and layouts.
+
+### Bottom navigation
+
+1. Home.
+2. Services.
+3. AI Assistant.
+4. My Requests.
+5. Profile.
+
+### Required mobile screens
+
+1. Splash Screen.
+2. Onboarding.
+3. Language Selection.
+4. Login.
+5. Registration.
+6. OTP Verification.
+7. Home Dashboard.
+8. Service Explorer.
+9. Service Details.
+10. Scheme Discovery.
+11. Scheme Details.
+12. Eligibility Guidance.
+13. AI Chat.
+14. Voice Assistant.
+15. Application Form.
+16. Document Upload.
+17. Application Tracking.
+18. Application Timeline.
+19. Complaint Submission.
+20. Complaint Tracking.
+21. Notifications.
+22. Profile.
+23. Settings.
+24. Help Centre.
+
+### Mobile requirements
+
+- Responsive layouts.
+- Touch-friendly controls.
+- Native-feeling navigation.
+- Camera/file upload interfaces.
+- Push notification design.
+- Offline-friendly states.
+- Accessible typography.
+- Tamil font support.
+- Android and iOS compatibility.
+- Proper loading and retry states.
+
+Do not simply shrink desktop pages to mobile size.
+
+---
+
+# 15. REUSABLE COMPONENT LIBRARY
+
+Create a centralized design system.
+
+### Navigation
+
+- Government header.
+- Public navbar.
+- Sidebar.
+- Mobile navigation.
+- Breadcrumb.
+- Tabs.
+- Dropdown.
+- Language selector.
+- Profile menu.
+- Notification menu.
+
+### Buttons
+
+- Primary.
+- Secondary.
+- Outline.
+- Ghost.
+- Destructive.
+- Icon.
+- Loading.
+- Disabled.
+
+### Forms
+
+- Text field.
+- Email field.
+- Password field.
+- Mobile field.
+- Textarea.
+- Search.
+- Select.
+- Multi-select.
+- Checkbox.
+- Radio.
+- Date picker.
+- File upload.
+
+### Data components
+
+- KPI card.
+- Data table.
+- Pagination.
+- Filters.
+- Status badge.
+- Timeline.
+- Activity feed.
+- Chart container.
+- Empty state.
+- Error state.
+- Loading skeleton.
+
+### AI components
+
+- Chat message.
+- AI assistant card.
+- Typing indicator.
+- Source reference.
+- Voice input.
+- Confidence indicator.
+- Prediction card.
+- Alert card.
+- Document extraction panel.
+
+### Overlays
+
+- Modal.
+- Drawer.
+- Confirmation dialog.
+- Tooltip.
+- Popover.
+- Toast.
+- Alert banner.
+
+Every component must have documented variants and interaction states.
+
+---
+
+# 16. INTERACTION AND FUNCTIONAL PROTOTYPING
+
+Create meaningful interactions for all pages.
+
+### Global navigation
+
+- Links navigate to the correct pages.
+- Sidebar navigation works.
+- Breadcrumbs work.
+- Active menu is highlighted.
+- Language selector changes the interface language where translations are available.
+- Search controls respond.
+- Login and registration navigate correctly.
+
+### Forms
+
+- Inputs accept values.
+- Validation works.
+- Required fields are indicated.
+- Error messages appear.
+- Submit buttons provide feedback.
+- Loading states work.
+- Success states appear.
+
+### Tables
+
+- Search.
+- Sorting.
+- Filtering.
+- Pagination.
+- Row selection where appropriate.
+- View details.
+- Action menus.
+
+### AI interface
+
+- New conversation.
+- Message entry.
+- Suggested questions.
+- Language selection.
+- Voice control visual state.
+- Source references.
+- Feedback controls.
+
+If no actual AI backend is connected, use clearly labelled prototype interactions rather than pretending to generate real AI responses.
+
+### Application workflow
+
+- Select service.
+- Complete application.
+- Upload sample document.
+- Validate.
+- Review.
+- Submit.
+- Show confirmation.
+
+Use prototype data only.
+
+### Administration
+
+- Open forms.
+- Create and edit demonstration records.
+- Show confirmation dialogs.
+- Change sample role selections.
+- Show permission states.
+
+Never imply that prototype actions have changed real government records.
+
+---
+
+# 17. RESPONSIVE DESIGN
+
+Support the following screen sizes:
+
+Mobile: 320–767px.
+
+Tablet: 768–1023px.
+
+Desktop: 1024–1439px.
+
+Large Desktop: 1440px and above.
+
+### Desktop
+
+- Full sidebar where applicable.
+- Multi-column layouts.
+- Detailed tables.
+- Large dashboards.
+- Multi-panel workflows.
+
+### Tablet
+
+- Collapsible sidebar.
+- Responsive cards.
+- Flexible tables.
+- Adaptable forms.
+
+### Mobile
+
+- Bottom navigation.
+- Single-column layouts.
+- Stacked cards.
+- Touch-friendly controls.
+- Full-width forms.
+- Responsive tables.
+- Mobile document review.
+- Accessible AI chat.
+
+Avoid horizontal overflow.
+
+---
+
+# 18. TAMIL AND ENGLISH LOCALIZATION
+
+Implement a consistent bilingual design strategy.
+
+All user-facing screens must support:
+
+- Tamil.
+- English.
+
+Requirements:
+
+- Language switcher.
+- Tamil font rendering.
+- Localized navigation.
+- Localized form labels.
+- Localized validation messages.
+- Localized empty states.
+- Localized notifications.
+- Localized help content.
+- Localized dates and numbers where appropriate.
+
+Do not use machine-generated placeholder Tamil text that is visibly incorrect.
+
+Prepare translation dictionaries for implementation.
+
+---
+
+# 19. ACCESSIBILITY
+
+Target WCAG 2.2 AA.
+
+Ensure:
+
+- Keyboard navigation.
+- Visible focus indicators.
+- Screen reader labels.
+- Proper heading hierarchy.
+- Sufficient contrast.
+- Accessible form labels.
+- Clear error messages.
+- Touch-friendly controls.
+- Accessible charts.
+- Text labels alongside icons.
+- High-contrast usability.
+- Tamil font readability.
+
+Do not rely only on color to indicate status.
+
+---
+
+# 20. FRONTEND DESIGN IMPLEMENTATION STANDARDS
+
+The intended frontend technology stack is:
+
+- React 19.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide icons.
+- TanStack Query.
+- Zustand.
+- React Hook Form.
+- Zod.
+- Recharts.
+- Chart.js.
+
+The mobile stack is:
+
+- React Native.
+- Expo.
+- TypeScript.
+- Expo Router.
+
+If implementing the interface directly:
+
+### Code architecture
+
+- Feature-based folders.
+- Reusable components.
+- Shared design tokens.
+- Centralized route definitions.
+- Shared navigation components.
+- Typed props.
+- Reusable layouts.
+- Consistent state handling.
+
+### Suggested web structure
+
+src/
+- app/
+- components/
+  - ui/
+  - layout/
+  - navigation/
+  - charts/
+  - tables/
+  - forms/
+  - ai/
+- features/
+  - public/
+  - citizen/
+  - employee/
+  - officer/
+  - admin/
+  - analytics/
+- layouts/
+- routes/
+- hooks/
+- services/
+- stores/
+- types/
+- utils/
+- i18n/
+- assets/
+- styles/
+
+### Important
+
+Phase 2 is a UI/UX design phase.
+
+Do not implement actual backend functionality, PostgreSQL integration, authentication APIs, real OCR, real AI models or real government integrations.
+
+Use clearly labelled design prototype data.
+
+Do not overwrite the existing Phase 1 architecture or documentation.
+
+---
+
+# 21. DESIGN DOCUMENTATION DELIVERABLES
+
+Create these documents where the environment supports project files.
+
+1. docs/uiux/DESIGN_SYSTEM.md
+2. docs/uiux/BRAND_GUIDELINES.md
+3. docs/uiux/SITEMAP.md
+4. docs/uiux/PAGE_INVENTORY.md
+5. docs/uiux/NAVIGATION_ARCHITECTURE.md
+6. docs/uiux/USER_JOURNEYS.md
+7. docs/uiux/COMPONENT_LIBRARY.md
+8. docs/uiux/RESPONSIVE_DESIGN.md
+9. docs/uiux/ACCESSIBILITY.md
+10. docs/uiux/LOCALIZATION.md
+11. docs/uiux/INTERACTION_SPECIFICATION.md
+12. docs/uiux/MOBILE_DESIGN.md
+13. docs/uiux/SCREEN_SPECIFICATIONS.md
+
+For each of the 45 pages, document:
+
+- Page name.
+- User role.
+- Page objective.
+- Layout type.
+- Header.
+- Navigation.
+- Content sections.
+- Components.
+- Primary actions.
+- Secondary actions.
+- Responsive behavior.
+- Interaction states.
+- Accessibility.
+- Localization.
+
+---
+
+# 22. EXECUTION STRATEGY
+
+Follow this order.
+
+### Step 1 – Reference Analysis
+
+Inspect the uploaded homepage screenshot.
+
+Identify the design tokens, layout, color palette, typography, imagery, spacing and visual language.
+
+### Step 2 – Global Design System
+
+Establish the shared design system.
+
+### Step 3 – Global Navigation
+
+Define all six portal navigation structures.
+
+### Step 4 – Public Website
+
+Design all seven public pages.
+
+The Home page must follow the uploaded screenshot.
+
+The remaining six public pages must have different layouts while maintaining the same theme.
+
+### Step 5 – Citizen Portal
+
+Design all ten citizen pages.
+
+### Step 6 – Employee Portal
+
+Design all seven employee pages.
+
+### Step 7 – Officer Portal
+
+Design all six officer pages.
+
+### Step 8 – Super Admin Portal
+
+Design all eight admin pages.
+
+### Step 9 – AI & Analytics Centre
+
+Design all seven intelligence pages.
+
+### Step 10 – Mobile Application
+
+Design all 24 mobile screens.
+
+### Step 11 – Shared Utilities
+
+Design authentication utilities, common dialogs, error states and notifications.
+
+### Step 12 – Responsive Validation
+
+Review the layouts across desktop, tablet and mobile.
+
+### Step 13 – Interaction Validation
+
+Validate navigation, forms, filters, dialogs and prototype workflows.
+
+### Step 14 – Design Handoff
+
+Produce all design documentation and implementation-ready specifications.
+
+If the entire project cannot be designed in one execution, continue through the portal groups without losing completed work.
+
+Never stop after the homepage.
+
+---
+
+# 23. FINAL QUALITY CHECKLIST
+
+Before declaring the design complete, verify:
+
+- [ ] Homepage follows the supplied reference image.
+- [ ] Public website has seven distinct pages.
+- [ ] Citizen portal has ten distinct pages.
+- [ ] Employee portal has seven distinct pages.
+- [ ] Officer portal has six distinct pages.
+- [ ] Super Admin portal has eight distinct pages.
+- [ ] AI & Analytics Centre has seven distinct pages.
+- [ ] All 45 core destinations are accounted for.
+- [ ] All pages use the shared design system.
+- [ ] Each page has an appropriate unique layout.
+- [ ] Navigation works consistently.
+- [ ] Reusable components are defined.
+- [ ] Mobile application screens are designed.
+- [ ] Tamil and English support is planned throughout.
+- [ ] Responsive layouts are verified.
+- [ ] Accessibility requirements are addressed.
+- [ ] Loading, empty, error and success states are included.
+- [ ] Charts and tables are meaningful.
+- [ ] Prototype data is labelled.
+- [ ] No fabricated official government information is presented as real.
+- [ ] Design documentation is prepared.
+- [ ] No Phase 1 architecture has been damaged.
+
+---
+
+# FINAL INSTRUCTION
+
+Create the complete GovAI Nexus UI/UX experience.
+
+The uploaded homepage screenshot is the master branding reference.
+
+**Do not duplicate the homepage design across the remaining pages.**
+
+Every page must have a different, purpose-built professional layout while maintaining the same brand identity, colors, typography, spacing, components and visual quality.
+
+Build a unified, enterprise-grade digital governance design system that is ready for full-stack implementation using React, TypeScript, FastAPI and React Native.
+
+The final result must look like a real-world government technology platform built by a professional product design and engineering team.
+
+**One unified brand. Six portals. Forty-five distinct web destinations. Twenty-four mobile screens. One consistent design language.**

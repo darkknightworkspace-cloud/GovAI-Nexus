@@ -1,0 +1,1311 @@
+# MASTER PROMPT – PHASE 6
+# GOVAI NEXUS – COMPLETE TESTING, SECURITY, DEPLOYMENT & PRODUCTION LAUNCH
+
+## 1. YOUR ROLE
+
+Act as a Principal Software Architect, Senior Python Engineer, DevSecOps Engineer, QA Automation Engineer, Database Administrator, Cloud Architect, AI Quality Engineer and Production Reliability Engineer.
+
+Your responsibility is to complete, validate, secure, optimize and deploy the entire GovAI Nexus platform.
+
+Continue from the existing Phase 1, Phase 2, Phase 3, Phase 4 and Phase 5 implementations.
+
+The final deliverable must be a production-ready, fully integrated and maintainable application.
+
+Do not rebuild existing modules unnecessarily. Inspect the existing project, identify incomplete functionality and improve it without breaking working features.
+
+---
+
+## 2. PROJECT TECHNOLOGY STACK
+
+Maintain the existing technology architecture.
+
+### Backend
+- Python 3.12+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- Alembic
+- Pytest
+
+### Frontend
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- TanStack Query
+- Zustand
+
+### Database
+- PostgreSQL
+- pgvector
+- Redis
+
+### AI and ML
+- Google Gemini API
+- Configured LLM providers
+- RAG
+- Hugging Face
+- Sentence Transformers
+- Scikit-learn
+- XGBoost
+- PyTorch
+- NLP
+- OCR
+- Multi-Agent AI
+
+### Mobile
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+
+### DevOps and Infrastructure
+- Docker
+- Docker Compose
+- GitHub Actions
+- Nginx
+- Cloud hosting
+- OpenTelemetry
+- Prometheus
+- Grafana
+- Sentry
+
+Python must remain the primary backend and AI/ML programming language.
+
+---
+
+## 3. COMPLETE PROJECT AUDIT
+
+Start by inspecting the complete existing repository.
+
+Audit all six portals and all integrated modules.
+
+### Audit categories
+
+1. Frontend architecture.
+2. Backend architecture.
+3. Database architecture.
+4. API implementation.
+5. Authentication.
+6. Role-based authorization.
+7. Citizen workflows.
+8. Employee workflows.
+9. Officer workflows.
+10. Admin workflows.
+11. AI and RAG.
+12. ML models.
+13. OCR and document processing.
+14. Multi-agent architecture.
+15. Automation workflows.
+16. Governance analytics.
+17. Transparency system.
+18. Mobile applications.
+19. External integrations.
+20. Security and deployment.
+
+### Identify
+
+- Missing functionality.
+- Broken components.
+- API failures.
+- Database inconsistencies.
+- Duplicate code.
+- Unused components.
+- Incorrect permissions.
+- Missing validations.
+- Performance bottlenecks.
+- Security vulnerabilities.
+- Incomplete integrations.
+- Missing tests.
+
+Create a project audit report before making major changes.
+
+Do not claim a feature is implemented simply because its frontend page exists.
+
+---
+
+## 4. COMPLETE FUNCTIONAL TESTING
+
+Verify every portal and its connected workflows.
+
+### A. Public Government Website
+
+Test:
+
+- Home page.
+- About page.
+- Government Services.
+- Schemes & Benefits.
+- Public Information.
+- Transparency Portal.
+- Contact & Help.
+- Navigation.
+- Search.
+- Language switching.
+- Responsive layouts.
+
+### B. Citizen Portal
+
+Test:
+
+- Registration.
+- Login.
+- Password recovery.
+- Profile management.
+- AI assistant.
+- Service discovery.
+- Scheme recommendations.
+- Application submission.
+- Document upload.
+- Application tracking.
+- Complaint submission.
+- Complaint tracking.
+- Notifications.
+
+### C. Employee Portal
+
+Test:
+
+- Employee login.
+- Dashboard.
+- Assigned applications.
+- Application review.
+- Document verification.
+- Complaint management.
+- Task management.
+- Reports.
+
+### D. Officer / HOD Portal
+
+Test:
+
+- Officer login.
+- Department dashboard.
+- Department management.
+- Workload monitoring.
+- Predictive analytics.
+- Fraud alerts.
+- Department reports.
+
+### E. Super Admin Portal
+
+Test:
+
+- Admin login.
+- User management.
+- Department management.
+- Roles and permissions.
+- Service management.
+- AI model management.
+- System configuration.
+- Audit logs.
+
+### F. AI & Analytics Centre
+
+Test:
+
+- Knowledge repository.
+- RAG retrieval.
+- Predictive intelligence.
+- Fraud intelligence.
+- Public transparency.
+- Citizen sentiment.
+- Infrastructure monitoring.
+- Compliance monitoring.
+
+### G. Mobile Application
+
+Test:
+
+- Android application.
+- iOS application.
+- Onboarding.
+- Authentication.
+- Navigation.
+- API integration.
+- AI assistant.
+- Voice interaction.
+- Document upload.
+- Notifications.
+- Location permissions.
+- Offline states.
+
+All tests must verify actual functionality, not just whether screens load.
+
+---
+
+## 5. END-TO-END WORKFLOW TESTING
+
+Test complete real application workflows from beginning to end.
+
+### Workflow 1 – Citizen Registration
+
+1. Citizen opens the website.
+2. Registers an account.
+3. Verifies the required contact method.
+4. Logs in.
+5. Completes profile information.
+6. Accesses the citizen dashboard.
+
+### Workflow 2 – Government Service Application
+
+1. Citizen explores services.
+2. Selects a service.
+3. Views eligibility requirements.
+4. Completes the application.
+5. Uploads documents.
+6. Submits the application.
+7. Receives acknowledgement.
+8. Employee receives the application.
+9. Employee reviews the application.
+10. Employee requests additional information if needed.
+11. Citizen responds.
+12. Employee completes the review.
+13. Authorized officer makes the required decision.
+14. Citizen receives an update.
+15. Application history is maintained.
+
+### Workflow 3 – Complaint Management
+
+1. Citizen submits a complaint.
+2. NLP classifies the complaint.
+3. System suggests the appropriate department.
+4. Authorized employee reviews the suggestion.
+5. Complaint is assigned.
+6. Employee updates progress.
+7. Officer monitors the complaint.
+8. Resolution is recorded.
+9. Citizen receives notification.
+10. Citizen submits feedback.
+
+### Workflow 4 – AI Government Assistance
+
+1. Citizen opens AI Assistant.
+2. Enters a Tamil or English question.
+3. Language is detected.
+4. RAG retrieves relevant verified documents.
+5. LLM generates a grounded response.
+6. Sources are displayed.
+7. Citizen asks a follow-up question.
+8. Conversation is saved.
+9. Citizen submits feedback.
+
+### Workflow 5 – Document Intelligence
+
+1. Citizen uploads a document.
+2. File validation is performed.
+3. Document is processed through OCR.
+4. Relevant fields are extracted.
+5. Confidence information is recorded.
+6. Employee opens the verification workspace.
+7. Employee reviews the document.
+8. Verification status is recorded.
+9. Application workflow is updated.
+
+### Workflow 6 – Predictive Intelligence
+
+1. Authorized data is collected.
+2. Data quality is validated.
+3. ML model generates predictions.
+4. Prediction results are stored.
+5. Dashboard displays results.
+6. Historical comparison is available.
+7. Model version and evaluation information are accessible.
+
+### Workflow 7 – Governance Transparency
+
+1. Authorized administrator creates a project record.
+2. Department enters progress information.
+3. Authorized reviewer validates publication.
+4. Approved information is published.
+5. Citizen views project progress.
+6. Public reports and datasets are accessible according to publication permissions.
+
+### Workflow 8 – Mobile Application
+
+1. Citizen installs the application.
+2. Selects Tamil or English.
+3. Registers or logs in.
+4. Explores services.
+5. Uses AI assistance.
+6. Submits an application.
+7. Tracks the application.
+8. Receives push notifications.
+9. Uses document upload.
+10. Updates profile settings.
+
+Verify every workflow across the frontend, backend, database and integrations.
+
+---
+
+## 6. AUTOMATED TESTING FRAMEWORK
+
+Implement a comprehensive automated testing strategy.
+
+### Backend testing
+
+Use Pytest.
+
+Test:
+
+- API endpoints.
+- Authentication.
+- Authorization.
+- Database operations.
+- Data validation.
+- Business logic.
+- File uploads.
+- Background jobs.
+- AI service interfaces.
+- External integrations.
+
+### Frontend testing
+
+Use Vitest and React Testing Library.
+
+Test:
+
+- Component rendering.
+- Form validation.
+- Navigation.
+- State management.
+- User interactions.
+- Error handling.
+- Responsive behavior.
+
+### Web end-to-end testing
+
+Use Playwright.
+
+Test complete user journeys across all portals.
+
+### Mobile testing
+
+Use suitable Expo-compatible testing tools, including Maestro where appropriate.
+
+Test Android and iOS navigation, forms, permissions and API workflows.
+
+### API testing
+
+Use automated API test suites and verify the generated OpenAPI documentation.
+
+### Database testing
+
+Test:
+
+- Primary keys.
+- Foreign keys.
+- Constraints.
+- Transactions.
+- Migrations.
+- Rollbacks.
+- Data integrity.
+- Concurrent updates.
+
+Create repeatable test environments with isolated test databases.
+
+---
+
+## 7. AI AND ML QUALITY VALIDATION
+
+Evaluate all AI capabilities implemented in Phase 4 and Phase 5.
+
+### A. RAG Evaluation
+
+Measure:
+
+- Retrieval precision.
+- Retrieval recall.
+- Context relevance.
+- Answer relevance.
+- Faithfulness.
+- Citation correctness.
+- Unsupported answer rate.
+- Hallucination indicators.
+
+Test both Tamil and English.
+
+### B. LLM Evaluation
+
+Test:
+
+- Response quality.
+- Grounding.
+- Instruction following.
+- Context handling.
+- Error recovery.
+- Token usage.
+- Latency.
+- Safety.
+
+### C. OCR Evaluation
+
+Measure:
+
+- Character recognition quality.
+- Field extraction accuracy.
+- Document classification accuracy.
+- Confidence calibration.
+- Error rates.
+
+### D. ML Evaluation
+
+For classification:
+
+- Accuracy.
+- Precision.
+- Recall.
+- F1-score.
+- Confusion matrix.
+
+For regression and forecasting:
+
+- MAE.
+- RMSE.
+- MAPE where meaningful.
+
+For anomaly detection:
+
+- Precision at review capacity.
+- False-positive rate.
+- Investigation outcomes where available.
+
+### E. Multi-Agent Evaluation
+
+Test:
+
+- Correct agent selection.
+- Tool execution.
+- Structured responses.
+- Permission enforcement.
+- Workflow completion.
+- Failure recovery.
+- Unauthorized operation prevention.
+
+### Important requirements
+
+- Do not fabricate evaluation results.
+- Do not invent model accuracy.
+- Use independent test datasets.
+- Maintain model versions.
+- Record evaluation datasets and metrics.
+- Document known model limitations.
+- Require human review for sensitive government decisions.
+
+---
+
+## 8. SECURITY AUDIT
+
+Perform a complete security review.
+
+### Authentication Security
+
+- Secure password hashing.
+- Token validation.
+- Refresh token rotation.
+- Session expiration.
+- MFA support.
+- Account recovery.
+- Login rate limiting.
+
+### Authorization Security
+
+- Role-based access control.
+- Department-level access.
+- Citizen record ownership.
+- Administrative permissions.
+- Restricted document access.
+- API-level authorization.
+
+### Application Security
+
+Review against OWASP application security recommendations.
+
+Test:
+
+- SQL injection.
+- Cross-site scripting.
+- Cross-site request forgery where applicable.
+- Broken access control.
+- Insecure direct object references.
+- File upload vulnerabilities.
+- Authentication weaknesses.
+- Sensitive information exposure.
+- Security misconfiguration.
+- API abuse.
+
+### AI Security
+
+Test:
+
+- Prompt injection.
+- Indirect prompt injection.
+- Retrieval data leakage.
+- Unauthorized document retrieval.
+- Unsafe tool execution.
+- Agent permission bypass.
+- Sensitive information disclosure.
+- Malicious file content.
+
+### File Security
+
+Implement:
+
+- File type validation.
+- File size limits.
+- Secure filenames.
+- Malware scanning integration where available.
+- Access restrictions.
+- Private object storage.
+- Time-limited download URLs.
+
+### Secrets Management
+
+- Never expose API keys in frontend code.
+- Never commit secrets to GitHub.
+- Use environment variables or secret managers.
+- Rotate exposed credentials.
+- Restrict production access.
+
+Fix critical and high-risk vulnerabilities before production deployment.
+
+---
+
+## 9. DATA PRIVACY AND GOVERNMENT SECURITY
+
+Implement privacy and governance controls suitable for the intended platform.
+
+Requirements:
+
+- Data minimization.
+- Consent management.
+- Purpose limitation.
+- Retention policies.
+- Secure data storage.
+- Encryption in transit.
+- Appropriate encryption at rest.
+- Data access logging.
+- User data correction workflows.
+- Authorized data export.
+- Secure deletion workflows.
+- Public/private information separation.
+
+Review applicable Indian data protection requirements, including the Digital Personal Data Protection framework.
+
+Where government data or official integrations are involved, require appropriate authorization, security review and institutional approval.
+
+Do not use real citizen records as test data.
+
+Use synthetic data in development and testing.
+
+---
+
+## 10. DATABASE PERFORMANCE AND RELIABILITY
+
+Optimize PostgreSQL and pgvector.
+
+Implement:
+
+- Query optimization.
+- Index optimization.
+- Connection pooling.
+- Efficient joins.
+- Pagination.
+- Database transaction management.
+- Migration validation.
+- Backup strategy.
+- Restore testing.
+- Data integrity checks.
+- Slow query monitoring.
+
+Review Redis and background worker reliability.
+
+Ensure failed jobs can be retried safely without duplicating important operations.
+
+Use appropriate idempotency mechanisms.
+
+Do not delete production data during testing.
+
+---
+
+## 11. FRONTEND PERFORMANCE OPTIMIZATION
+
+Optimize the React web application.
+
+Implement:
+
+- Code splitting.
+- Lazy loading.
+- Route-based loading.
+- Component optimization.
+- Image optimization.
+- API caching.
+- Efficient state management.
+- Table pagination.
+- Chart optimization.
+- Bundle analysis.
+- Error boundaries.
+
+Ensure:
+
+- Fast page navigation.
+- Responsive rendering.
+- No unnecessary re-renders.
+- No console errors.
+- No broken links.
+- No horizontal overflow.
+- Consistent loading states.
+
+Preserve the approved Phase 2 UI/UX design.
+
+---
+
+## 12. MOBILE PERFORMANCE OPTIMIZATION
+
+Optimize the React Native and Expo applications.
+
+Implement:
+
+- Optimized navigation.
+- Efficient list rendering.
+- Image optimization.
+- Secure token storage.
+- Offline-friendly caching.
+- Network error handling.
+- Background upload handling where supported.
+- Push notification handling.
+- Permission management.
+- App lifecycle handling.
+
+Validate Android and iOS builds.
+
+Test different device sizes and operating system versions.
+
+Ensure Tamil fonts and layouts render correctly.
+
+---
+
+## 13. ACCESSIBILITY VALIDATION
+
+Target WCAG 2.2 AA for the web interface.
+
+Verify:
+
+- Keyboard navigation.
+- Screen reader support.
+- Semantic HTML.
+- Accessible forms.
+- Proper labels.
+- Focus indicators.
+- Color contrast.
+- Accessible tables.
+- Accessible charts.
+- Error announcements.
+- Responsive text.
+- Tamil typography.
+
+Use automated accessibility testing and manual keyboard/screen reader review.
+
+Do not rely exclusively on automated accessibility scores.
+
+---
+
+## 14. LOAD AND PERFORMANCE TESTING
+
+Use Locust or k6 for performance testing.
+
+Test:
+
+- Login traffic.
+- Citizen dashboard requests.
+- Service discovery.
+- Application submissions.
+- Document uploads.
+- Complaint submissions.
+- AI chat requests.
+- RAG retrieval.
+- Dashboard analytics.
+- Report generation.
+- Notification processing.
+
+Measure:
+
+- Response time.
+- Throughput.
+- Error rate.
+- Concurrent users.
+- CPU utilization.
+- Memory utilization.
+- Database connections.
+- Background queue length.
+
+Establish realistic test loads based on expected deployment capacity.
+
+Identify bottlenecks and optimize them.
+
+Do not claim a specific number of supported concurrent users without test evidence.
+
+---
+
+## 15. MONITORING AND OBSERVABILITY
+
+Implement centralized system monitoring.
+
+### Backend Monitoring
+
+Track:
+
+- API response times.
+- HTTP error rates.
+- Request volume.
+- Database health.
+- Background job status.
+- Application exceptions.
+
+### AI Monitoring
+
+Track:
+
+- LLM provider availability.
+- Token consumption.
+- AI request latency.
+- RAG retrieval failures.
+- Model errors.
+- Prediction service status.
+- Agent execution failures.
+
+Avoid logging sensitive user prompts or personal data unnecessarily.
+
+### Infrastructure Monitoring
+
+Track:
+
+- CPU.
+- Memory.
+- Disk usage.
+- Network.
+- PostgreSQL.
+- Redis.
+- Worker health.
+- Storage availability.
+
+Use:
+
+- OpenTelemetry.
+- Prometheus.
+- Grafana.
+- Sentry.
+
+Create operational dashboards and actionable alerts.
+
+---
+
+## 16. DOCKER AND CONTAINERIZATION
+
+Prepare Docker-based deployment.
+
+Create:
+
+- Backend Dockerfile.
+- Frontend Dockerfile.
+- Worker Dockerfile where needed.
+- Docker Compose configuration.
+- PostgreSQL service configuration.
+- Redis configuration.
+- Nginx configuration.
+
+The deployment environment must support:
+
+1. React web application.
+2. Python FastAPI backend.
+3. PostgreSQL database.
+4. Redis.
+5. Background workers.
+6. AI services.
+7. Object storage integration.
+8. Reverse proxy.
+
+Use separate development, staging and production configurations.
+
+Do not expose internal database or Redis ports publicly without a specific secured requirement.
+
+---
+
+## 17. CI/CD AUTOMATION
+
+Implement GitHub Actions pipelines.
+
+### Continuous Integration
+
+On every pull request:
+
+1. Install dependencies.
+2. Run code formatting checks.
+3. Run linting.
+4. Run backend tests.
+5. Run frontend tests.
+6. Run type checking.
+7. Run security checks.
+8. Build frontend.
+9. Build backend container.
+10. Report results.
+
+### Continuous Deployment
+
+For approved deployments:
+
+1. Build release artifacts.
+2. Run deployment checks.
+3. Deploy to staging.
+4. Execute smoke tests.
+5. Obtain required approval.
+6. Deploy to production.
+7. Run health checks.
+8. Monitor system health.
+
+Never automatically deploy unreviewed changes to a sensitive production environment.
+
+---
+
+## 18. CLOUD DEPLOYMENT ARCHITECTURE
+
+Prepare production deployment for the complete GovAI Nexus platform.
+
+### Frontend
+
+Deploy the React web application to an appropriate static or frontend hosting service.
+
+### Backend
+
+Deploy FastAPI using Docker to a suitable cloud application runtime.
+
+### Database
+
+Use managed PostgreSQL with pgvector support where available.
+
+### Cache and Workers
+
+Deploy Redis and background workers using secured infrastructure.
+
+### File Storage
+
+Use private cloud object storage.
+
+### AI Services
+
+Configure external LLM providers or approved model-serving infrastructure.
+
+### Mobile
+
+Use Expo EAS Build for Android and iOS build workflows.
+
+### Domain and HTTPS
+
+Configure:
+
+- Production domain.
+- DNS.
+- TLS certificates.
+- HTTPS redirects.
+- Secure API domain.
+- CORS restrictions.
+
+Use separate environments for:
+
+- Development.
+- Staging.
+- Production.
+
+Do not use production credentials in development.
+
+---
+
+## 19. MOBILE APPLICATION RELEASE
+
+Prepare Android and iOS release workflows.
+
+### Android
+
+- Expo production build.
+- App icon.
+- Splash screen.
+- Application name.
+- Package identifier.
+- Permissions.
+- Notification configuration.
+- Signing configuration.
+- Release validation.
+- Google Play submission preparation.
+
+### iOS
+
+- Expo production build.
+- App icon.
+- Splash screen.
+- Bundle identifier.
+- Permissions.
+- Notification configuration.
+- Signing configuration.
+- Release validation.
+- App Store submission preparation.
+
+Create:
+
+- Privacy information.
+- App description.
+- Screenshots.
+- Support information.
+- Version information.
+- Release notes.
+
+Do not claim that an app is published unless the store has approved and released it.
+
+---
+
+## 20. BACKUP AND DISASTER RECOVERY
+
+Create a production backup and recovery strategy.
+
+### PostgreSQL
+
+- Automated backups.
+- Backup retention.
+- Restore procedures.
+- Migration recovery.
+- Point-in-time recovery where supported.
+
+### File Storage
+
+- Document backups.
+- Report backups.
+- Dataset backups.
+- Retention rules.
+
+### Configuration
+
+- Secure environment configuration backup.
+- Infrastructure configuration.
+- Deployment documentation.
+
+### Disaster Recovery
+
+Prepare procedures for:
+
+- Database failure.
+- Application failure.
+- Storage failure.
+- AI provider outage.
+- Redis failure.
+- Worker failure.
+- Accidental data deletion.
+- Compromised credentials.
+
+Perform an actual restore test before production launch.
+
+Define recovery time and recovery point objectives according to deployment requirements.
+
+---
+
+## 21. PRODUCTION CONFIGURATION
+
+Create a production-ready configuration system.
+
+Prepare:
+
+- .env.example.
+- Production environment variables.
+- Database configuration.
+- Redis configuration.
+- CORS configuration.
+- API rate limits.
+- LLM provider settings.
+- Email configuration.
+- SMS configuration.
+- Storage configuration.
+- Monitoring configuration.
+- Logging configuration.
+
+Ensure secrets are not included in the source repository.
+
+Create an environment validation command that checks required configuration before startup.
+
+Fail safely when mandatory production settings are missing.
+
+---
+
+## 22. DOCUMENTATION AND HANDOVER
+
+Prepare complete project documentation.
+
+Create or update:
+
+1. README.md
+2. docs/architecture/SYSTEM_ARCHITECTURE.md
+3. docs/architecture/DEPLOYMENT_ARCHITECTURE.md
+4. docs/database/DATABASE_SCHEMA.md
+5. docs/api/API_DOCUMENTATION.md
+6. docs/security/SECURITY_GUIDELINES.md
+7. docs/security/PRIVACY_GUIDELINES.md
+8. docs/testing/TESTING_STRATEGY.md
+9. docs/testing/TEST_RESULTS.md
+10. docs/deployment/DEPLOYMENT_GUIDE.md
+11. docs/deployment/CI_CD_GUIDE.md
+12. docs/deployment/BACKUP_RECOVERY.md
+13. docs/ai/AI_MODEL_DOCUMENTATION.md
+14. docs/ai/RAG_EVALUATION.md
+15. docs/mobile/MOBILE_BUILD_GUIDE.md
+16. docs/user/CITIZEN_USER_GUIDE.md
+17. docs/user/EMPLOYEE_USER_GUIDE.md
+18. docs/user/ADMIN_USER_GUIDE.md
+19. docs/operations/PRODUCTION_RUNBOOK.md
+20. docs/operations/KNOWN_LIMITATIONS.md
+
+Documentation must reflect the actual implementation.
+
+---
+
+## 23. PRODUCTION READINESS CHECKLIST
+
+Before deployment, verify:
+
+### Application
+
+- [ ] All six portals are functional.
+- [ ] All 45 web destinations are accounted for.
+- [ ] Android application builds successfully.
+- [ ] iOS application builds successfully.
+- [ ] Navigation works.
+- [ ] Forms work.
+- [ ] Search and filtering work.
+- [ ] Tamil and English interfaces work.
+- [ ] Responsive layouts work.
+
+### Backend
+
+- [ ] FastAPI starts successfully.
+- [ ] All required APIs work.
+- [ ] Authentication works.
+- [ ] RBAC works.
+- [ ] Department-level authorization works.
+- [ ] Database operations work.
+- [ ] Migrations work.
+- [ ] Background workers work.
+- [ ] Notifications work.
+
+### AI and ML
+
+- [ ] RAG retrieval works.
+- [ ] AI responses are grounded and evaluated.
+- [ ] Citations are validated.
+- [ ] OCR pipeline works.
+- [ ] Tamil and English processing works.
+- [ ] ML models are evaluated.
+- [ ] Fraud alerts are reviewable.
+- [ ] Agent permissions are enforced.
+- [ ] AI failures are handled safely.
+
+### Security
+
+- [ ] No critical unresolved vulnerabilities.
+- [ ] No exposed credentials.
+- [ ] API authorization is enforced.
+- [ ] File access is restricted.
+- [ ] Sensitive information is protected.
+- [ ] Audit logging works.
+- [ ] Backup and restore are tested.
+
+### Operations
+
+- [ ] Docker builds successfully.
+- [ ] CI/CD pipelines work.
+- [ ] Staging deployment works.
+- [ ] Production configuration is validated.
+- [ ] HTTPS is configured.
+- [ ] Monitoring works.
+- [ ] Alerts are configured.
+- [ ] Recovery documentation exists.
+
+---
+
+## 24. DEPLOYMENT EXECUTION STRATEGY
+
+Follow this sequence.
+
+### Step 1 – Full Project Audit
+
+Inspect all existing implementations and generate an issue list.
+
+### Step 2 – Fix Critical Functional Issues
+
+Fix broken workflows, APIs, database relationships and permissions.
+
+### Step 3 – Automated Testing
+
+Run backend, frontend, mobile and end-to-end test suites.
+
+### Step 4 – AI and ML Evaluation
+
+Validate RAG, LLM, OCR, NLP, ML and agent behavior.
+
+### Step 5 – Security and Privacy Audit
+
+Identify and resolve security risks.
+
+### Step 6 – Performance Optimization
+
+Optimize database, APIs, frontend, mobile and AI services.
+
+### Step 7 – Containerization
+
+Create and validate Docker configurations.
+
+### Step 8 – CI/CD Setup
+
+Configure automated testing and controlled deployment.
+
+### Step 9 – Staging Deployment
+
+Deploy to staging and execute full acceptance tests.
+
+### Step 10 – Production Preparation
+
+Configure domain, HTTPS, database, secrets, storage and monitoring.
+
+### Step 11 – Production Deployment
+
+Deploy only after required approval and successful readiness checks.
+
+### Step 12 – Mobile Release Preparation
+
+Build Android and iOS release artifacts.
+
+### Step 13 – Backup and Recovery Validation
+
+Perform backup and restore tests.
+
+### Step 14 – Final Handover
+
+Complete documentation and production readiness reporting.
+
+---
+
+## 25. EXECUTION RULES
+
+1. Inspect the complete existing repository first.
+2. Preserve all working Phase 1–5 features.
+3. Do not rebuild the application from scratch.
+4. Use Python as the primary backend and AI language.
+5. Maintain the existing FastAPI architecture.
+6. Maintain PostgreSQL as the primary database.
+7. Maintain the approved Phase 2 design system.
+8. Do not introduce unnecessary technology.
+9. Do not use fabricated test results.
+10. Do not claim deployment without verification.
+11. Do not expose production secrets.
+12. Do not test using real citizen information.
+13. Do not run destructive database operations on production.
+14. Do not publish private government information.
+15. Do not automatically deploy unreviewed changes.
+16. Fix critical and high-risk issues before production.
+17. Maintain automated testing.
+18. Document every unresolved issue.
+19. Use separate development, staging and production environments.
+20. Preserve all project documentation.
+
+If external credentials, cloud accounts or deployment permissions are unavailable, prepare and validate the deployment configuration without claiming that deployment has succeeded.
+
+If an integration cannot be tested, mark it as pending external validation.
+
+If a mobile store release requires approval, report it as release-ready or submitted, not published.
+
+---
+
+## 26. FINAL ACCEPTANCE CRITERIA
+
+Phase 6 is complete when:
+
+- [ ] All six portals are validated.
+- [ ] All 45 core web destinations are tested.
+- [ ] Core citizen workflows pass end-to-end testing.
+- [ ] Employee workflows pass testing.
+- [ ] Officer workflows pass testing.
+- [ ] Admin workflows pass testing.
+- [ ] AI and ML capabilities are evaluated.
+- [ ] RAG citations and retrieval are validated.
+- [ ] OCR quality is evaluated.
+- [ ] Multi-agent permissions are verified.
+- [ ] Android application builds successfully.
+- [ ] iOS application builds successfully.
+- [ ] Backend automated tests pass.
+- [ ] Frontend automated tests pass.
+- [ ] API tests pass.
+- [ ] Security audit is completed.
+- [ ] Critical vulnerabilities are resolved.
+- [ ] Privacy controls are validated.
+- [ ] Database performance is reviewed.
+- [ ] Load testing is completed.
+- [ ] Monitoring is operational.
+- [ ] Docker deployment is validated.
+- [ ] CI/CD pipelines are operational.
+- [ ] Staging deployment is validated.
+- [ ] Production configuration is ready.
+- [ ] Backup and restore are tested.
+- [ ] Documentation and handover are complete.
+
+Do not declare the platform production-ready if critical acceptance criteria remain incomplete.
+
+---
+
+## 27. FINAL PROJECT DELIVERY REPORT
+
+At the end of Phase 6, provide a comprehensive final report.
+
+Include:
+
+1. Project overview.
+2. Final system architecture.
+3. Frontend implementation status.
+4. Python backend implementation status.
+5. Database architecture.
+6. API implementation summary.
+7. Authentication and RBAC.
+8. AI and RAG implementation.
+9. ML model evaluation.
+10. OCR and NLP implementation.
+11. Multi-agent architecture.
+12. Governance analytics.
+13. Transparency and open data.
+14. Android application status.
+15. iOS application status.
+16. Security audit results.
+17. Functional testing results.
+18. Performance testing results.
+19. Deployment architecture.
+20. CI/CD implementation.
+21. Backup and disaster recovery.
+22. Documentation completed.
+23. Known limitations.
+24. Pending integrations.
+25. Production readiness assessment.
+
+For each major component, identify:
+
+- Completed.
+- Partially Completed.
+- Pending.
+- Blocked.
+
+Provide actual test evidence and deployment status wherever available.
+
+# FINAL INSTRUCTION
+
+Start by auditing the existing GovAI Nexus project from Phases 1–5.
+
+Complete all remaining implementation gaps, validate the entire platform, secure the system, optimize performance, prepare Docker and CI/CD, deploy to staging and prepare production deployment.
+
+Validate the web application, Python backend, PostgreSQL database, AI and ML engine, multi-agent system and React Native mobile applications as one integrated ecosystem.
+
+Do not fabricate test results or deployment success.
+
+**Deliver GovAI Nexus as a secure, scalable, multilingual, AI-powered and production-ready digital governance platform for Tamil Nadu.**

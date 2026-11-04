@@ -1,0 +1,121 @@
+# ==============================================================================
+# GovAI Nexus - Complete Production Docker Compose Orchestration
+# Government of Tamil Nadu AI-Powered Digital Governance Platform
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. Reverse Proxy & Security Edge (Nginx)
+  # ----------------------------------------------------------------------------
+  proxy:
+    image: nginx:1.27-alpine
+    container_name: govai_nexus_proxy
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      api:
+        condition: service_healthy
+      frontend:
+        condition: service_started
+    networks:
+      - govai_internal_net
+      - govai_public_net
+
+  # ----------------------------------------------------------------------------
+  # 2. React 19 Web Portals (Frontend SPA)
+  # ----------------------------------------------------------------------------
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: govai_nexus_frontend
+    restart: always
+    networks:
+      - govai_internal_net
+
+  # ----------------------------------------------------------------------------
+  # 3. Python 3.12 FastAPI Core & AI/ML Backend
+  # ----------------------------------------------------------------------------
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: govai_nexus_api
+    restart: always
+    environment:
+      - ENVIRONMENT=production
+      - PROJECT_TITLE=GovAI Nexus
+      - DEFAULT_STATE=Tamil Nadu
+      - POSTGRES_SERVER=db
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=govai_nexus_tn
+      - POSTGRES_USER=govai_admin
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-SecureGovAIPassword2026!}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-govai_prod_secret_signing_key_tn_2026}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    volumes:
+      - govai_uploads:/app/uploads
+    networks:
+      - govai_internal_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  # ----------------------------------------------------------------------------
+  # 4. PostgreSQL 16 Database with pgvector Extension
+  # ----------------------------------------------------------------------------
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: govai_nexus_db
+    restart: always
+    environment:
+      POSTGRES_DB: govai_nexus_tn
+      POSTGRES_USER: govai_admin
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-SecureGovAIPassword2026!}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - govai_internal_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U govai_admin -d govai_nexus_tn"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ----------------------------------------------------------------------------
+  # 5. Redis In-Memory Cache & Message Broker
+  # ----------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: govai_nexus_redis
+    restart: always
+    command: redis-server --save 60 1 --loglevel warning --requirepass ${REDIS_PASSWORD:-GovAIRedisSecret2026!}
+    volumes:
+      - redisdata:/data
+    networks:
+      - govai_internal_net
+
+networks:
+  govai_public_net:
+    driver: bridge
+  govai_internal_net:
+    driver: bridge
+
+volumes:
+  pgdata:
+  redisdata:
+  govai_uploads:

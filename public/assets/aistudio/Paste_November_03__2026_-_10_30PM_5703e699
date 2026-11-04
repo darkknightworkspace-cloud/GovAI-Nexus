@@ -1,0 +1,3143 @@
+# GOVAI NEXUS – AI & ANALYTICS CENTRE
+# COMPLETE MASTER DEVELOPMENT PROMPT
+## UI/UX DESIGN + FRONTEND + PYTHON BACKEND + AI/ML + GENAI + RAG + ANALYTICS + DATABASE + INTEGRATION
+
+---
+
+# 1. PROJECT OVERVIEW
+
+Project Name: GovAI Nexus  
+Tagline: Smarter Government. Faster Services. Transparent Governance.  
+Organization: Government of Tamil Nadu  
+Module: AI & Analytics Centre  
+Languages: English + Tamil  
+Platform: Web Application  
+Architecture: Python-first, AI-powered, modular and scalable.
+
+You are working on an existing enterprise-level GovTech platform named GovAI Nexus.
+
+Your task is to design, develop and integrate a complete AI & Analytics Centre into the existing GovAI Nexus ecosystem.
+
+The AI & Analytics Centre is the central intelligence and analytical layer of the platform.
+
+It must collect authorized operational data from the existing portals, process it through Python-based AI/ML pipelines, generate insights, provide predictions, detect unusual patterns and present meaningful information to authorized government administrators and decision-makers.
+
+The AI & Analytics Centre must not be a standalone application.
+
+It must be integrated with:
+
+1. Public Government Website.
+2. Citizen Portal.
+3. Employee Portal.
+4. Department Officer / HOD Portal.
+5. Super Admin Portal.
+6. AI & Analytics Centre.
+
+## 1.1 Core objectives
+
+1. Centralized government knowledge management.
+2. AI-powered government information retrieval.
+3. Predictive intelligence for government services.
+4. Application delay prediction.
+5. Service demand forecasting.
+6. Workload forecasting.
+7. Fraud and anomaly intelligence.
+8. Public transparency and open-data analytics.
+9. Citizen feedback and sentiment analytics.
+10. Infrastructure and system monitoring.
+11. Compliance and governance monitoring.
+12. AI-assisted administrative decision support.
+
+## 1.2 Mandatory technology stack
+
+Python must be the primary programming language for all backend, AI, ML, data processing, automation and orchestration components.
+
+### Frontend
+
+- React 19.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide React.
+- TanStack Query.
+- Zustand.
+- React Hook Form.
+- Zod.
+- Recharts.
+- @xyflow/react, where visual workflows are required.
+
+### Backend
+
+- Python 3.12+.
+- FastAPI.
+- Pydantic.
+- SQLAlchemy 2.
+- Alembic.
+- Background workers.
+
+### Database and storage
+
+- PostgreSQL.
+- pgvector.
+- Redis.
+- Secure object storage for authorized documents.
+- Structured analytics tables and materialized views where appropriate.
+
+### AI / ML
+
+- Python.
+- Gemini or configured LLM providers.
+- OpenAI or approved alternatives.
+- Hugging Face Transformers.
+- Sentence Transformers.
+- Scikit-learn.
+- XGBoost.
+- PyTorch.
+- Pandas.
+- NumPy.
+- SciPy.
+- Statsmodels.
+
+### RAG and knowledge management
+
+- pgvector.
+- Sentence Transformers.
+- Semantic chunking.
+- Hybrid retrieval.
+- Reranking.
+- Metadata filtering.
+- Source citations.
+- Document versioning.
+
+### Visualization and monitoring
+
+- Recharts.
+- Prometheus.
+- Grafana.
+- OpenTelemetry.
+- Sentry.
+
+### Deployment
+
+- Docker.
+- GitHub Actions.
+- Environment-based configuration.
+- Cloud infrastructure.
+
+## 1.3 Mandatory implementation rules
+
+1. Inspect the existing GovAI Nexus repository before development.
+2. Reuse the existing authentication, database and API architecture.
+3. Reuse existing application, department, service, scheme, employee and officer records.
+4. Do not create duplicate master data.
+5. Do not replace the existing backend with Node.js.
+6. Use Python FastAPI for all AI and analytics APIs.
+7. All charts must use real authorized data or clearly identified sample/demo data.
+8. Never display fabricated government statistics.
+9. Never invent model accuracy, prediction scores or evaluation metrics.
+10. Implement loading, empty, error and insufficient-data states.
+11. Enforce role and jurisdiction permissions on the backend.
+12. Maintain source references for AI-generated government information.
+13. Do not automatically make legally significant government decisions using AI.
+14. Do not treat an anomaly alert as proof of fraud.
+15. Do not publish confidential citizen records in public dashboards.
+
+---
+
+# 2. AI & ANALYTICS CENTRE – DESIGN SYSTEM
+
+Maintain the same GovAI Nexus visual identity used in the Citizen, Employee, Officer and Super Admin Portals.
+
+## 2.1 Brand colour palette
+
+Primary Navy: #102A43  
+Dark Navy: #071B3B  
+Primary Blue: #2563EB  
+Primary Purple: #6D28D9  
+Secondary Purple: #7C3AED  
+Teal: #0F766E  
+Background: #F8FAFC  
+Card Background: #FFFFFF  
+Primary Text: #0F172A  
+Secondary Text: #64748B  
+Border: #E2E8F0
+
+## 2.2 Design style
+
+Create a premium government enterprise intelligence dashboard.
+
+Use:
+
+- Navy-blue government header.
+- Dark navy left sidebar.
+- Purple gradient active navigation.
+- White content cards.
+- Soft shadows.
+- Rounded corners.
+- Clear information hierarchy.
+- Modern outline icons.
+- Professional analytics charts.
+- Clean tables.
+- Consistent spacing.
+- Subtle gradients.
+- Accessible contrast.
+- Responsive layouts.
+
+Avoid excessive gradients, unnecessary animations and decorative charts that do not communicate useful information.
+
+## 2.3 Typography
+
+English: Inter or Poppins.  
+Tamil: Noto Sans Tamil.
+
+Maintain readable chart labels, table text, headings and dashboard metrics.
+
+## 2.4 Global header
+
+Create a common header across all seven pages.
+
+Include:
+
+- Government of Tamil Nadu emblem.
+- GovAI Nexus logo.
+- AI & Analytics Centre badge.
+- Global search.
+- English / Tamil language switcher.
+- Font size controls.
+- Notification icon.
+- System health indicator.
+- User profile avatar.
+- Logged-in user name.
+- Role / designation.
+- Profile dropdown.
+- Logout.
+
+## 2.5 Left sidebar – complete navigation
+
+Create a fixed, collapsible sidebar.
+
+### Main navigation
+
+1. AI Dashboard
+2. AI Knowledge Centre
+   - Knowledge Overview
+   - Government Documents
+   - Knowledge Search
+   - Document Ingestion
+   - RAG Monitoring
+   - Knowledge Sources
+3. Predictive Intelligence Centre
+   - Prediction Overview
+   - Application Delay Prediction
+   - Service Demand Forecasting
+   - Workload Forecasting
+   - Department Performance Forecasting
+   - Model Evaluation
+4. Fraud Intelligence Centre
+   - Anomaly Overview
+   - Duplicate Application Patterns
+   - Unusual Processing Patterns
+   - Document Anomaly Alerts
+   - Investigation Queue
+   - Anomaly Analytics
+5. Public Transparency Centre
+   - Transparency Overview
+   - Public Data Catalogue
+   - Department Performance
+   - Service Performance
+   - Scheme Utilization
+   - Budget and Project Data, if authorized and available
+   - Open Data Downloads
+6. Citizen Sentiment Centre
+   - Sentiment Overview
+   - Feedback Analytics
+   - Grievance Intelligence
+   - Topic Analysis
+   - Tamil NLP Analytics
+   - Service Satisfaction
+7. Infrastructure Monitoring
+   - Infrastructure Overview
+   - API Monitoring
+   - Database Monitoring
+   - AI Service Monitoring
+   - Storage Monitoring
+   - Integration Monitoring
+   - Background Job Monitoring
+8. Compliance & Governance Centre
+   - Compliance Overview
+   - Policy Registry
+   - Data Governance
+   - AI Governance
+   - Audit Monitoring
+   - Compliance Reports
+   - Risk Register
+9. Reports & Analytics
+10. Notifications
+11. Help & Documentation
+12. Profile & Settings
+
+Use expandable groups.
+
+Highlight the active page with the purple gradient navigation style.
+
+Display relevant alert counts beside sections.
+
+---
+
+# 3. AI & ANALYTICS CENTRE – MAIN DASHBOARD
+
+Route: /analytics/dashboard
+
+Page Title: AI & Analytics Dashboard
+
+Subtitle: "Centralized intelligence, predictive insights and real-time operational analytics for Tamil Nadu Government."
+
+This dashboard must summarize the entire AI and analytics ecosystem.
+
+## 3.1 Welcome banner
+
+Display:
+
+- Welcome message.
+- Logged-in user.
+- Designation.
+- Authorized department scope.
+- Current date.
+- Last data refresh time.
+
+Banner title:
+
+"Welcome to GovAI Intelligence Centre"
+
+Subtitle:
+
+"Transforming government data into actionable intelligence."
+
+Include a premium AI-themed visual illustration.
+
+Add an Ask GovAI Intelligence Assistant shortcut.
+
+## 3.2 Intelligence KPI cards
+
+Create the following database-driven cards:
+
+1. Knowledge Documents.
+2. Indexed Knowledge Chunks.
+3. Active AI Models.
+4. AI Requests Today.
+5. Predictions Generated.
+6. Active Anomaly Alerts.
+7. Citizen Feedback Analysed.
+8. System Health.
+
+Each card must display:
+
+- Metric title.
+- Actual metric.
+- Icon.
+- Reporting period.
+- Trend where calculable.
+- Last updated timestamp.
+- Click-through action.
+
+## 3.3 AI platform usage trend
+
+Create a line or bar chart.
+
+Metrics:
+
+- AI Requests.
+- Successful Responses.
+- Failed Requests.
+- RAG Queries.
+- Prediction Requests.
+
+Filters:
+
+- Today.
+- Last 7 Days.
+- Last 30 Days.
+- Last 3 Months.
+- Custom Date Range.
+
+## 3.4 AI model distribution
+
+Create a donut chart showing:
+
+- LLM Models.
+- ML Models.
+- NLP Models.
+- Anomaly Detection Models.
+- Forecasting Models.
+- Embedding Models.
+
+Display active and inactive model counts.
+
+## 3.5 Predictive intelligence summary
+
+Create insight cards for:
+
+- Applications at High Delay Risk.
+- Predicted Service Demand.
+- Forecasted Application Backlog.
+- Department Workload Forecast.
+- Model Evaluation Status.
+
+Clicking a card must open the corresponding predictive intelligence page.
+
+## 3.6 Fraud intelligence summary
+
+Display:
+
+- New Anomaly Alerts.
+- Alerts Under Review.
+- Critical Alerts.
+- Resolved Alerts.
+- False Positive Rate, only when actually measured.
+
+## 3.7 Citizen sentiment summary
+
+Display:
+
+- Feedback Received.
+- Positive Feedback.
+- Neutral Feedback.
+- Negative Feedback.
+- Common Feedback Topics.
+- Overall Satisfaction Trend.
+
+Clearly identify the source, reporting period and analysis limitations.
+
+## 3.8 Infrastructure health
+
+Display:
+
+- Backend API.
+- PostgreSQL.
+- Redis.
+- AI Providers.
+- RAG Retrieval.
+- Storage.
+- Background Workers.
+- External Integrations.
+
+Status:
+
+- Operational.
+- Degraded.
+- Down.
+- Unknown.
+
+Display the last successful health check.
+
+## 3.9 Recent AI activities
+
+Create a timeline:
+
+- Knowledge Document Indexed.
+- Embedding Generated.
+- AI Model Activated.
+- Prediction Completed.
+- Anomaly Alert Generated.
+- Sentiment Analysis Completed.
+- Model Evaluation Executed.
+- System Health Alert.
+
+## 3.10 AI intelligence alerts
+
+Display:
+
+- AI Model Failure.
+- RAG Retrieval Failure.
+- High Prediction Risk.
+- Unusual Application Pattern.
+- Data Quality Issue.
+- Integration Failure.
+- Knowledge Source Expiry.
+- Infrastructure Warning.
+
+## 3.11 Quick actions
+
+Create cards:
+
+- Upload Government Document.
+- Search Knowledge Base.
+- Run Prediction.
+- Review Anomaly Alerts.
+- View Citizen Sentiment.
+- View Infrastructure.
+- Generate Analytics Report.
+- Ask AI Assistant.
+
+## 3.12 Ask GovAI Intelligence Assistant
+
+Provide an AI assistant for authorized analytical questions.
+
+Example questions:
+
+- Which department has the highest application backlog?
+- What services are experiencing increasing demand?
+- Which applications have high predicted delay risk?
+- What are the most common citizen complaints?
+- Are there any unusual processing patterns?
+- What is the current AI infrastructure status?
+- Summarize this month's government service performance.
+
+The assistant must retrieve data from authorized sources, show the reporting period and cite knowledge sources where applicable.
+
+---
+
+# 4. PAGE 1 – AI KNOWLEDGE CENTRE
+
+Route: /analytics/knowledge-centre
+
+Purpose: Centralized repository for official government knowledge, documents, schemes, services, guidelines and policies used by GovAI Nexus AI systems.
+
+## 4.1 Knowledge Centre overview
+
+Create KPI cards:
+
+1. Total Documents.
+2. Verified Documents.
+3. Indexed Documents.
+4. Pending Verification.
+5. Failed Indexing Jobs.
+6. Total Knowledge Chunks.
+7. Active Knowledge Sources.
+8. Last Successful Indexing.
+
+## 4.2 Knowledge category explorer
+
+Create category cards:
+
+- Government Orders.
+- Government Policies.
+- Government Schemes.
+- Government Services.
+- Certificate Guidelines.
+- Licence and Permit Guidelines.
+- Eligibility Rules.
+- Application Procedures.
+- Department Circulars.
+- Official FAQs.
+- Citizen Service Guidelines.
+- Other Authorized Documents.
+
+Each card displays document count.
+
+Clicking a category opens the filtered document directory.
+
+## 4.3 Government document repository
+
+Route: /analytics/knowledge-centre/documents
+
+Create a complete document directory.
+
+Columns:
+
+- Document ID.
+- Document Name.
+- Document Type.
+- Department.
+- Language.
+- Version.
+- Official Source.
+- Verification Status.
+- Indexing Status.
+- Upload Date.
+- Last Verified.
+- Actions.
+
+Filters:
+
+- Department.
+- Category.
+- Document Type.
+- Language.
+- Verification Status.
+- Indexing Status.
+- Date Range.
+
+Actions:
+
+- View.
+- Preview.
+- Download, where permitted.
+- Verify Source.
+- Re-index.
+- View Version History.
+- Deactivate.
+- Delete, only under retention policy.
+
+## 4.4 Document ingestion workspace
+
+Route: /analytics/knowledge-centre/ingestion
+
+Create an upload interface.
+
+Supported formats:
+
+- PDF.
+- DOCX.
+- TXT.
+- HTML.
+- CSV, where suitable.
+- Official URLs.
+
+Upload fields:
+
+- Document Name.
+- Department.
+- Category.
+- Language.
+- Official Source URL.
+- Document Version.
+- Effective Date.
+- Expiry / Review Date.
+- Verification Status.
+- Description.
+
+Provide drag-and-drop upload.
+
+### Ingestion workflow
+
+Document Upload
+→ File Validation
+→ Malware / Security Scan
+→ Text Extraction
+→ OCR, if required
+→ Text Cleaning
+→ Language Detection
+→ Metadata Extraction
+→ Semantic Chunking
+→ Embedding Generation
+→ pgvector Storage
+→ Index Verification
+→ Publication to Authorized Knowledge Search.
+
+Display processing progress at every stage.
+
+Show individual errors and retry options.
+
+Do not mark a document as verified merely because it was uploaded.
+
+## 4.5 Knowledge search
+
+Route: /analytics/knowledge-centre/search
+
+Create an advanced semantic search interface.
+
+Search using:
+
+- English queries.
+- Tamil queries.
+- Government service names.
+- Scheme names.
+- Document names.
+- Keywords.
+- Natural language questions.
+
+Search filters:
+
+- Department.
+- Document Category.
+- Language.
+- Date.
+- Document Status.
+- Source Type.
+
+Display results with:
+
+- Document Title.
+- Relevant Excerpt.
+- Department.
+- Source.
+- Page Number, when available.
+- Document Version.
+- Relevance Information.
+- View Document.
+
+## 4.6 RAG monitoring
+
+Route: /analytics/knowledge-centre/rag-monitoring
+
+Display:
+
+- Total RAG Requests.
+- Successful Retrievals.
+- Failed Retrievals.
+- Average Retrieval Time.
+- Retrieved Chunks.
+- Citation Coverage.
+- Insufficient Context Responses.
+
+Charts:
+
+- Retrieval Volume.
+- Retrieval Latency.
+- Success / Failure Trend.
+- Retrieval by Department.
+- Retrieval by Language.
+
+Provide a query inspection page showing:
+
+- Original Query.
+- Language.
+- Retrieved Sources.
+- Retrieved Chunks.
+- Similarity / Ranking Information.
+- Final AI Response.
+- Citation References.
+- Retrieval Errors.
+
+Protect citizen-specific conversation history from unauthorized analytics access.
+
+## 4.7 Knowledge source registry
+
+Route: /analytics/knowledge-centre/sources
+
+Maintain authorized source records:
+
+- Source Name.
+- Source Department.
+- Source URL.
+- Source Type.
+- Verification Status.
+- Last Checked.
+- Next Review.
+- Active Status.
+
+Support scheduled verification jobs where technically possible.
+
+Do not crawl restricted websites or bypass access restrictions.
+
+## 4.8 Knowledge version management
+
+Features:
+
+- Document Version History.
+- Effective Dates.
+- Superseded Documents.
+- Expired Documents.
+- Re-index History.
+- Rollback to Previous Approved Version.
+
+Never silently replace an official policy document without preserving its history.
+
+---
+
+# 5. PAGE 2 – PREDICTIVE INTELLIGENCE CENTRE
+
+Route: /analytics/predictive-intelligence
+
+Purpose: Use historical government operational data and validated ML models to predict trends and identify potential service bottlenecks.
+
+## 5.1 Predictive intelligence overview
+
+Create KPI cards:
+
+1. Active Prediction Models.
+2. Total Predictions.
+3. High-Risk Predictions.
+4. Services Forecasted.
+5. Departments Analysed.
+6. Model Evaluation Status.
+7. Last Prediction Run.
+8. Data Freshness.
+
+## 5.2 Prediction category cards
+
+Create six main prediction modules:
+
+1. Application Delay Prediction.
+2. Service Demand Forecasting.
+3. Workload Forecasting.
+4. Department Performance Forecasting.
+5. Application Backlog Forecasting.
+6. Citizen Service Demand Analysis.
+
+## 5.3 Application delay prediction
+
+Route: /analytics/predictive-intelligence/delay-prediction
+
+### Summary cards
+
+- Applications Analysed.
+- High Delay Risk.
+- Medium Delay Risk.
+- Low Delay Risk.
+- Average Predicted Delay, if validated.
+- Prediction Model Status.
+
+### Filters
+
+- Department.
+- Service.
+- District.
+- Taluk.
+- Office.
+- Application Stage.
+- Date Range.
+- Risk Level.
+
+### Prediction table
+
+Columns:
+
+- Application ID, masked where appropriate.
+- Service.
+- Department.
+- Office.
+- Current Stage.
+- SLA Deadline.
+- Predicted Risk.
+- Prediction Date.
+- Recommended Action.
+
+### Application prediction details
+
+Display:
+
+- Application Metadata.
+- Current Processing Stage.
+- Historical Processing Context.
+- SLA Deadline.
+- Predicted Risk.
+- Main Contributing Factors.
+- Model Version.
+- Prediction Timestamp.
+- Confidence / Uncertainty Information, where available.
+
+### ML implementation
+
+Use validated Python models such as:
+
+- Random Forest.
+- XGBoost.
+- Logistic Regression.
+- Gradient Boosting.
+
+Possible features:
+
+- Service Type.
+- Application Complexity.
+- Processing Stage.
+- Document Completeness.
+- Historical Processing Duration.
+- Employee Workload.
+- Office Workload.
+- Historical SLA Performance.
+- External Dependencies.
+
+Do not use sensitive attributes as prediction shortcuts without a documented lawful basis and fairness review.
+
+Predictions must support human decision-making, not automatically reject or deprioritize applications.
+
+## 5.4 Service demand forecasting
+
+Route: /analytics/predictive-intelligence/service-demand
+
+### KPI cards
+
+- Services Analysed.
+- Total Historical Applications.
+- Forecasted Demand.
+- Highest Demand Service.
+- Forecast Horizon.
+- Model Status.
+
+### Filters
+
+- Department.
+- Service Category.
+- District.
+- Date Range.
+- Forecast Period.
+
+Forecast horizons:
+
+- 7 Days.
+- 30 Days.
+- 3 Months.
+- 6 Months.
+
+### Charts
+
+- Historical Application Volume.
+- Forecasted Application Volume.
+- Actual vs Predicted.
+- Service-wise Demand.
+- District-wise Demand.
+
+Display prediction intervals where supported.
+
+## 5.5 Workload forecasting
+
+Route: /analytics/predictive-intelligence/workload
+
+Display:
+
+- Department Workload.
+- District Workload.
+- Office Workload.
+- Employee Capacity.
+- Predicted Pending Work.
+- Expected Processing Capacity.
+
+Charts:
+
+- Current vs Forecast Workload.
+- District Comparison.
+- Office Comparison.
+- Capacity Utilization.
+- Predicted Backlog.
+
+Suggested actions:
+
+- Review resource allocation.
+- Identify high workload offices.
+- Redistribute work where authorized.
+- Plan additional verification capacity.
+
+## 5.6 Department performance forecasting
+
+Route: /analytics/predictive-intelligence/department-performance
+
+Analyze:
+
+- Application Completion Trends.
+- SLA Compliance.
+- Processing Time.
+- Pending Backlog.
+- Service Demand.
+- Complaint Volume.
+
+Display:
+
+- Historical Trend.
+- Forecast Trend.
+- Model Version.
+- Forecast Period.
+- Confidence Interval.
+- Data Limitations.
+
+## 5.7 Prediction insights
+
+Create explainable insight cards.
+
+Example:
+
+"Application volume for the selected service is forecast to increase during the next reporting period."
+
+"Processing delays are associated with higher pending document-verification workloads."
+
+Each insight must include:
+
+- Supporting metric.
+- Data period.
+- Department.
+- Model.
+- Confidence / limitations.
+- Recommended review action.
+
+## 5.8 Model evaluation
+
+Route: /analytics/predictive-intelligence/model-evaluation
+
+Display:
+
+- Model Name.
+- Model Type.
+- Version.
+- Training Date.
+- Evaluation Dataset.
+- MAE.
+- RMSE.
+- Precision.
+- Recall.
+- F1-score.
+- AUC, where appropriate.
+- Drift Status.
+
+Only display metrics relevant to the model and actually calculated from evaluation runs.
+
+Support:
+
+- Model Comparison.
+- Evaluation History.
+- Model Version Comparison.
+- Data Drift Detection.
+- Performance Degradation Alerts.
+
+## 5.9 Prediction execution history
+
+Display:
+
+- Prediction Job ID.
+- Model.
+- Dataset.
+- Execution Date.
+- Duration.
+- Records Analysed.
+- Job Status.
+- Error Details.
+
+Support retry and inspection of failed jobs.
+
+---
+
+# 6. PAGE 3 – FRAUD INTELLIGENCE CENTRE
+
+Route: /analytics/fraud-intelligence
+
+Purpose: Detect unusual patterns and potential irregularities in government service workflows for authorized human investigation.
+
+IMPORTANT: An anomaly is not proof of fraud, corruption or misconduct.
+
+Do not label a person guilty based on an algorithmic alert.
+
+## 6.1 Fraud intelligence overview
+
+Create KPI cards:
+
+1. Total Anomaly Alerts.
+2. New Alerts.
+3. High-Priority Alerts.
+4. Under Investigation.
+5. Resolved Alerts.
+6. False Positive Alerts.
+7. Average Investigation Duration, if available.
+8. Model Status.
+
+## 6.2 Anomaly categories
+
+Create category cards:
+
+- Duplicate Application Patterns.
+- Unusual Application Frequency.
+- Unusual Processing Time.
+- Unusual Status Changes.
+- Repeated Document Inconsistencies.
+- Unusual Bulk Processing.
+- Benefit Distribution Anomalies, where authorized.
+- Unusual Service Utilization.
+- Suspicious Transaction Patterns, only when supported by authorized data.
+
+## 6.3 Anomaly alert dashboard
+
+Route: /analytics/fraud-intelligence/alerts
+
+Columns:
+
+- Alert ID.
+- Alert Type.
+- Department.
+- District.
+- Office.
+- Related Record Reference.
+- Detection Method.
+- Risk Indicator.
+- Detection Date.
+- Investigation Status.
+- Action.
+
+Filters:
+
+- Department.
+- District.
+- Alert Category.
+- Risk Level.
+- Status.
+- Detection Period.
+- Detection Method.
+
+## 6.4 Anomaly detection methods
+
+Use suitable Python methods:
+
+- Isolation Forest.
+- Local Outlier Factor.
+- Statistical Outlier Detection.
+- Clustering.
+- Rule-Based Detection.
+- Time-Series Anomaly Detection.
+
+Model choice must depend on the available dataset, quality and problem.
+
+## 6.5 Alert details
+
+Route: /analytics/fraud-intelligence/alerts/:alertId
+
+Display:
+
+- Alert ID.
+- Category.
+- Detection Date.
+- Source Dataset.
+- Related Record.
+- Anomaly Description.
+- Detection Method.
+- Model Version.
+- Evidence Summary.
+- Supporting Metrics.
+- Risk Indicator.
+- Previous Related Alerts.
+- Investigation Status.
+
+Mask personal information unless access is explicitly authorized.
+
+## 6.6 Investigation management
+
+Route: /analytics/fraud-intelligence/investigations
+
+Workflow:
+
+Alert Generated
+→ Initial Review
+→ Evidence Examination
+→ Investigator Assignment
+→ Additional Information
+→ Findings
+→ Authorized Resolution
+→ Closure.
+
+Actions:
+
+- Review Alert.
+- Assign Investigator.
+- Request Clarification.
+- Add Evidence Reference.
+- Add Investigation Note.
+- Escalate.
+- Mark False Positive.
+- Resolve.
+- Close.
+
+Require reasons for important status changes.
+
+Maintain complete audit history.
+
+## 6.7 Anomaly analytics
+
+Charts:
+
+- Alerts by Category.
+- Alerts by Department.
+- Alerts by District.
+- Alert Trend.
+- Investigation Status.
+- Resolution Duration.
+- False Positive Trend.
+
+## 6.8 Responsible AI safeguards
+
+- No automatic accusation.
+- No automatic rejection of applications.
+- No automatic employee disciplinary action.
+- Human investigation required.
+- Show the evidence supporting an alert.
+- Explain the detection method.
+- Record model versions.
+- Support correction of inaccurate data.
+- Restrict investigations to authorized personnel.
+
+---
+
+# 7. PAGE 4 – PUBLIC TRANSPARENCY CENTRE
+
+Route: /analytics/public-transparency
+
+Purpose: Provide approved, aggregated and privacy-protected government performance information to support transparency and public accountability.
+
+This module must serve two audiences:
+
+1. Authorized internal government analysts.
+2. Citizens accessing published public information.
+
+Never expose private citizen applications, identity documents, financial details or confidential employee information.
+
+## 7.1 Transparency overview
+
+Create KPI cards:
+
+1. Published Open Data Datasets.
+2. Participating Departments.
+3. Published Service Reports.
+4. Published Scheme Reports.
+5. Last Data Update.
+6. Data Verification Status.
+
+## 7.2 Public data catalogue
+
+Route: /analytics/public-transparency/datasets
+
+Create a searchable dataset catalogue.
+
+Categories:
+
+- Government Service Performance.
+- Department Performance.
+- Scheme Information.
+- Public Grievance Statistics.
+- District Development Indicators.
+- Approved Infrastructure Projects.
+- Public Budget Data, where authorized.
+- Public Welfare Statistics.
+- Service Delivery Metrics.
+
+Dataset table:
+
+- Dataset ID.
+- Dataset Name.
+- Department.
+- Category.
+- Description.
+- Coverage.
+- Data Period.
+- Last Updated.
+- Publication Status.
+- Available Format.
+
+Support:
+
+- CSV.
+- JSON.
+- PDF.
+- XLSX, where suitable.
+
+Each published dataset must include:
+
+- Description.
+- Source.
+- Data Owner.
+- Last Updated.
+- Methodology.
+- Data Limitations.
+- Download Information.
+
+## 7.3 Department performance transparency
+
+Route: /analytics/public-transparency/departments
+
+Display:
+
+- Department Name.
+- Total Services.
+- Aggregate Applications Received.
+- Applications Processed.
+- Average Processing Time.
+- SLA Compliance.
+- Reporting Period.
+
+Provide department comparison charts.
+
+Publish only approved aggregated data.
+
+## 7.4 Government service performance
+
+Route: /analytics/public-transparency/services
+
+Display:
+
+- Service Name.
+- Department.
+- Applications Received.
+- Processed Applications.
+- Average Processing Duration.
+- SLA Performance.
+- Reporting Period.
+
+Provide service category filters.
+
+## 7.5 Scheme utilization analytics
+
+Route: /analytics/public-transparency/schemes
+
+Display verified, approved scheme statistics:
+
+- Scheme Name.
+- Responsible Department.
+- Scheme Category.
+- Eligible Population Metrics, if available.
+- Applications Received.
+- Applications Approved.
+- Beneficiary Count, if approved.
+- Reporting Period.
+- Official Source.
+
+Do not estimate or fabricate beneficiary counts.
+
+## 7.6 District-level transparency
+
+Route: /analytics/public-transparency/districts
+
+Display aggregated metrics by district:
+
+- Government Service Usage.
+- Application Processing.
+- Grievance Statistics.
+- Approved Development Indicators.
+- Scheme Utilization.
+
+Allow drill-down only to levels approved for public release.
+
+## 7.7 Public project and budget monitoring
+
+Route: /analytics/public-transparency/projects
+
+Where authorized datasets exist, display:
+
+- Project Name.
+- Department.
+- Location.
+- Approved Budget.
+- Reported Expenditure.
+- Project Status.
+- Milestone.
+- Last Updated.
+- Official Source.
+
+Clearly distinguish approved budget, allocated amount and actual expenditure.
+
+Never infer project completion from an incomplete status record.
+
+## 7.8 Open data download centre
+
+Route: /analytics/public-transparency/downloads
+
+Features:
+
+- Search Dataset.
+- Category Filter.
+- Format Filter.
+- Download.
+- Dataset Details.
+- Version History.
+- Usage Guidelines.
+
+## 7.9 Publication workflow
+
+Draft Dataset
+→ Data Validation
+→ Privacy Review
+→ Department Approval
+→ Authorized Publication
+→ Public Access
+→ Version Update.
+
+Only authorized personnel can publish datasets.
+
+Maintain publication history and withdrawal controls.
+
+---
+
+# 8. PAGE 5 – CITIZEN SENTIMENT CENTRE
+
+Route: /analytics/citizen-sentiment
+
+Purpose: Analyze citizen feedback, grievances, reviews and service satisfaction using Python NLP and multilingual AI.
+
+## 8.1 Sentiment overview
+
+Create KPI cards:
+
+1. Total Feedback Records.
+2. Positive Feedback.
+3. Neutral Feedback.
+4. Negative Feedback.
+5. Grievances Analysed.
+6. Common Feedback Topics.
+7. Tamil Feedback Records.
+8. Analysis Completion Status.
+
+Clearly display the reporting period and dataset coverage.
+
+## 8.2 Sentiment distribution
+
+Create a donut chart:
+
+- Positive.
+- Neutral.
+- Negative.
+- Unclassified.
+
+Display actual counts and percentages.
+
+Do not classify all feedback automatically if language or data quality prevents reliable analysis.
+
+## 8.3 Sentiment trend
+
+Create a line chart showing sentiment changes over:
+
+- 7 Days.
+- 30 Days.
+- 3 Months.
+- 6 Months.
+- Custom Period.
+
+Compare feedback volume and sentiment distribution.
+
+## 8.4 Feedback analytics
+
+Route: /analytics/citizen-sentiment/feedback
+
+Table columns:
+
+- Feedback ID.
+- Service.
+- Department.
+- District.
+- Submission Date.
+- Feedback Category.
+- Sentiment.
+- Language.
+- Analysis Status.
+
+Use masking and aggregation to protect citizen identity.
+
+## 8.5 Grievance intelligence
+
+Route: /analytics/citizen-sentiment/grievances
+
+Analyze:
+
+- Total Grievances.
+- Common Categories.
+- Department-wise Grievances.
+- District-wise Grievances.
+- Pending Grievances.
+- Escalated Grievances.
+- Resolution Time.
+- Repeated Complaint Topics.
+
+Create charts for:
+
+- Grievances by Category.
+- Grievances by Department.
+- Grievance Trend.
+- Resolution Trend.
+
+## 8.6 Topic analysis
+
+Route: /analytics/citizen-sentiment/topics
+
+Use NLP to identify recurring topics:
+
+- Application Delay.
+- Document Rejection.
+- Website Problems.
+- Service Accessibility.
+- Employee Assistance.
+- Scheme Eligibility.
+- Payment Issues.
+- Technical Problems.
+- Other Feedback.
+
+Display:
+
+- Topic Name.
+- Feedback Count.
+- Trend.
+- Related Service.
+- Related Department.
+- Example Text, only when privacy and permissions allow.
+
+## 8.7 Tamil NLP analytics
+
+Route: /analytics/citizen-sentiment/tamil-nlp
+
+Support:
+
+- Tamil Unicode Text.
+- Tamil-English Mixed Text.
+- English Text.
+- Language Detection.
+- Sentiment Analysis.
+- Topic Classification.
+- Text Normalization.
+- Transliteration-aware processing where appropriate.
+
+Use appropriate multilingual NLP models.
+
+Do not assume transliterated Tamil is identical to standard Tamil text.
+
+## 8.8 Service satisfaction analytics
+
+Route: /analytics/citizen-sentiment/service-satisfaction
+
+Display:
+
+- Service Name.
+- Feedback Volume.
+- Average Rating, if available.
+- Sentiment Distribution.
+- Common Complaint Topics.
+- Satisfaction Trend.
+
+Allow service and department comparison.
+
+## 8.9 NLP processing workflow
+
+Feedback Received
+→ Data Access Validation
+→ PII Minimization
+→ Language Detection
+→ Text Cleaning
+→ Sentiment Classification
+→ Topic Classification
+→ Aggregation
+→ Quality Review
+→ Analytics Dashboard.
+
+## 8.10 AI safeguards
+
+- Sentiment is an approximate text classification, not a fact about a citizen.
+- Do not profile citizens by political or sensitive personal beliefs.
+- Do not expose raw feedback unnecessarily.
+- Do not use sentiment scores to penalize employees automatically.
+- Support unclassified and low-confidence results.
+- Evaluate Tamil and English models separately.
+
+---
+
+# 9. PAGE 6 – INFRASTRUCTURE MONITORING
+
+Route: /analytics/infrastructure
+
+Purpose: Monitor the health, reliability, availability and performance of GovAI Nexus technical infrastructure.
+
+This page is intended for authorized technical administrators and infrastructure monitoring personnel.
+
+## 9.1 Infrastructure overview
+
+Create KPI cards:
+
+1. Overall System Availability.
+2. Backend API Status.
+3. Database Status.
+4. AI Service Status.
+5. Average API Latency.
+6. Active Background Jobs.
+7. Storage Utilization.
+8. Active Integration Status.
+
+Display real monitoring values only.
+
+## 9.2 System service map
+
+Create a visual architecture map.
+
+Components:
+
+- React Frontend.
+- Python FastAPI Backend.
+- PostgreSQL.
+- pgvector.
+- Redis.
+- AI Provider Services.
+- RAG Pipeline.
+- ML Prediction Workers.
+- OCR Services.
+- Document Storage.
+- Notification Services.
+- External Integrations.
+
+Show connections and service health.
+
+Use visual status:
+
+- Green: Operational.
+- Amber: Degraded.
+- Red: Down.
+- Grey: Unknown.
+
+Clicking a component opens its detailed monitoring page.
+
+## 9.3 API monitoring
+
+Route: /analytics/infrastructure/api-monitoring
+
+Display:
+
+- Total Requests.
+- Successful Requests.
+- Failed Requests.
+- Average Response Time.
+- P95 Latency.
+- P99 Latency.
+- Error Rate.
+- Rate Limit Events.
+
+Charts:
+
+- Request Volume.
+- Response Time Trend.
+- Error Rate.
+- Endpoint Usage.
+
+API table:
+
+- Endpoint.
+- HTTP Method.
+- Request Count.
+- Average Latency.
+- Error Count.
+- Status.
+- Last Updated.
+
+Do not expose authorization headers, tokens or personal request payloads.
+
+## 9.4 Database monitoring
+
+Route: /analytics/infrastructure/database
+
+Monitor:
+
+- PostgreSQL Health.
+- Connection Count.
+- Active Queries.
+- Slow Queries.
+- Query Latency.
+- Database Size.
+- Index Usage.
+- Connection Pool.
+- Backup Status.
+
+For pgvector, include index health and retrieval query performance where available.
+
+## 9.5 AI service monitoring
+
+Route: /analytics/infrastructure/ai-services
+
+Display:
+
+- Provider Availability.
+- LLM Request Volume.
+- LLM Latency.
+- Inference Errors.
+- Model Availability.
+- RAG Retrieval Latency.
+- Embedding Job Status.
+- Prediction Worker Status.
+
+Provide provider-wise comparison.
+
+Do not expose API keys or provider credentials.
+
+## 9.6 Redis and cache monitoring
+
+Display:
+
+- Cache Availability.
+- Memory Utilization.
+- Cache Hit Rate.
+- Cache Miss Rate.
+- Eviction Count.
+- Connection Count.
+- Latency.
+
+## 9.7 Storage monitoring
+
+Route: /analytics/infrastructure/storage
+
+Display:
+
+- Total Storage.
+- Used Storage.
+- Available Storage.
+- Document Count.
+- Object Count.
+- Average File Size.
+- Upload Failures.
+- Storage Error Count.
+
+Separate:
+
+- Application Documents.
+- Knowledge Documents.
+- Backup Storage.
+- Temporary Processing Files.
+
+## 9.8 Integration monitoring
+
+Route: /analytics/infrastructure/integrations
+
+Display authorized integrations:
+
+- Government Service Gateways.
+- e-Sevai, where integrated.
+- DigiLocker, where authorized.
+- Payment Providers.
+- SMS Providers.
+- Email Providers.
+- Maps.
+- Storage.
+- Other Configured APIs.
+
+Table:
+
+- Integration.
+- Provider.
+- Status.
+- Last Successful Sync.
+- Last Failure.
+- Error Count.
+- Last Health Check.
+
+## 9.9 Background job monitoring
+
+Route: /analytics/infrastructure/jobs
+
+Monitor:
+
+- Document Ingestion.
+- OCR Processing.
+- Embedding Generation.
+- RAG Indexing.
+- ML Prediction.
+- Forecasting.
+- Sentiment Analysis.
+- Report Generation.
+- Notification Delivery.
+- Scheduled Data Refresh.
+
+Display:
+
+- Job ID.
+- Job Type.
+- Queue.
+- Started At.
+- Completed At.
+- Duration.
+- Status.
+- Retry Count.
+- Error Details.
+
+## 9.10 Infrastructure alert centre
+
+Create alerts for:
+
+- API Downtime.
+- High Latency.
+- Database Failure.
+- Storage Capacity Warning.
+- AI Provider Failure.
+- Redis Failure.
+- Job Queue Backlog.
+- Failed Backups.
+- Integration Downtime.
+- High Error Rates.
+
+Provide:
+
+- Alert Details.
+- Severity.
+- Start Time.
+- Affected Component.
+- Current Status.
+- Acknowledgement.
+- Resolution History.
+
+## 9.11 Monitoring safeguards
+
+- Do not expose secrets.
+- Restrict infrastructure data to authorized technical roles.
+- Use real monitoring exporters and health checks.
+- Clearly distinguish unavailable monitoring from healthy service status.
+- Do not claim 99.9% uptime without a measured reporting period.
+
+---
+
+# 10. PAGE 7 – COMPLIANCE & GOVERNANCE CENTRE
+
+Route: /analytics/compliance-governance
+
+Purpose: Monitor compliance controls, data governance, AI governance, security controls, policy versions and administrative accountability.
+
+## 10.1 Compliance overview
+
+Create KPI cards:
+
+1. Total Compliance Controls.
+2. Compliant Controls.
+3. Pending Reviews.
+4. Open Compliance Issues.
+5. High-Risk Items.
+6. Expired Policy Documents.
+7. AI Governance Reviews.
+8. Last Compliance Review.
+
+Use actual assessment records.
+
+## 10.2 Compliance dashboard
+
+Create charts:
+
+- Compliance Status Distribution.
+- Issues by Category.
+- Issues by Department.
+- Risk Level Distribution.
+- Compliance Trend.
+- Review Completion.
+
+## 10.3 Policy registry
+
+Route: /analytics/compliance-governance/policies
+
+Maintain:
+
+- Policy Name.
+- Policy Category.
+- Policy Version.
+- Responsible Department.
+- Effective Date.
+- Review Date.
+- Status.
+- Source Document.
+- Approval Record.
+
+Categories:
+
+- Data Protection.
+- Information Security.
+- AI Governance.
+- Data Retention.
+- Access Control.
+- Records Management.
+- Service Delivery.
+- Operational Governance.
+
+## 10.4 Data governance
+
+Route: /analytics/compliance-governance/data-governance
+
+Display:
+
+- Data Inventory.
+- Data Owners.
+- Data Categories.
+- Data Classification.
+- Data Quality Status.
+- Retention Policies.
+- Access Policies.
+- Data Lineage.
+- Data Sharing Register.
+
+Classify information:
+
+- Public.
+- Internal.
+- Confidential.
+- Restricted.
+
+The actual classification rules must be approved by the responsible organization.
+
+## 10.5 AI governance
+
+Route: /analytics/compliance-governance/ai-governance
+
+Maintain an AI system registry.
+
+For each AI model:
+
+- Model Name.
+- Model Version.
+- Intended Purpose.
+- Model Owner.
+- Training Data Description.
+- Evaluation Status.
+- Known Limitations.
+- Risk Classification.
+- Human Oversight.
+- Deployment Status.
+- Last Review.
+
+Review categories:
+
+- Accuracy.
+- Reliability.
+- Fairness.
+- Explainability.
+- Privacy.
+- Security.
+- Hallucination Risk.
+- Data Drift.
+- Human Oversight.
+
+## 10.6 AI risk register
+
+Route: /analytics/compliance-governance/risk-register
+
+Columns:
+
+- Risk ID.
+- Risk Description.
+- Risk Category.
+- Affected Module.
+- Severity.
+- Likelihood.
+- Risk Owner.
+- Mitigation.
+- Review Date.
+- Status.
+
+Risk categories:
+
+- Privacy.
+- Security.
+- Model Bias.
+- Model Drift.
+- Hallucination.
+- Data Quality.
+- Unauthorized Access.
+- Operational Failure.
+- Third-Party Dependency.
+
+## 10.7 Audit monitoring
+
+Route: /analytics/compliance-governance/audit-monitoring
+
+Monitor:
+
+- Privileged Access Changes.
+- Administrative Actions.
+- Data Export Events.
+- AI Model Changes.
+- Service Configuration Changes.
+- Security Incidents.
+- Compliance Reviews.
+
+Link to the authorized Super Admin audit records.
+
+Do not duplicate or independently modify the authoritative audit log.
+
+## 10.8 Compliance issue management
+
+Route: /analytics/compliance-governance/issues
+
+Workflow:
+
+Issue Identified
+→ Assigned
+→ Investigation
+→ Corrective Action
+→ Evidence Submission
+→ Review
+→ Closure.
+
+Features:
+
+- Create Issue.
+- Assign Owner.
+- Add Evidence.
+- Set Due Date.
+- Update Status.
+- Record Corrective Action.
+- Verify Resolution.
+- Generate Compliance Report.
+
+## 10.9 Compliance reports
+
+Generate:
+
+- Data Governance Report.
+- AI Governance Report.
+- Access Control Report.
+- Security Compliance Report.
+- Policy Review Report.
+- Risk Register Report.
+- Audit Summary.
+- Corrective Action Report.
+
+Do not present an internal checklist as official legal certification.
+
+---
+
+# 11. GLOBAL REPORTS & ANALYTICS
+
+Route: /analytics/reports
+
+Create a centralized reporting centre across all seven modules.
+
+## Report categories
+
+1. AI Knowledge Repository Report.
+2. RAG Performance Report.
+3. Predictive Intelligence Report.
+4. Application Delay Prediction Report.
+5. Service Demand Forecast Report.
+6. Workload Forecast Report.
+7. Anomaly Detection Report.
+8. Investigation Summary.
+9. Public Transparency Report.
+10. Citizen Sentiment Report.
+11. Tamil NLP Report.
+12. Infrastructure Health Report.
+13. API Performance Report.
+14. AI Usage Report.
+15. Compliance Report.
+16. AI Governance Report.
+
+## Report builder
+
+Provide:
+
+- Report Name.
+- Report Category.
+- Reporting Period.
+- Department.
+- District.
+- Service.
+- Data Fields.
+- Visualization.
+- Privacy Level.
+- Output Format.
+
+Formats:
+
+- PDF.
+- Excel.
+- CSV.
+
+Features:
+
+- Preview.
+- Generate.
+- Download.
+- Report History.
+- Scheduled Reports, where authorized.
+
+All reports must preserve source information, reporting periods and methodology.
+
+---
+
+# 12. AI INTELLIGENCE ASSISTANT
+
+Provide a centralized assistant accessible throughout the AI & Analytics Centre.
+
+Route: /analytics/assistant
+
+### Capabilities
+
+- Government Knowledge Search.
+- RAG Question Answering.
+- Analytics Query Assistance.
+- Predictive Insight Explanation.
+- Department Performance Summaries.
+- Anomaly Alert Explanation.
+- Citizen Feedback Summarization.
+- Infrastructure Status Explanation.
+- Compliance Guidance.
+
+### UI design
+
+Create a professional chat workspace.
+
+Left panel:
+
+- New Conversation.
+- Conversation History.
+- Saved Queries.
+- Suggested Questions.
+
+Main panel:
+
+- AI welcome message.
+- Chat history.
+- Message input.
+- Voice input, if configured.
+- Attach document, if authorized.
+- Send button.
+- Source References.
+- Feedback buttons.
+
+### Suggested questions
+
+- Summarize government service performance.
+- Explain application delay trends.
+- Find official scheme guidelines.
+- Identify common citizen complaints.
+- Explain the latest infrastructure alerts.
+- Summarize AI governance risks.
+
+### AI response requirements
+
+Every response must:
+
+- Use authorized information.
+- Provide relevant sources.
+- Show data period.
+- Explain uncertainty.
+- Identify missing information.
+- Abstain when reliable evidence is unavailable.
+
+For analytical questions, show the dataset or metric definitions used.
+
+Never expose confidential information to users without the appropriate permissions.
+
+---
+
+# 13. AI AND DATA PROCESSING ARCHITECTURE
+
+Create a Python-first modular intelligence architecture.
+
+## 13.1 Data ingestion layer
+
+Collect authorized data from:
+
+- Citizen Portal.
+- Employee Portal.
+- Officer Portal.
+- Super Admin Portal.
+- Government service master.
+- Scheme master.
+- Application records.
+- Grievance records.
+- Citizen feedback.
+- Approved government documents.
+- Infrastructure monitoring services.
+
+Support:
+
+- REST APIs.
+- Database queries.
+- Scheduled jobs.
+- Approved file imports.
+- Authorized integrations.
+
+Do not scrape restricted government systems or bypass access restrictions.
+
+## 13.2 Data validation layer
+
+Use:
+
+- Pydantic.
+- Pandas.
+- NumPy.
+- Database constraints.
+- Schema validation.
+- Duplicate detection.
+- Data freshness checks.
+
+Validate:
+
+- Missing values.
+- Duplicate records.
+- Invalid timestamps.
+- Invalid categories.
+- Inconsistent status values.
+- Source completeness.
+- Data lineage.
+
+## 13.3 Feature engineering layer
+
+Use Python to prepare model features.
+
+Maintain:
+
+- Feature definitions.
+- Data provenance.
+- Version history.
+- Validation rules.
+- Training / inference consistency.
+
+Avoid sensitive features unless there is a documented and lawful justification.
+
+## 13.4 AI / ML model layer
+
+Create independent model services for:
+
+- Forecasting.
+- Classification.
+- Anomaly Detection.
+- Sentiment Analysis.
+- NLP.
+- Recommendation.
+- Delay Prediction.
+
+Each model must have:
+
+- Version.
+- Training dataset reference.
+- Evaluation results.
+- Deployment status.
+- Monitoring.
+- Rollback support.
+
+## 13.5 RAG layer
+
+Implement:
+
+Document Ingestion
+→ Text Extraction
+→ Cleaning
+→ Semantic Chunking
+→ Embedding Generation
+→ pgvector Storage
+→ Hybrid Retrieval
+→ Reranking
+→ Context Construction
+→ LLM Response
+→ Citation Generation
+→ Response Validation.
+
+## 13.6 AI orchestration layer
+
+Create an orchestrator that routes requests to the correct AI module.
+
+Agents:
+
+1. Knowledge Intelligence Agent.
+2. Prediction Intelligence Agent.
+3. Anomaly Intelligence Agent.
+4. Transparency Analytics Agent.
+5. Citizen Sentiment Agent.
+6. Infrastructure Monitoring Agent.
+7. Compliance Intelligence Agent.
+8. Report Generation Agent.
+9. Central Orchestrator Agent.
+
+Every agent must respect user authorization and module permissions.
+
+---
+
+# 14. DATABASE ARCHITECTURE
+
+Extend the existing PostgreSQL database.
+
+Reuse the existing master entities.
+
+Do not duplicate:
+
+- Users.
+- Departments.
+- Employees.
+- Officers.
+- Services.
+- Schemes.
+- Applications.
+- Documents.
+- Grievances.
+- Feedback.
+- Audit Logs.
+- Notifications.
+
+Create or extend the following entities where necessary.
+
+## 14.1 AI Knowledge Centre
+
+1. knowledge_document_master
+2. knowledge_source_registry
+3. knowledge_document_versions
+4. knowledge_document_metadata
+5. knowledge_document_chunks
+6. knowledge_embedding_registry
+7. knowledge_ingestion_jobs
+8. knowledge_indexing_history
+9. knowledge_verification_history
+10. rag_query_history
+11. rag_retrieval_results
+12. rag_evaluation_runs
+
+## 14.2 Predictive Intelligence
+
+13. prediction_model_registry
+14. prediction_model_versions
+15. prediction_training_history
+16. prediction_evaluation_results
+17. prediction_results
+18. forecast_results
+19. model_feature_registry
+20. model_drift_history
+21. prediction_job_history
+
+## 14.3 Fraud Intelligence
+
+22. anomaly_model_registry
+23. anomaly_detection_runs
+24. anomaly_alerts
+25. anomaly_evidence
+26. anomaly_investigations
+27. anomaly_investigation_history
+28. anomaly_false_positive_records
+
+## 14.4 Public Transparency
+
+29. public_dataset_registry
+30. public_dataset_versions
+31. public_dataset_publication_history
+32. public_data_approval_records
+33. public_analytics_snapshots
+34. public_download_history
+
+## 14.5 Citizen Sentiment
+
+35. feedback_analysis_jobs
+36. feedback_sentiment_results
+37. feedback_topic_results
+38. grievance_analytics_snapshots
+39. sentiment_model_registry
+40. sentiment_evaluation_history
+
+## 14.6 Infrastructure Monitoring
+
+41. infrastructure_components
+42. infrastructure_health_checks
+43. api_performance_metrics
+44. database_performance_metrics
+45. ai_service_metrics
+46. storage_metrics
+47. integration_health_history
+48. background_job_metrics
+49. infrastructure_alerts
+
+## 14.7 Compliance & Governance
+
+50. compliance_policy_registry
+51. compliance_controls
+52. compliance_assessments
+53. compliance_issues
+54. compliance_corrective_actions
+55. ai_governance_registry
+56. ai_risk_register
+57. data_classification_registry
+58. data_retention_policies
+59. governance_review_history
+
+## 14.8 Shared analytics
+
+60. analytics_report_history
+61. analytics_export_history
+62. analytics_saved_queries
+63. analytics_refresh_history
+64. intelligence_agent_registry
+65. intelligence_agent_execution_history
+
+Use:
+
+- Proper primary keys.
+- Foreign keys.
+- Unique constraints.
+- Indexes.
+- Data validation.
+- Timestamps.
+- Version history.
+- Audit history.
+- Data retention policies.
+- Transactions.
+
+For time-series data, use an appropriate retention and aggregation strategy.
+
+Store vector embeddings in pgvector or the existing approved vector infrastructure.
+
+---
+
+# 15. BACKEND API DEVELOPMENT
+
+Use FastAPI and Python.
+
+Base route:
+
+/api/v1/analytics/
+
+## Dashboard
+
+- GET /api/v1/analytics/dashboard/summary
+- GET /api/v1/analytics/dashboard/ai-usage
+- GET /api/v1/analytics/dashboard/model-distribution
+- GET /api/v1/analytics/dashboard/prediction-summary
+- GET /api/v1/analytics/dashboard/anomaly-summary
+- GET /api/v1/analytics/dashboard/sentiment-summary
+- GET /api/v1/analytics/dashboard/infrastructure-health
+- GET /api/v1/analytics/dashboard/recent-activities
+
+## Knowledge Centre
+
+- GET /api/v1/analytics/knowledge/overview
+- GET /api/v1/analytics/knowledge/documents
+- POST /api/v1/analytics/knowledge/documents
+- GET /api/v1/analytics/knowledge/documents/{document_id}
+- POST /api/v1/analytics/knowledge/documents/{document_id}/index
+- POST /api/v1/analytics/knowledge/documents/{document_id}/reindex
+- GET /api/v1/analytics/knowledge/search
+- GET /api/v1/analytics/knowledge/sources
+- GET /api/v1/analytics/knowledge/rag-metrics
+- GET /api/v1/analytics/knowledge/ingestion-jobs
+
+## Predictive Intelligence
+
+- GET /api/v1/analytics/predictions/overview
+- GET /api/v1/analytics/predictions/delay-risk
+- GET /api/v1/analytics/predictions/delay-risk/{record_id}
+- GET /api/v1/analytics/predictions/service-demand
+- GET /api/v1/analytics/predictions/workload
+- GET /api/v1/analytics/predictions/department-performance
+- GET /api/v1/analytics/predictions/models
+- GET /api/v1/analytics/predictions/model-evaluation
+- POST /api/v1/analytics/predictions/run
+
+## Fraud Intelligence
+
+- GET /api/v1/analytics/anomalies/overview
+- GET /api/v1/analytics/anomalies/alerts
+- GET /api/v1/analytics/anomalies/alerts/{alert_id}
+- GET /api/v1/analytics/anomalies/investigations
+- POST /api/v1/analytics/anomalies/{alert_id}/review
+- POST /api/v1/analytics/anomalies/{alert_id}/assign
+- POST /api/v1/analytics/anomalies/{alert_id}/escalate
+- POST /api/v1/analytics/anomalies/{alert_id}/resolve
+- POST /api/v1/analytics/anomalies/{alert_id}/false-positive
+- GET /api/v1/analytics/anomalies/trends
+
+## Public Transparency
+
+- GET /api/v1/analytics/transparency/overview
+- GET /api/v1/analytics/transparency/datasets
+- GET /api/v1/analytics/transparency/datasets/{dataset_id}
+- GET /api/v1/analytics/transparency/departments
+- GET /api/v1/analytics/transparency/services
+- GET /api/v1/analytics/transparency/schemes
+- GET /api/v1/analytics/transparency/districts
+- GET /api/v1/analytics/transparency/projects
+- POST /api/v1/analytics/transparency/datasets/{dataset_id}/publish
+- GET /api/v1/analytics/transparency/downloads
+
+## Citizen Sentiment
+
+- GET /api/v1/analytics/sentiment/overview
+- GET /api/v1/analytics/sentiment/distribution
+- GET /api/v1/analytics/sentiment/trends
+- GET /api/v1/analytics/sentiment/feedback
+- GET /api/v1/analytics/sentiment/grievances
+- GET /api/v1/analytics/sentiment/topics
+- GET /api/v1/analytics/sentiment/tamil
+- GET /api/v1/analytics/sentiment/service-satisfaction
+- POST /api/v1/analytics/sentiment/analyse
+
+## Infrastructure
+
+- GET /api/v1/analytics/infrastructure/overview
+- GET /api/v1/analytics/infrastructure/components
+- GET /api/v1/analytics/infrastructure/apis
+- GET /api/v1/analytics/infrastructure/database
+- GET /api/v1/analytics/infrastructure/ai-services
+- GET /api/v1/analytics/infrastructure/redis
+- GET /api/v1/analytics/infrastructure/storage
+- GET /api/v1/analytics/infrastructure/integrations
+- GET /api/v1/analytics/infrastructure/jobs
+- GET /api/v1/analytics/infrastructure/alerts
+
+## Compliance & Governance
+
+- GET /api/v1/analytics/compliance/overview
+- GET /api/v1/analytics/compliance/policies
+- GET /api/v1/analytics/compliance/data-governance
+- GET /api/v1/analytics/compliance/ai-governance
+- GET /api/v1/analytics/compliance/risk-register
+- GET /api/v1/analytics/compliance/audit-monitoring
+- GET /api/v1/analytics/compliance/issues
+- POST /api/v1/analytics/compliance/issues
+- POST /api/v1/analytics/compliance/issues/{issue_id}/assign
+- POST /api/v1/analytics/compliance/issues/{issue_id}/resolve
+- GET /api/v1/analytics/compliance/reports
+
+## Reports and AI Assistant
+
+- GET /api/v1/analytics/reports
+- POST /api/v1/analytics/reports/generate
+- GET /api/v1/analytics/reports/{report_id}
+- GET /api/v1/analytics/assistant/conversations
+- POST /api/v1/analytics/assistant/query
+- GET /api/v1/analytics/notifications
+
+All APIs must implement:
+
+- Authentication.
+- Role-based access.
+- Department and jurisdiction restrictions.
+- Pydantic validation.
+- Pagination.
+- Filtering.
+- Sorting.
+- Secure file access.
+- Rate limiting.
+- Audit logging.
+- Standardized errors.
+- Safe response serialization.
+
+Use background workers for long-running ingestion, embedding, forecasting and analysis tasks.
+
+---
+
+# 16. FRONTEND COMPONENT ARCHITECTURE
+
+Create reusable components.
+
+## Global components
+
+- AnalyticsHeader.
+- AnalyticsSidebar.
+- AnalyticsProfileMenu.
+- AnalyticsWelcomeBanner.
+- GlobalSearch.
+- DateRangeFilter.
+- DepartmentFilter.
+- DistrictFilter.
+- ServiceFilter.
+- RefreshIndicator.
+- NotificationPanel.
+
+## Analytics components
+
+- IntelligenceStatCard.
+- TrendChart.
+- BarComparisonChart.
+- DonutChart.
+- ForecastChart.
+- ConfidenceBandChart.
+- DataTable.
+- AdvancedFilterPanel.
+- InsightCard.
+- RiskIndicator.
+- ModelStatusCard.
+- DataFreshnessBadge.
+- SourceCitationPanel.
+- ExportMenu.
+
+## Knowledge components
+
+- DocumentUploadZone.
+- DocumentPreview.
+- KnowledgeDocumentTable.
+- KnowledgeSearchBar.
+- RAGRetrievalPanel.
+- IngestionProgress.
+- DocumentVersionHistory.
+
+## Fraud components
+
+- AnomalyAlertCard.
+- AnomalyEvidencePanel.
+- InvestigationTimeline.
+- RiskDistributionChart.
+- InvestigationTable.
+
+## Transparency components
+
+- DatasetCard.
+- PublicDataTable.
+- DatasetMetadataPanel.
+- PublicationApprovalPanel.
+
+## Sentiment components
+
+- SentimentDistributionChart.
+- FeedbackTopicCard.
+- GrievanceTrendChart.
+- TamilNLPPanel.
+
+## Infrastructure components
+
+- ServiceHealthCard.
+- SystemArchitectureMap.
+- APIMetricsChart.
+- DatabaseHealthPanel.
+- IntegrationStatusTable.
+- JobQueueTable.
+
+## Compliance components
+
+- ComplianceStatusCard.
+- PolicyRegistryTable.
+- RiskRegisterTable.
+- AIModelGovernanceCard.
+- ComplianceIssueTimeline.
+
+All charts and tables must support the appropriate filters and responsive behavior.
+
+---
+
+# 17. ALIGNMENT, LAYOUT & RESPONSIVE DESIGN REQUIREMENTS
+
+This section is mandatory.
+
+All seven pages must follow one consistent layout system.
+
+## 17.1 Desktop layout
+
+Target desktop widths: 1440px and above.
+
+Header:
+
+- Full-width top navigation.
+- Government identity on the left.
+- Language and profile controls on the right.
+
+Sidebar:
+
+- Fixed width approximately 250px.
+- Dark navy background.
+- Collapsible groups.
+- Purple active navigation.
+- Full-height layout.
+
+Main content:
+
+- Remaining available width.
+- Consistent 24px horizontal content padding.
+- Consistent 20–24px vertical spacing.
+- Page heading and description at the top.
+- Filters aligned on the right when space permits.
+- KPI cards directly below the page heading.
+- Charts and tables in responsive grid layouts.
+
+## 17.2 Standard page structure
+
+Every analytics page must follow this hierarchy:
+
+1. Breadcrumb.
+2. Page title.
+3. Page description.
+4. Reporting period and refresh status.
+5. Global filters.
+6. KPI cards.
+7. Primary charts.
+8. Detailed analytics.
+9. Data tables.
+10. Insights and recommendations.
+11. Export / reporting actions.
+
+Do not force identical layouts on every page. Preserve the shared hierarchy while arranging charts and tables according to the page's purpose.
+
+## 17.3 KPI card alignment
+
+- Use 4 cards per row on wide desktop layouts where space permits.
+- Use 3 cards per row on medium desktop layouts.
+- Use 2 cards per row on tablets.
+- Use 1 or 2 cards per row on mobile depending on readability.
+
+All KPI cards in the same row must have consistent heights.
+
+Use consistent icon positioning, label spacing and number typography.
+
+## 17.4 Chart alignment
+
+Use:
+
+- Two-column chart layouts for major comparisons.
+- Full-width charts for detailed trends.
+- Consistent chart heights within the same row.
+- Proper axis labels.
+- Readable legends.
+- Tooltips.
+- Date filters.
+- Responsive chart containers.
+
+Do not overcrowd charts with unnecessary metrics.
+
+## 17.5 Table alignment
+
+All tables must have:
+
+- Consistent header height.
+- Proper column alignment.
+- Readable spacing.
+- Search.
+- Filters.
+- Pagination.
+- Sorting.
+- Empty state.
+- Loading state.
+- Error state.
+- Responsive overflow handling.
+
+Use right alignment for numerical metrics where appropriate.
+
+Use clear status badges.
+
+## 17.6 Colour alignment
+
+Maintain consistent meanings:
+
+- Navy: Main navigation and primary brand.
+- Purple: Active module and AI intelligence.
+- Blue: General analytics.
+- Teal / Green: Healthy or positive state.
+- Amber: Warning.
+- Red: Critical issue.
+- Grey: Inactive or unknown.
+
+Do not use colours as the only way to convey status.
+
+## 17.7 Mobile responsiveness
+
+At mobile widths:
+
+- Collapse sidebar into a drawer.
+- Keep page titles readable.
+- Stack KPI cards.
+- Convert chart grids into one-column layouts.
+- Make filters accessible.
+- Make tables horizontally scrollable or convert them into record cards.
+- Keep critical alert information visible.
+- Avoid horizontal page overflow.
+
+## 17.8 Accessibility
+
+Target WCAG 2.2 AA.
+
+Implement:
+
+- Keyboard navigation.
+- Visible focus.
+- Accessible form labels.
+- Sufficient contrast.
+- Chart descriptions.
+- Screen-reader support.
+- Tamil text support.
+- Accessible modal dialogs.
+
+---
+
+# 18. ROLE-BASED ACCESS CONTROL
+
+The AI & Analytics Centre must support authorized access based on the user's role and jurisdiction.
+
+Possible roles:
+
+- Super Admin.
+- AI Administrator.
+- Analytics Administrator.
+- Department HOD.
+- Department Officer.
+- Data Analyst.
+- Infrastructure Administrator.
+- Compliance Officer.
+- Read-Only Auditor.
+
+Example access rules:
+
+### Super Admin
+
+- Platform-wide analytics.
+- AI model configuration.
+- Knowledge source management.
+- System-wide monitoring.
+- Governance management, subject to assigned permissions.
+
+### AI Administrator
+
+- AI providers.
+- Models.
+- Agents.
+- RAG knowledge base.
+- Evaluation.
+
+### Department HOD
+
+- Authorized department analytics.
+- Department predictions.
+- Department anomaly summaries.
+- Department sentiment and performance.
+
+### Department Officer
+
+- Assigned jurisdiction analytics.
+- Application delay insights.
+- Workload and service monitoring.
+
+### Data Analyst
+
+- Approved datasets.
+- Analytical queries.
+- Aggregated reporting.
+
+### Infrastructure Administrator
+
+- API monitoring.
+- Database health.
+- AI service health.
+- Storage.
+- Background jobs.
+
+### Compliance Officer
+
+- Governance registry.
+- Compliance assessments.
+- Authorized audit monitoring.
+- Risk register.
+
+### Read-Only Auditor
+
+- Read-only access to specifically authorized records.
+
+Implement permissions in the backend and enforce them for every query.
+
+---
+
+# 19. DATA PRIVACY, AI SAFETY & GOVERNANCE
+
+Apply appropriate Indian data protection requirements, including the Digital Personal Data Protection Act and applicable rules.
+
+Mandatory safeguards:
+
+1. Collect only necessary data.
+2. Restrict citizen personal data.
+3. Mask sensitive identifiers.
+4. Encrypt sensitive information.
+5. Apply retention rules.
+6. Maintain audit trails.
+7. Separate public and confidential datasets.
+8. Require approval before public publication.
+9. Prevent unauthorized exports.
+10. Enforce purpose-based access.
+
+### AI safety
+
+- No automated legal decisions.
+- No automated citizen application rejection.
+- No automatic employee disciplinary decisions.
+- No automatic fraud accusations.
+- Explain prediction uncertainty.
+- Show source citations for government information.
+- Abstain when knowledge is insufficient.
+- Evaluate model bias and drift.
+- Preserve human oversight.
+
+### Public transparency safeguards
+
+Only publish:
+
+- Approved data.
+- Aggregated statistics.
+- Privacy-protected datasets.
+- Verified information.
+
+Never publish:
+
+- Aadhaar numbers.
+- PAN numbers.
+- Personal addresses.
+- Phone numbers.
+- Bank account information.
+- Individual application documents.
+- Confidential grievance records.
+- Private employee information.
+
+---
+
+# 20. TESTING & VALIDATION
+
+Use:
+
+Backend:
+- Pytest.
+- FastAPI TestClient.
+
+Frontend:
+- Vitest.
+- React Testing Library.
+
+End-to-end:
+- Playwright.
+
+Test all seven pages.
+
+## Knowledge Centre tests
+
+- Document Upload.
+- Text Extraction.
+- OCR.
+- Chunking.
+- Embedding.
+- Indexing.
+- Semantic Search.
+- RAG Retrieval.
+- Source Citations.
+- Version Management.
+
+## Predictive Intelligence tests
+
+- Data Preparation.
+- Model Training.
+- Prediction Execution.
+- Forecasting.
+- Evaluation.
+- Data Drift.
+- Insufficient Data Handling.
+
+## Fraud Intelligence tests
+
+- Anomaly Detection.
+- Alert Creation.
+- Alert Review.
+- Investigation Assignment.
+- False Positive Handling.
+- Audit History.
+
+## Public Transparency tests
+
+- Dataset Registration.
+- Validation.
+- Privacy Review.
+- Approval Workflow.
+- Publication.
+- Download.
+- Withdrawal.
+
+## Citizen Sentiment tests
+
+- Language Detection.
+- Tamil Text Processing.
+- Sentiment Classification.
+- Topic Analysis.
+- Grievance Aggregation.
+- Privacy Protection.
+
+## Infrastructure tests
+
+- API Health.
+- Database Health.
+- Redis Monitoring.
+- AI Service Monitoring.
+- Job Monitoring.
+- Alert Generation.
+
+## Compliance tests
+
+- Policy Registry.
+- Risk Management.
+- AI Governance.
+- Compliance Issue Workflow.
+- Audit Monitoring.
+
+Also test:
+
+- Role-based access.
+- Unauthorized API requests.
+- Data leakage.
+- Performance.
+- Mobile responsiveness.
+- Accessibility.
+
+Never mark tests as passed unless they have actually executed successfully.
+
+---
+
+# 21. IMPLEMENTATION ROADMAP
+
+Before implementing:
+
+1. Inspect existing GovAI Nexus repository.
+2. Inspect all existing portals.
+3. Inspect the existing PostgreSQL schema.
+4. Inspect existing AI/RAG infrastructure.
+5. Inspect existing application and grievance records.
+6. Inspect available department data.
+7. Inspect current authentication and permissions.
+8. Identify reusable services.
+9. Identify missing data sources.
+10. Prepare a module-wise implementation plan.
+
+Implement in this order:
+
+### Phase A – AI Centre Foundation
+
+- AI dashboard layout.
+- Sidebar.
+- Shared analytics components.
+- Filters.
+- Authentication.
+- Permission system.
+
+### Phase B – AI Knowledge Centre
+
+- Document repository.
+- Ingestion pipeline.
+- OCR.
+- Embeddings.
+- RAG.
+- Knowledge search.
+- Source verification.
+
+### Phase C – Predictive Intelligence
+
+- Data preparation.
+- Model registry.
+- Delay prediction.
+- Demand forecasting.
+- Workload forecasting.
+- Model evaluation.
+
+### Phase D – Fraud Intelligence
+
+- Anomaly detection.
+- Alert management.
+- Investigation workflow.
+- Evidence display.
+- Audit history.
+
+### Phase E – Public Transparency
+
+- Dataset catalogue.
+- Privacy review.
+- Publication workflow.
+- Public reports.
+- Download centre.
+
+### Phase F – Citizen Sentiment
+
+- Tamil NLP.
+- English NLP.
+- Sentiment analysis.
+- Topic detection.
+- Grievance intelligence.
+- Satisfaction analytics.
+
+### Phase G – Infrastructure Monitoring
+
+- API metrics.
+- Database monitoring.
+- AI service monitoring.
+- Storage.
+- Integrations.
+- Background jobs.
+- Alerts.
+
+### Phase H – Compliance & Governance
+
+- Policy registry.
+- Data governance.
+- AI governance.
+- Risk register.
+- Compliance workflow.
+
+### Phase I – Reports & Assistant
+
+- Central reporting.
+- AI assistant.
+- Source-backed responses.
+- Export.
+
+### Phase J – Testing & Deployment
+
+- Integration testing.
+- Security testing.
+- Performance testing.
+- Accessibility testing.
+- Deployment.
+- Documentation.
+
+---
+
+# 22. CROSS-PORTAL INTEGRATION
+
+The AI & Analytics Centre must connect to all GovAI Nexus portals.
+
+## Citizen Portal
+
+Consume authorized data for:
+
+- Scheme recommendations.
+- Service search analytics.
+- Application processing trends.
+- Citizen feedback.
+- Grievance analytics.
+- Citizen AI assistant knowledge.
+
+## Employee Portal
+
+Consume authorized data for:
+
+- Application processing metrics.
+- Document verification trends.
+- Employee workload.
+- Task completion.
+- Processing delays.
+
+## Officer / HOD Portal
+
+Provide:
+
+- Department predictions.
+- Workload forecasts.
+- Service demand insights.
+- Anomaly alerts.
+- Grievance analytics.
+- Department performance reports.
+
+## Super Admin Portal
+
+Provide:
+
+- AI provider health.
+- Model status.
+- RAG monitoring.
+- Infrastructure metrics.
+- AI usage.
+- Model evaluation.
+- Governance status.
+
+## Public Government Website
+
+Provide approved:
+
+- Public transparency dashboards.
+- Public datasets.
+- Department performance information.
+- Service performance reports.
+- Approved government analytics.
+
+All portals must use the same central data source and consistent definitions of metrics.
+
+---
+
+# 23. FINAL EXPECTED RESULT
+
+Build a complete AI & Analytics Centre with seven major pages:
+
+1. AI Dashboard.
+2. AI Knowledge Centre.
+3. Predictive Intelligence Centre.
+4. Fraud Intelligence Centre.
+5. Public Transparency Centre.
+6. Citizen Sentiment Centre.
+7. Infrastructure Monitoring.
+8. Compliance & Governance Centre.
+
+The eight listed items consist of the dashboard plus seven specialist pages.
+
+The final platform must support:
+
+- Government knowledge management.
+- RAG-powered information retrieval.
+- AI assistant.
+- ML predictions.
+- Demand forecasting.
+- Workload forecasting.
+- Anomaly detection.
+- Human-led investigations.
+- Public transparency.
+- Tamil and English NLP.
+- Citizen sentiment analytics.
+- Infrastructure monitoring.
+- Compliance management.
+- AI governance.
+- Analytics reports.
+
+### FINAL DEVELOPMENT INSTRUCTION
+
+Build the complete GovAI Nexus AI & Analytics Centre inside the existing project.
+
+Every page must have its own purpose-built layout, sections, KPI cards, charts, filters, tables, forms and workflows.
+
+Every component must connect to actual backend APIs and authorized PostgreSQL data.
+
+Use Python as the primary backend, AI, ML, RAG, NLP and automation language.
+
+Maintain the existing GovAI Nexus navy-blue-purple-white design system and ensure consistent alignment across all seven specialist modules.
+
+Do not deliver static dashboards, disconnected pages, fake statistics, fabricated AI predictions or non-functional controls.
+
+The final result must be a secure, scalable, bilingual, explainable and production-oriented government intelligence platform integrated with all existing GovAI Nexus portals.

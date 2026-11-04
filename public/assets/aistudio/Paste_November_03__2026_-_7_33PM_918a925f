@@ -1,0 +1,1572 @@
+# GOVAI NEXUS – EMPLOYEE PORTAL
+# COMPLETE UI/UX DESIGN + FULL-STACK DEVELOPMENT MASTER PROMPT
+
+## 1. PROJECT OVERVIEW
+
+Project Name: GovAI Nexus  
+Tagline: Smarter Government. Faster Services. Transparent Governance.  
+Target: Tamil Nadu Government  
+Portal: Employee Portal  
+Languages: English + Tamil  
+Platforms: Web + Responsive Mobile  
+Primary Backend Language: Python  
+Frontend: React 19 + Vite + TypeScript  
+Backend: Python 3.12+ + FastAPI  
+Database: PostgreSQL  
+Cache: Redis
+
+You are working on an existing enterprise-level GovTech application called GovAI Nexus.
+
+Your task is to design and implement the complete Employee Portal as an integrated part of the existing GovAI Nexus platform.
+
+The Employee Portal is designed for government employees, e-Sevai operators, junior assistants, clerks, department staff, verification officers and authorized processing personnel.
+
+Its primary responsibility is to help government employees:
+
+- Process citizen applications.
+- Verify uploaded documents.
+- Manage government service requests.
+- Review scheme applications.
+- Handle citizen grievances.
+- Assign and complete tasks.
+- Communicate with citizens.
+- Monitor application deadlines.
+- Generate departmental reports.
+- Improve service delivery efficiency.
+
+IMPORTANT:
+
+1. Follow the existing GovAI Nexus branding and design system.
+2. Maintain the same visual consistency as the Citizen Portal.
+3. Do not redesign the entire project.
+4. Do not remove existing functionality.
+5. Do not create a separate disconnected application.
+6. Integrate every feature into the existing backend and PostgreSQL database.
+7. All dashboard metrics must come from actual database queries.
+8. All actions must work through real backend APIs.
+9. Do not use hardcoded production data or disconnected mock functionality.
+10. Keep advanced department-level administration in the Officer Portal and platform-wide administration in the Super Admin Portal.
+
+---
+
+# 2. EMPLOYEE PORTAL – DESIGN SYSTEM
+
+Maintain the same visual identity as the previous GovAI Nexus Citizen Portal.
+
+### Brand colours
+
+Primary Navy: #102A43  
+Dark Navy: #071B3B  
+Primary Blue: #2563EB  
+Primary Purple: #6D28D9  
+Secondary Purple: #7C3AED  
+Teal: #0F766E  
+Background: #F8FAFC  
+Card Background: #FFFFFF  
+Primary Text: #0F172A  
+Secondary Text: #64748B  
+Border: #E2E8F0
+
+### Design style
+
+- Professional government enterprise dashboard.
+- Navy-blue government header.
+- Dark navy left navigation sidebar.
+- Purple active navigation states.
+- White rounded content cards.
+- Blue and purple gradient banners.
+- Soft shadows and subtle borders.
+- Clean typography and consistent spacing.
+- Lucide outline icons.
+- Responsive layouts.
+- Clear tables and status indicators.
+- Professional charts and analytics.
+- Minimal clutter.
+- Accessible interaction states.
+
+### Typography
+
+- English: Inter or Poppins.
+- Tamil: Noto Sans Tamil.
+- Use consistent heading sizes and font weights.
+
+### Common header
+
+Every authenticated employee page must contain:
+
+- Tamil Nadu Government identity.
+- GovAI Nexus logo and branding.
+- Employee Portal badge.
+- Global search.
+- English / Tamil language selector.
+- Font size controls.
+- Notification icon.
+- Employee profile menu.
+- Logout option.
+
+### Common left sidebar
+
+Create a fixed, collapsible navigation sidebar containing:
+
+1. Dashboard
+2. Application Processing
+   - My Work Queue
+   - Pending Applications
+   - Under Review
+   - Process Applications
+   - Approval / Rejection
+3. Service Requests
+4. Citizen Communications
+5. Document Verification
+6. Scheme & Service Information
+7. Reports & Analytics
+8. SLA & Performance
+9. Team & Workload
+10. Help & Resources
+
+Highlight the active page using the existing purple gradient style.
+
+Sidebar must support responsive mobile navigation.
+
+---
+
+# 3. EMPLOYEE PORTAL – COMPLETE PAGE STRUCTURE
+
+Implement the following seven major pages.
+
+## PAGE 1 – EMPLOYEE LOGIN
+
+Route: /employee/login
+
+Create a professional employee authentication interface.
+
+### Left section
+
+- GovAI Nexus logo.
+- Government of Tamil Nadu branding.
+- Employee Portal title.
+- Government Secretariat illustration.
+- Platform introduction.
+- Security and authorized access information.
+
+### Right section
+
+Login card containing:
+
+- Employee ID.
+- Official email or registered username.
+- Password.
+- Show / Hide Password.
+- Remember Me.
+- Forgot Password.
+- Login button.
+- Tamil / English language selector.
+
+### Additional features
+
+- Secure authentication.
+- Account lockout after configurable failed attempts.
+- Login rate limiting.
+- Session expiration.
+- Optional OTP / MFA.
+- Password reset workflow.
+- Device/session management.
+- Login history.
+- Unauthorized access handling.
+
+After successful authentication, redirect the employee to the Employee Dashboard.
+
+Only active and authorized government employee accounts can access the portal.
+
+---
+
+## PAGE 2 – EMPLOYEE DASHBOARD
+
+Route: /employee/dashboard
+
+This is the primary landing page after login.
+
+Use the same layout style as the previously designed Employee Dashboard.
+
+### A. Welcome banner
+
+Display:
+
+- Welcome message.
+- Employee name.
+- Employee photograph or avatar.
+- Employee designation.
+- Employee ID.
+- Department.
+- District.
+- Office / e-Sevai Centre.
+- Current date.
+- Current working shift, if configured.
+
+Banner text:
+
+"Welcome, [Employee Name]"
+
+"Process applications, verify documents, manage citizen requests and deliver timely government services."
+
+Include a professional Tamil Nadu government visual in the banner.
+
+### B. KPI summary cards
+
+Display database-driven metrics:
+
+1. Pending Applications
+2. Verified Documents
+3. Applications Under Process
+4. Approved Applications
+5. Rejected Applications
+6. Average Processing Time
+
+Each card must show:
+
+- Metric title.
+- Actual count/value.
+- Relevant icon.
+- Change compared with a previous period, when calculated.
+- Click-through navigation to the corresponding filtered records.
+
+Do not invent metric values.
+
+### C. My Work Queue
+
+Display applications assigned to the logged-in employee.
+
+Categories:
+
+- Income Certificate
+- Community Certificate
+- Nativity Certificate
+- Smart Family Card
+- Driving Licence
+- Land / Patta Services
+- Scheme Applications
+- Other Government Services
+
+Each category should display the number of assigned applications.
+
+Clicking a category opens the filtered application list.
+
+### D. Application Trend
+
+Create an interactive chart showing:
+
+- Applications Received.
+- Applications Processed.
+- Applications Approved.
+
+Filters:
+
+- Last 7 Days
+- Last 30 Days
+- Last 3 Months
+- Custom Date Range
+
+Use Recharts and real database data.
+
+### E. Application Status Overview
+
+Create a donut chart containing:
+
+- Pending
+- Under Review
+- Document Verification
+- Approved
+- Rejected
+- Additional Documents Required
+
+Display the actual total count and percentage distribution.
+
+### F. Quick Actions
+
+Provide the following shortcuts:
+
+1. Verify Document
+2. Process Application
+3. Request Additional Documents
+4. Generate Report
+5. View Work Queue
+6. Contact Citizen
+
+Every shortcut must navigate to a functional workflow.
+
+### G. Recent Applications
+
+Create a recent application table.
+
+Columns:
+
+- Application ID
+- Citizen Name
+- Service / Scheme
+- Submitted Date
+- Current Status
+- Assigned Employee
+- Priority
+- Action
+
+Actions:
+
+- View
+- Verify
+- Process
+- Request Documents
+
+### H. Department Performance
+
+Show employee-level processing information:
+
+- Total Assigned Applications
+- Completed Applications
+- Pending Applications
+- Average Processing Time
+- SLA Compliance
+- Workload Progress
+
+Only show metrics that the employee is authorized to view.
+
+### I. Notifications
+
+Display:
+
+- New application assignments.
+- Document verification requests.
+- Applications nearing SLA deadlines.
+- Citizen responses.
+- Reassigned applications.
+- Department notifications.
+- System announcements.
+
+### J. Useful Resources
+
+Provide access to:
+
+- Scheme Guidelines.
+- Government Service Manuals.
+- Government Orders (GOs).
+- Application Forms.
+- Department Circulars.
+- FAQs.
+- Verification Guidelines.
+
+---
+
+## PAGE 3 – APPLICATION MANAGEMENT
+
+Route: /employee/applications
+
+Create a complete application processing workspace.
+
+This page manages applications submitted by citizens through GovAI Nexus and authorized external service integrations.
+
+### A. Application Management Header
+
+Display:
+
+"Application Management"
+
+"Review, process and manage citizen applications assigned to your department."
+
+Include:
+
+- Search by Application ID.
+- Search by Citizen Name.
+- Search by Service.
+- Search by Scheme.
+- Date filters.
+- Department filters, within employee permissions.
+- Export options, subject to permissions.
+
+### B. Application Status Cards
+
+Display:
+
+- Total Assigned
+- Pending Applications
+- Under Review
+- Documents Required
+- Ready for Approval
+- Completed
+
+### C. Application Tabs
+
+Create:
+
+1. My Work Queue
+2. Pending Applications
+3. Under Review
+4. Document Verification
+5. Additional Documents Required
+6. Ready for Approval
+7. Approved
+8. Rejected
+9. Reassigned
+
+### D. Application List Table
+
+Columns:
+
+- Select Checkbox
+- Application ID
+- Citizen Name
+- Service Name
+- Department
+- Submission Date
+- Assigned Date
+- Priority
+- Application Status
+- SLA Deadline
+- Actions
+
+Features:
+
+- Search.
+- Sorting.
+- Pagination.
+- Advanced filtering.
+- Configurable page size.
+- Bulk actions where authorized.
+- CSV / Excel export where authorized.
+
+### E. Application Details Page
+
+Route: /employee/applications/:applicationId
+
+When an employee opens an application, show a complete application workspace.
+
+#### Section 1 – Application Overview
+
+- Application ID.
+- Service / Scheme Name.
+- Application Type.
+- Submission Date.
+- Current Status.
+- Priority.
+- Department.
+- Assigned Employee.
+- SLA Deadline.
+- Submission Channel.
+
+#### Section 2 – Citizen Information
+
+Display only information necessary for processing:
+
+- Citizen Name.
+- Contact Details.
+- District.
+- Address.
+- Applicant Profile.
+- Relevant eligibility details.
+
+Sensitive identifiers must be masked unless access is specifically authorized.
+
+#### Section 3 – Application Form Data
+
+Display all citizen-submitted information using a clean structured layout.
+
+Group the information into:
+
+- Personal Information.
+- Address Information.
+- Family Information.
+- Educational Information.
+- Income Information.
+- Scheme-Specific Information.
+- Other Required Details.
+
+#### Section 4 – Uploaded Documents
+
+Display:
+
+- Document Name.
+- Document Type.
+- Upload Date.
+- File Format.
+- Verification Status.
+- Preview.
+- Download, if authorized.
+
+#### Section 5 – Application Timeline
+
+Show:
+
+1. Draft Created.
+2. Application Submitted.
+3. Application Assigned.
+4. Document Verification.
+5. Application Reviewed.
+6. Additional Documents Requested, if applicable.
+7. Final Decision.
+8. Application Closed.
+
+Only show events supported by actual application history.
+
+#### Section 6 – Employee Actions
+
+Provide:
+
+- Start Review.
+- Mark Under Review.
+- Verify Documents.
+- Request Additional Documents.
+- Add Internal Note.
+- Forward to Authorized Officer.
+- Recommend Approval.
+- Recommend Rejection.
+- Reassign, if permitted.
+
+Final approval or rejection must follow the configured authority hierarchy.
+
+Do not allow employees to approve services beyond their assigned authorization.
+
+#### Section 7 – Internal Notes
+
+Allow authorized employees to add internal processing notes.
+
+Internal notes must never be visible to citizens unless explicitly converted into an approved citizen-facing message.
+
+#### Section 8 – Citizen Communication
+
+Allow employees to:
+
+- Send clarification requests.
+- Request missing documents.
+- Send application updates.
+- Send rejection explanations approved by the responsible authority.
+- Record communication history.
+
+---
+
+## PAGE 4 – DOCUMENT VERIFICATION
+
+Route: /employee/document-verification
+
+Create a dedicated document verification workspace.
+
+### A. Dashboard Summary
+
+Display:
+
+- Total Documents Received.
+- Pending Verification.
+- Verified Documents.
+- Rejected Documents.
+- Resubmission Required.
+- Average Verification Time.
+
+### B. Verification Queue
+
+Tabs:
+
+1. All Documents
+2. Pending Verification
+3. Verified
+4. Rejected
+5. Resubmission Required
+
+### C. Document Table
+
+Columns:
+
+- Document ID.
+- Application ID.
+- Citizen Name.
+- Document Type.
+- Uploaded Date.
+- OCR Status.
+- Verification Status.
+- Assigned Employee.
+- Action.
+
+### D. Document Review Workspace
+
+Route: /employee/document-verification/:documentId
+
+Create a professional split-screen interface.
+
+Left panel:
+
+- PDF / Image document preview.
+- Zoom.
+- Rotate.
+- Page navigation.
+- Download, if authorized.
+- OCR extracted text.
+
+Right panel:
+
+- Document information.
+- Citizen-submitted details.
+- Extracted document details.
+- Field comparison.
+- Verification checklist.
+- Reviewer notes.
+- Verification actions.
+
+### E. OCR Integration
+
+Use Python-based OCR services.
+
+Possible technologies:
+
+- PaddleOCR.
+- Tesseract.
+- OpenCV.
+- PyMuPDF.
+
+OCR should extract relevant information from uploaded documents.
+
+Show extracted values and confidence indicators.
+
+Allow employees to correct OCR errors.
+
+Never treat OCR results as verified government records.
+
+### F. Verification Checks
+
+Support configurable checks:
+
+- Document is readable.
+- Document is complete.
+- Document belongs to the applicant.
+- Required information is present.
+- Relevant dates are valid.
+- Document type matches the requirement.
+- Document is not expired, where expiry applies.
+- Required pages are present.
+- Information is consistent with the application.
+
+Use a checklist that depends on the selected document type.
+
+### G. Verification Actions
+
+- Mark Verified.
+- Reject Document.
+- Request Re-upload.
+- Add Verification Note.
+- Escalate for Further Review.
+
+For rejection or re-upload requests, require a reason.
+
+### H. Verification History
+
+Store:
+
+- Reviewer.
+- Review Date.
+- Action.
+- Reason.
+- Previous Status.
+- New Status.
+- Notes.
+
+Maintain a complete audit trail.
+
+---
+
+## PAGE 5 – SERVICE REQUESTS & CITIZEN COMMUNICATIONS
+
+Routes:
+
+- /employee/service-requests
+- /employee/communications
+
+Create a unified workspace for citizen requests and communication.
+
+### A. Service Request Dashboard
+
+Display:
+
+- Total Requests.
+- New Requests.
+- In Progress.
+- Awaiting Citizen Response.
+- Resolved.
+- Overdue Requests.
+
+### B. Service Request Categories
+
+- Application Enquiries.
+- Document Clarifications.
+- Scheme Assistance.
+- Certificate Requests.
+- Licence Requests.
+- Application Delays.
+- Payment Issues.
+- Technical Issues.
+- General Government Service Enquiries.
+
+### C. Request List
+
+Columns:
+
+- Request ID.
+- Citizen Name.
+- Request Category.
+- Related Application.
+- Department.
+- Created Date.
+- Priority.
+- Status.
+- Assigned Employee.
+- Action.
+
+### D. Request Details
+
+Display:
+
+- Request ID.
+- Citizen information.
+- Request description.
+- Related application.
+- Uploaded supporting files.
+- Communication history.
+- Assigned employee.
+- Department.
+- Status timeline.
+
+### E. Citizen Communication Centre
+
+Implement:
+
+- Secure in-platform messages.
+- Message history.
+- Standard response templates.
+- Tamil and English communication.
+- File attachments where permitted.
+- Read / unread status.
+- Notification delivery status.
+
+Possible response templates:
+
+- Application received.
+- Application under review.
+- Additional documents required.
+- Document verification completed.
+- Application forwarded for approval.
+- Application processing update.
+- Service completed.
+
+### F. Response Actions
+
+- Reply to Citizen.
+- Request Additional Information.
+- Attach Guidelines.
+- Forward to Department.
+- Escalate Request.
+- Mark Resolved.
+
+All communications must be recorded.
+
+Do not expose internal comments or private employee discussions to citizens.
+
+---
+
+## PAGE 6 – TASK & WORKFLOW MANAGEMENT
+
+Route: /employee/tasks
+
+Create an employee task management and workflow workspace.
+
+### A. Task Dashboard
+
+Display:
+
+- Total Assigned Tasks.
+- Pending Tasks.
+- In Progress.
+- Completed Tasks.
+- Overdue Tasks.
+- High-Priority Tasks.
+
+### B. Task Categories
+
+- Application Review.
+- Document Verification.
+- Citizen Follow-up.
+- Complaint Resolution.
+- Department Reporting.
+- Scheme Processing.
+- Service Delivery.
+- Administrative Tasks.
+
+### C. Task List
+
+Columns:
+
+- Task ID.
+- Task Title.
+- Related Application.
+- Task Type.
+- Assigned By.
+- Assigned Date.
+- Due Date.
+- Priority.
+- Status.
+- Action.
+
+### D. Task Views
+
+Provide:
+
+- List View.
+- Kanban Board.
+- Calendar View.
+- My Tasks.
+- Overdue Tasks.
+- Completed Tasks.
+
+### E. Task Management Actions
+
+- Create Task, if authorized.
+- Assign Task, if authorized.
+- Accept Task.
+- Start Task.
+- Update Progress.
+- Add Comments.
+- Attach Files.
+- Mark Completed.
+- Request Extension.
+- Escalate Task.
+
+### F. Workflow Engine
+
+Implement configurable workflows for government applications.
+
+Example:
+
+Citizen Submission
+→ Employee Assignment
+→ Document Verification
+→ Application Review
+→ Additional Information, if required
+→ Authorized Officer Review
+→ Decision
+→ Citizen Notification
+→ Application Closure
+
+Each workflow must support:
+
+- Defined stages.
+- Permitted transitions.
+- Responsible role.
+- Assignment rules.
+- SLA deadline.
+- Escalation conditions.
+- Required approvals.
+- Audit history.
+
+Employees must not bypass required approval stages.
+
+---
+
+## PAGE 7 – REPORTS & PERFORMANCE
+
+Route: /employee/reports
+
+Create an employee-level reporting and performance dashboard.
+
+### A. Performance KPI Cards
+
+Display:
+
+- Total Applications Assigned.
+- Applications Processed.
+- Applications Completed.
+- Documents Verified.
+- Pending Work.
+- Average Processing Time.
+- SLA Compliance.
+
+### B. Analytics Charts
+
+Create interactive charts:
+
+1. Daily Application Processing Trend.
+2. Weekly Application Completion.
+3. Application Status Distribution.
+4. Service-wise Application Processing.
+5. Document Verification Performance.
+6. Monthly Workload.
+7. SLA Compliance Trend.
+
+### C. Filters
+
+- Today.
+- Last 7 Days.
+- Last 30 Days.
+- Last 3 Months.
+- Custom Date Range.
+- Service Type.
+- Department, where authorized.
+
+### D. Detailed Reports
+
+Create:
+
+- Application Processing Report.
+- Document Verification Report.
+- Citizen Request Report.
+- Task Completion Report.
+- SLA Performance Report.
+- Service-wise Report.
+
+### E. Export
+
+Allow authorized export to:
+
+- PDF.
+- Excel.
+- CSV.
+
+Apply role-based access and protect citizen information in exported reports.
+
+### F. Performance Insights
+
+Display evidence-based observations:
+
+- Applications completed.
+- Pending workload.
+- Services with high processing volume.
+- Overdue tasks.
+- Verification bottlenecks.
+- SLA trends.
+
+Do not generate fabricated performance scores or unfair employee rankings.
+
+Provide clear metric definitions and reporting periods.
+
+---
+
+# 4. ADDITIONAL EMPLOYEE WORKSPACE MODULES
+
+Integrate the following features into the appropriate existing pages or shared components.
+
+## A. SLA & Performance
+
+Route: /employee/sla-performance
+
+Features:
+
+- SLA deadline monitoring.
+- Applications nearing deadlines.
+- Overdue applications.
+- Processing time distribution.
+- Service-specific SLA configuration display.
+- Escalation alerts.
+- SLA history.
+
+Only use officially configured or department-approved SLA values.
+
+## B. Team & Workload
+
+Route: /employee/team-workload
+
+Features:
+
+- Employee task allocation, where authorized.
+- Team workload overview.
+- Assigned application counts.
+- Task distribution.
+- Workload status.
+- Assignment history.
+- Reassignment requests.
+
+Regular employees must not access restricted employee records or team management functions.
+
+## C. Scheme & Service Information
+
+Route: /employee/scheme-services
+
+Features:
+
+- Search government schemes.
+- Search government services.
+- View eligibility criteria.
+- View required documents.
+- View official application links.
+- View application guidelines.
+- Access Government Orders.
+- Access department circulars.
+
+Read scheme and service information from the central GovAI Nexus master database.
+
+Employees must not independently modify official scheme policy information.
+
+## D. Help & Resources
+
+Route: /employee/help
+
+Features:
+
+- Employee user manual.
+- Application processing guidelines.
+- Document verification handbook.
+- Government Orders.
+- Department circulars.
+- FAQs.
+- Training materials.
+- Technical support.
+- Contact administrator.
+
+---
+
+# 5. EMPLOYEE PROFILE & ACCOUNT SETTINGS
+
+Create a profile menu accessible from the header.
+
+Route: /employee/profile
+
+Display:
+
+- Employee Photograph.
+- Employee Name.
+- Employee ID.
+- Designation.
+- Department.
+- Office.
+- District.
+- Official Email.
+- Registered Mobile Number.
+- Account Status.
+- Assigned Roles.
+
+Settings:
+
+- Change Password.
+- Notification Preferences.
+- Language Preference.
+- Accessibility Settings.
+- Active Sessions.
+- Login History.
+- Security Settings.
+
+Sensitive profile fields must be editable only by authorized administrators.
+
+---
+
+# 6. EMPLOYEE NOTIFICATIONS
+
+Create a centralized notification system.
+
+Notification categories:
+
+- New Application Assignment.
+- Application Deadline.
+- Document Verification Request.
+- Citizen Reply.
+- Additional Document Uploaded.
+- Task Assignment.
+- Task Overdue.
+- Department Announcement.
+- Workflow Update.
+- System Alert.
+
+Features:
+
+- Unread count.
+- Mark as Read.
+- Mark All as Read.
+- Notification History.
+- Priority Indicators.
+- Click-through navigation.
+- Configurable preferences.
+
+Use in-app notifications and integrate email / SMS only when authorized providers are configured.
+
+---
+
+# 7. DATABASE INTEGRATION
+
+Extend the existing GovAI Nexus PostgreSQL database.
+
+Reuse existing tables wherever available.
+
+Do not create duplicate user, citizen, department, service, scheme or application master tables.
+
+Required employee-related entities include:
+
+1. employee_master
+2. employee_department_mapping
+3. employee_office_mapping
+4. employee_role_mapping
+5. employee_permissions
+6. employee_sessions
+7. employee_login_history
+8. employee_notification_preferences
+
+Application workflow:
+
+9. application_assignment
+10. application_review
+11. application_internal_notes
+12. application_workflow_history
+13. application_approval_records
+14. application_reassignment_history
+
+Document verification:
+
+15. document_verification
+16. document_verification_checks
+17. document_ocr_results
+18. document_verification_history
+
+Citizen communication:
+
+19. citizen_service_requests
+20. citizen_communication
+21. communication_attachments
+22. response_templates
+
+Tasks and workflow:
+
+23. employee_tasks
+24. task_assignments
+25. task_comments
+26. task_attachments
+27. task_history
+28. workflow_definitions
+29. workflow_stages
+30. workflow_transitions
+31. workflow_execution_history
+
+Reports and performance:
+
+32. employee_performance_snapshots
+33. employee_sla_metrics
+34. application_processing_metrics
+35. report_export_history
+
+All tables must have appropriate:
+
+- Primary keys.
+- Foreign keys.
+- Unique constraints.
+- Indexes.
+- Validation constraints.
+- Timestamps.
+- Audit information.
+
+Use SQLAlchemy 2 and Alembic migrations.
+
+Maintain database normalization and transactional integrity.
+
+---
+
+# 8. BACKEND API DEVELOPMENT
+
+Use Python 3.12+ and FastAPI.
+
+Implement REST APIs.
+
+### Employee Authentication
+
+- POST /api/v1/employee/auth/login
+- POST /api/v1/employee/auth/logout
+- POST /api/v1/employee/auth/refresh
+- POST /api/v1/employee/auth/forgot-password
+- POST /api/v1/employee/auth/reset-password
+- GET /api/v1/employee/profile
+- PUT /api/v1/employee/profile
+
+### Employee Dashboard
+
+- GET /api/v1/employee/dashboard/summary
+- GET /api/v1/employee/dashboard/work-queue
+- GET /api/v1/employee/dashboard/application-trends
+- GET /api/v1/employee/dashboard/status-distribution
+- GET /api/v1/employee/dashboard/recent-applications
+- GET /api/v1/employee/dashboard/notifications
+
+### Application Management
+
+- GET /api/v1/employee/applications
+- GET /api/v1/employee/applications/{application_id}
+- POST /api/v1/employee/applications/{application_id}/assign
+- POST /api/v1/employee/applications/{application_id}/start-review
+- POST /api/v1/employee/applications/{application_id}/request-documents
+- POST /api/v1/employee/applications/{application_id}/recommend-approval
+- POST /api/v1/employee/applications/{application_id}/recommend-rejection
+- POST /api/v1/employee/applications/{application_id}/forward
+- POST /api/v1/employee/applications/{application_id}/notes
+
+### Document Verification
+
+- GET /api/v1/employee/documents
+- GET /api/v1/employee/documents/{document_id}
+- POST /api/v1/employee/documents/{document_id}/verify
+- POST /api/v1/employee/documents/{document_id}/reject
+- POST /api/v1/employee/documents/{document_id}/request-reupload
+- GET /api/v1/employee/documents/{document_id}/history
+
+### Citizen Requests & Communication
+
+- GET /api/v1/employee/service-requests
+- GET /api/v1/employee/service-requests/{request_id}
+- POST /api/v1/employee/service-requests/{request_id}/reply
+- POST /api/v1/employee/service-requests/{request_id}/assign
+- POST /api/v1/employee/service-requests/{request_id}/escalate
+- POST /api/v1/employee/service-requests/{request_id}/resolve
+
+### Tasks
+
+- GET /api/v1/employee/tasks
+- POST /api/v1/employee/tasks
+- PUT /api/v1/employee/tasks/{task_id}
+- POST /api/v1/employee/tasks/{task_id}/start
+- POST /api/v1/employee/tasks/{task_id}/complete
+- POST /api/v1/employee/tasks/{task_id}/comments
+- POST /api/v1/employee/tasks/{task_id}/reassign
+
+### Reports & Analytics
+
+- GET /api/v1/employee/reports/summary
+- GET /api/v1/employee/reports/applications
+- GET /api/v1/employee/reports/documents
+- GET /api/v1/employee/reports/tasks
+- GET /api/v1/employee/reports/sla
+- POST /api/v1/employee/reports/export
+
+### Notifications
+
+- GET /api/v1/employee/notifications
+- POST /api/v1/employee/notifications/{notification_id}/read
+- POST /api/v1/employee/notifications/read-all
+- PUT /api/v1/employee/notification-preferences
+
+Implement:
+
+- Pydantic request/response schemas.
+- Input validation.
+- Pagination.
+- Filtering.
+- Sorting.
+- RBAC authorization.
+- Rate limiting.
+- Audit logging.
+- Standardized error responses.
+- API documentation.
+- Secure file handling.
+
+---
+
+# 9. AUTHENTICATION, RBAC & SECURITY
+
+Implement role-based access control.
+
+Possible employee roles:
+
+- Junior Assistant.
+- Assistant.
+- Senior Assistant.
+- Clerk.
+- e-Sevai Operator.
+- Document Verification Officer.
+- Application Processing Officer.
+- Department Staff.
+- Authorized Reviewer.
+
+Permissions must be configurable by the Super Admin and mapped to official organizational authority.
+
+Examples:
+
+| Permission | Employee | Authorized Reviewer |
+|---|---|---|
+| View Assigned Applications | Yes | Yes |
+| Verify Documents | If authorized | Yes |
+| Request Additional Documents | If authorized | Yes |
+| Add Internal Notes | Yes | Yes |
+| Recommend Approval | If authorized | Yes |
+| Final Approval | Only if specifically authorized | Based on delegation |
+| Reject Application | Only if specifically authorized | Based on delegation |
+| Reassign Tasks | If authorized | Yes |
+| View Department Analytics | Restricted | Based on role |
+
+Security requirements:
+
+- Secure authentication.
+- RBAC and department-level access control.
+- Employee-level application assignment.
+- Citizen data isolation.
+- Secure password storage.
+- Session management.
+- CSRF protection where applicable.
+- XSS prevention.
+- SQL injection protection.
+- Secure upload validation.
+- Malware scanning where available.
+- Encryption at rest and in transit.
+- Sensitive-data masking.
+- Audit logging.
+- Rate limiting.
+- Access revocation.
+- Secure logout.
+
+Employees must only see records within their assigned department, office and permissions.
+
+Never allow frontend-only authorization. Enforce all permissions on the backend.
+
+---
+
+# 10. AI-POWERED EMPLOYEE ASSISTANT
+
+Integrate an employee-focused version of Ask GovAI.
+
+It should assist employees with:
+
+- Finding application processing guidelines.
+- Understanding document requirements.
+- Finding scheme eligibility rules.
+- Searching government orders.
+- Understanding workflow procedures.
+- Finding department circulars.
+- Drafting citizen communication.
+- Summarizing application information.
+- Finding relevant official service information.
+
+### RAG Knowledge Base
+
+Use:
+
+- Python.
+- FastAPI.
+- PostgreSQL.
+- pgvector.
+- Sentence Transformers.
+- Gemini or configured LLM.
+- Hybrid retrieval.
+- Reranking.
+- Source citations.
+
+The assistant must retrieve information from authorized government knowledge sources.
+
+Every policy-related response should display source references.
+
+It must not:
+
+- Approve or reject applications independently.
+- Modify official application records without authorization.
+- Invent government rules.
+- Bypass employee permissions.
+- Expose confidential citizen information.
+- Treat OCR output as verified evidence.
+
+AI-generated summaries and suggested communications must be reviewed by the employee before use.
+
+---
+
+# 11. TAMIL & ENGLISH LOCALIZATION
+
+Support bilingual functionality throughout the Employee Portal.
+
+Translate:
+
+- Navigation.
+- Dashboard labels.
+- Application statuses.
+- Form labels.
+- Validation messages.
+- Notifications.
+- Service descriptions.
+- Document guidelines.
+- Help resources.
+
+Use:
+
+- Inter.
+- Noto Sans Tamil.
+- A proper localization framework.
+
+Allow employees to change language without losing their current work.
+
+Do not automatically translate legal or policy-critical text without clearly identifying machine-translated content.
+
+---
+
+# 12. FRONTEND DEVELOPMENT
+
+Use the existing frontend stack:
+
+- React 19.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide React.
+- TanStack Query.
+- Zustand.
+- React Hook Form.
+- Zod.
+- Recharts.
+
+Build reusable components:
+
+- EmployeeHeader.
+- EmployeeSidebar.
+- EmployeeProfileMenu.
+- EmployeeWelcomeBanner.
+- EmployeeStatCard.
+- ApplicationTable.
+- ApplicationStatusBadge.
+- ApplicationTimeline.
+- DocumentPreview.
+- DocumentVerificationPanel.
+- TaskKanbanBoard.
+- NotificationPanel.
+- AnalyticsChart.
+- SearchFilterBar.
+- Pagination.
+- ConfirmationDialog.
+- SecureUploadComponent.
+- EmptyState.
+- LoadingSkeleton.
+- ErrorState.
+
+Maintain a consistent component design across all employee pages.
+
+### Responsive design
+
+Desktop:
+- Full navigation sidebar.
+- Multi-column dashboard.
+- Detailed tables and analytics.
+
+Tablet:
+- Collapsible navigation.
+- Responsive cards.
+- Scrollable tables.
+
+Mobile:
+- Compact header.
+- Drawer navigation.
+- Stacked KPI cards.
+- Mobile-friendly forms.
+- Responsive application details.
+- Touch-friendly actions.
+
+Target WCAG 2.2 AA accessibility.
+
+---
+
+# 13. TESTING REQUIREMENTS
+
+Use:
+
+Backend:
+- Pytest.
+- FastAPI TestClient.
+
+Frontend:
+- Vitest.
+- React Testing Library.
+
+End-to-end:
+- Playwright.
+
+Test:
+
+1. Employee login.
+2. Authentication and logout.
+3. Role-based access.
+4. Dashboard data.
+5. Application listing.
+6. Application assignment.
+7. Application review.
+8. Document upload.
+9. OCR extraction.
+10. Document verification.
+11. Citizen communication.
+12. Task assignment.
+13. Task completion.
+14. SLA notifications.
+15. Reports and exports.
+16. Tamil localization.
+17. Responsive layouts.
+18. Security and unauthorized access.
+
+Test all seven major pages and all important workflows.
+
+Do not claim that tests have passed unless they have actually been executed.
+
+---
+
+# 14. IMPLEMENTATION STRATEGY
+
+Before development:
+
+1. Inspect the existing GovAI Nexus repository.
+2. Inspect all existing portal routes.
+3. Inspect the authentication system.
+4. Inspect the PostgreSQL schema.
+5. Inspect the existing citizen application workflow.
+6. Inspect document storage and upload services.
+7. Inspect employee and department data.
+8. Inspect existing APIs.
+9. Reuse existing shared components.
+10. Prepare an implementation plan.
+
+Then implement in this order:
+
+Phase A – Employee Authentication and Profile.
+
+Phase B – Employee Dashboard.
+
+Phase C – Application Management.
+
+Phase D – Document Verification.
+
+Phase E – Service Requests and Citizen Communication.
+
+Phase F – Task and Workflow Management.
+
+Phase G – Reports, Analytics and SLA.
+
+Phase H – AI Employee Assistant.
+
+Phase I – Testing, Security and Integration.
+
+Do not build separate duplicate application or document systems.
+
+Use the existing Citizen Portal application records and uploaded documents as the source of truth.
+
+Ensure that application status changes are reflected consistently in the Citizen Portal, Employee Portal and authorized Officer Portal.
+
+---
+
+# 15. FINAL EXPECTED RESULT
+
+The final GovAI Nexus Employee Portal must provide a complete operational workspace for authorized government employees.
+
+Employees must be able to:
+
+1. Log in securely.
+2. View their personalized dashboard.
+3. See assigned applications.
+4. Search and filter citizen applications.
+5. Review submitted information.
+6. Preview uploaded documents.
+7. Perform authorized document verification.
+8. Request additional documents.
+9. Process application workflows.
+10. Communicate with citizens.
+11. Handle service requests.
+12. Create and complete assigned tasks.
+13. Monitor application deadlines.
+14. Access scheme and service guidelines.
+15. Generate authorized reports.
+16. View individual performance analytics.
+17. Receive notifications.
+18. Use the AI Employee Assistant.
+19. Work in Tamil or English.
+
+The Employee Portal must be fully connected to the Citizen Portal and the Department Officer / HOD Portal.
+
+A citizen application submitted through GovAI Nexus must appear in the correct employee workflow according to department, service, location, role and assignment rules.
+
+Employee actions must update the central application history and trigger appropriate citizen notifications.
+
+**FINAL INSTRUCTION: Build a complete, secure, production-oriented government employee workspace with real backend integration, functional workflows, database-driven analytics, bilingual support and consistent GovAI Nexus UI/UX. Do not deliver a collection of static dashboard mockups.**
