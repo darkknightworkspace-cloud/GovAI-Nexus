@@ -17,3 +17,12 @@ coverage/
 *.p12
 *.pfx
 credentials.json
+
+## Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env*
+
+## Backend DB (local dev only)
+backend/*.db
+backend/venv/

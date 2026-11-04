@@ -35,6 +35,9 @@ from backend.app.api.v1.endpoints import (
     integrations_api
 )
 
+# Public Homepage API (Phase 6 – Public Government Website)
+from backend.app.api.v1.endpoints import public as public_api
+
 app = FastAPI(
     title=settings.PROJECT_TITLE,
     version="1.0.0",
@@ -101,3 +104,5 @@ app.include_router(reports.router, prefix=settings.API_V1_STR)
 app.include_router(mobile_api.router, prefix=settings.API_V1_STR)
 app.include_router(integrations_api.router, prefix=settings.API_V1_STR)
 
+# Phase 6 Public Government Website APIs
+app.include_router(public_api.router, prefix=settings.API_V1_STR)
