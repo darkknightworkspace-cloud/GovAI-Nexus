@@ -1,0 +1,168 @@
+{
+  "topbar": {
+    "govt": "Government of Tamil Nadu",
+    "helpline": "Citizen Helpline: 1967 (24×7)",
+    "accessibility": "Accessibility",
+    "sitemap": "Sitemap",
+    "contact": "Contact Us"
+  },
+  "nav": {
+    "home": "Home",
+    "government": "Government",
+    "services": "Services",
+    "schemes": "Schemes",
+    "departments": "Departments",
+    "resources": "Resources",
+    "signin": "Sign In / Apply",
+    "govt_menu": {
+      "about_tn": "About Tamil Nadu",
+      "about_govai": "About GovAI Nexus",
+      "vision": "Vision & Objectives",
+      "governance": "Governance Initiatives"
+    },
+    "services_menu": {
+      "all": "All Government Services",
+      "certificates": "Certificates",
+      "identity": "Identity Services",
+      "licences": "Licences & Permits",
+      "land": "Land & Revenue",
+      "transport": "Transport Services",
+      "utility": "Utility Services"
+    },
+    "schemes_menu": {
+      "all": "All Government Schemes",
+      "women": "Women & Family Welfare",
+      "students": "Students & Education",
+      "farmers": "Farmers & Agriculture",
+      "health": "Health & Medical",
+      "seniors": "Senior Citizens",
+      "disabled": "Differently Abled Welfare",
+      "employment": "Employment & Skills"
+    },
+    "depts_menu": {
+      "directory": "Department Directory",
+      "services": "Department-wise Services",
+      "contacts": "Department Contacts"
+    },
+    "resources_menu": {
+      "orders": "Government Orders",
+      "policies": "Policies & Guidelines",
+      "manuals": "Service Manuals",
+      "guide": "Citizen User Guide",
+      "faqs": "FAQs",
+      "downloads": "Downloads",
+      "help": "Help & Support"
+    }
+  },
+  "hero": {
+    "pre": "TAMIL NADU GOVERNMENT",
+    "title1": "GovAI",
+    "title2": "Nexus",
+    "subtitle": "A Unified Digital Governance Platform",
+    "desc": "Access government services, welfare schemes, certificates, licences and verified information — intelligently, securely and in your language.",
+    "search_placeholder": "Search for services, schemes, departments, GOs, forms...",
+    "search_btn": "Search",
+    "popular": "Popular:",
+    "chips": ["Income Certificate", "Community Certificate", "Nativity Certificate", "Smart Family Card"],
+    "ask_govai": "Ask GovAI",
+    "ask_govai_desc": "Get instant answers",
+    "track": "Track Application",
+    "track_desc": "Check your application status",
+    "notifications": "Get Notifications",
+    "notifications_desc": "Service updates & alerts"
+  },
+  "categories": {
+    "title": "Quick Government Service Categories",
+    "items": {
+      "certificates": { "title": "Certificates", "desc": "Income, Community, Nativity & More" },
+      "identity": { "title": "Identity Services", "desc": "Family Card, e-District ID, Resident Services" },
+      "licences": { "title": "Licences & Permits", "desc": "Transport, Trade, FSSAI, Business" },
+      "land": { "title": "Land & Revenue", "desc": "Patta, Chitta, A-Register, Land Records" },
+      "welfare": { "title": "Welfare Schemes", "desc": "Education, Health, Women, Farmers" },
+      "departments": { "title": "Department Services", "desc": "Apply, Track, Download and More" }
+    }
+  },
+  "ai_section": {
+    "title": "AI-Powered Government Services",
+    "features": ["Smart Assistance", "Eligibility Check", "Document Guidance", "Service Recommendations"],
+    "cta": "Try GovAI Assistant →"
+  },
+  "featured_scheme": {
+    "badge": "Featured Scheme",
+    "apply": "Apply Now →",
+    "details": "View Details"
+  },
+  "updates": {
+    "title": "Latest Updates",
+    "view_all": "View All →",
+    "new": "New"
+  },
+  "stats": {
+    "title": "GovAI Nexus at a Glance",
+    "citizens": "Registered Citizens",
+    "applications": "Total Applications",
+    "sla": "SLA Compliance",
+    "departments": "Departments",
+    "services": "Government Services",
+    "schemes": "Welfare Schemes",
+    "esevai": "e-Sevai Centres"
+  },
+  "info_section": {
+    "title": "Government Information & Discovery",
+    "govt_info": { "title": "Government Information", "items": ["About Tamil Nadu", "Government Structure", "Departments", "Government Leadership"] },
+    "citizen": { "title": "Citizen Resources", "items": ["Citizen Charter", "Government Orders", "Policies & Guidelines", "Service Manuals"] },
+    "digital": { "title": "Digital Government", "items": ["e-Sevai", "DigiLocker", "UMANG", "Digital Initiatives"] },
+    "assist": { "title": "Citizen Assistance", "items": ["FAQs", "Citizen User Guide", "Help Centre", "Contact Support"] }
+  },
+  "departments": {
+    "title": "Explore Government Departments",
+    "subtitle": "Access services and information from all Tamil Nadu government departments",
+    "view": "View Department",
+    "view_all": "View All Departments"
+  },
+  "citizen_portal": {
+    "title": "All Government Services in One Place",
+    "desc": "Discover government schemes, apply for services, upload documents and track your applications through one unified digital platform.",
+    "features": [
+      "Personalized Scheme Recommendations",
+      "Online Application Submission",
+      "Digital Document Management",
+      "Application Tracking",
+      "Renewal Reminders",
+      "AI-Powered Citizen Assistance"
+    ],
+    "explore": "Explore Citizen Portal",
+    "signin": "Sign In / Register"
+  },
+  "transparency": {
+    "title": "Public Transparency & Trust",
+    "subtitle": "Open, accountable and citizen-centric governance",
+    "view_all": "View Transparency Centre →",
+    "items": ["Service Performance", "Public Information", "Department Reports", "Open Data"]
+  },
+  "mobile_app": {
+    "title": "Government Services at Your Fingertips",
+    "features": ["Discover Schemes", "Apply for Services", "Track Applications", "Get Notifications", "Ask GovAI Assistant", "Services in Tamil & English"],
+    "play_store": "Get it on Google Play",
+    "app_store": "Download on App Store",
+    "coming_soon": "Coming Soon"
+  },
+  "footer": {
+    "tagline": "AI-Powered Governance Platform",
+    "govt": "Government of Tamil Nadu",
+    "about": "About",
+    "information": "Information",
+    "support": "Support",
+    "links": "Important Links",
+    "follow": "Follow Us",
+    "about_items": ["About Tamil Nadu", "About GovAI Nexus", "Vision & Objectives"],
+    "info_items": ["Government Orders", "Policies & Guidelines", "Service Manuals"],
+    "support_items": ["Citizen User Guide", "FAQs", "Technical Support", "Contact Us"],
+    "link_items": ["e-Sevai Services", "DigiLocker", "UMANG", "India.gov.in"],
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "accessibility": "Accessibility Statement",
+    "disclaimer": "Disclaimer",
+    "copyright": "© 2026 Government of Tamil Nadu. All rights reserved."
+  }
+}
