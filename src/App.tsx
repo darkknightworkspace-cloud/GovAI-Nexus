@@ -28,6 +28,7 @@ import { LicencesDirectoryPage } from './features/public/LicencesDirectoryPage';
 import { PublicInfoPage } from './features/public/PublicInfoPage';
 import { TransparencyPage } from './features/public/TransparencyPage';
 import { ContactHelpPage } from './features/public/ContactHelpPage';
+import { DepartmentsPage } from './features/public/DepartmentsPage';
 
 import { SchemeDetailsModal } from './components/SchemeDetailsModal';
 import { DocumentChecklistModal } from './components/DocumentChecklistModal';
@@ -201,7 +202,16 @@ export default function App() {
               />
             )}
 
-            {/* PAGE 4B: DOCUMENTS & CERTIFICATES CATALOG */}
+            {/* PAGE 4B: DEPARTMENTS DIRECTORY */}
+            {currentPublicPage === 'departments' && (
+              <DepartmentsPage
+                language={language}
+                onSelectPortal={(portal) => setCurrentPortal(portal)}
+                onNavigatePage={(p: PublicPage) => setCurrentPublicPage(p)}
+              />
+            )}
+
+            {/* PAGE 4C: DOCUMENTS & CERTIFICATES CATALOG */}
             {currentPublicPage === 'documents' && (
               <DocumentsDirectoryPage
                 language={language}

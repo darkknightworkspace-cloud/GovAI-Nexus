@@ -274,21 +274,27 @@ export const Header: React.FC<HeaderProps> = ({
               <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform ${activeDropdown === 'departments' ? 'rotate-180' : ''}`} />
             </button>
             {activeDropdown === 'departments' && (
-              <div 
+              <div
                 onMouseLeave={closeDropdowns}
-                className="absolute top-full left-0 mt-1 w-60 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-50 text-xs font-semibold"
+                className="absolute top-full left-0 mt-1 w-64 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-50 text-xs font-semibold"
               >
-                <button onClick={() => { onSelectPublicPage('services'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
+                <button onClick={() => { onSelectPublicPage('departments'); closeDropdowns(); }} className="w-full text-left px-4 py-2.5 hover:bg-purple-50 text-purple-800 font-bold border-b border-slate-100">
+                  All Departments (12)
+                </button>
+                <button onClick={() => { onSelectPublicPage('departments'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
                   Revenue & Disaster Management
                 </button>
-                <button onClick={() => { onSelectPublicPage('services'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
+                <button onClick={() => { onSelectPublicPage('departments'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
                   Social Welfare & Women Empowerment
                 </button>
-                <button onClick={() => { onSelectPublicPage('services'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
-                  Transport & Road Safety
+                <button onClick={() => { onSelectPublicPage('departments'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
+                  Transport Department
                 </button>
-                <button onClick={() => { onSelectPublicPage('services'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
+                <button onClick={() => { onSelectPublicPage('departments'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
                   Housing & Urban Development
+                </button>
+                <button onClick={() => { onSelectPublicPage('departments'); closeDropdowns(); }} className="w-full text-left px-4 py-2 hover:bg-purple-50 text-slate-700">
+                  Health & Family Welfare
                 </button>
               </div>
             )}

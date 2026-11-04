@@ -79,6 +79,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigatePage }) => {
                   <span className="text-slate-400">›</span> Vision & Objectives
                 </button>
               </li>
+              <li>
+                <button onClick={() => onNavigatePage('departments')} className="hover:text-purple-400 flex items-center gap-1.5 transition-colors cursor-pointer">
+                  <span className="text-slate-400">›</span> Government Departments
+                </button>
+              </li>
             </ul>
           </div>
 

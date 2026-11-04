@@ -8,15 +8,16 @@ export type PortalType =
   | 'mobile-sim' 
   | 'architecture-docs';
 
-export type PublicPage = 
-  | 'home' 
-  | 'about' 
-  | 'services' 
-  | 'schemes' 
+export type PublicPage =
+  | 'home'
+  | 'about'
+  | 'services'
+  | 'schemes'
+  | 'departments'
   | 'documents'
   | 'licences'
-  | 'public-info' 
-  | 'transparency' 
+  | 'public-info'
+  | 'transparency'
   | 'contact';
 
 export type CitizenPage = 
